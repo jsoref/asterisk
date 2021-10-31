@@ -13949,7 +13949,7 @@ static int actual_load_config(int reload, struct ast_config *cfg, struct ast_con
 			}
 		}
 
-		/* Silence treshold */
+		/* Silence threshold */
 		silencethreshold = ast_dsp_get_threshold_from_settings(THRESHOLD_SILENCE);
 		if ((val = ast_variable_retrieve(cfg, "general", "silencethreshold")))
 			silencethreshold = atoi(val);

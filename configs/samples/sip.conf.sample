@@ -701,7 +701,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
 ; for a device.
 ;
 ; If you set the busylevel, we will indicate busy when we have a number of calls that
-; matches the busylevel treshold.
+; matches the busylevel threshold.
 ;
 ; For queues, you will need this level of detail in status reporting, regardless
 ; if you use SIP subscriptions. Queues and manager use the same internal interface

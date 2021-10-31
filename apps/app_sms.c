@@ -1730,7 +1730,7 @@ static void sms_process(sms_t * h, int samples, signed short *data)
 		} else {
 			h->imag = h->imag * 7 / 8;
 		}
-		if (h->imag <= 500) {               /* below [arbitrary] threahold: lost carrier */
+		if (h->imag <= 500) {               /* below [arbitrary] threshold: lost carrier */
 			if (h->idle++ == 80000) {       /* nothing happening */
 				ast_log(LOG_NOTICE, "No data, hanging up\n");
 				h->hangup = 1;

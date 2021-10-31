@@ -2828,7 +2828,7 @@ static int apply_general_options(struct ast_variable *var)
 			/* External voicemail notify application */
 			ast_copy_string(global_externnotify, var->value, sizeof(global_externnotify));
 		} else if (!strcmp(var->name, "silencethreshold")) {
-			/* Silence treshold */
+			/* Silence threshold */
 			global_silencethreshold = atoi(var->value);
 		} else if (!strcmp(var->name, "maxmessage")) {
 			int x;
