@@ -5330,7 +5330,7 @@ AMI (Asterisk Manager Interface)
    AMI Parkinglot events.
 
  * Added MessageSend command.  This behaves in the same manner as the
-   MessageSend application, and is a technolgoy agnostic mechanism to send out
+   MessageSend application, and is a technology agnostic mechanism to send out
    of call text messages.
 
  * Added "message" class authorization.  This grants an account permission to

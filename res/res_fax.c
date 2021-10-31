@@ -328,7 +328,7 @@
 		<description>
 			<para>Provides details about a specific FAX session. The response will include a common subset of
 			the output from the CLI command 'fax show session &lt;session_number&gt;' for each technology. If the
-			FAX technolgy used by this session does not include a handler for FAXSession, then this action
+			FAX technology used by this session does not include a handler for FAXSession, then this action
 			will fail.</para>
 		</description>
 	</manager>
