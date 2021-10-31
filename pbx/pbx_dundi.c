@@ -1646,7 +1646,7 @@ static int handle_command_response(struct dundi_transaction *trans, struct dundi
 			} else
 				hasauth = 1;
 			if (hasauth) {
-				/* Okay we're authentiated and all, now we check if they're authorized */
+				/* Okay we're authenticated and all, now we check if they're authorized */
 				if (!ies.called_context)
 					ies.called_context = "e164";
 				if (cmd == DUNDI_COMMAND_EIDQUERY) {
