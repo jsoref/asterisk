@@ -3944,7 +3944,7 @@ static int publish_hint_remove(struct ast_hint *hint)
 /*! \brief Remove hint from extension */
 static int ast_remove_hint(struct ast_exten *e)
 {
-	/* Cleanup the Notifys if hint is removed */
+	/* Cleanup the NOTIFYs if hint is removed */
 	struct ast_hint *hint;
 
 	if (!e) {

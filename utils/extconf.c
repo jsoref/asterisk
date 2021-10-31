@@ -3734,7 +3734,7 @@ static int add_pri(struct ast_context *con, struct ast_exten *tmp,
 /*! \brief  ast_remove_hint: Remove hint from extension */
 static int ast_remove_hint(struct ast_exten *e)
 {
-	/* Cleanup the Notifys if hint is removed */
+	/* Cleanup the NOTIFYs if hint is removed */
 	struct ast_hint *hint;
 	struct ast_state_cb *cblist, *cbprev;
 	int res = -1;
