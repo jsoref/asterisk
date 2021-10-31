@@ -71,7 +71,7 @@
  * named, which is useful in debugging.
  *
  * Topics themselves are reference counted objects. Since topics are referred to
- * by their subscibers, they will not be freed until all of their subscribers
+ * by their subscribers, they will not be freed until all of their subscribers
  * have unsubscribed. Topics are also thread safe, so no worries about
  * publishing/subscribing/unsubscribing to a topic concurrently from multiple
  * threads. It's also designed to handle the case of unsubscribing from a topic
