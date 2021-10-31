@@ -1296,7 +1296,7 @@ app_queue
 
  * A new option, "announce-position-only-up," has been added that, when set to
    yes, causes position announcements to only be played when the caller's
-   queue position has improved since the last time that we annouced their
+   queue position has improved since the last time that we announced their
    position. This default is no.
 
 Build System
