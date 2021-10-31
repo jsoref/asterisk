@@ -3576,7 +3576,7 @@ static void mwi_event_cb(void *userdata, struct stasis_subscription *sub, struct
 		transmit_lamp_indication(d, STIMULUS_VOICEMAIL, l->instance, SKINNY_LAMP_OFF);
 	}
 
-	/* find out wether the device lamp should be on or off */
+	/* find out whether the device lamp should be on or off */
 	AST_LIST_TRAVERSE(&d->lines, l2, list) {
 		if (l2->newmsgs) {
 			dev_msgs++;
