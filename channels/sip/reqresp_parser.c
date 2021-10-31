@@ -1849,7 +1849,7 @@ AST_TEST_DEFINE(sip_parse_options_test)
 							"Tests parsing of SIP options from supported and required "
 							"header fields.  Verifies when unsupported options are encountered "
 							"that they are appended to the unsupported out buffer and that the "
-							"correct bit field representnig the option profile is returned.";
+							"correct bit field representing the option profile is returned.";
 		return AST_TEST_NOT_RUN;
 	case TEST_EXECUTE:
 		break;

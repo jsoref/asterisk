@@ -145,7 +145,7 @@ EXTERN OOStkCmdStat ooHangCall(const char* callToken, OOCallClearReason reason, 
  * This command function can be used by an user application to send a DTMF
  * sequence using H.245 UserInputIndication message.
  * @param callToken  Unique token for the call
- * @param alpha      Alphanumeric string reperesenting dtmf sequence
+ * @param alpha      Alphanumeric string representing dtmf sequence
  *
  * @return            Returns OOStkCmdStat value indication success or failure.
  */
