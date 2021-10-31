@@ -1369,7 +1369,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
 ;				     ; A value of 'yes' will perform both certificate and fingerprint verification
 ;				     ; A value of 'no' will perform no certificate or fingerprint verification
 ;				     ; A value of 'fingerprint' will perform ONLY fingerprint verification
-;				     ; A value of 'certificate' will perform ONLY certficiate verification
+;				     ; A value of 'certificate' will perform ONLY certificate verification
 ; dtlsrekey = 60                     ; Interval at which to renegotiate the TLS session and rekey the SRTP session
 ;                                    ; If this is not set or the value provided is 0 rekeying will be disabled
 ; dtlsautogeneratecert = yes         ; Enable ephemeral DTLS certificate generation. The default is 'no.'

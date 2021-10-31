@@ -272,7 +272,7 @@ static int attestation_to_str(const void *obj, const intptr_t *args, char **buf)
 
 #ifdef TEST_FRAMEWORK
 
-/* Name for test certificaate */
+/* Name for test certificate */
 #define TEST_CONFIG_NAME "test_stir_shaken_certificate"
 /* The public key URL to use for the test certificate */
 #define TEST_CONFIG_URL "http://testing123"
