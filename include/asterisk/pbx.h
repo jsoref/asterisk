@@ -789,7 +789,7 @@ int ast_findlabel_extension2(struct ast_channel *c, struct ast_context *con,
  * \brief Looks for a valid matching extension
  *
  * \param c not really important
- * \param context context to serach within
+ * \param context context to search within
  * \param exten extension to check
  * \param priority priority of extension path
  * \param callerid callerid of extension being searched for
@@ -809,7 +809,7 @@ int ast_canmatch_extension(struct ast_channel *c, const char *context,
  * \brief Looks to see if adding anything to this extension might match something. (exists ^ canmatch)
  *
  * \param c not really important XXX
- * \param context context to serach within
+ * \param context context to search within
  * \param exten extension to check
  * \param priority priority of extension path
  * \param callerid callerid of extension being searched for
