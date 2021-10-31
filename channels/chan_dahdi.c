@@ -1154,7 +1154,7 @@ static int analogsub_to_dahdisub(enum analog_sub analogsub)
  * \brief release all members on the doomed pris list
  * \since 13.0
  *
- * Called priodically by the monitor threads to release spans marked for
+ * Called periodically by the monitor threads to release spans marked for
  * removal.
  */
 static void release_doomed_pris(void)

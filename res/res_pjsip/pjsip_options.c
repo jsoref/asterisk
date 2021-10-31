@@ -46,7 +46,7 @@
  * The lowest level object in here is a contact and its associated
  * contact status. The result of an OPTIONS request to a contact is
  * reflected in the contact status. The scheduling of these OPTIONS
- * request is driven by the AOR. The AOR periodicially (according to
+ * request is driven by the AOR. The AOR periodically (according to
  * configuration) sends OPTIONS requests out to any contacts
  * associated with it. Contacts themselves are not individually
  * scheduled. Contacts can be added or deleted as appropriate with no
