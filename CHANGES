@@ -4702,7 +4702,7 @@ res_parking
    PARKING_SPACE to match the naming scheme of the new system.
 
  * PARKING_SPACE and PARKEDLOT channel variables will now be set for a parked
-   channel even when the configuration option 'comebactoorigin' is enabled.
+   channel even when the configuration option 'comebacktoorigin' is enabled.
 
  * A new CLI command 'parking show' has been added. This allows a user to
    inspect the parking lots that are currently in use.

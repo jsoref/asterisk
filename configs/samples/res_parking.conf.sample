@@ -112,7 +112,7 @@ context => parkedcalls          ; Which context parked calls and the default par
                                 ; The default value is 30 seconds.
 
 ;comebackcontext = parkedcallstimeout
-                                ; The context a timed out call will return to if comebcktoorigin=no.
+                                ; The context a timed out call will return to if comebacktoorigin=no.
                                 ; The default value is 'parkedcallstimeout'.
 
 ;courtesytone = beep            ; Sound file to play to when someone picks up a parked call
