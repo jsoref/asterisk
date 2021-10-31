@@ -3567,7 +3567,7 @@ static int handle_response_ciev(struct mbl_pvt *pvt, char *buf)
 			if (pvt->owner) {
 				ast_debug(1, "[%s] hanging up owner\n", pvt->id);
 				if (mbl_queue_hangup(pvt)) {
-					ast_log(LOG_ERROR, "[%s] error queueing hangup, disconnectiong...\n", pvt->id);
+					ast_log(LOG_ERROR, "[%s] error queueing hangup, disconnecting...\n", pvt->id);
 					return -1;
 				}
 			}
@@ -3601,7 +3601,7 @@ static int handle_response_ciev(struct mbl_pvt *pvt, char *buf)
 						handle_response_busy(pvt);
 					}
 					if (mbl_queue_hangup(pvt)) {
-						ast_log(LOG_ERROR, "[%s] error queueing hangup, disconnectiong...\n", pvt->id);
+						ast_log(LOG_ERROR, "[%s] error queueing hangup, disconnecting...\n", pvt->id);
 						return -1;
 					}
 				}
