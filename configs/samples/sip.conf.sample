@@ -244,7 +244,7 @@ tcpbindaddr=0.0.0.0             ; IP address for TCP server to bind to (0.0.0.0 
                                 ; to connect at any given time. (default: 100)
 
 ;websocket_enabled = true       ; Set to false to prevent chan_sip from listening to websockets.  This
-                                ; is neeeded when using chan_sip and res_pjsip_transport_websockets on
+                                ; is needed when using chan_sip and res_pjsip_transport_websockets on
                                 ; the same system.
 
 ;websocket_write_timeout = 100  ; Default write timeout to set on websocket transports.
