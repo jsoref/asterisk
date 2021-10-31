@@ -1889,7 +1889,7 @@ struct ast_sip_subscription *ast_sip_create_subscription(const struct ast_sip_su
 
 	contact = ast_sip_location_retrieve_contact_from_aor_list(endpoint->aors);
 	if (!contact || ast_strlen_zero(contact->uri)) {
-		ast_log(LOG_WARNING, "No contacts configured for endpoint %s. Unable to create SIP subsription\n",
+		ast_log(LOG_WARNING, "No contacts configured for endpoint %s. Unable to create SIP subscription\n",
 				ast_sorcery_object_get_id(endpoint));
 		ao2_ref(sub_tree, -1);
 		ao2_cleanup(contact);

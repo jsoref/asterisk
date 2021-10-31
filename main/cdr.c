@@ -4309,7 +4309,7 @@ static void destroy_subscriptions(void)
 }
 
 /*!
- * \brief Create the Stasis subcriptions for CDRs
+ * \brief Create the Stasis subscriptions for CDRs
  */
 static int create_subscriptions(void)
 {

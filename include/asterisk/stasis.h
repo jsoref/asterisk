@@ -598,7 +598,7 @@ void stasis_publish(struct stasis_topic *topic, struct stasis_message *message);
  * The caller of stasis_publish_sync will block until the specified
  * subscriber completes handling of the message.
  *
- * All other subscribers to the topic the \ref stasis_subpscription
+ * All other subscribers to the topic the \ref stasis_subscription
  * is subscribed to are also delivered the message; this delivery however
  * happens asynchronously.
  *

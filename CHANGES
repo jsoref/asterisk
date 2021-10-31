@@ -1576,7 +1576,7 @@ res_pjsip
    is not a hostname, the saved transport will be used and the 'x-ast-txp'
    parameter stripped from the outgoing packet.  To facilitate recreation of
    subscriptions on asterisk restart, a new column 'contact_uri' needed to be
-   added to the ps_subcsription_persistence table.  Since new columns were
+   added to the ps_subscription_persistence table.  Since new columns were
    added to both transport and subscription_persistence, an alembic upgrade
    should be run to bring the database tables up to date.
 
