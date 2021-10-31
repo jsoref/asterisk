@@ -1255,7 +1255,7 @@
                     ; taskprocessor queue.
                     ; If the taskprocessor queue size reached high water level,
                     ; the alert is triggered.
-                    ; If the alert is set the pjsip distibutor stops processing incoming
+                    ; If the alert is set the pjsip distributor stops processing incoming
                     ; requests until the alert is cleared.
                     ; The alert is cleared when taskprocessor queue size drops to the
                     ; low water clear level.

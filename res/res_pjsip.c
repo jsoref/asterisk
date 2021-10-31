@@ -2378,7 +2378,7 @@
 					<description><para>
 						This option specifies the trigger the distributor will use for
 						detecting taskprocessor overloads.  When it detects an overload condition,
-						the distrubutor will stop accepting new requests until the overload is
+						the distributor will stop accepting new requests until the overload is
 						cleared.
 						</para>
 						<enumlist>
