@@ -1086,7 +1086,7 @@ static struct ast_config *realtime_multi_ldap(const char *basedn,
 
 }
 
-/*! \brief Sorting alogrithm for qsort to find the order of the variables \a a and \a b
+/*! \brief Sorting algorithm for qsort to find the order of the variables \a a and \a b
  * \param a pointer to category_and_metric struct
  * \param b pointer to category_and_metric struct
  *

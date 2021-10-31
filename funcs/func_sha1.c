@@ -44,7 +44,7 @@
 			</parameter>
 		</syntax>
 		<description>
-			<para>Generate a SHA1 digest via the SHA1 algorythm.</para>
+			<para>Generate a SHA1 digest via the SHA1 algorithm.</para>
 			<para>Example:  Set(sha1hash=${SHA1(junky)})</para>
 			<para>Sets the asterisk variable sha1hash to the string <literal>60fa5675b9303eb62f99a9cd47f9f5837d18f9a0</literal>
 			which is known as his hash</para>
