@@ -169,7 +169,7 @@
 					<synopsis>Default parking lot for this endpoint.</synopsis>
 				</configOption>
 				<configOption name="accountcode">
-					<synopsis>Accout code for CDR purposes</synopsis>
+					<synopsis>Account code for CDR purposes</synopsis>
 				</configOption>
 				<configOption name="allow">
 					<synopsis>Codecs to allow</synopsis>
