@@ -720,7 +720,7 @@ struct dahdi_pvt {
 #endif	/* defined(HAVE_OPENR2) */
 	/*! \brief DTMF digit in progress.  0 when no digit in progress. */
 	char begindigit;
-	/*! \brief TRUE if confrence is muted. */
+	/*! \brief TRUE if conference is muted. */
 	int muting;
 	void *sig_pvt;
 	struct ast_cc_config_params *cc_params;

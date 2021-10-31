@@ -3415,7 +3415,7 @@ static int conf_run(struct ast_channel *chan, struct ast_conference *conf, struc
 
 	if (rt_schedule && conf->maxusers) {
 		if (conf->users >= conf->maxusers) {
-			/* Sorry, but this confernce has reached the participant limit! */
+			/* Sorry, but this conference has reached the participant limit! */
 			ast_mutex_unlock(&conf->playlock);
 			if (!ast_streamfile(chan, "conf-full", ast_channel_language(chan)))
 				ast_waitstream(chan, "");
