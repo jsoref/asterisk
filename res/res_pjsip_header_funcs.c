@@ -441,7 +441,7 @@ static int read_header(void *obj)
 
 /*!
  * \internal
- * \brief Implements PJSIP_HEADER 'add' by inserting the specified header into thge list.
+ * \brief Implements PJSIP_HEADER 'add' by inserting the specified header into the list.
  *
  * Retrieve the header_datastore from the session or create one if it doesn't exist.
  * Create and initialize the list if needed.
