@@ -3607,7 +3607,7 @@ static int xmpp_client_reconnect(struct ast_xmpp_client *client)
 		return -1;
 	}
 
-	/* Depending on the configuration of the client we eiher jump to requesting TLS, or authenticating */
+	/* Depending on the configuration of the client we either jump to requesting TLS, or authenticating */
 	xmpp_client_change_state(client, (ast_test_flag(&clientcfg->flags, XMPP_USETLS) ? XMPP_STATE_REQUEST_TLS : XMPP_STATE_AUTHENTICATE));
 
 	return 0;
