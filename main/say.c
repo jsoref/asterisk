@@ -1014,7 +1014,7 @@ static int ast_say_number_full_cs(struct ast_channel *chan, int num, const char 
 				if (res)
 					return res;
 			}
-			if ( left >= 5 ) { /* >= 5 have the same declesion */
+			if ( left >= 5 ) { /* >= 5 have the same declension */
 				snprintf(fn, sizeof(fn), "digits/5_E%d", length - 1);
 			} else if ( left >= 2 && left <= 4 ) {
 				snprintf(fn, sizeof(fn), "digits/2-4_E%d", length - 1);
