@@ -68,7 +68,7 @@ typedef enum OOStackCmdID {
    OO_CMD_MANUALPROGRESS,    /*!< Send progress */
    OO_CMD_STOPMONITOR,       /*!< Stop the event monitor */
    OO_CMD_REQMODE,	     /*!< Request new mode */
-   OO_CMD_SETANI,	     /*! <Set conncted info */
+   OO_CMD_SETANI,	     /*! <Set connected info */
    OO_CMD_UPDLC		     /*! <Update Logical channels */
 
 } OOStackCmdID;
