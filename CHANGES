@@ -6213,7 +6213,7 @@ Channel Event Logging
    the AMI, but it differs from the AMI in that it logs to db backends much
    like CDR does; is based on the event subsystem introduced by Russell, and
    can share in all its benefits; allows multiple backends to operate like CDR;
-   is specialized to event data that would be of concern to billing sytems,
+   is specialized to event data that would be of concern to billing systems,
    like CDR. Backends for logging and accounting calls have been produced,
    but a new CDR backend is still in development.
 
