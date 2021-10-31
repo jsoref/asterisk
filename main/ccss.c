@@ -606,7 +606,7 @@ static enum ast_device_state ccss_device_state(const char *device_name)
 	match_flags = MATCH_NO_REQUEST;
 	core_instance = ao2_t_callback_data(cc_core_instances, 0, match_agent,
 		(char *) device_name, &match_flags,
-		"Find Core Instance for ccss_device_state reqeust.");
+		"Find Core Instance for ccss_device_state request.");
 	if (!core_instance) {
 		ast_log_dynamic_level(cc_logger_level,
 			"Couldn't find a core instance for caller %s\n", device_name);

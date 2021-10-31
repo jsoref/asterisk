@@ -1205,7 +1205,7 @@
 ;disable_multi_domain=no
             ; Disable Multi Domain support.
             ; If disabled it can improve realtime performance by reducing
-            ; number of database requsts
+            ; number of database requests
             ; (default: "no")
 ;endpoint_identifier_order=ip,username,anonymous
             ; The order by which endpoint identifiers are given priority.

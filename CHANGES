@@ -2337,7 +2337,7 @@ res_pjsip
 ------------------
  * Added new global option (disable_multi_domain) to pjsip.
    Disabling Multi Domain can improve realtime performance by reducing
-   number of database requsts.
+   number of database requests.
 
 chan_pjsip
 ------------------

@@ -53,7 +53,7 @@ struct ast_ari_response;
  * \param ser TCP/TLS session object
  * \param get_params GET parameters from the HTTP request.
  * \param path_vars Path variables from any wildcard path segments.
- * \param headers HTTP headers from the HTTP requiest.
+ * \param headers HTTP headers from the HTTP request.
  * \param[out] response The RESTful response.
  */
 typedef void (*stasis_rest_callback)(
