@@ -277,7 +277,7 @@
 			up by another user.</para>
 			<para>This application will return to the dialplan if the queue does not exist, or
 			any of the join options cause the caller to not enter the queue.</para>
-			<para>This application does not automatically answer and should be preceeded
+			<para>This application does not automatically answer and should be preceded
 			by an application such as Answer(), Progress(), or Ringing().</para>
 			<para>This application sets the following channel variables upon completion:</para>
 			<variablelist>

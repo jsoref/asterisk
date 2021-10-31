@@ -218,7 +218,7 @@ int ast_callerid_parse(char *instr, char **name, char **location);
 /*!
  * \brief Generate a CAS (CPE Alert Signal) tone for 'n' samples
  * \param outbuf Allocated buffer for data.  Must be at least 2400 bytes unless no SAS is desired
- * \param sas Non-zero if CAS should be preceeded by SAS
+ * \param sas Non-zero if CAS should be preceded by SAS
  * \param len How many samples to generate.
  * \param codec Which codec (AST_FORMAT_ALAW or AST_FORMAT_ULAW)
  * \return Returns -1 on error (if len is less than 2400), 0 on success.

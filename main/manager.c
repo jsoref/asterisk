@@ -1261,7 +1261,7 @@
 				<para>This filter option is used to whitelist or blacklist events per user to be
 				reported with regular expressions and are allowed if both the regex matches
 				and the user has read access as defined in manager.conf. Filters are assumed to be for whitelisting
-				unless preceeded by an exclamation point, which marks it as being black.
+				unless preceded by an exclamation point, which marks it as being black.
 				Evaluation of the filters is as follows:</para>
 				<para>- If no filters are configured all events are reported as normal.</para>
 				<para>- If there are white filters only: implied black all filter processed first, then white filters.</para>
