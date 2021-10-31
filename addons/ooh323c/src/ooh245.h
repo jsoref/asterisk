@@ -271,7 +271,7 @@ EXTERN int ooOnReceivedUserInputIndication
    (OOH323CallData *call, H245UserInputIndication *indication);
 
 /**
- * This function is called on receiving a TreminalCapabilitySetAck message.
+ * This function is called on receiving a TerminalCapabilitySetAck message.
  * If the MasterSlaveDetermination process is also over, this function
  * initiates the process of opening logical channels.
  * @param call          Pointer to call for which TCSAck is received.
