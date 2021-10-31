@@ -10991,7 +10991,7 @@ static char *handle_queue_set_member_ringinuse(struct ast_cli_entry *e, int cmd,
 		return CLI_SHOWUSAGE;
 	}
 
-	/* Set the queue name if applicale */
+	/* Set the queue name if applicable */
 	if (a->argc == 8) {
 		queuename = a->argv[7];
 	}
