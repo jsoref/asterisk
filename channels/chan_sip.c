@@ -9379,7 +9379,7 @@ static void forked_invite_init(struct sip_request *req, const char *new_theirtag
 	transmit_request(p, SIP_ACK, p->ocseq, XMIT_UNRELIABLE, TRUE);
 	transmit_request(p, SIP_BYE, 0, XMIT_RELIABLE, TRUE);
 
-	pvt_set_needdestroy(p, "forked request"); /* this dialog will terminate once the BYE is responed to or times out. */
+	pvt_set_needdestroy(p, "forked request"); /* this dialog will terminate once the BYE is responded to or times out. */
 	sip_pvt_unlock(p);
 	dialog_unref(p, "setup forked invite termination");
 }
