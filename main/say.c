@@ -1952,7 +1952,7 @@ static int ast_say_number_full_it(struct ast_channel *chan, int num, const char 
 		Like english, numbers up to 20 are a single 'word', and others
 		compound, but with exceptions.
 		For example 21 is not twenty-one, but there is a single word in 'it'.
-		Idem for 28 (ie when a the 2nd part of a compund number
+		Idem for 28 (ie when a the 2nd part of a compound number
 		starts with a vowel)
 
 		There are exceptions also for hundred, thousand and million.
