@@ -2559,7 +2559,7 @@ void ast_sip_cleanup_auths(struct ast_sip_auth *auths[], size_t num_auths);
  * number of auth ids supplied if auth objects couldn't be found for
  * some of them.
  *
- * \NOTE Since the ref count on all auith objects returned has been
+ * \NOTE Since the ref count on all auth objects returned has been
  * bumped, you must call ast_sip_cleanup_auth_objects_vector() to decrement
  * the ref count on all of the auth objects in the vector,
  * then call AST_VECTOR_FREE() on the vector itself.
