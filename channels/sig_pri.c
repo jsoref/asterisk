@@ -8604,7 +8604,7 @@ int sig_pri_indicate(struct sig_pri_chan *p, struct ast_channel *chan, int condi
 					}
 					/*
 					 * If hangup was delayed for this AOC-E msg, waiting_for_aoc
-					 * will be set.  A hangup is already occuring via a timeout during
+					 * will be set.  A hangup is already occurring via a timeout during
 					 * this delay.  Instead of waiting for that timeout to occur, go ahead
 					 * and initiate the hangup since the delay is no longer necessary.
 					 */
