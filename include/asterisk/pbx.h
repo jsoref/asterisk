@@ -1013,7 +1013,7 @@ int ast_context_remove_extension_callerid2(struct ast_context *con, const char *
 /*!
  * \brief Add an ignorepat
  *
- * \param context which context to add the ignorpattern to
+ * \param context which context to add the ignorepattern to
  * \param ignorepat ignorepattern to set up for the extension
  * \param registrar registrar of the ignore pattern
  *
