@@ -63,7 +63,7 @@ bindaddr = 0.0.0.0
 		; Also accessible through the "manager debug" CLI command.
 
 ; authtimeout specifies the maximum number of seconds a client has to
-; authenticate.  If the client does not authenticate beofre this timeout
+; authenticate.  If the client does not authenticate before this timeout
 ; expires, the client will be disconnected. (default: 30 seconds)
 
 ;authtimeout = 30

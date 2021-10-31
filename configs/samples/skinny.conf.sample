@@ -11,7 +11,7 @@ keepalive=120
 
 ;authtimeout = 30       ; authtimeout specifies the maximum number of seconds a
 			; client has to authenticate.  If the client does not
-			; authenticate beofre this timeout expires, the client
+			; authenticate before this timeout expires, the client
                         ; will be disconnected.  (default: 30 seconds)
 
 ;authlimit = 50         ; authlimit specifies the maximum number of

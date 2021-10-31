@@ -235,7 +235,7 @@ tcpbindaddr=0.0.0.0             ; IP address for TCP server to bind to (0.0.0.0 
 
 ;tcpauthtimeout = 30            ; tcpauthtimeout specifies the maximum number
 				; of seconds a client has to authenticate.  If
-				; the client does not authenticate beofre this
+				; the client does not authenticate before this
 				; timeout expires, the client will be
                                 ; disconnected. (default: 30 seconds)
 
