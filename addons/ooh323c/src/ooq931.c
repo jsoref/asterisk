@@ -1210,7 +1210,7 @@ int ooSetFastStartResponse(OOH323CallData *pCall, Q931Message *pQ931msg,
          pChannel = ooFindLogicalChannelByLogicalChannelNo
                       (pCall, olc->forwardLogicalChannelNumber);
 
-         /* start receive and tramsmit channel listening */
+         /* start receive and transmit channel listening */
          if(dir & OORX)
          {
             strcpy(pChannel->remoteIP, remoteMediaControlIP);
