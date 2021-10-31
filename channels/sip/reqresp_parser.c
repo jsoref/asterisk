@@ -577,7 +577,7 @@ AST_TEST_DEFINE(sip_parse_uri_test)
 			!ast_strlen_zero(pass)      ||
 			strcmp(hostport, "host")    ||
 			strcmp(transport, "tcp")) {
-		ast_test_status_update(test, "Test 2: uri with addtion of tcp transport failed. \n");
+		ast_test_status_update(test, "Test 2: uri with addition of tcp transport failed. \n");
 		res = AST_TEST_FAIL;
 	}
 

@@ -1328,7 +1328,7 @@ ConfBridge
    or by the dialplan function CONFBRIDGE(bridge,language)=en.
 chan_sip - Clarify The "sip show peers" Forcerport Column And Add Comedia
  - Under the "Forcerport" column, the "N" used to mean NAT (i.e. Yes).  With
-   the additon of auto_* NAT settings, the meaning changed and there was a
+   the addition of auto_* NAT settings, the meaning changed and there was a
    certain combination of letters added to indicate the current setting. The
    combination of using "Y", "N", "A" or "a", can be confusing.  Therefore, we
    now display clearly what the current Forcerport setting is: "Yes", "No",

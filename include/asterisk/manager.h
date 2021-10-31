@@ -327,7 +327,7 @@ void astman_send_listack(struct mansession *s, const struct message *m, char *ms
  * the AMI list completion event.
  *
  * \note Between calling astman_send_list_complete_start() and
- * astman_send_list_complete_end() you can add additonal headers
+ * astman_send_list_complete_end() you can add additional headers
  * using astman_append().
  *
  * \return Nothing
@@ -344,7 +344,7 @@ void astman_send_list_complete_start(struct mansession *s, const struct message 
  * the AMI list completion event.
  *
  * \note Between calling astman_send_list_complete_start() and
- * astman_send_list_complete_end() you can add additonal headers
+ * astman_send_list_complete_end() you can add additional headers
  * using astman_append().
  *
  * \return Nothing
