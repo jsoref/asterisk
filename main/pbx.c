@@ -1914,7 +1914,7 @@ static int ext_cmp_exten(const char *left, const char *right)
  *		and MATCHMORE. Only allowed at the end of a pattern.
  *		In the core routine, ! causes a match with a return code of 2.
  *		In turn, depending on the search mode: (XXX check if it is implemented)
- *		- E_MATCH retuns 1 (does match)
+ *		- E_MATCH returns 1 (does match)
  *		- E_MATCHMORE returns 0 (no match)
  *		- E_CANMATCH returns 1 (does match)
  *
