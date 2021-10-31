@@ -139,7 +139,7 @@ AST_TEST_DEFINE(default_taskprocessor)
 	case TEST_INIT:
 		info->name = "default_taskprocessor";
 		info->category = "/main/taskprocessor/";
-		info->summary = "Test of default taskproccesor";
+		info->summary = "Test of default taskprocessor";
 		info->description =
 			"Ensures that a queued task gets executed.";
 		return AST_TEST_NOT_RUN;
@@ -363,7 +363,7 @@ AST_TEST_DEFINE(default_taskprocessor_load)
 	case TEST_INIT:
 		info->name = "default_taskprocessor_load";
 		info->category = "/main/taskprocessor/";
-		info->summary = "Load test of default taskproccesor";
+		info->summary = "Load test of default taskprocessor";
 		info->description =
 			"Ensure that a large number of queued tasks are executed in the proper order.";
 		return AST_TEST_NOT_RUN;
@@ -563,7 +563,7 @@ AST_TEST_DEFINE(taskprocessor_listener)
 	case TEST_INIT:
 		info->name = "taskprocessor_listener";
 		info->category = "/main/taskprocessor/";
-		info->summary = "Test of taskproccesor listeners";
+		info->summary = "Test of taskprocessor listeners";
 		info->description =
 			"Ensures that listener callbacks are called when expected.";
 		return AST_TEST_NOT_RUN;
@@ -760,7 +760,7 @@ AST_TEST_DEFINE(taskprocessor_shutdown)
 	case TEST_INIT:
 		info->name = "taskprocessor_shutdown";
 		info->category = "/main/taskprocessor/";
-		info->summary = "Test of taskproccesor shutdown sequence";
+		info->summary = "Test of taskprocessor shutdown sequence";
 		info->description =
 			"Ensures that all tasks run to completion after the taskprocessor has been unref'ed.";
 		return AST_TEST_NOT_RUN;
