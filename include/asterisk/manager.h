@@ -353,7 +353,7 @@ void astman_send_list_complete_end(struct mansession *s);
 
 void __attribute__((format(printf, 2, 3))) astman_append(struct mansession *s, const char *fmt, ...);
 
-/*! \brief Determinie if a manager session ident is authenticated */
+/*! \brief Determine if a manager session ident is authenticated */
 int astman_is_authed(uint32_t ident);
 
 /*!
