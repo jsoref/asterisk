@@ -1486,7 +1486,7 @@ static int montype_default;
 /*! \brief queues.conf [general] option */
 static int shared_lastcall;
 
-/*! \brief queuesrules.conf [general] option */
+/*! \brief queuerules.conf [general] option */
 static int realtime_rules;
 
 /*! \brief Subscription to device state change messages */
