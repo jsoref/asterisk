@@ -1273,7 +1273,7 @@
 		<description>
 			<para>The filters added are only used for the current session.
 			Once the connection is closed the filters are removed.</para>
-			<para>This comand requires the system permission because
+			<para>This command requires the system permission because
 			this command can be used to create filters that may bypass
 			filters defined in manager.conf</para>
 		</description>

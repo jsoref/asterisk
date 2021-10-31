@@ -209,10 +209,10 @@ sub close_all
 
 sub send_command_to_manager
 {
-    my $comando = shift;
+    my $command = shift;
     if (defined $p)
     {
-        my @lineas = split("\r\n", $comando);
+        my @lineas = split("\r\n", $command);
         foreach my $linea (@lineas)
         {
             syswrite($p, "$linea\r\n");
