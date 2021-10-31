@@ -843,7 +843,7 @@ static char *handle_cli_dialplan_save(struct ast_cli_entry *e, int cmd, struct a
 
 	if (ast_mutex_lock(&save_dialplan_lock)) {
 		ast_cli(a->fd,
-			"Failed to lock dialplan saving (another proccess saving?)\n");
+			"Failed to lock dialplan saving (another process saving?)\n");
 		return CLI_FAILURE;
 	}
 	/* XXX the code here is quite loose, a pathname with .conf in it
