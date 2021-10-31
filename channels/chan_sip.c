@@ -7062,7 +7062,7 @@ int hangup_sip2cause(int cause)
 			return AST_CAUSE_BEARERCAPABILITY_NOTAVAIL;
 		default:
 			if (cause < 500 && cause >= 400) {
-				/* 4xx class error that is unknown - someting wrong with our request */
+				/* 4xx class error that is unknown - something wrong with our request */
 				return AST_CAUSE_INTERWORKING;
 			} else if (cause < 600 && cause >= 500) {
 				/* 5xx class error - problem in the remote end */
@@ -26590,7 +26590,7 @@ static int handle_request_invite(struct sip_pvt *p, struct sip_request *req, str
 		}
 
 		if (!error && ast_strlen_zero(pickup.exten) && !replaces_chan) {
-			/* Oops, someting wrong anyway, no owner, no call */
+			/* Oops, something wrong anyway, no owner, no call */
 			ast_log(LOG_NOTICE, "Supervised transfer attempted to replace non-existing call id (%s)!\n", replace_id);
 			/* Check for better return code */
 			transmit_response_reliable(p, "481 Call Leg Does Not Exist (Replace)", req);
