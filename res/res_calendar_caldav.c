@@ -339,7 +339,7 @@ static time_t icalfloat_to_timet(icaltimetype time)
 }
 
 /* span->start & span->end may be dates or floating times which have no timezone,
- * which would mean that they should apply to the local timezone for all recepients.
+ * which would mean that they should apply to the local timezone for all recipients.
  * For example, if a meeting was set for 1PM-2PM floating time, people in different time
  * zones would not be scheduled at the same local times.  Dates are often treated as
  * floating times, so all day events will need to be converted--so we can trust the
