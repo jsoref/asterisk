@@ -3587,7 +3587,7 @@ static struct ast_frame *__ast_read(struct ast_channel *chan, int dropaudio, int
 		switch (res) {
 		case AST_TIMING_EVENT_EXPIRED:
 			if (ast_timer_ack(ast_channel_timer(chan), 1) < 0) {
-				ast_log(LOG_ERROR, "Failed to acknoweldge timer in ast_read\n");
+				ast_log(LOG_ERROR, "Failed to acknowledge timer in ast_read\n");
 				goto done;
 			}
 
