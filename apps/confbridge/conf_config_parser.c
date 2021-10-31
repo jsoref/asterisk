@@ -612,7 +612,7 @@
 						<enum name="playback(filename&amp;filename2&amp;...)"><para>
 							<literal>playback</literal> will play back an audio file to a channel
 							and then immediately return to the conference.
-							This file can not be interupted by DTMF.
+							This file can not be interrupted by DTMF.
 							Multiple files can be chained together using the
 							<literal>&amp;</literal> character.</para></enum>
 						<enum name="playback_and_continue(filename&amp;filename2&amp;...)"><para>

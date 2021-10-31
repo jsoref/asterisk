@@ -345,7 +345,7 @@ type=bridge
 ; playback(<name of audio file>&<name of audio file>)
                                        ; Playback will play back an audio file to a channel
                                        ; and then immediately return to the conference.
-                                       ; This file can not be interupted by DTMF.
+                                       ; This file can not be interrupted by DTMF.
                                        ; Mutliple files can be chained together using the
                                        ; '&' character.
 ; playback_and_continue(<name of playback prompt>&<name of playback prompt>)
