@@ -22,7 +22,7 @@
  * \author\verbatim David M. Lee, II <dlee@digium.com> \endverbatim
  *
  * Inspired by the original hashtest2.c by Steve Murphy <murf@digium.com>.  This test runs
- * several threads manipulatings a concurrent astobj2 container to see if they maintain
+ * several threads manipulating a concurrent astobj2 container to see if they maintain
  * consistency. While the tests attempt to check consistency and error normally, threading
  * errors often result in segfaults.
  * \ingroup tests
