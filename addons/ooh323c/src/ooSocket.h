@@ -328,7 +328,7 @@ EXTERN int ooSocketSendTo(OOSOCKET socket, const ASN1OCTET* pdata,
  *                     whether write would block on them.
  * @param exceptfds    The descriptors listed in exceptfds will be watched for
  *                     exceptions.
- * @param timeout      Upper bound on amout of time elapsed before select
+ * @param timeout      Upper bound on amount of time elapsed before select
  *                     returns.
  * @return             Completion status of operation: 0 (ASN_OK) = success,
  *                     negative return value is error.

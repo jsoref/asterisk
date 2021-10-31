@@ -83,11 +83,11 @@ char connected=1; /* connection state */
 
 int connect_to_host(char* host, int port); /* connect to a given host (name or IP) and given port number in nonblocking mode returning socket descriptor*/
 
-void read_full(int file, char* buffer, int num); /* read EXACTLY "num" ammount of bytes from "file" descriptor to "buffer"*/
-int read_some(int file, char* buffer, int size); /* read AT MOST "size" ammount of bytes */
+void read_full(int file, char* buffer, int num); /* read EXACTLY "num" amount of bytes from "file" descriptor to "buffer"*/
+int read_some(int file, char* buffer, int size); /* read AT MOST "size" amount of bytes */
 
-void write_buf(int file, char* buffer, int num); /* write "num" ammount of bytes to "file" descriptor and buffer the surplus if the write would block */
-int write_amap(int file, char* buffer, int num); /*write AT MOST "num" ammount of bytes and return ammount that was written*/
+void write_buf(int file, char* buffer, int num); /* write "num" amount of bytes to "file" descriptor and buffer the surplus if the write would block */
+int write_amap(int file, char* buffer, int num); /*write AT MOST "num" amount of bytes and return amount that was written*/
 
 void setnonblocking(int desc); /*sets the socket non-blocking; for polling */
 
