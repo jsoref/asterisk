@@ -352,7 +352,7 @@ struct ast_module_info {
 	const char *description;
 
 	/*!
-	 * This holds the ASTERISK_GPL_KEY, signifiying that you agree to the terms of
+	 * This holds the ASTERISK_GPL_KEY, signifying that you agree to the terms of
 	 * the Asterisk license as stated in the ASTERISK_GPL_KEY.  Your module will not
 	 * load if it does not return the EXACT key string.
 	 */
