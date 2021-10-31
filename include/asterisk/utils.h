@@ -676,7 +676,7 @@ struct ast_http_digest {
 /*!
  * \brief Parse digest authorization header.
  * \return Returns -1 if we have no auth or something wrong with digest.
- * \note This function may be used for Digest request and responce header.
+ * \note This function may be used for Digest request and response header.
  * request arg is set to nonzero, if we parse Digest Request.
  * pedantic arg can be set to nonzero if we need to do addition Digest check.
  */

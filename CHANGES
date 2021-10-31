@@ -1530,7 +1530,7 @@ pbx_spool
 
 AMI
 ------------------
- * The 'PJSIPShowEndpoint' command's respone event of 'IdentifyDetail' now
+ * The 'PJSIPShowEndpoint' command's response event of 'IdentifyDetail' now
    contains a new optional parameter, 'MatchHeader', mapping to the new
    configuration option 'match_header' for the corresponding 'identify' object.
    It should be noted that since 'match_header' takes in a key: value pair, the

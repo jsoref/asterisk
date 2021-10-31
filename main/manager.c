@@ -1006,7 +1006,7 @@
 			<syntax>
 				<xi:include xpointer="xpointer(/docs/manager[@name='Login']/syntax/parameter[@name='ActionID'])" />
 				<parameter name="EventList">
-					<para>Conveys the status of the command reponse list</para>
+					<para>Conveys the status of the command response list</para>
 				</parameter>
 				<parameter name="ListItems">
 					<para>The total number of list items produced</para>

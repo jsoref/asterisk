@@ -29139,7 +29139,7 @@ static int handle_incoming(struct sip_pvt *p, struct sip_request *req, struct as
 			ast_log(LOG_WARNING, "Invalid SIP response code: '%d'\n", respid);
 			return 0;
 		}
-		/* RFC 3261 - 8.1.3.3 If more than one Via header field value is present in a reponse
+		/* RFC 3261 - 8.1.3.3 If more than one Via header field value is present in a response
 		 * the UAC SHOULD discard the message. This is not perfect, as it will not catch multiple
 		 * headers joined with a comma. Fixing that would pretty much involve writing a new parser */
 		if (!ast_strlen_zero(__get_header(req, "via", &via_pos))) {
