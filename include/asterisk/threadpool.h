@@ -246,7 +246,7 @@ struct ast_taskprocessor *ast_threadpool_serializer_get_current(void);
  *
  * While it guarantees that each task will complete before executing the next,
  * there is no guarantee as to which thread from the \c pool individual tasks
- * will execute. This normally only matters if your code relys on thread
+ * will execute. This normally only matters if your code relies on thread
  * specific information, such as thread locals.
  *
  * Use ast_taskprocessor_unreference() to dispose of the returned \ref
@@ -274,7 +274,7 @@ struct ast_taskprocessor *ast_threadpool_serializer(const char *name, struct ast
  *
  * While it guarantees that each task will complete before executing the next,
  * there is no guarantee as to which thread from the \c pool individual tasks
- * will execute. This normally only matters if your code relys on thread
+ * will execute. This normally only matters if your code relies on thread
  * specific information, such as thread locals.
  *
  * Use ast_taskprocessor_unreference() to dispose of the returned \ref
