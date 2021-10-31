@@ -110,7 +110,7 @@ static const char app[] = "ExternalIVR";
 #define EIVR_CMD_SQUE 'S' /* (re)set prompt queue */
 #define EIVR_CMD_ANS  'T' /* answer channel */
 #define EIVR_CMD_SVAR 'V' /* set channel varable(s) */
-#define EIVR_CMD_XIT  'X' /* exit **depricated** */
+#define EIVR_CMD_XIT  'X' /* exit **deprecated** */
 
 #define EXTERNALIVR_PORT 2949
 
@@ -844,7 +844,7 @@ static int eivr_comm(struct ast_channel *chan, struct ivr_localuser *u,
 				ast_chan_log(LOG_NOTICE, chan, "Log message from EIVR: %s\n", &input[2]);
 			} else if (input[0] == EIVR_CMD_XIT) {
 				ast_chan_log(LOG_NOTICE, chan, "Exiting: %s\n", &input[2]);
-				ast_chan_log(LOG_WARNING, chan, "e'X'it command is depricated, use 'E'xit instead\n");
+				ast_chan_log(LOG_WARNING, chan, "e'X'it command is deprecated, use 'E'xit instead\n");
 				res = 0;
 				break;
 			} else if (input[0] == EIVR_CMD_EXIT) {
