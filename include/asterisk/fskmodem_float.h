@@ -64,7 +64,7 @@ typedef struct {
    \return return value is as follows:
    \arg 0: Still looking for something...
    \arg 1: An output byte was received and stored in outbyte
-   \arg -1: An error occured in the transmission
+   \arg -1: An error occurred in the transmission
    He must be called with at least 80 bytes of buffer. */
 int fsk_serial(fsk_data *fskd, short *buffer, int *len, int *outbyte);
 

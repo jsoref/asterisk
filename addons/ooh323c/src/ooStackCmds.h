@@ -68,7 +68,7 @@ typedef enum OOStackCmdID {
    OO_CMD_MANUALPROGRESS,    /*!< Send progress */
    OO_CMD_STOPMONITOR,       /*!< Stop the event monitor */
    OO_CMD_REQMODE,	     /*!< Request new mode */
-   OO_CMD_SETANI,	     /*! <Set conncted info */
+   OO_CMD_SETANI,	     /*! <Set connected info */
    OO_CMD_UPDLC		     /*! <Update Logical channels */
 
 } OOStackCmdID;
@@ -134,7 +134,7 @@ EXTERN OOStkCmdStat ooForwardCall(const char* callToken, char *dest);
 
 /**
  * This function is used by an user application to terminate a call.
- * @param callToken   The uinque token for the call.
+ * @param callToken   The unique token for the call.
  * @param reason      Reason for hanging call.
  *
  * @return            Returns OOStkCmdStat value indication success or failure.
@@ -145,7 +145,7 @@ EXTERN OOStkCmdStat ooHangCall(const char* callToken, OOCallClearReason reason, 
  * This command function can be used by an user application to send a DTMF
  * sequence using H.245 UserInputIndication message.
  * @param callToken  Unique token for the call
- * @param alpha      Alphanumeric string reperesenting dtmf sequence
+ * @param alpha      Alphanumeric string representing dtmf sequence
  *
  * @return            Returns OOStkCmdStat value indication success or failure.
  */

@@ -101,7 +101,7 @@ static const char app[] = "ExternalIVR";
 #define EIVR_CMD_APND 'A' /* append to prompt queue */
 #define EIVR_CMD_DTMF 'D' /* send DTMF */
 #define EIVR_CMD_EXIT 'E' /* exit */
-#define EIVR_CMD_GET  'G' /* get channel varable(s) */
+#define EIVR_CMD_GET  'G' /* get channel variable(s) */
 #define EIVR_CMD_HGUP 'H' /* hangup */
 #define EIVR_CMD_IRPT 'I' /* interrupt */
 #define EIVR_CMD_LOG  'L' /* log message */
@@ -109,8 +109,8 @@ static const char app[] = "ExternalIVR";
 #define EIVR_CMD_PARM 'P' /* return supplied params */
 #define EIVR_CMD_SQUE 'S' /* (re)set prompt queue */
 #define EIVR_CMD_ANS  'T' /* answer channel */
-#define EIVR_CMD_SVAR 'V' /* set channel varable(s) */
-#define EIVR_CMD_XIT  'X' /* exit **depricated** */
+#define EIVR_CMD_SVAR 'V' /* set channel variable(s) */
+#define EIVR_CMD_XIT  'X' /* exit **deprecated** */
 
 #define EXTERNALIVR_PORT 2949
 
@@ -834,7 +834,7 @@ static int eivr_comm(struct ast_channel *chan, struct ivr_localuser *u,
 				}
 			} else if (input[0] == EIVR_CMD_GET) {
 				char response[2048];
-				ast_verb(4, "Retriving Variables from channel: %s\n", &input[2]);
+				ast_verb(4, "Retrieving Variables from channel: %s\n", &input[2]);
 				ast_eivr_getvariable(chan, &input[2], response, sizeof(response));
 				send_eivr_event(eivr_events, 'G', response, chan);
 			} else if (input[0] == EIVR_CMD_SVAR) {
@@ -844,7 +844,7 @@ static int eivr_comm(struct ast_channel *chan, struct ivr_localuser *u,
 				ast_chan_log(LOG_NOTICE, chan, "Log message from EIVR: %s\n", &input[2]);
 			} else if (input[0] == EIVR_CMD_XIT) {
 				ast_chan_log(LOG_NOTICE, chan, "Exiting: %s\n", &input[2]);
-				ast_chan_log(LOG_WARNING, chan, "e'X'it command is depricated, use 'E'xit instead\n");
+				ast_chan_log(LOG_WARNING, chan, "e'X'it command is deprecated, use 'E'xit instead\n");
 				res = 0;
 				break;
 			} else if (input[0] == EIVR_CMD_EXIT) {

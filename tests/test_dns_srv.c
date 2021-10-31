@@ -266,7 +266,7 @@ AST_TEST_DEFINE(srv_resolve_same_priority_different_weights)
 		{ 10, 20, 5060, "goose.down" },
 	};
 
-	int srv_record_occurence[2] = { 0, };
+	int srv_record_occurrence[2] = { 0, };
 	enum ast_test_result_state res = AST_TEST_PASS;
 	int count = 0;
 
@@ -322,14 +322,14 @@ AST_TEST_DEFINE(srv_resolve_same_priority_different_weights)
 				continue;
 			}
 
-			srv_record_occurence[i]++;
+			srv_record_occurrence[i]++;
 			break;
 		}
 
 		ast_dns_result_free(result);
 	}
 
-	if (srv_record_occurence[0] > srv_record_occurence[1]) {
+	if (srv_record_occurrence[0] > srv_record_occurrence[1]) {
 		ast_test_status_update(test, "SRV sorting resulted in lesser weight being returned more often\n");
 		res = AST_TEST_FAIL;
 	}
@@ -355,7 +355,7 @@ AST_TEST_DEFINE(srv_resolve_different_priorities_different_weights)
 	};
 
 	int srv_record_priority[4] = { 5, 5, 10, 10 };
-	int srv_record_occurence[4] = { 0, };
+	int srv_record_occurrence[4] = { 0, };
 	enum ast_test_result_state res = AST_TEST_PASS;
 	int count = 0;
 
@@ -421,19 +421,19 @@ AST_TEST_DEFINE(srv_resolve_different_priorities_different_weights)
 				continue;
 			}
 
-			srv_record_occurence[i]++;
+			srv_record_occurrence[i]++;
 			break;
 		}
 
 		ast_dns_result_free(result);
 	}
 
-	if (srv_record_occurence[0] > srv_record_occurence[1]) {
+	if (srv_record_occurrence[0] > srv_record_occurrence[1]) {
 		ast_test_status_update(test, "SRV sorting resulted in lesser weight being returned more often for priority 10\n");
 		res = AST_TEST_FAIL;
 	}
 
-	if (srv_record_occurence[3] > srv_record_occurence[2]) {
+	if (srv_record_occurrence[3] > srv_record_occurrence[2]) {
 		ast_test_status_update(test, "SRV sorting resulted in lesser weight being returned more often for priority 5\n");
 		res = AST_TEST_FAIL;
 	}

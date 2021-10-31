@@ -9046,7 +9046,7 @@ fi
 rm -f core conftest.err conftest.$ac_objext \
     conftest$ac_exeext conftest.$ac_ext
 	if test -z "${AST_C_COMPILER_FAMILY}"; then
-		as_fn_error $? "Compiler ${CC} not supported. Mminimum required gcc-4.3 / llvm-gcc-4.3 / clang-3.3 + libblocksruntime-dev" "$LINENO" 5
+		as_fn_error $? "Compiler ${CC} not supported. Minimum required gcc-4.3 / llvm-gcc-4.3 / clang-3.3 + libblocksruntime-dev" "$LINENO" 5
 	fi
 
 

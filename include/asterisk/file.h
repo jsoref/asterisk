@@ -200,7 +200,7 @@ int ast_waitstream_exten(struct ast_channel *c, const char *context);
  * \param breakon string of DTMF digits to break upon
  * \param forward DTMF digit to fast forward upon
  * \param rewind DTMF digit to rewind upon
- * \param ms How many miliseconds to skip forward/back
+ * \param ms How many milliseconds to skip forward/back
  * Begins playback of a stream...
  * Wait for a stream to stop or for any one of a given digit to arrive,
  * \retval 0 if the stream finishes.

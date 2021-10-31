@@ -234,7 +234,7 @@ struct video_out_desc {
  * The overall descriptor, with room for config info, video source and
  * received data descriptors, SDL info, etc.
  * This should be globally visible to all modules (grabber, vcodecs, gui)
- * and contain all configurtion info.
+ * and contain all configuration info.
  */
 struct video_desc {
 	char codec_name[64];        /* the codec we use */
@@ -364,7 +364,7 @@ static int grabber_open(struct video_out_desc *v)
  * \param fps = frame per seconds, for every device
  *
  * returns:
- * - NULL on falure
+ * - NULL on failure
  * - reference to the device buffer on success
  */
 static struct fbuf_t *grabber_read(struct video_device *dev, int fps)
@@ -896,7 +896,7 @@ static void *video_thread(void *arg)
 	 */
 	video_out_init(env);
 
-	/* Writes intial status of the sources. */
+	/* Writes initial status of the sources. */
 	if (env->gui) {
 		for (i = 0; i < env->out.device_num; i++) {
 			print_message(env->gui->thumb_bd_array[i].board,

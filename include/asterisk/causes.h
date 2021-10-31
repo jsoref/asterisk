@@ -39,10 +39,10 @@ specification:
 	- AST_CAUSE_UNALLOCATED                      1
 	- AST_CAUSE_NO_ROUTE_TRANSIT_NET             2
 	- AST_CAUSE_NO_ROUTE_DESTINATION             3
-	- AST_CAUSE_MISDIALLED_TRUNK_PREFIX          5
+	- AST_CAUSE_MISDIALED_TRUNK_PREFIX           5
 	- AST_CAUSE_CHANNEL_UNACCEPTABLE             6
 	- AST_CAUSE_CALL_AWARDED_DELIVERED           7
-	- AST_CAUSE_PRE_EMPTED                       8
+	- AST_CAUSE_PREEMPTED                        8
 	- AST_CAUSE_NUMBER_PORTED_NOT_HERE          14
 	- AST_CAUSE_NORMAL_CLEARING                 16
 	- AST_CAUSE_USER_BUSY                       17
@@ -97,10 +97,10 @@ For more information:
 #define AST_CAUSE_UNALLOCATED                    1
 #define AST_CAUSE_NO_ROUTE_TRANSIT_NET           2
 #define AST_CAUSE_NO_ROUTE_DESTINATION           3
-#define AST_CAUSE_MISDIALLED_TRUNK_PREFIX        5
+#define AST_CAUSE_MISDIALED_TRUNK_PREFIX         5
 #define AST_CAUSE_CHANNEL_UNACCEPTABLE           6
 #define AST_CAUSE_CALL_AWARDED_DELIVERED         7
-#define AST_CAUSE_PRE_EMPTED                     8
+#define AST_CAUSE_PREEMPTED                      8
 #define AST_CAUSE_NUMBER_PORTED_NOT_HERE        14
 #define AST_CAUSE_NORMAL_CLEARING               16
 #define AST_CAUSE_USER_BUSY                     17

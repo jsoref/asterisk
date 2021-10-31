@@ -170,7 +170,7 @@ static void bridge_sync_cleanup(struct bridge_sync *sync_struct)
  * completed.
  *
  * If a significant amount of time passes, then we will abandon
- * waiting for the synchrnous bridge action to complete.
+ * waiting for the synchronous bridge action to complete.
  *
  * This constant represents the number of milliseconds we will
  * wait for the bridge action to complete.
@@ -1334,7 +1334,7 @@ void ast_bridge_channel_playfile(struct ast_bridge_channel *bridge_channel, ast_
 
 	/*
 	 * It may be necessary to resume music on hold after we finish
-	 * playing the announcment.
+	 * playing the announcement.
 	 */
 	if (ast_test_flag(ast_channel_flags(bridge_channel->chan), AST_FLAG_MOH)) {
 		const char *latest_musicclass;
@@ -1506,7 +1506,7 @@ struct bridge_park {
 
 /*!
  * \internal
- * \brief Park a bridge_cahnnel
+ * \brief Park a bridge_channel
  */
 static void bridge_channel_park(struct ast_bridge_channel *bridge_channel, struct bridge_park *payload)
 {

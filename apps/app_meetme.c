@@ -1654,7 +1654,7 @@ static struct ast_conference *build_conf(const char *confno, const char *pin,
 	cnf->fd = open("/dev/dahdi/pseudo", O_RDWR);
 	if (cnf->fd < 0 || ioctl(cnf->fd, DAHDI_SETCONF, &dahdic)) {
 		if (test) {
-			/* if we are creating a conference for a unit test, it is not neccesary
+			/* if we are creating a conference for a unit test, it is not necessary
 			 * to open a pseudo channel, so, if we fail continue creating
 			 * the conference. */
 			ast_test_status_update(test, "Unable to open DAHDI pseudo device\n");
@@ -2202,7 +2202,7 @@ static const char *trunkstate2str(enum sla_trunk_state state)
 	S(SLA_TRUNK_STATE_ONHOLD)
 	S(SLA_TRUNK_STATE_ONHOLD_BYME)
 	}
-	return "Uknown State";
+	return "Unknown State";
 #undef S
 }
 
@@ -3415,7 +3415,7 @@ static int conf_run(struct ast_channel *chan, struct ast_conference *conf, struc
 
 	if (rt_schedule && conf->maxusers) {
 		if (conf->users >= conf->maxusers) {
-			/* Sorry, but this confernce has reached the participant limit! */
+			/* Sorry, but this conference has reached the participant limit! */
 			ast_mutex_unlock(&conf->playlock);
 			if (!ast_streamfile(chan, "conf-full", ast_channel_language(chan)))
 				ast_waitstream(chan, "");
@@ -5722,7 +5722,7 @@ static void *recordthread(void *args)
 		if (f->frametype == AST_FRAME_VOICE) {
 			ast_mutex_lock(&cnf->listenlock);
 			for (x = 0; x < AST_FRAME_BITS; x++) {
-				/* Free any translations that have occured */
+				/* Free any translations that have occurred */
 				if (cnf->transframe[x]) {
 					ast_frfree(cnf->transframe[x]);
 					cnf->transframe[x] = NULL;
@@ -6263,7 +6263,7 @@ static void sla_handle_dial_state_event(void)
 				/* This case happens in a bit of a race condition.  If two stations answer
 				 * the outbound call at the same time, the first one will get connected to
 				 * the trunk.  When the second one gets here, it will not see any trunks
-				 * ringing so we have no idea what to conect it to.  So, we just hang up
+				 * ringing so we have no idea what to connect it to.  So, we just hang up
 				 * on it. */
 				ast_debug(1, "Found no ringing trunk for station '%s' to answer!\n", ringing_station->station->name);
 				ast_dial_join(ringing_station->station->dial);

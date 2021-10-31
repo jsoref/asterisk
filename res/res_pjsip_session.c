@@ -4982,7 +4982,7 @@ static int add_sdp_streams(struct ast_sip_session_media *session_media,
 		/* if an already assigned handler reports a catastrophic error, fail */
 		res = handler->create_outgoing_sdp_stream(session, session_media, answer, remote, stream);
 		if (res < 0) {
-			SCOPE_EXIT_RTN_VALUE(-1, "Coudn't create sdp stream\n");
+			SCOPE_EXIT_RTN_VALUE(-1, "Couldn't create sdp stream\n");
 		}
 		SCOPE_EXIT_RTN_VALUE(0, "Had handler\n");
 	}
@@ -5000,7 +5000,7 @@ static int add_sdp_streams(struct ast_sip_session_media *session_media,
 		res = handler->create_outgoing_sdp_stream(session, session_media, answer, remote, stream);
 		if (res < 0) {
 			/* catastrophic error */
-			SCOPE_EXIT_RTN_VALUE(-1, "Coudn't create sdp stream\n");
+			SCOPE_EXIT_RTN_VALUE(-1, "Couldn't create sdp stream\n");
 		}
 		if (res > 0) {
 			/* Handled by this handler. Move to the next stream */
@@ -5369,7 +5369,7 @@ static void session_inv_on_media_update(pjsip_inv_session *inv, pj_status_t stat
 
 		/*
 		 * If following_fork is set, then this is probably the result of a
-		 * forked INVITE and SDP asnwers coming from the different fork UAS
+		 * forked INVITE and SDP answers coming from the different fork UAS
 		 * destinations.  In this case updated_sdp_answer will also be set.
 		 *
 		 * If only updated_sdp_answer is set, then this is the non-forking

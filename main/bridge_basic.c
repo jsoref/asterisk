@@ -89,7 +89,7 @@ static const struct ast_datastore_info dtmf_features_info = {
  * \since 12.0.0
  * \brief read a feature code character and set it on for the give feature_flags struct
  *
- * \param feature_flags flags being modifed
+ * \param feature_flags flags being modified
  * \param feature feature code provided - should be an uppercase letter
  *
  * \retval 0 if the feature was set successfully
@@ -341,7 +341,7 @@ struct bridge_basic_personality {
  * \param len Length of the given extension buffer.
  *
  * \retval 0 success
- * \retval non-zero failiure
+ * \retval non-zero failure
  */
 static int builtin_feature_get_exten(struct ast_channel *chan, const char *feature_name, char *buf, size_t len)
 {

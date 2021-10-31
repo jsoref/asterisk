@@ -103,7 +103,7 @@
 			<para>"Messages are processed as per text file message queues. smsq (a separate software) is a command to
 			generate message queues and send messages.</para>
 			<note><para>The protocol has tight delay bounds. Please use short frames and disable/keep short the
-			jitter buffer on the ATA to make sure that respones (ACK etc.) are received in time.</para></note>
+			jitter buffer on the ATA to make sure that responses (ACK etc.) are received in time.</para></note>
 		</description>
 	</application>
  ***/
@@ -116,8 +116,8 @@
 /* Time zones on time stamps */
 /* user ref field */
 
-static volatile unsigned char message_ref;  /* arbitary message ref */
-static volatile unsigned int seq;           /* arbitrary message sequence number for unqiue files */
+static volatile unsigned char message_ref;  /* arbitrary message ref */
+static volatile unsigned int seq;           /* arbitrary message sequence number for unique files */
 
 static char log_file[255];
 
@@ -1730,7 +1730,7 @@ static void sms_process(sms_t * h, int samples, signed short *data)
 		} else {
 			h->imag = h->imag * 7 / 8;
 		}
-		if (h->imag <= 500) {               /* below [arbitrary] threahold: lost carrier */
+		if (h->imag <= 500) {               /* below [arbitrary] threshold: lost carrier */
 			if (h->idle++ == 80000) {       /* nothing happening */
 				ast_log(LOG_NOTICE, "No data, hanging up\n");
 				h->hangup = 1;

@@ -3944,7 +3944,7 @@ static int publish_hint_remove(struct ast_hint *hint)
 /*! \brief Remove hint from extension */
 static int ast_remove_hint(struct ast_exten *e)
 {
-	/* Cleanup the Notifys if hint is removed */
+	/* Cleanup the NOTIFYs if hint is removed */
 	struct ast_hint *hint;
 
 	if (!e) {
@@ -4330,7 +4330,7 @@ static enum ast_pbx_result __ast_pbx_run(struct ast_channel *c,
 	callid = ast_read_threadstorage_callid();
 	/* If the thread isn't already associated with a callid, we should create that association. */
 	if (!callid) {
-		/* Associate new PBX thread with the channel call id if it is availble.
+		/* Associate new PBX thread with the channel call id if it is available.
 		 * If not, create a new one instead.
 		 */
 		callid = ast_channel_callid(c);
@@ -4970,7 +4970,7 @@ int ast_context_remove_extension_callerid(const char *context, const char *exten
 }
 
 /*!
- * \brief This functionc locks given context, search for the right extension and
+ * \brief This function locks given context, search for the right extension and
  * fires out all peer in this extensions with given priority. If priority
  * is set to 0, all peers are removed. After that, unlock context and
  * return.

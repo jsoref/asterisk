@@ -64,7 +64,7 @@
 				<para>The name of the provider that authenticates the call.</para>
 			</parameter>
 			<parameter name="options">
-				<para>Reserverd.</para>
+				<para>Reserved.</para>
 			</parameter>
 		</syntax>
 		<description>
@@ -1328,7 +1328,7 @@ static OSPEFAILREASON asterisk2osp(
  * \param called Called number
  * \param token OSP token, may be empty
  * \param timelimit Call duration limit, output
- * \return OSP_OK Authenricated, OSP_FAILED Unauthenticated, OSP_ERROR Error
+ * \return OSP_OK Authenticated, OSP_FAILED Unauthenticated, OSP_ERROR Error
  */
 static int osp_auth(
 	const char* name,

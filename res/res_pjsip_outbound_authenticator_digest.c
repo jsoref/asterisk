@@ -319,7 +319,7 @@ static pj_status_t set_outbound_authentication_credentials(pjsip_auth_clt_sess *
 			auth_cred.data_type = PJSIP_CRED_DATA_DIGEST;
 			break;
 		case AST_SIP_AUTH_TYPE_GOOGLE_OAUTH:
-			/* nothing to do. handled seperately in res_pjsip_outbound_registration */
+			/* nothing to do. handled separately in res_pjsip_outbound_registration */
 			break;
 		case AST_SIP_AUTH_TYPE_ARTIFICIAL:
 			ast_log(LOG_ERROR,

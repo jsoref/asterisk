@@ -676,7 +676,7 @@ struct ast_http_digest {
 /*!
  * \brief Parse digest authorization header.
  * \return Returns -1 if we have no auth or something wrong with digest.
- * \note This function may be used for Digest request and responce header.
+ * \note This function may be used for Digest request and response header.
  * request arg is set to nonzero, if we parse Digest Request.
  * pedantic arg can be set to nonzero if we need to do addition Digest check.
  */
@@ -1067,7 +1067,7 @@ int ast_pipe_nonblock(int filedes[2]);
  *
  * \param is_user_interface Non-zero to mark the thread as a user interface.
  *
- * \return 0 if successfuly marked current thread.
+ * \return 0 if successfully marked current thread.
  * \return Non-zero if marking current thread failed.
  */
 int ast_thread_user_interface_set(int is_user_interface);

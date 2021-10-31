@@ -1395,7 +1395,7 @@ struct sip_registry {
 		AST_STRING_FIELD(opaque);     /*!< Opaque nonsense */
 		AST_STRING_FIELD(qop);        /*!< Quality of Protection, since SIP wasn't complicated enough yet. */
 		AST_STRING_FIELD(authdomain); /*!< Authorization domain */
-		AST_STRING_FIELD(regdomain);  /*!< Registration doamin */
+		AST_STRING_FIELD(regdomain);  /*!< Registration domain */
 		AST_STRING_FIELD(username);   /*!< Who we are registering as */
 		AST_STRING_FIELD(authuser);   /*!< Who we *authenticate* as */
 		AST_STRING_FIELD(hostname);   /*!< Domain or host we register to */
@@ -1471,7 +1471,7 @@ struct sip_subscription_mwi {
  *
  * There are two main components to the effort, the event publication agent (EPA) and
  * the event state compositor (ESC). Both of these terms appear in RFC 3903, and the
- * implementation in Asterisk conforms to the defintions there. An EPA is a UAC that
+ * implementation in Asterisk conforms to the definitions there. An EPA is a UAC that
  * transmits PUBLISH requests. An ESC is a UAS that receives PUBLISH requests and
  * acts appropriately based on the content of those requests.
  *

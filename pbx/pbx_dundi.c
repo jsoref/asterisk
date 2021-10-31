@@ -1437,7 +1437,7 @@ static int dundi_encrypt(struct dundi_transaction *trans, struct dundi_packet *p
 	len = pack->datalen + pack->datalen / 100 + 42;
 	compress_space = ast_alloca(len);
 	memset(compress_space, 0, len);
-	/* We care about everthing save the first 6 bytes of header */
+	/* We care about everything save the first 6 bytes of header */
 	bytes = len;
 	res = compress(compress_space, &bytes, pack->data + 6, pack->datalen - 6);
 	if (res != Z_OK) {
@@ -1646,7 +1646,7 @@ static int handle_command_response(struct dundi_transaction *trans, struct dundi
 			} else
 				hasauth = 1;
 			if (hasauth) {
-				/* Okay we're authentiated and all, now we check if they're authorized */
+				/* Okay we're authenticated and all, now we check if they're authorized */
 				if (!ies.called_context)
 					ies.called_context = "e164";
 				if (cmd == DUNDI_COMMAND_EIDQUERY) {
@@ -1888,7 +1888,7 @@ static int handle_command_response(struct dundi_transaction *trans, struct dundi
 				hasauth = 1;
 
 			if (!hasauth) {
-				ast_log(LOG_NOTICE, "Reponse to register not authorized!\n");
+				ast_log(LOG_NOTICE, "Response to register not authorized!\n");
 				if (!final) {
 					dundi_ie_append_cause(ied, DUNDI_IE_CAUSE, DUNDI_CAUSE_NOAUTH, "Improper signature in answer");
 					dundi_send(trans, DUNDI_COMMAND_CANCEL, 0, 1, ied);
@@ -2630,7 +2630,7 @@ static char *dundi_show_peer(struct ast_cli_entry *e, int cmd, struct ast_cli_ar
 		e->command = "dundi show peer";
 		e->usage =
 			"Usage: dundi show peer [peer]\n"
-			"       Provide a detailed description of a specifid DUNDi peer.\n";
+			"       Provide a detailed description of a specified DUNDi peer.\n";
 		return NULL;
 	case CLI_GENERATE:
 		return complete_peer_helper(a->line, a->word, a->pos, a->n, 3);
@@ -3835,7 +3835,7 @@ static int dundi_lookup_internal(struct dundi_result *result, int maxret, struct
 	char eid_str[20];
 	struct timeval start;
 
-	/* Don't do anthing for a hungup channel */
+	/* Don't do anything for a hungup channel */
 	if (chan && ast_check_hangup(chan))
 		return 0;
 

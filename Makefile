@@ -758,7 +758,7 @@ install: badshell bininstall datafiles
 	@$(MAKE) -s ld-cache-update
 	@$(MAKE) -s check-old-libdir
 
-isntall: install
+install: install
 
 upgrade: bininstall
 

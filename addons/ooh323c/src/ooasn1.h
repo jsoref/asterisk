@@ -606,7 +606,7 @@ EXTERN int initContextBuffer
 
 /**
  * This function initializes a context block. It makes sure that if the block
- * was not previosly initialized, that all key working parameters are set to
+ * was not previously initialized, that all key working parameters are set to
  * their correct initial state values (i.e. declared within a function as a
  * normal working variable), it is required that they invoke this function
  * before using it.
@@ -755,7 +755,7 @@ EXTERN void errPrint (ASN1ErrInfo* pErrInfo);
 
 /**
  * This function resets the error information in the error information
- * sturcture.
+ * structure.
  *
  * @param pErrInfo     A pointer to a structure containing information on the
  *                     error to be printed. Typically, the error info
@@ -894,7 +894,7 @@ memHeapFreeAll(&(pctxt)->pTypeMemHeap)
  * <p>The difference between this and the ASN1MEMFREE macro is that the
  * memory blocks held within the context are not actually freed.  Internal
  * pointers are reset so the existing blocks can be reused.  This can
- * provide a performace improvement for repetitive tasks such as decoding
+ * provide a performance improvement for repetitive tasks such as decoding
  * messages in a loop.
  *
  * @param pctxt - Pointer to a context block
@@ -1305,7 +1305,7 @@ EXTERN int decodeObjectIdentifier (OOCTXT* pctxt, ASN1OBJID* pvalue);
 
 /**
  * This function will decode a value of the ASN.1 octet string type whose
- * maximun size is known in advance. The ASN1C compiler generates a call to
+ * maximum size is known in advance. The ASN1C compiler generates a call to
  * this function to decode octet string productions or elements that contain a
  * size constraint.
  *
@@ -1486,7 +1486,7 @@ EXTERN int encodeBMPString
 (OOCTXT* pctxt, ASN1BMPString value, Asn116BitCharSet* permCharSet);
 
 /**
- * This function will position the encode bit cursor on the next byte boundry.
+ * This function will position the encode bit cursor on the next byte boundary.
  *
  * @param pctxt        A pointer to a context structure. This provides a
  *                       storage area for the function to store all working
@@ -1609,7 +1609,7 @@ EXTERN int encodeExpandBuffer (OOCTXT* pctxt, ASN1UINT nbytes);
  * dynamic encoding is specified because the message pointer is not known until
  * encoding is complete. If static encoding is used, the message starts at the
  * beginning of the specified buffer adn the encodeGetMsgLen function can be
- * used to obtain the lenght of the message.
+ * used to obtain the length of the message.
  *
  * @param pctxt        Pointer to a context structure. This provides a storage
  *                       area for the function to store all working variables
@@ -1663,7 +1663,7 @@ EXTERN int encodeObjectIdentifier (OOCTXT* pctxt, ASN1OBJID* pvalue);
 EXTERN int encodebitsFromOctet (OOCTXT* pctxt, ASN1OCTET value, ASN1UINT nbits);
 
 /**
- * This fuction will encode an array of octets. The Octets will be encoded
+ * This function will encode an array of octets. The Octets will be encoded
  * unaligned starting at the current bit offset within the encode buffer.
  *
  * @param pctxt        A pointer to a context structure. The provides a storage

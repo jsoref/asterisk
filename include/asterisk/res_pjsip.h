@@ -323,7 +323,7 @@ struct ast_sip_contact {
 	unsigned int qualify_frequency;
 	/*! If true authenticate the qualify challenge response if needed */
 	int authenticate_qualify;
-	/*! Qualify timeout. 0 is diabled. */
+	/*! Qualify timeout. 0 is disabled. */
 	double qualify_timeout;
 	/*! Endpoint that added the contact, only available in observers */
 	struct ast_sip_endpoint *endpoint;
@@ -401,7 +401,7 @@ struct ast_sip_aor {
 	struct ao2_container *permanent_contacts;
 	/*! Determines whether SIP Path headers are supported */
 	unsigned int support_path;
-	/*! Qualify timeout. 0 is diabled. */
+	/*! Qualify timeout. 0 is disabled. */
 	double qualify_timeout;
 	/*! Voicemail extension to set in Message-Account */
 	char *voicemail_extension;
@@ -3193,7 +3193,7 @@ const char *ast_sip_get_contact_short_status_label(const enum ast_sip_contact_st
  *
  * \param tdata the tx data from the original request
  * \retval 0 No more addresses to try
- * \retval 1 The request was successfully re-intialized
+ * \retval 1 The request was successfully re-initialized
  */
 int ast_sip_failover_request(pjsip_tx_data *tdata);
 

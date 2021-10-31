@@ -38,7 +38,7 @@
 
 
 [general]
-;Define the asetrisk server h323 endpoint
+;Define the asterisk server h323 endpoint
 
 ;The port asterisk should listen for incoming H323 connections.
 ;Default - 1720
@@ -163,9 +163,9 @@ faxdetect = cng
 ;
 directmedia=no
 ;
-;	early direct rtp (try to establish direct rtp before asnwer)
+;	early direct rtp (try to establish direct rtp before answer)
 ;	disabled by default, auto enabled by directmedia is enabled
-;	can be disabled escpecially if directmedia is enabled.
+;	can be disabled especially if directmedia is enabled.
 ;	can be specified globally or per peer/user section
 ;
 ;

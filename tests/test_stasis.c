@@ -900,12 +900,12 @@ static struct stasis_message *cache_test_message_create(struct stasis_message_ty
 
 static const char *cache_test_data_id(struct stasis_message *message)
 {
-	struct cache_test_data *cachable = stasis_message_data(message);
+	struct cache_test_data *cacheable = stasis_message_data(message);
 
 	if (0 != strcmp("Cacheable", stasis_message_type_name(stasis_message_type(message)))) {
 		return NULL;
 	}
-	return cachable->id;
+	return cacheable->id;
 }
 
 static struct stasis_message *cache_test_aggregate_calc_fn(struct stasis_cache_entry *entry, struct stasis_message *new_snapshot)

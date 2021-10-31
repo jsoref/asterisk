@@ -846,7 +846,7 @@ static int update_from(pjsip_tx_data *tdata, char *from)
  * \internal
  * \brief Checks if the given msg var name should be blocked.
  *
- * \details Some headers are not allowed to be overriden by the user.
+ * \details Some headers are not allowed to be overridden by the user.
  *  Determine if the given var header name from the user is blocked for
  *  an outgoing MESSAGE.
  *

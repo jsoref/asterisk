@@ -242,7 +242,7 @@ monitor-type = MixMonitor
 ; caller and queue member channels) and just prior to the caller
 ; leaving the queue
 ; QUEUENAME name of the queue
-; QUEUEMAX maxmimum number of calls allowed
+; QUEUEMAX maximum number of calls allowed
 ; QUEUESTRATEGY the strategy of the queue;
 ; QUEUECALLS number of calls currently in the queue
 ; QUEUEHOLDTIME current average hold time

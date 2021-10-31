@@ -630,7 +630,7 @@ static int xmldoc_has_specialtags(struct ast_xml_node *fixnode)
  * \param rootname Name of the application, function, option, etc. to build the syntax.
  * \param childname The name of each parameter node.
  * \param printparenthesis Boolean if we must print parenthesis if not parameters are found in the rootnode.
- * \param printrootname Boolean if we must print the rootname before the syntax and parenthesis at the begining/end.
+ * \param printrootname Boolean if we must print the rootname before the syntax and parenthesis at the beginning/end.
  *
  * \retval NULL on error.
  * \retval An ast_malloc'ed string with the syntax generated.
@@ -888,7 +888,7 @@ static char *xmldoc_parse_cmd_enumlist(struct ast_xml_node *fixnode)
 
 	paramname = ast_str_create(128);
 	if (!paramname) {
-		return ast_strdup("{<unkown>}");
+		return ast_strdup("{<unknown>}");
 	}
 
 	ast_str_append(&paramname, 0, "{");
@@ -924,7 +924,7 @@ static char *xmldoc_parse_cmd_enumlist(struct ast_xml_node *fixnode)
  *
  * \param fixnode The <syntax> node pointer.
  * \param name The name of the 'command'.
- * \param printname Print the name of the command before the paramters?
+ * \param printname Print the name of the command before the parameters?
  *
  * \retval On error, return just 'name'.
  * \retval On success return the generated syntax.
@@ -1437,7 +1437,7 @@ static int xmldoc_parse_specialtags(struct ast_xml_node *fixnode, const char *ta
 
 		/* parse <para> elements inside special tags. */
 		for (node = ast_xml_node_get_children(node); node; node = ast_xml_node_get_next(node)) {
-			/* first <para> just print it without tabs at the begining. */
+			/* first <para> just print it without tabs at the beginning. */
 			if ((xmldoc_parse_para(node, "", posttabs, buffer) == 2)
 				|| (xmldoc_parse_info(node, "", posttabs, buffer) == 2)) {
 				ret = 2;
@@ -1505,7 +1505,7 @@ static int xmldoc_parse_argument(struct ast_xml_node *fixnode, int insideparamet
  * \brief Parse a <variable> node inside a <variablelist> node.
  *
  * \param node The variable node to parse.
- * \param tabs A string to be appended at the begining of the output that will be stored
+ * \param tabs A string to be appended at the beginning of the output that will be stored
  *        in buffer.
  * \param buffer This must be an already created ast_str. It will be used
  *        to store the result (if already has something it will be appended to the current
@@ -1537,7 +1537,7 @@ static int xmldoc_parse_variable(struct ast_xml_node *node, const char *tabs, st
 			ast_str_append(buffer, 0, "\n");
 			printedpara = 1;
 		}
-		/* Parse each <value name='valuename'>desciption</value> */
+		/* Parse each <value name='valuename'>description</value> */
 		valname = ast_xml_get_attribute(tmp, "name");
 		if (valname) {
 			ret = 1;
@@ -1566,7 +1566,7 @@ static int xmldoc_parse_variable(struct ast_xml_node *node, const char *tabs, st
  * \brief Parse a <variablelist> node and put all the output inside 'buffer'.
  *
  * \param node The variablelist node pointer.
- * \param tabs A string to be appended at the begining of the output that will be stored
+ * \param tabs A string to be appended at the beginning of the output that will be stored
  *        in buffer.
  * \param buffer This must be an already created ast_str. It will be used
  *        to store the result (if already has something it will be appended to the current
@@ -1791,7 +1791,7 @@ static int xmldoc_parse_enumlist(struct ast_xml_node *fixnode, const char *tabs,
  * \brief Parse an <option> node.
  *
  * \param fixnode An ast_xml pointer to the <option> node.
- * \param tabs A string to be appended at the begining of each line being added to the
+ * \param tabs A string to be appended at the beginning of each line being added to the
  *             buffer string.
  * \param buffer The output buffer.
  *
@@ -1838,7 +1838,7 @@ static int xmldoc_parse_option(struct ast_xml_node *fixnode, const char *tabs, s
  * \brief Parse an <optionlist> element from the xml documentation.
  *
  * \param fixnode Pointer to the optionlist xml node.
- * \param tabs A string to be appended at the begining of each line being added to the
+ * \param tabs A string to be appended at the beginning of each line being added to the
  *             buffer string.
  * \param buffer Output buffer to put what is inside the optionlist tag.
  */
@@ -2231,7 +2231,7 @@ char *ast_xmldoc_build_synopsis(const char *type, const char *name, const char *
 
 /*!
  * \internal
- * \brief Build the descripton for an item
+ * \brief Build the description for an item
  *
  * \param node	The description node to parse
  *

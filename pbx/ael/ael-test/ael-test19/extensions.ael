@@ -7,7 +7,7 @@ context dialextens
 	_1ZX => Dial(Zap/${EXTEN:1},30,Ttw);
 }
 /*
-    Due to extenal wiring:
+    Due to external wiring:
 
   dialing 125 will ring 101
   dialing 126 will ring 102

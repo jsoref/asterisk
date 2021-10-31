@@ -222,7 +222,7 @@ static int set_id_from_pai(pjsip_rx_data *rdata, struct ast_party_id *id)
  *
  * \param rdata The incoming message
  * \param[out] id The ID to set
- * \retval 0 Succesfully set the party ID
+ * \retval 0 Successfully set the party ID
  * \retval non-zero Could not set the party ID
  */
 static int set_id_from_rpid(pjsip_rx_data *rdata, struct ast_party_id *id)
@@ -274,7 +274,7 @@ static int set_id_from_rpid(pjsip_rx_data *rdata, struct ast_party_id *id)
  *
  * \param rdata The incoming message
  * \param[out] id The ID to set
- * \retval 0 Succesfully set the party ID
+ * \retval 0 Successfully set the party ID
  * \retval non-zero Could not set the party ID
  */
 static int set_id_from_from(struct pjsip_rx_data *rdata, struct ast_party_id *id)

@@ -2004,7 +2004,7 @@ static int user_cmp_cb(void *obj, void *arg, int flags)
 }
 
 /*!
- * \note This funtion calls realtime_peer -> reg_source_db -> iax2_poke_peer -> find_callno,
+ * \note This function calls realtime_peer -> reg_source_db -> iax2_poke_peer -> find_callno,
  *       so do not call it with a pvt lock held.
  */
 static struct iax2_peer *find_peer(const char *name, int realtime)
@@ -5849,7 +5849,7 @@ static int iax2_getpeertrunk(struct ast_sockaddr addr)
 /*! \brief  Create new call, interface with the PBX core */
 static struct ast_channel *ast_iax2_new(int callno, int state, iax2_format capability,
 	struct iax2_codec_pref *prefs, const struct ast_assigned_ids *assignedids,
-	const struct ast_channel *requestor, unsigned int cachable)
+	const struct ast_channel *requestor, unsigned int cacheable)
 {
 	struct ast_channel *tmp = NULL;
 	struct chan_iax2_pvt *i;
@@ -5982,7 +5982,7 @@ static struct ast_channel *ast_iax2_new(int callno, int state, iax2_format capab
 	i->owner = tmp;
 	i->capability = capability;
 
-	if (!cachable) {
+	if (!cacheable) {
 		ast_set_flag(ast_channel_flags(tmp), AST_FLAG_DISABLE_DEVSTATE_CACHE);
 	}
 
@@ -10272,7 +10272,7 @@ static int socket_process_helper(struct iax2_thread *thread)
 			if (ies.calltoken && ies.calltokendata) {
 				/* if we've gotten this far, and the calltoken ie data exists,
 				 * then calltoken validation _MUST_ have taken place.  If calltoken
-				 * data is provided, it is always validated reguardless of any
+				 * data is provided, it is always validated regardless of any
 				 * calltokenoptional or requirecalltoken options */
 				new = NEW_ALLOW_CALLTOKEN_VALIDATED;
 			} else {

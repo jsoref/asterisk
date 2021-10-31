@@ -39,7 +39,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int synths_(integer *voice, integer *pitch, real *rms, real *rc, real *speech, integer *k, struct lpc10_decoder_state *st);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 /*:ref: pitsyn_ 14 12 4 4 4 6 6 4 4 4 6 6 4 6 */
 /*:ref: irc2pc_ 14 5 6 6 4 6 6 */
 /*:ref: bsynz_ 14 7 6 4 4 6 6 6 6 */
@@ -54,9 +54,9 @@ extern int synths_(integer *voice, integer *pitch, real *rms, real *rc, real *sp
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* Table of constant values */
 
@@ -339,9 +339,9 @@ static real c_b2 = .7f;
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /*       Parameters/constants */
 /*       Local variables that need not be saved */
 /*       Local state */
@@ -380,7 +380,7 @@ static real c_b2 = .7f;
 /* Computing MAX */
     i__1 = min(*pitch,156);
     *pitch = max(i__1,20);
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 /* Computing MAX */
 /* Computing MIN */
@@ -388,7 +388,7 @@ static real c_b2 = .7f;
 	r__1 = min(r__2,.99f);
 	rc[i__] = max(r__1,-.99f);
     }
-    pitsyn_(&contrl_1.order, &voice[1], pitch, rms, &rc[1], &contrl_1.lframe,
+    pitsyn_(&control_1.order, &voice[1], pitch, rms, &rc[1], &control_1.lframe,
 	    ivuv, ipiti, rmsi, rci, &nout, &ratio, st);
     if (nout > 0) {
 	i__1 = nout;
@@ -398,7 +398,7 @@ static real c_b2 = .7f;
 d of */
 /*             BUF. */
 
-	    irc2pc_(&rci[j * 10 - 10], pc, &contrl_1.order, &c_b2, &g2pass);
+	    irc2pc_(&rci[j * 10 - 10], pc, &control_1.order, &c_b2, &g2pass);
 	    bsynz_(pc, &ipiti[j - 1], &ivuv[j - 1], &buf[*buflen], &rmsi[j - 1]
 		    , &ratio, &g2pass, st);
 	    deemp_(&buf[*buflen], &ipiti[j - 1], st);

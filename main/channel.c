@@ -133,10 +133,10 @@ static const struct causes_map causes[] = {
 	{ AST_CAUSE_UNALLOCATED, "UNALLOCATED", "Unallocated (unassigned) number" },
 	{ AST_CAUSE_NO_ROUTE_TRANSIT_NET, "NO_ROUTE_TRANSIT_NET", "No route to specified transmit network" },
 	{ AST_CAUSE_NO_ROUTE_DESTINATION, "NO_ROUTE_DESTINATION", "No route to destination" },
-	{ AST_CAUSE_MISDIALLED_TRUNK_PREFIX, "MISDIALLED_TRUNK_PREFIX", "Misdialed trunk prefix" },
+	{ AST_CAUSE_MISDIALED_TRUNK_PREFIX, "MISDIALED_TRUNK_PREFIX", "Misdialed trunk prefix" },
 	{ AST_CAUSE_CHANNEL_UNACCEPTABLE, "CHANNEL_UNACCEPTABLE", "Channel unacceptable" },
 	{ AST_CAUSE_CALL_AWARDED_DELIVERED, "CALL_AWARDED_DELIVERED", "Call awarded and being delivered in an established channel" },
-	{ AST_CAUSE_PRE_EMPTED, "PRE_EMPTED", "Pre-empted" },
+	{ AST_CAUSE_PREEMPTED, "PREEMPTED", "Preempted" },
 	{ AST_CAUSE_NUMBER_PORTED_NOT_HERE, "NUMBER_PORTED_NOT_HERE", "Number ported elsewhere" },
 	{ AST_CAUSE_NORMAL_CLEARING, "NORMAL_CLEARING", "Normal Clearing" },
 	{ AST_CAUSE_USER_BUSY, "USER_BUSY", "User busy" },
@@ -170,9 +170,9 @@ static const struct causes_map causes[] = {
 	{ AST_CAUSE_INCOMPATIBLE_DESTINATION, "INCOMPATIBLE_DESTINATION", "Incompatible destination" },
 	{ AST_CAUSE_INVALID_MSG_UNSPECIFIED, "INVALID_MSG_UNSPECIFIED", "Invalid message unspecified" },
 	{ AST_CAUSE_MANDATORY_IE_MISSING, "MANDATORY_IE_MISSING", "Mandatory information element is missing" },
-	{ AST_CAUSE_MESSAGE_TYPE_NONEXIST, "MESSAGE_TYPE_NONEXIST", "Message type nonexist." },
+	{ AST_CAUSE_MESSAGE_TYPE_NONEXIST, "MESSAGE_TYPE_NONEXIST", "Message type nonexistent." },
 	{ AST_CAUSE_WRONG_MESSAGE, "WRONG_MESSAGE", "Wrong message" },
-	{ AST_CAUSE_IE_NONEXIST, "IE_NONEXIST", "Info. element nonexist or not implemented" },
+	{ AST_CAUSE_IE_NONEXIST, "IE_NONEXIST", "Info. element nonexistent or not implemented" },
 	{ AST_CAUSE_INVALID_IE_CONTENTS, "INVALID_IE_CONTENTS", "Invalid information element contents" },
 	{ AST_CAUSE_WRONG_CALL_STATE, "WRONG_CALL_STATE", "Message not compatible with call state" },
 	{ AST_CAUSE_RECOVERY_ON_TIMER_EXPIRE, "RECOVERY_ON_TIMER_EXPIRE", "Recover on timer expiry" },
@@ -944,7 +944,7 @@ __ast_channel_alloc_ap(int needqueue, int state, const char *cid_num, const char
 
 	/*
 	 * And now, since the channel structure is built, and has its name, let
-	 * the world know of its existance
+	 * the world know of its existence
 	 */
 	ast_channel_stage_snapshot_done(tmp);
 
@@ -3692,7 +3692,7 @@ static struct ast_frame *__ast_read(struct ast_channel *chan, int dropaudio, int
 				ast_channel_alert_write(chan);
 			} else {
 				/*
-				 * Safely disable continous timer events if only buffered dtmf begin or end
+				 * Safely disable continuous timer events if only buffered dtmf begin or end
 				 * frames are left in the readq.
 				 */
 				ast_timer_disable_continuous(ast_channel_timer(chan));
@@ -6919,7 +6919,7 @@ static void channel_do_masquerade(struct ast_channel *original, struct ast_chann
 	 */
 	ao2_lock(channels);
 
-	/* Bump the refs to ensure that they won't dissapear on us. */
+	/* Bump the refs to ensure that they won't disappear on us. */
 	ast_channel_ref(original);
 	ast_channel_ref(clonechan);
 
@@ -7052,7 +7052,7 @@ static void channel_do_masquerade(struct ast_channel *original, struct ast_chann
 	ast_channel_state_set(original, ast_channel_state(clonechan));
 	ast_channel_state_set(clonechan, origstate);
 
-	/* And the swap the cachable state too. Otherwise we'd start caching
+	/* And the swap the cacheable state too. Otherwise we'd start caching
 	 * Local channels and ignoring real ones. */
 	orig_disablestatecache = ast_test_flag(ast_channel_flags(original), AST_FLAG_DISABLE_DEVSTATE_CACHE);
 	clone_disablestatecache = ast_test_flag(ast_channel_flags(clonechan), AST_FLAG_DISABLE_DEVSTATE_CACHE);

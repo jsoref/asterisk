@@ -154,7 +154,7 @@
                            iLBCdec_inst->blockl>4*320)
                use_gain=(float)0.0;
 
-           /* mix noise and pitch repeatition */
+           /* mix noise and pitch repetition */
            ftmp=(float)sqrt(max_per);
            if (ftmp>(float)0.7)
                pitchfact=(float)1.0;
@@ -195,7 +195,7 @@
                    randvec[i] =  randvec[pick];
                }
 
-               /* pitch repeatition component */
+               /* pitch repetition component */
                pick = i - use_lag;
 
                if (pick < 0) {

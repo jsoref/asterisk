@@ -527,7 +527,7 @@
 ;MAC=deadbeef4dad             ; required
 ;SERVER=myserver.example.com  ; A standard variable
 ;TIMEZONE=America/Denver      ; A standard variable
-;MYVAR=somevalue              ; A user confdigured variable
+;MYVAR=somevalue              ; A user configured variable
 
 ; If the phoneprov sections have common variables, it is best to create a
 ; phoneprov template.  The example below will produce the same configuration
@@ -547,7 +547,7 @@
                               ; USERNAME, SECRET, DISPLAY_NAME and CALLERID
                               ; are needed.
 ;MAC=deadbeef4dad             ; required
-;MYVAR=someOTHERvalue         ; A user confdigured variable
+;MYVAR=someOTHERvalue         ; A user configured variable
 
 ; To have USERNAME and SECRET automatically set, the endpoint
 ; specified here must in turn have an outbound_auth section defined.
@@ -578,7 +578,7 @@
                               ; USERNAME, SECRET, DISPLAY_NAME and CALLERID
                               ; are needed.
 ;MAC=deadbeef4dad             ; required
-;MYVAR=someUSERvalue          ; A user confdigured variable
+;MYVAR=someUSERvalue          ; A user configured variable
 ;LABEL=1000                   ; A standard variable
 
 ; The previous sections would produce a template substitution map as follows:
@@ -589,7 +589,7 @@
 ;PROFILE=someprofile            ;added by defaults
 ;SERVER=myserver.example.com    ;added by defaults
 ;SERVER_PORT=5060               ;added by defaults
-;MYVAR=someUSERvalue            ;added by defaults but overdidden by user
+;MYVAR=someUSERvalue            ;added by defaults but overridden by user
 ;CALLERID=8005551212            ;automatically added by 1000 callerid
 ;DISPLAY_NAME=My Name           ;automatically added by 1000 callerid
 ;TIMEZONE=America/Denver        ;added by defaults
@@ -669,7 +669,7 @@
 ;voicemail_extension= ; The voicemail extension to send in the NOTIFY Message-Account header
                       ; (default: global/default_voicemail_extension)
 ;mwi_subscribe_replaces_unsolicited=no
-                      ; An MWI subscribe will replace unsoliticed NOTIFYs
+                      ; An MWI subscribe will replace unsolicited NOTIFYs
                       ; (default: "no")
 ;moh_suggest=default    ; Default Music On Hold class (default: "default")
 ;moh_passthrough=yes    ; Pass Music On Hold through using SIP re-invites with sendonly
@@ -1204,8 +1204,8 @@
                         ; The interval (in seconds) to check for expired contacts.
 ;disable_multi_domain=no
             ; Disable Multi Domain support.
-            ; If disabled it can improve realtime performace by reducing
-            ; number of database requsts
+            ; If disabled it can improve realtime performance by reducing
+            ; number of database requests
             ; (default: "no")
 ;endpoint_identifier_order=ip,username,anonymous
             ; The order by which endpoint identifiers are given priority.
@@ -1255,7 +1255,7 @@
                     ; taskprocessor queue.
                     ; If the taskprocessor queue size reached high water level,
                     ; the alert is triggered.
-                    ; If the alert is set the pjsip distibutor stops processing incoming
+                    ; If the alert is set the pjsip distributor stops processing incoming
                     ; requests until the alert is cleared.
                     ; The alert is cleared when taskprocessor queue size drops to the
                     ; low water clear level.
@@ -1331,7 +1331,7 @@
 ;auth_rejection_permanent=yes   ; Determines whether failed authentication
                                 ; challenges are treated as permanent failures
                                 ; (default: "yes")
-;client_uri=    ; Client SIP URI used when attemping outbound registration
+;client_uri=    ; Client SIP URI used when attempting outbound registration
                 ; (default: "")
 ;contact_user=  ; Contact User to use in request (default: "")
 ;expiration=3600        ; Expiration time for registrations in seconds

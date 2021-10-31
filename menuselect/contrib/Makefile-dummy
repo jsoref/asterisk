@@ -9,7 +9,7 @@ makeopts:
 menuselect:
 	./menuselect-dummy
 
-# Generate some dummy files to satifsy dependencies from the main
+# Generate some dummy files to satisfy dependencies from the main
 # Makefile.
 dummies:
 	touch linkedlists.h menuselect.c menuselect_curses.c \

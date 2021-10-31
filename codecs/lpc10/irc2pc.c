@@ -64,7 +64,7 @@ extern int irc2pc_(real *rc, real *pc, integer *order, real *gprime, real *g2pas
 
 /* ***************************************************************** */
 
-/*   Convert Reflection Coefficients to Predictor Coeficients */
+/*   Convert Reflection Coefficients to Predictor Coefficients */
 
 /* Inputs: */
 /*  RC     - Reflection coefficients */

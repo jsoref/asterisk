@@ -167,7 +167,7 @@ static int db_create_astdb(void)
 static int init_statements(void)
 {
 	/* Don't initialize create_astdb_statement here as the astdb table needs to exist
-	 * brefore these statements can be initialized */
+	 * before these statements can be initialized */
 	return init_stmt(&put_stmt, put_stmt_sql, sizeof(put_stmt_sql));
 }
 

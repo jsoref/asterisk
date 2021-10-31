@@ -1006,7 +1006,7 @@
 			<syntax>
 				<xi:include xpointer="xpointer(/docs/manager[@name='Login']/syntax/parameter[@name='ActionID'])" />
 				<parameter name="EventList">
-					<para>Conveys the status of the command reponse list</para>
+					<para>Conveys the status of the command response list</para>
 				</parameter>
 				<parameter name="ListItems">
 					<para>The total number of list items produced</para>
@@ -1146,7 +1146,7 @@
 				this value along with the optional UnitType value are entries in a list.  To accommodate this
 				these values take an index value starting at 0 which can be used to generate this list of
 				unit entries.  For Example, If two unit entires were required this could be achieved by setting the
-				paramter UnitAmount(0)=1234 and UnitAmount(1)=5678.  Note that UnitAmount at index 0 is
+				parameter UnitAmount(0)=1234 and UnitAmount(1)=5678.  Note that UnitAmount at index 0 is
 				required when ChargeType=Unit, all other entries in the list are optional.
 				</para>
 			</parameter>
@@ -1261,7 +1261,7 @@
 				<para>This filter option is used to whitelist or blacklist events per user to be
 				reported with regular expressions and are allowed if both the regex matches
 				and the user has read access as defined in manager.conf. Filters are assumed to be for whitelisting
-				unless preceeded by an exclamation point, which marks it as being black.
+				unless preceded by an exclamation point, which marks it as being black.
 				Evaluation of the filters is as follows:</para>
 				<para>- If no filters are configured all events are reported as normal.</para>
 				<para>- If there are white filters only: implied black all filter processed first, then white filters.</para>
@@ -1273,7 +1273,7 @@
 		<description>
 			<para>The filters added are only used for the current session.
 			Once the connection is closed the filters are removed.</para>
-			<para>This comand requires the system permission because
+			<para>This command requires the system permission because
 			this command can be used to create filters that may bypass
 			filters defined in manager.conf</para>
 		</description>
@@ -5892,7 +5892,7 @@ static int action_originate(struct mansession *s, const struct message *m)
 			ast_string_field_set(fast, otherchannelid, assignedids.uniqueid2);
 			fast->vars = vars;
 			fast->cap = cap;
-			cap = NULL; /* transfered originate helper the capabilities structure.  It is now responsible for freeing it. */
+			cap = NULL; /* transferred originate helper the capabilities structure.  It is now responsible for freeing it. */
 			fast->timeout = to;
 			fast->early_media = bridge_early;
 			fast->priority = pi;

@@ -65,13 +65,13 @@ static enum ast_test_result_state test_create_joint(struct ast_test *test, const
 
 	rc = ast_format_cap_update_by_allow_disallow(local, local_string, 1);
 	if (rc != 0) {
-		ast_test_status_update(test, "    %sxpected Failure: Coulldn't parse local codecs (%s)\n",
+		ast_test_status_update(test, "    %sxpected Failure: Couldn't parse local codecs (%s)\n",
 			expected_result == AST_TEST_FAIL ? "E" : "Une", local_string);
 		return expected_result == AST_TEST_FAIL ? AST_TEST_PASS : AST_TEST_FAIL;
 	}
 	rc = ast_format_cap_update_by_allow_disallow(remote, remote_string, 1);
 	if (rc != 0) {
-		ast_test_status_update(test, "    %sxpected Failure: Coulldn't parse remote codecs (%s)\n",
+		ast_test_status_update(test, "    %sxpected Failure: Couldn't parse remote codecs (%s)\n",
 			expected_result == AST_TEST_FAIL ? "E" : "Une", remote_string);
 		return expected_result == AST_TEST_FAIL ? AST_TEST_PASS : AST_TEST_FAIL;
 	}

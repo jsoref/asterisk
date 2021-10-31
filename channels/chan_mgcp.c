@@ -1815,7 +1815,7 @@ static struct mgcp_subchannel *find_subchannel_and_lock(char *name, int msgid, s
 					found = 1;
 					break;
 				} else if (name && !strcasecmp(p->name, tmp)) {
-					ast_debug(1, "Coundn't determine subchannel, assuming current master %s@%s-%d\n",
+					ast_debug(1, "Couldn't determine subchannel, assuming current master %s@%s-%d\n",
 						p->name, g->name, p->sub->id);
 					sub = p->sub;
 					found = 1;
@@ -3711,7 +3711,7 @@ static int mgcpsock_read(int *id, int fd, short events, void *ignore)
 		if (ast_strlen_zero(req.endpoint) ||
 			ast_strlen_zero(req.version) ||
 			ast_strlen_zero(req.verb)) {
-			ast_log(LOG_NOTICE, "Message must have a verb, an idenitifier, version, and endpoint\n");
+			ast_log(LOG_NOTICE, "Message must have a verb, an identifier, version, and endpoint\n");
 			return 1;
 		}
 		/* Process request, with iflock held */

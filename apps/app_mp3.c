@@ -68,7 +68,7 @@
 			to see how M3U playlist file format is like, Example usage would be
 			exten => 1234,1,MP3Player(/var/lib/asterisk/playlist.m3u)
 			User can exit by pressing any key on the dialpad, or by hanging up.</para>
-			<para>This application does not automatically answer and should be preceeded by an
+			<para>This application does not automatically answer and should be preceded by an
 			application such as Answer() or Progress().</para>
 		</description>
 	</application>

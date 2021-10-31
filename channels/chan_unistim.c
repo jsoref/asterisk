@@ -434,7 +434,7 @@ static struct unistim_device {
 	int callhistory;			/*!< Allowed to record call history */
         int sharp_dial;				/*!< Execute Dial on '#' or not */
 	char lst_cid[TEXT_LENGTH_MAX];  /*!< Last callerID received */
-	char lst_cnm[TEXT_LENGTH_MAX];  /*!< Last callername recevied */
+	char lst_cnm[TEXT_LENGTH_MAX];  /*!< Last callername received */
 	char call_forward[AST_MAX_EXTENSION];   /*!< Forward number */
 	int output;				     /*!< Handset, headphone or speaker */
 	int previous_output;	    /*!< Previous output */
@@ -459,7 +459,7 @@ static struct unistimsession {
 	ast_mutex_t lock;
 	struct sockaddr_in sin;	 /*!< IP address of the phone */
 	struct sockaddr_in sout;	/*!< IP address of server */
-	int timeout;			    /*!< time-out in ticks : resend packet if no ack was received before the timeout occured */
+	int timeout;			    /*!< time-out in ticks : resend packet if no ack was received before the timeout occurred */
 	unsigned short seq_phone;       /*!< sequence number for the next packet (when we receive a request) */
 	unsigned short seq_server;      /*!< sequence number for the next packet (when we send a request) */
 	unsigned short last_seq_ack;    /*!< sequence number of the last ACK received */
@@ -2176,12 +2176,12 @@ static void rcv_mac_addr(struct unistimsession *pte, const unsigned char *buf)
 		struct unistim_line *line;
 		struct unistim_subchannel *sub;
 
-		ast_verb(3, "Device '%s' successfuly registered\n", pte->device->name);
+		ast_verb(3, "Device '%s' successfully registered\n", pte->device->name);
 
 		AST_LIST_LOCK(&pte->device->subs);
 		AST_LIST_TRAVERSE_SAFE_BEGIN(&pte->device->subs, sub, list) {
 			if (sub) {
-				ast_log(LOG_ERROR, "Subchannel lost sice reboot. Hanged channel may apear!\n");
+				ast_log(LOG_ERROR, "Subchannel lost sice reboot. Hanged channel may appear!\n");
 				AST_LIST_REMOVE_CURRENT(list);
 				ast_free(sub);
 			}
@@ -3156,7 +3156,7 @@ static void handle_call_outgoing(struct unistimsession *s)
 			send_text(TEXT_LINE1, TEXT_NORMAL, s, s->device->phone_number);
 			send_text(TEXT_LINE2, TEXT_NORMAL, s, ustmtext("Dialing...", s));
 		}
-		send_text_status(s, ustmtext("TransfrCancel", s));
+		send_text_status(s, ustmtext("TransferCancel", s));
 
 		if (ast_pthread_create(&sub->ss_thread, NULL, unistim_ss, c)) {
 			ast_log(LOG_WARNING, "Unable to start simple switch on channel %p\n", c);
@@ -4889,7 +4889,7 @@ static int unistim_call(struct ast_channel *ast, const char *dest, int timeout)
 	}
 	session->state = STATE_RINGING;
 	send_callerid_screen(session, sub);
-	if (ast_strlen_zero(ast_channel_call_forward(ast))) { /* Send ring only if no call forward, otherwise short ring will apear */
+	if (ast_strlen_zero(ast_channel_call_forward(ast))) { /* Send ring only if no call forward, otherwise short ring will appear */
 		send_text(TEXT_LINE2, TEXT_NORMAL, session, ustmtext("is calling you.", session));
 		send_text_status(session, ustmtext("Accept        Ignore Hangup", session));
 
@@ -6513,7 +6513,7 @@ static struct unistim_device *build_device(const char *cat, const struct ast_var
 	d = devices;
 	while (d) {
 		if (!strcmp(d->name, cat)) {
-			/* Yep, we alreay have this one */
+			/* Yep, we already have this one */
 			if (unistimsock < 0) {
 				/* It's a dupe */
 				ast_log(LOG_WARNING, "Duplicate entry found (%s), ignoring.\n", cat);

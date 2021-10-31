@@ -204,7 +204,7 @@ static void asterisk_publisher_devstate_cb(void *data, struct stasis_subscriptio
 		"type", "devicestate",
 		"device", dev_state->device,
 		"state", ast_devstate_str(dev_state->state),
-		"cachable", dev_state->cachable,
+		"cacheable", dev_state->cacheable,
 		"eid", eid_str);
 	if (!json) {
 		return;
@@ -494,7 +494,7 @@ static int asterisk_publication_devicestate(struct ast_sip_publication *pub, str
 {
 	const char *device = ast_json_string_get(ast_json_object_get(json, "device"));
 	const char *state = ast_json_string_get(ast_json_object_get(json, "state"));
-	int cachable = ast_json_integer_get(ast_json_object_get(json, "cachable"));
+	int cacheable = ast_json_integer_get(ast_json_object_get(json, "cacheable"));
 
 	if (!config->device_state) {
 		ast_debug(2, "Received device state event for resource '%s' but it is not configured to accept them\n",
@@ -515,7 +515,7 @@ static int asterisk_publication_devicestate(struct ast_sip_publication *pub, str
 	}
 
 	ast_publish_device_state_full(device, ast_devstate_val(state),
-		cachable == AST_DEVSTATE_CACHABLE ? AST_DEVSTATE_CACHABLE : AST_DEVSTATE_NOT_CACHABLE,
+		cacheable == AST_DEVSTATE_CACHABLE ? AST_DEVSTATE_CACHABLE : AST_DEVSTATE_NOT_CACHABLE,
 		pubsub_eid);
 
 	return 0;

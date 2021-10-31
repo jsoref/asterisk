@@ -272,7 +272,7 @@ void* memHeapAlloc (void** ppvMemHeap, int nbytes)
                          QOFFSETOF (pElem, pMemBlk->data) + 1)
                      {
 
-                        /* modify the pMemBlk->freeElemOff value if necsry */
+                        /* modify the pMemBlk->freeElemOff value if necessary */
 
                         OSMemElemDescr* nextFree = GET_NEXT_FREE (pElem);
                         FORCE_SET_FREE_ELEM (pMemBlk, nextFree);

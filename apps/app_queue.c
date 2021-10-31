@@ -277,7 +277,7 @@
 			up by another user.</para>
 			<para>This application will return to the dialplan if the queue does not exist, or
 			any of the join options cause the caller to not enter the queue.</para>
-			<para>This application does not automatically answer and should be preceeded
+			<para>This application does not automatically answer and should be preceded
 			by an application such as Answer(), Progress(), or Ringing().</para>
 			<para>This application sets the following channel variables upon completion:</para>
 			<variablelist>
@@ -1731,7 +1731,7 @@ struct call_queue {
 	int minannouncefrequency;           /*!< The minimum number of seconds between position announcements (def. 15) */
 	int periodicannouncefrequency;      /*!< How often to play periodic announcement */
 	int numperiodicannounce;            /*!< The number of periodic announcements configured */
-	int randomperiodicannounce;         /*!< Are periodic announcments randomly chosen */
+	int randomperiodicannounce;         /*!< Are periodic announcements randomly chosen */
 	int roundingseconds;                /*!< How many seconds do we round to? */
 	int holdtime;                       /*!< Current avg holdtime, based on an exponential average */
 	int talktime;                       /*!< Current avg talktime, based on the same exponential average */
@@ -5576,7 +5576,7 @@ static int is_our_turn(struct queue_ent *qe)
 		res = 0;
 	}
 
-	/* Update realtime members if this is the first call and number of avalable members is 0 */
+	/* Update realtime members if this is the first call and number of available members is 0 */
 	if (avl == 0 && qe->pos == 1) {
 		update_realtime_members(qe->parent);
 	}

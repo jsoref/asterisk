@@ -2573,7 +2573,7 @@ int ast_bridge_add_channel(struct ast_bridge *bridge, struct ast_channel *chan,
 		if (ast_bridge_impart(bridge, yanked_chan, NULL, features,
 			AST_BRIDGE_IMPART_CHAN_INDEPENDENT)) {
 			/* It is possible for us to yank a channel and have some other
-			 * thread start a PBX on the channl after we yanked it. In particular,
+			 * thread start a PBX on the channel after we yanked it. In particular,
 			 * this can theoretically happen on the ;2 of a Local channel if we
 			 * yank it prior to the ;1 being answered. Make sure that it isn't
 			 * executing a PBX before hanging it up.
@@ -3862,7 +3862,7 @@ void ast_bridge_set_remb_send_interval(struct ast_bridge *bridge, unsigned int r
 	ast_bridge_unlock(bridge);
 }
 
-void ast_brige_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior)
+void ast_bridge_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior)
 {
 	ast_assert(bridge->softmix.video_mode.mode == AST_BRIDGE_VIDEO_MODE_SFU);
 
@@ -4275,7 +4275,7 @@ static struct ast_channel *get_transferee(struct ao2_container *channels, struct
  * \param bridge2 Bridge that chan2 is in. If NULL, then chan2 is not bridged.
  * \param publication Data to publish for a stasis attended transfer message.
  * \retval AST_BRIDGE_TRANSFER_FAIL Internal error occurred
- * \retval AST_BRIDGE_TRANSFER_SUCCESS Succesfully transferred the bridge
+ * \retval AST_BRIDGE_TRANSFER_SUCCESS Successfully transferred the bridge
  */
 static enum ast_transfer_result attended_transfer_bridge(struct ast_channel *chan1,
 		struct ast_channel *chan2, struct ast_bridge *bridge1, struct ast_bridge *bridge2,

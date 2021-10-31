@@ -713,7 +713,7 @@ struct bksp_req_message {
 #define SOFTKEY_REDIAL 0x01
 #define SOFTKEY_NEWCALL 0x02
 #define SOFTKEY_HOLD 0x03
-#define SOFTKEY_TRNSFER 0x04
+#define SOFTKEY_TRANSFER 0x04
 #define SOFTKEY_CFWDALL 0x05
 #define SOFTKEY_CFWDBUSY 0x06
 #define SOFTKEY_CFWDNOANSWER 0x07
@@ -737,7 +737,7 @@ struct bksp_req_message {
 #define KEYMASK_REDIAL         (1 << 1)
 #define KEYMASK_NEWCALL        (1 << 2)
 #define KEYMASK_HOLD           (1 << 3)
-#define KEYMASK_TRNSFER        (1 << 4)
+#define KEYMASK_TRANSFER       (1 << 4)
 #define KEYMASK_CFWDALL        (1 << 5)
 #define KEYMASK_CFWDBUSY       (1 << 6)
 #define KEYMASK_CFWDNOANSWER   (1 << 7)
@@ -892,7 +892,7 @@ static struct soft_key_template_definition soft_key_template_default[] = {
 	{ OCTAL_REDIAL, SOFTKEY_REDIAL },
 	{ OCTAL_NEWCALL, SOFTKEY_NEWCALL },
 	{ OCTAL_HOLD, SOFTKEY_HOLD },
-	{ OCTAL_TRANSFER, SOFTKEY_TRNSFER },
+	{ OCTAL_TRANSFER, SOFTKEY_TRANSFER },
 	{ OCTAL_CFWDALL, SOFTKEY_CFWDALL },
 	{ OCTAL_CFWDBUSY, SOFTKEY_CFWDBUSY },
 	{ OCTAL_CFWDNOAN, SOFTKEY_CFWDNOANSWER },
@@ -932,7 +932,7 @@ static const uint8_t soft_key_default_onhook[] = {
 static const uint8_t soft_key_default_connected[] = {
 	SOFTKEY_HOLD,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 	SOFTKEY_PARK,
 	SOFTKEY_CFWDALL,
 	SOFTKEY_CFWDBUSY,
@@ -943,19 +943,19 @@ static const uint8_t soft_key_default_onhold[] = {
 	SOFTKEY_RESUME,
 	SOFTKEY_NEWCALL,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 };
 
 static const uint8_t soft_key_default_ringin[] = {
 	SOFTKEY_ANSWER,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 };
 
 static const uint8_t soft_key_default_offhook[] = {
 	SOFTKEY_REDIAL,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 	SOFTKEY_CFWDALL,
 	SOFTKEY_CFWDBUSY,
 	SOFTKEY_CFWDNOANSWER,
@@ -965,7 +965,7 @@ static const uint8_t soft_key_default_offhook[] = {
 static const uint8_t soft_key_default_connwithtrans[] = {
 	SOFTKEY_HOLD,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 	SOFTKEY_PARK,
 	SOFTKEY_CFWDALL,
 	SOFTKEY_CFWDBUSY,
@@ -975,7 +975,7 @@ static const uint8_t soft_key_default_connwithtrans[] = {
 static const uint8_t soft_key_default_dadfd[] = {
 	SOFTKEY_BKSPC,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 	SOFTKEY_FORCEDIAL,
 };
 
@@ -991,13 +991,13 @@ static const uint8_t soft_key_default_ringout[] = {
 static const uint8_t soft_key_default_ringoutwithtransfer[] = {
 	SOFTKEY_NONE,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 };
 
 static const uint8_t soft_key_default_offhookwithfeat[] = {
 	SOFTKEY_REDIAL,
 	SOFTKEY_ENDCALL,
-	SOFTKEY_TRNSFER,
+	SOFTKEY_TRANSFER,
 };
 
 static const uint8_t soft_key_default_unknown[] = {
@@ -1230,7 +1230,7 @@ static int skinny_header_size = 12;
 
 static int skinnyreload = 0;
 
-/* a hostname, portnumber, socket and such is usefull for VoIP protocols */
+/* a hostname, portnumber, socket and such is useful for VoIP protocols */
 static struct sockaddr_in bindaddr;
 static char ourhost[256];
 static int ourport;
@@ -5992,7 +5992,7 @@ static void setsubstate(struct skinny_subchannel *sub, int state)
 		sub->substate = SUBSTATE_HOLD;
 		break;
 	default:
-		ast_log(LOG_WARNING, "Was asked to change to nonexistant substate %d on Sub-%u\n", state, sub->callid);
+		ast_log(LOG_WARNING, "Was asked to change to nonexistent substate %d on Sub-%u\n", state, sub->callid);
 	}
 	skinny_unlocksub(sub);
 }
@@ -7061,8 +7061,8 @@ static int handle_soft_key_event_message(struct skinny_req *req, struct skinnyse
 		}
 
 		break;
-	case SOFTKEY_TRNSFER:
-		SKINNY_DEBUG(DEBUG_PACKET, 3, "Received SOFTKEY_TRNSFER from %s, inst %d, callref %d\n",
+	case SOFTKEY_TRANSFER:
+		SKINNY_DEBUG(DEBUG_PACKET, 3, "Received SOFTKEY_TRANSFER from %s, inst %d, callref %d\n",
 			d->name, instance, callreference);
 		if (l->transfer)
 			handle_transfer_button(sub);

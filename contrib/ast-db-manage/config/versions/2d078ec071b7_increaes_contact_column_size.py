@@ -1,4 +1,4 @@
-"""increaes_contact_column_size
+"""increases_contact_column_size
 
 Revision ID: 2d078ec071b7
 Revises: 189a235b3fd7

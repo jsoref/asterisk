@@ -100,7 +100,7 @@ struct adapter_pvt {
 	int dev_id;					/* device id */
 	int hci_socket;					/* device descriptor */
 	char id[31];					/* the 'name' from mobile.conf */
-	bdaddr_t addr;					/* adddress of adapter */
+	bdaddr_t addr;					/* address of adapter */
 	unsigned int inuse:1;				/* are we in use ? */
 	unsigned int alignment_detection:1;		/* do alignment detection on this adapter? */
 	struct io_context *io;				/*!< io context for audio connections */
@@ -2823,7 +2823,7 @@ static int hfp_parse_cind_test(struct hfp_pvt *hfp, char *buf)
 
 	hfp->nocallsetup = 1;
 
-	/* parse the indications list.  It is in the follwing format:
+	/* parse the indications list.  It is in the following format:
 	 * +CIND: ("ind1",(0-1)),("ind2",(0-5))
 	 */
 	group = 0;

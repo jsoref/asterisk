@@ -96,7 +96,7 @@ extern int placev_(integer *osbuf, integer *osptr, integer *oslen, integer *obou
 /*       	Indices (1,AF) and (2,AF) are written, */
 /*       	and then possibly read. */
 /*       	All other indices are unused. */
-/*              In all cases, the final values will satsify the condition:*/
+/*              In all cases, the final values will satisfy the condition:*/
 /*               VWIN(2,AF)-VWIN(1,AF)+1 .LE. MAXWIN */
 /*               I'm not certain yet, but they may also satisfy: */
 /*               MINWIN .LE. VWIN(2,AF)-VWIN(1,AF)+1 */
@@ -168,7 +168,7 @@ extern int placev_(integer *osbuf, integer *osptr, integer *oslen, integer *obou
 /*   window's length */
 /*  is the longest length that can fit in the range under these constraint
 s,*/
-/*  except that the window may be shortened even further to avoid overlapp
+/*  except that the window may be shortened even further to avoid overlap
 ing*/
 /*  other onsets in the placement range.  In any case, the window's length
 */

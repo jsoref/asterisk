@@ -4954,7 +4954,7 @@ static void prep_email_sub_vars(struct ast_channel *ast, struct ast_vm_user *vmu
 }
 
 /*!
- * \brief Wraps a character sequence in double quotes, escaping occurences of quotes within the string.
+ * \brief Wraps a character sequence in double quotes, escaping occurrences of quotes within the string.
  * \param from The string to work with.
  * \param buf The buffer into which to write the modified quoted string.
  * \param maxlen Always zero, but see \see ast_str
@@ -6286,7 +6286,7 @@ static void run_externnotify(const char *context, const char *extension, const c
 /*!
  * \brief Variables used for saving a voicemail.
  *
- * This includes the record gain, mode flags, and the exit context of the chanel that was used for leaving the voicemail.
+ * This includes the record gain, mode flags, and the exit context of the channel that was used for leaving the voicemail.
  */
 struct leave_vm_options {
 	unsigned int flags;
@@ -9464,10 +9464,10 @@ static int vm_intro_gr(struct ast_channel *chan, struct vm_state *vms)
  * If you use it for Russian and other slavic languages, you will need these additional sound files:
  *
  *  vm-newn		"novoye" (singular, neuter)
- *  vm-newx		"novikh" (counting plural form, genative plural)
+ *  vm-newx		"novikh" (counting plural form, genitive plural)
  *  vm-message		"sobsheniye" (singular form)
- *  vm-messagex1	"sobsheniya" (first counting plural form, genative singular)
- *  vm-messagex2	"sobsheniy" (second counting plural form, genative plural)
+ *  vm-messagex1	"sobsheniya" (first counting plural form, genitive singular)
+ *  vm-messagex2	"sobsheniy" (second counting plural form, genitive plural)
  *  digits/1n		"odno" (neuter singular for phrases such as "one message" or "thirty one messages")
  *  digits/2n		"dva" (neuter singular)
  */
@@ -13945,11 +13945,11 @@ static int actual_load_config(int reload, struct ast_config *cfg, struct ast_con
 				smdi_iface = ast_smdi_interface_find("/dev/ttyS0");
 			}
 			if (!smdi_iface) {
-				ast_log(AST_LOG_ERROR, "No valid SMDI interface specfied, disabling SMDI voicemail notification\n");
+				ast_log(AST_LOG_ERROR, "No valid SMDI interface specified, disabling SMDI voicemail notification\n");
 			}
 		}
 
-		/* Silence treshold */
+		/* Silence threshold */
 		silencethreshold = ast_dsp_get_threshold_from_settings(THRESHOLD_SILENCE);
 		if ((val = ast_variable_retrieve(cfg, "general", "silencethreshold")))
 			silencethreshold = atoi(val);
@@ -15015,7 +15015,7 @@ AST_TEST_DEFINE(test_voicemail_vm_info)
 		ast_copy_string(vminfo_args, test_items[test_counter].vminfo_test_args, sizeof(vminfo_args));
 		test_ret = acf_vm_info(chan, vminfo_cmd, vminfo_args, vminfo_buf, sizeof(vminfo_buf));
 		if (strcmp(vminfo_buf, test_items[test_counter].vminfo_expected)) {
-			ast_test_status_update(test, "VM_INFO respose was: '%s', but expected: '%s'\n", vminfo_buf, test_items[test_counter].vminfo_expected);
+			ast_test_status_update(test, "VM_INFO response was: '%s', but expected: '%s'\n", vminfo_buf, test_items[test_counter].vminfo_expected);
 			res = AST_TEST_FAIL;
 		}
 		if (!(test_ret == test_items[test_counter].vminfo_ret)) {

@@ -194,7 +194,7 @@ int ooEncodeH245Message
       /* Populate message buffer to be returned */
       len =  4;
       msgbuf[i++] = 3; /* TPKT version */
-      msgbuf[i++] = 0; /* TPKT resevred */
+      msgbuf[i++] = 0; /* TPKT reserved */
       /* 1st octet of length, will be populated once len is determined */
       msgbuf[i++] = 0;
       /* 2nd octet of length, will be populated once len is determined */
@@ -517,7 +517,7 @@ int ooSendTermCapMsg(OOH323CallData *call)
             }
          }
          else{
-            OOTRACEDBGC3("Sending transmit&recevie capability t38 in TCS.(%s, %s)\n",
+            OOTRACEDBGC3("Sending transmit&receive capability t38 in TCS.(%s, %s)\n",
                 call->callType, call->callToken);
             t38Cap = ooCapabilityCreateT38Capability(epCap, pctxt, OOTX&OORX);
             if(!t38Cap)
@@ -771,7 +771,7 @@ int ooSendTermCapMsg(OOH323CallData *call)
       return OO_FAILED;
    }
 
-   /* Define capability descriptior */
+   /* Define capability descriptor */
    capDesc = (H245CapabilityDescriptor*)
              memAlloc(pctxt, sizeof(H245CapabilityDescriptor));
    memset(capDesc, 0, sizeof(H245CapabilityDescriptor));
@@ -1308,7 +1308,7 @@ int ooSendRequestModeReject(OOH323CallData* call,
                       T_H245MultimediaSystemControlMessage_response);
    if(ret != OO_OK)
    {
-      OOTRACEERR3("Error:H245 message creation failed for - RequstMode "
+      OOTRACEERR3("Error:H245 message creation failed for - RequestMode "
                   "Reject (%s, %s)\n",call->callType,
                   call->callToken);
       return OO_FAILED;
@@ -1359,7 +1359,7 @@ int ooSendRequestMode(OOH323CallData* call,
                       T_H245MultimediaSystemControlMessage_request);
    if(ret != OO_OK)
    {
-      OOTRACEERR3("Error:H245 message creation failed for - RequstMode "
+      OOTRACEERR3("Error:H245 message creation failed for - RequestMode "
                   "(%s, %s)\n",call->callType,
                   call->callToken);
       return OO_FAILED;
@@ -1722,7 +1722,7 @@ int ooHandleOpenLogicalChannel_helper(OOH323CallData *call,
    	iPAddress->tsapIdentifier = pLogicalChannel->localRtpPort;
    }
 
-   /* media contrcol channel */
+   /* media control channel */
    h2250lcap->mediaControlChannel.t =
                                  T_H245TransportAddress_unicastAddress;
    h2250lcap->mediaControlChannel.u.unicastAddress =  (H245UnicastAddress*)
@@ -3733,7 +3733,7 @@ int ooOpenLogicalChannel(OOH323CallData *call, enum OOCapType capType )
          }
          if(!epCap)
          {
-            OOTRACEDBGA4("Prefereed capability %d is not a local transmit "
+            OOTRACEDBGA4("Preferred capability %d is not a local transmit "
                          "capability(%s, %s)\n", call->capPrefs.order[k],
                          call->callType, call->callToken);
             continue;

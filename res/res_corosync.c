@@ -433,21 +433,21 @@ static void publish_device_state_to_stasis(struct ast_event *event)
 {
 	const char *device;
 	enum ast_device_state state;
-	unsigned int cachable;
+	unsigned int cacheable;
 	struct ast_eid *event_eid;
 
 	ast_assert(ast_event_get_type(event) == AST_EVENT_DEVICE_STATE_CHANGE);
 
 	device = ast_event_get_ie_str(event, AST_EVENT_IE_DEVICE);
 	state = ast_event_get_ie_uint(event, AST_EVENT_IE_STATE);
-	cachable = ast_event_get_ie_uint(event, AST_EVENT_IE_CACHABLE);
+	cacheable = ast_event_get_ie_uint(event, AST_EVENT_IE_CACHABLE);
 	event_eid = (struct ast_eid *)ast_event_get_ie_raw(event, AST_EVENT_IE_EID);
 
 	if (ast_strlen_zero(device)) {
 		return;
 	}
 
-	if (ast_publish_device_state_full(device, state, cachable, event_eid)) {
+	if (ast_publish_device_state_full(device, state, cacheable, event_eid)) {
 		char eid[18];
 		ast_eid_to_str(eid, sizeof(eid), event_eid);
 		ast_log(LOG_WARNING, "Failed to publish device state message for %s from %s\n",
@@ -750,12 +750,12 @@ static void send_cluster_notify(void)
 		ast_debug(5, "send_cluster_notify rdlock\n");
 
 		if ((cs_err = corosync_cfg_local_get(cfg_handle, &node_id)) != CS_OK) {
-			ast_log(LOG_WARNING, "Failed to extract Corosync node ID for this node. Not informing cluster of existance.\n");
+			ast_log(LOG_WARNING, "Failed to extract Corosync node ID for this node. Not informing cluster of existence.\n");
 			return;
 		}
 
 		if (((cs_err = corosync_cfg_get_node_addrs(cfg_handle, node_id, 1, &num_addrs, &corosync_addr)) != CS_OK) || (num_addrs < 1)) {
-			ast_log(LOG_WARNING, "Failed to get local Corosync address. Not informing cluster of existance.\n");
+			ast_log(LOG_WARNING, "Failed to get local Corosync address. Not informing cluster of existence.\n");
 			return;
 		}
 
@@ -766,7 +766,7 @@ static void send_cluster_notify(void)
 	sa = (struct sockaddr *)corosync_addr.address;
 	sa_len = (size_t)corosync_addr.address_length;
 	if ((res = getnameinfo(sa, sa_len, buf, sizeof(buf), NULL, 0, NI_NUMERICHOST))) {
-		ast_log(LOG_WARNING, "Failed to determine name of local Corosync address: %s (%d). Not informing cluster of existance.\n",
+		ast_log(LOG_WARNING, "Failed to determine name of local Corosync address: %s (%d). Not informing cluster of existence.\n",
 			gai_strerror(res), res);
 		return;
 	}

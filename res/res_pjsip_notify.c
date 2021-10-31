@@ -47,7 +47,7 @@
 				<para>The endpoint to which to send the NOTIFY.</para>
 			</parameter>
 			<parameter name="URI" required="false">
-				<para>Abritrary URI to which to send the NOTIFY.</para>
+				<para>Arbitrary URI to which to send the NOTIFY.</para>
 			</parameter>
 			<parameter name="channel" required="false">
 				<para>Channel name to send the NOTIFY. Must be a PJSIP channel.</para>
@@ -1072,7 +1072,7 @@ static struct ast_cli_entry cli_options[] = {
 };
 
 /*!
- * \interanl
+ * \internal
  * \brief Completes SIPNotify AMI command in Endpoint mode.
  */
 static void manager_notify_endpoint(struct mansession *s,

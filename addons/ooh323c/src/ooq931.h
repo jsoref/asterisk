@@ -104,7 +104,7 @@ enum Q931InformationTransferCapability {
    Q931TransferUnrestrictedDigital = 8,
    Q931TransferRestrictedDigital = 9,
    Q931Transfer3_1kHzAudio = 16,
-   Q931TrasnferUnrestrictedDigitalWithTones = 17,
+   Q931TransferUnrestrictedDigitalWithTones = 17,
    Q931TransferVideo = 24
 };
 
@@ -229,7 +229,7 @@ typedef struct Q931InformationElement {
 
 /**
  * Q.931 message structure. Contains context for memory allocation,
- * protocol discriminator, call reference, meesage type and list of
+ * protocol discriminator, call reference, message type and list of
  * user-user information elements (IEs).
  */
 typedef struct Q931Message {
@@ -365,7 +365,7 @@ EXTERN int ooEncodeUUIE(OOCTXT* pctxt, Q931Message *q931msg);
  * @param q931msg  Pointer to the Q931 message
  * @param ieCode   IE code for the IE element to be retrieved
  *
- * @return         Pointer to a Q931InformationElement contating
+ * @return         Pointer to a Q931InformationElement containing
  *                 the IE element.
  */
 EXTERN Q931InformationElement* ooQ931GetIE (const Q931Message* q931msg,
@@ -418,7 +418,7 @@ EXTERN int ooGenerateCallIdentifier(H225CallIdentifier *callid);
 EXTERN int ooFreeQ931Message(OOCTXT* pctxt, Q931Message *q931Msg);
 
 /**
- * This function is invoked to retrive the outgoing message buffer for
+ * This function is invoked to retrieve the outgoing message buffer for
  * Q931 message
  *
  * @param call     Pointer to call for which outgoing Q931 message has to be
@@ -427,7 +427,7 @@ EXTERN int ooFreeQ931Message(OOCTXT* pctxt, Q931Message *q931Msg);
  *                 be returned.
  * @param len      Pointer to int in which length of the buffer will
  *                 be returned.
- * @param msgType  Pointer to integer in which message type of the ougoing
+ * @param msgType  Pointer to integer in which message type of the outgoing
  *                 message is returned.
  *
  * @return         Completion status - 0 on success, -1 on failure

@@ -735,7 +735,7 @@ static void test_vm_api_test_teardown(void)
  * \internal
  * \brief Update the test snapshots with a new mailbox snapshot
  *
- * \param mailbox_snapshot The new mailbox shapshot to update the test snapshots with
+ * \param mailbox_snapshot The new mailbox snapshot to update the test snapshots with
  */
 static void test_vm_api_update_test_snapshots(struct ast_vm_mailbox_snapshot *mailbox_snapshot)
 {
@@ -933,7 +933,7 @@ AST_TEST_DEFINE(voicemail_api_off_nominal_snapshot)
 		info->description =
 			"Test off nominal requests for mailbox snapshots.  This includes"
 			" testing the following:\n"
-			" * Access to non-exisstent mailbox\n"
+			" * Access to nonexistent mailbox\n"
 			" * Access to NULL mailbox\n"
 			" * Access to non-existent context\n"
 			" * Access to non-existent folder\n"
