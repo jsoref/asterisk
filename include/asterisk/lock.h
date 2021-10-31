@@ -723,7 +723,7 @@ static void  __attribute__((destructor)) fini_##rwlock(void) \
  * perform all memory reads/writes in a single atomic operation.  I don't
  * believe this is possible to exactly replicate using __sync built-ins.
  * Will need to determine potential use cases of this feature and write a
- * wrapper which provides consistant behavior between __sync and __atomic
+ * wrapper which provides consistent behavior between __sync and __atomic
  * implementations.
  */
 #define ast_atomic_compare_exchange_n(ptr, expected, desired, success_memorder, failure_memorder) \
