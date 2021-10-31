@@ -1741,7 +1741,7 @@ static int local_ast_moh_start(struct ast_channel *chan, const char *mclass, con
 					return -1;
 				}
 			} else {
-				/* We don't register RT moh class, so let's init it manualy */
+				/* We don't register RT moh class, so let's init it manually */
 
 				time(&mohclass->start);
 				mohclass->start -= respawn_time;
