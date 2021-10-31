@@ -78,7 +78,7 @@ char *end, *bs, *be;
  */
 
 int command_desc; /* command transfer descriptor */
-int speech_desc; /* speech signal descrriptor */
+int speech_desc; /* speech signal descriptor */
 char connected=1; /* connection state */
 
 int connect_to_host(char* host, int port); /* connect to a given host (name or IP) and given port number in nonblocking mode returning socket descriptor*/

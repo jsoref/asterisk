@@ -4485,7 +4485,7 @@ int ast_channel_fd_isset(const struct ast_channel *chan, int which);
 
 /*!
  * \since 15
- * \brief Retrieve the number of file decriptor positions present on the channel
+ * \brief Retrieve the number of file descriptor positions present on the channel
  *
  * \param chan The channel to get the count of
  *
