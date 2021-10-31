@@ -9449,7 +9449,7 @@ static int vm_intro_gr(struct ast_channel *chan, struct vm_state *vms)
  *     prefix on vm-new and vm-old (none for English).
  *  4) Pass the gender of the language's word for "message" as an argument to
  *     this function which is can in turn pass on to the functions which
- *     say numbers and put endings on nounds and adjectives.
+ *     say numbers and put endings on nouns and adjectives.
  *
  * All languages require these messages:
  *  vm-youhave		"You have..."
