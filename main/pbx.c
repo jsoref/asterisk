@@ -4330,7 +4330,7 @@ static enum ast_pbx_result __ast_pbx_run(struct ast_channel *c,
 	callid = ast_read_threadstorage_callid();
 	/* If the thread isn't already associated with a callid, we should create that association. */
 	if (!callid) {
-		/* Associate new PBX thread with the channel call id if it is availble.
+		/* Associate new PBX thread with the channel call id if it is available.
 		 * If not, create a new one instead.
 		 */
 		callid = ast_channel_callid(c);

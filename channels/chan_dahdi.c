@@ -6234,7 +6234,7 @@ static int dahdi_hangup(struct ast_channel *ast)
 				p->subs[SUB_REAL].inthreeway = 0;
 			}
 		} else if (idx == SUB_CALLWAIT) {
-			/* Ditch the holding callwait call, and immediately make it availabe */
+			/* Ditch the holding callwait call, and immediately make it available */
 			if (p->subs[SUB_CALLWAIT].inthreeway) {
 				/* This is actually part of a three way, placed on hold.  Place the third part
 				   on music on hold now */
