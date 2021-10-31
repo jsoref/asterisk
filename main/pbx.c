@@ -4010,7 +4010,7 @@ static int ast_add_hint(struct ast_exten *e)
 	}
 	hint_new->exten = e;
 	if (strstr(e->app, "${") && e->exten[0] == '_') {
-		/* The hint is dynamic and hasn't been evaluted yet */
+		/* The hint is dynamic and hasn't been evaluated yet */
 		hint_new->laststate = AST_DEVICE_INVALID;
 		hint_new->last_presence_state = AST_PRESENCE_INVALID;
 	} else {
