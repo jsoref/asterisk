@@ -500,7 +500,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
                                 ; setup you will not need to enable this.
 
 ;dynamic_exclude_static = yes   ; Disallow all dynamic hosts from registering
-                                ; as any IP address used for staticly defined
+                                ; as any IP address used for statically defined
                                 ; hosts.  This helps avoid the configuration
                                 ; error of allowing your users to register at
                                 ; the same address as a SIP provider.

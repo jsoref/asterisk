@@ -2186,7 +2186,7 @@ static const char *ast_var_name(const struct ast_var_t *var)
 /* experiment 1: see if it's easier just to use existing config code
  *               to read in the extensions.conf file. In this scenario,
                  I have to rip/copy code from other modules, because they
-                 are staticly declared as-is. A solution would be to move
+                 are statically declared as-is. A solution would be to move
                  the ripped code to another location and make them available
                  to other modules and standalones */
 
