@@ -5221,7 +5221,7 @@ static int user_chan_cb(void *obj, void *args, int flags)
 	return 0;
 }
 
-/*! \brief The MeetMeadmin application
+/*! \brief The MeetMeAdmin application
 
   MeetMeAdmin(confno, command, caller) */
 static int admin_exec(struct ast_channel *chan, const char *data) {
