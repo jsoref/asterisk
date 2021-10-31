@@ -593,7 +593,7 @@ static int turn_on_off(int index, struct video_desc *env)
 			p->status_index |= IS_ON;
 			/* print the new message in the message board */
 			update_device_info(env, index);
-			return 1; /* open succeded */
+			return 1; /* open succeeded */
 		}
 		return 0; /* failure */
 	} else {
