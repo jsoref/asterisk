@@ -52,7 +52,7 @@
 #define CONFIG_INCLUDE_FILE "test_config_include.conf"
 
 /*
- * This builds the folowing config:
+ * This builds the following config:
  * [Capitals]
  * Germany = Berlin
  * China = Beijing

@@ -2823,7 +2823,7 @@ static int hfp_parse_cind_test(struct hfp_pvt *hfp, char *buf)
 
 	hfp->nocallsetup = 1;
 
-	/* parse the indications list.  It is in the follwing format:
+	/* parse the indications list.  It is in the following format:
 	 * +CIND: ("ind1",(0-1)),("ind2",(0-5))
 	 */
 	group = 0;
