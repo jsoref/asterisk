@@ -1052,7 +1052,7 @@
 						It can be one of the following values:
 						</para><enumlist>
 							<enum name="no"><para>
-								meaning no verificaton is done.
+								meaning no verification is done.
 							</para></enum>
 							<enum name="fingerprint"><para>
 								meaning to verify the remote fingerprint.
