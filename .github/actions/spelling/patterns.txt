@@ -1,0 +1,28 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# uuid:
+[<({"'>][0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[<'"})>]
+
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9a-fA-FgGrR_]{2,}(?:[uU]?[lL]{0,2}|u\d+)\b
+
+# https://www.gnu.org/software/groff/manual/groff.html
+# man troff content
+\\f[BCIPR]
+
+# <word>v#
+[Vv]\d+(?:\b|(?=[a-zA-Z_]))
+
+# Compiler flags
+[\t "`]-[DWYL]
+[\t "`]-l(?!ogmsg)
+
+# password
+password = "?\w+\b
+
+# windows
+\\note\b
+\\todo\b
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b
