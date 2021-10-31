@@ -2943,7 +2943,7 @@ static void clear_queue(struct call_queue *q)
 /*!
  * \brief Change queue penalty by adding rule.
  *
- * Check rule for errors with time or fomatting, see if rule is relative to rest
+ * Check rule for errors with time or formatting, see if rule is relative to rest
  * of queue, iterate list of rules to find correct insertion point, insert and return.
  * \retval -1 on failure
  * \retval 0 on success
@@ -3047,7 +3047,7 @@ static int insert_penaltychange(const char *list_name, const char *content, cons
 /*!
  * \brief Load queue rules from realtime.
  *
- * Check rule for errors with time or fomatting, see if rule is relative to rest
+ * Check rule for errors with time or formatting, see if rule is relative to rest
  * of queue, iterate list of rules to find correct insertion point, insert and return.
  * \retval -1 on failure
  * \retval 0 on success
