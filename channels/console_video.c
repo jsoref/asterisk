@@ -162,7 +162,7 @@ static void my_scale(struct fbuf_t *in, AVPicture *p_in,
 
 /*
  * this structure will be an entry in the table containing
- * every device specified in the file oss.conf, it contains various infomation
+ * every device specified in the file oss.conf, it contains various information
  * about the device
  */
 struct video_device {
