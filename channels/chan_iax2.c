@@ -4581,7 +4581,7 @@ static void realtime_update_peer(const char *peername, struct ast_sockaddr *sock
 	ast_update_realtime("iaxpeers", "name", peername,
 		"ipaddr", ast_sockaddr_isnull(sockaddr) ? "" : ast_sockaddr_stringify_addr(sockaddr),
 		"port", ast_sockaddr_isnull(sockaddr) ? "" : port,
-		"regseconds", regseconds, syslabel, sysname, SENTINEL); /* note syslable can be NULL */
+		"regseconds", regseconds, syslabel, sysname, SENTINEL); /* note syslabel can be NULL */
 }
 
 struct create_addr_info {
