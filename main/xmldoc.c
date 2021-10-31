@@ -1537,7 +1537,7 @@ static int xmldoc_parse_variable(struct ast_xml_node *node, const char *tabs, st
 			ast_str_append(buffer, 0, "\n");
 			printedpara = 1;
 		}
-		/* Parse each <value name='valuename'>desciption</value> */
+		/* Parse each <value name='valuename'>description</value> */
 		valname = ast_xml_get_attribute(tmp, "name");
 		if (valname) {
 			ret = 1;
@@ -2231,7 +2231,7 @@ char *ast_xmldoc_build_synopsis(const char *type, const char *name, const char *
 
 /*!
  * \internal
- * \brief Build the descripton for an item
+ * \brief Build the description for an item
  *
  * \param node	The description node to parse
  *

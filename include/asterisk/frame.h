@@ -635,7 +635,7 @@ int ast_frame_slinear_sum(struct ast_frame *f1, struct ast_frame *f2);
 int ast_frame_clear(struct ast_frame *frame);
 
 /*!
- * \brief Copy the discription of a frame's subclass into the provided string
+ * \brief Copy the description of a frame's subclass into the provided string
  *
  * \param f The frame to get the information from
  * \param subclass Buffer to fill with subclass information
@@ -648,7 +648,7 @@ int ast_frame_clear(struct ast_frame *frame);
 char *ast_frame_subclass2str(struct ast_frame *f, char *subclass, size_t slen, char *moreinfo, size_t mlen);
 
 /*!
- * \brief Copy the discription of a frame type into the provided string
+ * \brief Copy the description of a frame type into the provided string
  *
  * \param frame_type The frame type to be described
  * \param ftype Buffer to fill with frame type description
