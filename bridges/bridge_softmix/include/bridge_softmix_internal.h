@@ -98,7 +98,7 @@ struct convolve_channel_pair {
 };
 
 struct convolve_data {
-	/*! A count of all channels potentialy having input data for the conference. */
+	/*! A count of all channels potentially having input data for the conference. */
 	int number_channels;
 	/*! Will set to true if there is at least one binaural output.
 	 * Only if set to true data will be convolved. */
