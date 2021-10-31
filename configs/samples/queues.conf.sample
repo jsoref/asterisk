@@ -192,7 +192,7 @@ monitor-type = MixMonitor
 ; Autopause will pause a queue member if they fail to answer a call
 ; no: Member will not be paused
 ; yes: Member will be paused only in the queue where the timeout took place
-; all: Memeber will be paused in all queues he/she is a member
+; all: Member will be paused in all queues he/she is a member
 ;autopause=yes
 ;
 ; Autopausedelay delay autopause for autopausedelay seconds from the
