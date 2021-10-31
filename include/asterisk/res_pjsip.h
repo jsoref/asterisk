@@ -2122,7 +2122,7 @@ pjsip_dialog *ast_sip_create_dialog_uas(const struct ast_sip_endpoint *endpoint,
  * occurs.
  *
  * As long as the caller maintains a reference to the dialog there should be no
- * worry that it might unknowningly be destroyed. However, once the caller unlocks
+ * worry that it might unknowingly be destroyed. However, once the caller unlocks
  * the dialog there is a danger that some of the dialog's internal objects could
  * be lost and/or compromised. For example, when the aforementioned transport error
  * occurs the dialog's associated transaction gets destroyed (see pjsip_dlg_on_tsx_state
