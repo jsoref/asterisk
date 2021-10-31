@@ -85,7 +85,7 @@ struct ast_str* ast_get_character_str(const char *str, const char *lang, enum as
 			fn = "digits/pound";
 			break;
 		case ('!'):
-			fn = "letters/exclaimation-point";
+			fn = "letters/exclamation-point";
 			break;
 		case ('@'):
 			fn = "letters/at";
@@ -227,7 +227,7 @@ struct ast_str* ast_get_phonetic_str(const char *str, const char *lang)
 			fn = "digits/pound";
 			break;
 		case ('!'):
-			fn = "letters/exclaimation-point";
+			fn = "letters/exclamation-point";
 			break;
 		case ('@'):
 			fn = "letters/at";
