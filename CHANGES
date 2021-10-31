@@ -3269,7 +3269,7 @@ ARI
 Functions
 ------------------
  * A new function, TALK_DETECT, has been added. When set on a channel, this
-   fucntion causes events indicating the starting/stoping of talking on said
+   function causes events indicating the starting/stoping of talking on said
    channel to be emitted to both AMI and ARI clients.
 
 ------------------------------------------------------------------------------

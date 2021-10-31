@@ -127,7 +127,7 @@ EXTERN int ooSendEmptyTermCapMsg(struct OOH323CallData *call);
 EXTERN ASN1UINT ooGenerateStatusDeterminationNumber(void);
 
 /**
- * This fuction is used to handle received MasterSlaveDetermination procedure
+ * This function is used to handle received MasterSlaveDetermination procedure
  * messages.
  * @param call       Pointer to the call for which a message is received.
  * @param pmsg       Pointer to MSD message

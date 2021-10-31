@@ -352,7 +352,7 @@ int ast_msg_has_destination(const struct ast_msg *msg);
 /*!
  * \brief Queue a message for routing through the dialplan.
  *
- * Regardless of the return value of this function, this funciton will take
+ * Regardless of the return value of this function, this function will take
  * care of ensuring that the message object is properly destroyed when needed.
  *
  * \retval 0 message successfully queued
@@ -363,7 +363,7 @@ int ast_msg_queue(struct ast_msg *msg);
 /*!
  * \brief Send a msg directly to an endpoint.
  *
- * Regardless of the return value of this function, this funciton will take
+ * Regardless of the return value of this function, this function will take
  * care of ensuring that the message object is properly destroyed when needed.
  *
  * \retval 0 message successfully queued to be sent out

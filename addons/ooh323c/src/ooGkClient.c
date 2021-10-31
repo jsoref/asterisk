@@ -2870,7 +2870,7 @@ int ooGkClientHandleClientOrGkFailure(ooGkClient *pGkClient)
 }
 
 /**
- * TODO: This fuction might not work properly in case of additive registrations
+ * TODO: This function might not work properly in case of additive registrations
  * For example we registrered 10 aliases and gatekeeper accepted 8 of them.
  * Now we want to register another two new aliases(not out of those first 10).
  * Gk responds with RCF with empty terminalAlias field thus indicating both

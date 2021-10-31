@@ -663,7 +663,7 @@ static struct parking_lot *alloc_new_parking_lot(struct parking_lot_cfg *lot_cfg
 void parking_lot_cfg_remove_extensions(struct parking_lot_cfg *lot_cfg)
 {
 	if (!ast_strlen_zero(lot_cfg->registrar)) {
-		/* Although the function is called ast_context_destroy, the use of this funtion is
+		/* Although the function is called ast_context_destroy, the use of this function is
 		 * intended only to remove extensions, hints, etc registered by the parking lot's registrar.
 		 * It won't actually destroy the context unless that context is empty afterwards and it is
 		 * unreferenced.

@@ -315,7 +315,7 @@ extern struct {
     if (*voice == 0 && *alphax < 128.f) {
 	alpha = 8.f;
     }
-/* SEESAW: Construct a pitch pointer array and intermediate winner functio
+/* SEESAW: Construct a pitch pointer array and intermediate winner function
 n*/
 /*   Left to right pass: */
     iptr = *ipoint + 1;

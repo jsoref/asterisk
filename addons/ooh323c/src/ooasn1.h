@@ -1663,7 +1663,7 @@ EXTERN int encodeObjectIdentifier (OOCTXT* pctxt, ASN1OBJID* pvalue);
 EXTERN int encodebitsFromOctet (OOCTXT* pctxt, ASN1OCTET value, ASN1UINT nbits);
 
 /**
- * This fuction will encode an array of octets. The Octets will be encoded
+ * This function will encode an array of octets. The Octets will be encoded
  * unaligned starting at the current bit offset within the encode buffer.
  *
  * @param pctxt        A pointer to a context structure. The provides a storage

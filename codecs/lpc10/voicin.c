@@ -542,7 +542,7 @@ fic*/
 /*   SNR.  The last element of the vector is the constant. */
 /* 	         E    ZC    RC1    Qs   IVRC2  aRb   aRf        c */
 
-/*  The VOICE array contains the result of the linear discriminant functio
+/*  The VOICE array contains the result of the linear discriminant function
 n*/
 /*   (analog values).  The VOIBUF array contains the hard-limited binary
 */

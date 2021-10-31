@@ -1660,7 +1660,7 @@ static int get_buddy_status(struct ast_xmpp_client_config *clientcfg, char *scre
 
 /*!
  * \internal
- * \brief Dial plan funtcion to retrieve the status of a buddy.
+ * \brief Dial plan function to retrieve the status of a buddy.
  * \param channel The associated ast_channel, if there is one
  * \param data The account, buddy JID, and optional timeout
  * timeout.

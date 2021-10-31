@@ -4970,7 +4970,7 @@ int ast_context_remove_extension_callerid(const char *context, const char *exten
 }
 
 /*!
- * \brief This functionc locks given context, search for the right extension and
+ * \brief This function locks given context, search for the right extension and
  * fires out all peer in this extensions with given priority. If priority
  * is set to 0, all peers are removed. After that, unlock context and
  * return.
