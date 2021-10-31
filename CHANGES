@@ -4902,7 +4902,7 @@ MixMonitor
 ------------------
  * MixMonitor hooks now have IDs associated with them which can be used to
    assign a target to StopMixMonitor. Use of MixMonitor's i(variable) option
-   will allow storage of the MixMontior ID in a channel variable. StopMixmonitor
+   will allow storage of the MixMonitor ID in a channel variable. StopMixmonitor
    now accepts that ID as an argument.
 
  * Added 'm' option, which stores a copy of the recording as a voicemail in the
