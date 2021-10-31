@@ -7818,7 +7818,7 @@ static int get_member_penalty(char *queuename, char *interface)
 		queue_t_unref(q, "Search complete");
 	}
 
-	/* some useful debuging */
+	/* some useful debugging */
 	if (foundqueue) {
 		ast_log (LOG_ERROR, "Invalid queuename\n");
 	} else {
