@@ -3631,7 +3631,7 @@ res_mwi_external
    acts as a base framework that other modules can build on top of to allow
    an external system to control MWI within Asterisk. For implementations
    that make use of res_mwi_external, see res_mwi_external_ami and
-   res_ari_mailboxes. Note that res_mwi_external canflicts with other modules
+   res_ari_mailboxes. Note that res_mwi_external conflicts with other modules
    that may produce MWI themselves, such as app_voicemail. res_mwi_external
    and other modules that depend on it cannot be built or loaded with
    app_voicemail present.
