@@ -263,7 +263,7 @@ enum TIME_UNIT {
  * given string at least starts with one of the form values it will match.
  *
  * For example: us, usec, microsecond will all map to TIME_UNIT_MICROSECOND.
- * So will uss, usecs, miscroseconds, or even microsecondvals
+ * So will uss, usecs, microseconds, or even microsecondvals
  *
  * Matching is also not case sensitive.
  *
