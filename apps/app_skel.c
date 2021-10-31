@@ -228,7 +228,7 @@ static void *skel_level_alloc(const char *cat);
 /*! \brief Find a skel level in the specified container
  * \note This function *does not* look for a skel_level in the active container. It is used
  * internally by the Config Options code to check if an level has already been added to the
- * container that will be swapped for the live container on a successul reload.
+ * container that will be swapped for the live container on a successful reload.
  *
  * \param tmp_container A non-active container to search for a level
  * \param category The category associated with the level to check for

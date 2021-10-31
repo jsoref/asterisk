@@ -24909,7 +24909,7 @@ static int handle_response_register(struct sip_pvt *p, int resp, const char *res
 		ao2_t_replace(p->registry, NULL, "unref registry entry p->registry");
 
 		/* destroy dialog now to avoid interference with next register */
-		pvt_set_needdestroy(p, "Registration successfull");
+		pvt_set_needdestroy(p, "Registration successful");
 
 		/* set us up for re-registering
 		 * figure out how long we got registered for

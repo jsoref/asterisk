@@ -106,7 +106,7 @@ struct ast_msg_handler {
 	 *
 	 * \param msg The message to handle
 	 *
-	 * \retval 0 The handler processed the message successfull
+	 * \retval 0 The handler processed the message successful
 	 * \retval non-zero The handler passed or could not process the message
 	 */
 	int (* const handle_msg)(struct ast_msg *msg);
