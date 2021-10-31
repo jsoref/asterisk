@@ -3657,7 +3657,7 @@ RFC 3951              Internet Low Bit Rate Codec          December 2004
    }
 
    /*----------------------------------------------------------------*
-    *  frame residual decoder function (subrutine to iLBC_decode)
+    *  frame residual decoder function (subroutine to iLBC_decode)
     *---------------------------------------------------------------*/
 
    void Decode(
@@ -9357,7 +9357,7 @@ RFC 3951              Internet Low Bit Rate Codec          December 2004
 
 
    /*----------------------------------------------------------------*
-    *  lpc analysis (subrutine to LPCencode)
+    *  lpc analysis (subroutine to LPCencode)
     *---------------------------------------------------------------*/
 
    void SimpleAnalysis(
@@ -9413,7 +9413,7 @@ RFC 3951              Internet Low Bit Rate Codec          December 2004
 
 
     *  lsf interpolator and conversion from lsf to a coefficients
-    *  (subrutine to SimpleInterpolateLSF)
+    *  (subroutine to SimpleInterpolateLSF)
     *---------------------------------------------------------------*/
 
    void LSFinterpolate2a_enc(
@@ -9431,7 +9431,7 @@ RFC 3951              Internet Low Bit Rate Codec          December 2004
    }
 
    /*----------------------------------------------------------------*
-    *  lsf interpolator (subrutine to LPCencode)
+    *  lsf interpolator (subroutine to LPCencode)
     *---------------------------------------------------------------*/
 
    void SimpleInterpolateLSF(
@@ -9528,7 +9528,7 @@ RFC 3951              Internet Low Bit Rate Codec          December 2004
    }
 
    /*----------------------------------------------------------------*
-    *  lsf quantizer (subrutine to LPCencode)
+    *  lsf quantizer (subroutine to LPCencode)
     *---------------------------------------------------------------*/
 
    void SimplelsfQ(
@@ -10387,7 +10387,7 @@ A.46.  StateSearchW.c
 
    /*----------------------------------------------------------------*
     *  predictive noise shaping encoding of scaled start state
-    *  (subrutine for StateSearchW)
+    *  (subroutine for StateSearchW)
     *---------------------------------------------------------------*/
 
    void AbsQuantW(

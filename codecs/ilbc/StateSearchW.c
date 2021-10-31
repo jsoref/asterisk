@@ -20,7 +20,7 @@
 
    /*----------------------------------------------------------------*
     *  predictive noise shaping encoding of scaled start state
-    *  (subrutine for StateSearchW)
+    *  (subroutine for StateSearchW)
     *---------------------------------------------------------------*/
 
    void AbsQuantW(
