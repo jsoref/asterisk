@@ -265,7 +265,7 @@ void* memHeapAlloc (void** ppvMemHeap, int nbytes)
                   if (nunits <= (ASN1UINT)pElem_nunits (pElem)) {
                      RTMEMDIAG3
                         ("memHeapAlloc: "
-                         "found an exisiting free element 0x%x, size %d\n",
+                         "found an existing free element 0x%x, size %d\n",
                         pElem, (pElem_nunits (pElem) * 8u));
 
                      if (pMemBlk->freeElemOff ==
