@@ -1331,7 +1331,7 @@
 ;auth_rejection_permanent=yes   ; Determines whether failed authentication
                                 ; challenges are treated as permanent failures
                                 ; (default: "yes")
-;client_uri=    ; Client SIP URI used when attemping outbound registration
+;client_uri=    ; Client SIP URI used when attempting outbound registration
                 ; (default: "")
 ;contact_user=  ; Contact User to use in request (default: "")
 ;expiration=3600        ; Expiration time for registrations in seconds
