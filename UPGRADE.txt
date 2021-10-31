@@ -1476,7 +1476,7 @@ SIP
    performance should be vastly improved.  The HANGUPCAUSE function should now
    be used instead of SIP_CAUSE. Because of this, the storesipcause option in
    sip.conf is also deprecated.
- - The sip paramater for Originating Line Information (oli, isup-oli, and
+ - The sip parameter for Originating Line Information (oli, isup-oli, and
    ss7-oli) is now parsed out of the From header and copied into the channel's
    ANI2 information field.  This is readable from the CALLERID(ani2) dialplan
    function.

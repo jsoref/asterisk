@@ -17258,7 +17258,7 @@ static void build_route(struct sip_pvt *p, struct sip_request *req, int backward
 }
 
 /*! \brief Build route list from Path header
- *  RFC 3327 requires that the Path header contains SIP URIs with lr paramter.
+ *  RFC 3327 requires that the Path header contains SIP URIs with lr parameter.
  *  Thus, we do not care about strict routing SIP routers
  */
 static int build_path(struct sip_pvt *p, struct sip_peer *peer, struct sip_request *req, const char *pathbuf)

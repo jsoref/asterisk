@@ -675,7 +675,7 @@ int ast_get_enum(struct ast_channel *chan, const char *number, char *dst, int ds
 
 /*
   We don't need that any more, that "n" preceding the number has been replaced by a flag
-  in the options paramter.
+  in the options parameter.
 	ast_copy_string(naptrinput, number, sizeof(naptrinput));
 */
 /*

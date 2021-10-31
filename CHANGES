@@ -2616,7 +2616,7 @@ ARI
    of whether the application 'controls' the resource. This is useful for
    scenarios where an ARI application merely wants to observe the system,
    as opposed to control it. There are two ways to accomplish this:
-   (1) Via the WebSocket connection URI. A new query paramter, 'subscribeAll',
+   (1) Via the WebSocket connection URI. A new query parameter, 'subscribeAll',
        has been added that, when present and True, will subscribe all
        specified applications to all ARI event sources in Asterisk.
    (2) Via the applications resource. An ARI client can, at any time, subscribe

@@ -1146,7 +1146,7 @@
 				this value along with the optional UnitType value are entries in a list.  To accommodate this
 				these values take an index value starting at 0 which can be used to generate this list of
 				unit entries.  For Example, If two unit entires were required this could be achieved by setting the
-				paramter UnitAmount(0)=1234 and UnitAmount(1)=5678.  Note that UnitAmount at index 0 is
+				parameter UnitAmount(0)=1234 and UnitAmount(1)=5678.  Note that UnitAmount at index 0 is
 				required when ChargeType=Unit, all other entries in the list are optional.
 				</para>
 			</parameter>

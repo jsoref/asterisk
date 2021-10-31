@@ -924,7 +924,7 @@ static char *xmldoc_parse_cmd_enumlist(struct ast_xml_node *fixnode)
  *
  * \param fixnode The <syntax> node pointer.
  * \param name The name of the 'command'.
- * \param printname Print the name of the command before the paramters?
+ * \param printname Print the name of the command before the parameters?
  *
  * \retval On error, return just 'name'.
  * \retval On success return the generated syntax.
