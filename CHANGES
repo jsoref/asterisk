@@ -306,7 +306,7 @@ Core
       a ast_stream_codec_negotiation_prefs structure.
     * Added ast_stream_codec_prefs_to_str() which does the reverse.
     * Added many functions to parse individual parameter name
-      and value strings to their respectrive enum values, and the
+      and value strings to their respective enum values, and the
       reverse.
 
    For streams:
