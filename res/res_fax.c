@@ -3114,7 +3114,7 @@ static struct ast_frame *fax_gateway_detect_t38(struct fax_gateway *gateway, str
 	enum ast_t38_state state_other;
 
 	if (f->datalen != sizeof(struct ast_control_t38_parameters)) {
-		/* invalaid AST_CONTROL_T38_PARAMETERS frame, we can't
+		/* invalid AST_CONTROL_T38_PARAMETERS frame, we can't
 		 * do anything with it, pass it on */
 		return f;
 	}

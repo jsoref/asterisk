@@ -4251,7 +4251,7 @@ const char* ooGetQ931CauseValueText(int val)
       case Q931RecoveryOnTimerExpiry:
          return "Q931RecoveryOnTimerExpiry";
       case Q931InvalidCallReference:
-         return "Q931InvaliedCallReference";
+         return "Q931InvalidCallReference";
       default:
          return "Unsupported Cause Type";
    }

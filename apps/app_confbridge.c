@@ -2374,7 +2374,7 @@ static int conf_get_pin(struct ast_channel *chan, struct confbridge_user *user)
 			ast_channel_language(chan));
 		res = ast_waitstream(chan, AST_DIGIT_ANY);
 		if (res > 0) {
-			/* Account for digit already read during ivalid pin playback
+			/* Account for digit already read during invalid pin playback
 			 * resetting pin buf. */
 			pin_guess[0] = res;
 			pin_guess[1] = '\0';
