@@ -93,7 +93,7 @@ def upgrade():
         sa.Column('protocol', pjsip_transport_protocol_values),
         sa.Column('require_client_cert', yesno_values),
         sa.Column('verify_client', yesno_values),
-        sa.Column('verifiy_server', yesno_values),
+        sa.Column('verify_server', yesno_values),
         sa.Column('tos', yesno_values),
         sa.Column('cos', yesno_values),
     )
