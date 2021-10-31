@@ -96,7 +96,7 @@ int ast_channel_has_role(struct ast_channel *channel, const char *role_name);
  * \retval non-NULL The value of the option
  *
  * This is an alternative to \ref ast_bridge_channel_get_role_option that is useful if bridge
- * roles have not yet been esstablished on a channel's bridge_channel. A possible example of
+ * roles have not yet been established on a channel's bridge_channel. A possible example of
  * when this could be used is in a bridge v_table's push() callback.
  */
 const char *ast_channel_get_role_option(struct ast_channel *channel, const char *role_name, const char *option);
