@@ -229,7 +229,7 @@ typedef struct Q931InformationElement {
 
 /**
  * Q.931 message structure. Contains context for memory allocation,
- * protocol discriminator, call reference, meesage type and list of
+ * protocol discriminator, call reference, message type and list of
  * user-user information elements (IEs).
  */
 typedef struct Q931Message {

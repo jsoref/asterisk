@@ -2793,7 +2793,7 @@ static void handle_parked_call_message(void *data, struct stasis_subscription *s
 	}
 
 	if (unhandled) {
-		/* Nothing handled the messgae - we need a new one! */
+		/* Nothing handled the message - we need a new one! */
 		struct cdr_object *new_cdr;
 
 		new_cdr = cdr_object_create_and_append(cdr, stasis_message_timestamp(message));

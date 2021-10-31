@@ -285,7 +285,7 @@ const char *ast_msg_get_var(struct ast_msg *msg, const char *name);
  * \note The return value is valid only as long as the ast_message is valid. Hold a reference
  *       to the message if you plan on storing the return value.
  *
- * \return The body of the messsage, encoded in UTF-8.
+ * \return The body of the message, encoded in UTF-8.
  */
 const char *ast_msg_get_body(const struct ast_msg *msg);
 
