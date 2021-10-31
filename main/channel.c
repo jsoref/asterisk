@@ -944,7 +944,7 @@ __ast_channel_alloc_ap(int needqueue, int state, const char *cid_num, const char
 
 	/*
 	 * And now, since the channel structure is built, and has its name, let
-	 * the world know of its existance
+	 * the world know of its existence
 	 */
 	ast_channel_stage_snapshot_done(tmp);
 
