@@ -797,7 +797,7 @@ Realtime Configuration:
    SIP Path support in chan_pjsip.
 
  - The following new tables have been added for pjsip realtime: 'ps_systems',
-   'ps_globals', 'ps_tranports', 'ps_registrations'.
+   'ps_globals', 'ps_transport', 'ps_registrations'.
 
  - The following columns were added to the 'ps_aors' realtime table:
    'maximum_expiration', 'outbound_proxy', and 'support_path'.

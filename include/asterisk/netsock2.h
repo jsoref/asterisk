@@ -650,7 +650,7 @@ int ast_sockaddr_hash(const struct ast_sockaddr *addr);
  * \brief
  * Returns a string representation of an ast_transport
  *
- * \retval Name of the tranpsort if it is defined
+ * \retval Name of the transport if it is defined
  * \retval Undefined if the transport is undefined
  */
 const char *ast_transport2str(enum ast_transport transport);
