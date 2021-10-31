@@ -9705,7 +9705,7 @@ static int reload_handler(int reload, struct ast_flags *mask, const char *queuen
 	return res;
 }
 
-/*! \brief direct ouput to manager or cli with proper terminator */
+/*! \brief direct output to manager or cli with proper terminator */
 static void do_print(struct mansession *s, int fd, const char *str)
 {
 	if (s) {
