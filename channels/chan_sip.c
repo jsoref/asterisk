@@ -10119,7 +10119,7 @@ static int find_sdp(struct sip_request *req)
 		boundary[strlen(boundary) - 1] = '\0';
 
 	/* search for the boundary marker, the empty line delimiting headers from
-	   sdp part and the end boundry if it exists */
+	   sdp part and the end boundary if it exists */
 
 	for (x = 0; x < (req->lines); x++) {
 		const char *line = REQ_OFFSET_TO_STR(req, line[x]);

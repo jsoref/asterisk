@@ -1486,7 +1486,7 @@ EXTERN int encodeBMPString
 (OOCTXT* pctxt, ASN1BMPString value, Asn116BitCharSet* permCharSet);
 
 /**
- * This function will position the encode bit cursor on the next byte boundry.
+ * This function will position the encode bit cursor on the next byte boundary.
  *
  * @param pctxt        A pointer to a context structure. This provides a
  *                       storage area for the function to store all working
