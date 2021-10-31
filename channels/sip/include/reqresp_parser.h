@@ -118,7 +118,7 @@ char *get_in_brackets(char *tmp);
  *
  * \param src String to search
  * \param[out] start Set to first character inside left bracket.
- * \param[out] length Set to lenght of string inside brackets
+ * \param[out] length Set to length of string inside brackets
  * \retval 0 success
  * \retval -1 failure
  * \retval 1 no brackets so got all
@@ -143,7 +143,7 @@ int get_in_brackets_full(char *tmp, char **out, char **residue);
 int parse_name_andor_addr(char *uri, const char *scheme, char **name,
 			  char **user, char **pass, char **domain,
 			  struct uriparams *params, char **headers,
-			  char **remander);
+			  char **residue);
 
 /*! \brief Parse all contact header contacts
  * \retval 0 success

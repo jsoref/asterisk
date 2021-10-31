@@ -94,7 +94,7 @@
 ;	1. Asterisk checks the SIP From: address username and matches against
 ;	   names of devices with type=user
 ;	   The name is the text between square brackets [name]
-;	2. Asterisk checks the From: addres and matches the list of devices
+;	2. Asterisk checks the From: address and matches the list of devices
 ;	   with a type=peer
 ;	3. Asterisk checks the IP address (and port number) that the INVITE
 ;	   was sent from and matches against any devices with type=peer
@@ -114,7 +114,7 @@
 ; ----------------------------------------------------------------------------
 
 ; ** Old configuration options **
-; The "call-limit" configuation option is considered old is replaced
+; The "call-limit" configuration option is considered old is replaced
 ; by new functionality. To enable callcounters, you use the new
 ; "callcounter" setting (for extension states in queue and subscriptions)
 ; You are encouraged to use the dialplan groupcount functionality
@@ -235,7 +235,7 @@ tcpbindaddr=0.0.0.0             ; IP address for TCP server to bind to (0.0.0.0 
 
 ;tcpauthtimeout = 30            ; tcpauthtimeout specifies the maximum number
 				; of seconds a client has to authenticate.  If
-				; the client does not authenticate beofre this
+				; the client does not authenticate before this
 				; timeout expires, the client will be
                                 ; disconnected. (default: 30 seconds)
 
@@ -244,7 +244,7 @@ tcpbindaddr=0.0.0.0             ; IP address for TCP server to bind to (0.0.0.0 
                                 ; to connect at any given time. (default: 100)
 
 ;websocket_enabled = true       ; Set to false to prevent chan_sip from listening to websockets.  This
-                                ; is neeeded when using chan_sip and res_pjsip_transport_websockets on
+                                ; is needed when using chan_sip and res_pjsip_transport_websockets on
                                 ; the same system.
 
 ;websocket_write_timeout = 100  ; Default write timeout to set on websocket transports.
@@ -263,7 +263,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
                                 ; ability to place SIP calls based on domain
                                 ; names to some other SIP users on the Internet
                                 ; Specifying a port in a SIP peer definition or
-                                ; when dialing outbound calls will supress SRV
+                                ; when dialing outbound calls will suppress SRV
                                 ; lookups for that peer or call.
 
 ;pedantic=yes                   ; Enable checking of tags in headers,
@@ -500,7 +500,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
                                 ; setup you will not need to enable this.
 
 ;dynamic_exclude_static = yes   ; Disallow all dynamic hosts from registering
-                                ; as any IP address used for staticly defined
+                                ; as any IP address used for statically defined
                                 ; hosts.  This helps avoid the configuration
                                 ; error of allowing your users to register at
                                 ; the same address as a SIP provider.
@@ -701,7 +701,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
 ; for a device.
 ;
 ; If you set the busylevel, we will indicate busy when we have a number of calls that
-; matches the busylevel treshold.
+; matches the busylevel threshold.
 ;
 ; For queues, you will need this level of detail in status reporting, regardless
 ; if you use SIP subscriptions. Queues and manager use the same internal interface
@@ -1236,7 +1236,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
 ;   Peers handle both inbound and outbound calls and are matched by ip/port, so for
 ;   The case of incoming calls from the peer, the IP address must match in order for
 ;   The invitation to work. This means calls made from either direction won't work if
-;   The peer is unregistered while host=dynamic or if the host is otherise not set to
+;   The peer is unregistered while host=dynamic or if the host is otherwise not set to
 ;   the correct IP of the sender.
 ; * For entities with 'type=user':
 ;   Asterisk users handle inbound calls only (meaning they call Asterisk, Asterisk can't
@@ -1369,7 +1369,7 @@ srvlookup=yes                   ; Enable DNS SRV lookups on outbound calls
 ;				     ; A value of 'yes' will perform both certificate and fingerprint verification
 ;				     ; A value of 'no' will perform no certificate or fingerprint verification
 ;				     ; A value of 'fingerprint' will perform ONLY fingerprint verification
-;				     ; A value of 'certificate' will perform ONLY certficiate verification
+;				     ; A value of 'certificate' will perform ONLY certificate verification
 ; dtlsrekey = 60                     ; Interval at which to renegotiate the TLS session and rekey the SRTP session
 ;                                    ; If this is not set or the value provided is 0 rekeying will be disabled
 ; dtlsautogeneratecert = yes         ; Enable ephemeral DTLS certificate generation. The default is 'no.'

@@ -3,7 +3,7 @@
 #
 # Copyright (C) 2013, Russell Bryant
 #
-# Russell Bryant <russell@rusellbryant.net>
+# Russell Bryant <russell@russellbryant.net.net>
 #
 # See http://www.asterisk.org for more information about
 # the Asterisk project. Please do not directly contact
@@ -40,7 +40,7 @@ def upgrade():
         sa.Column('context', sa.String(80)),
         sa.Column('macrocontext', sa.String(80)),
         sa.Column('callerid', sa.String(80)),
-        sa.Column('origtime', sa.Integer),
+        sa.Column('orightime', sa.Integer),
         sa.Column('duration', sa.Integer),
         sa.Column('recording', sa.LargeBinary),
         sa.Column('flag', sa.String(30)),

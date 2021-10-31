@@ -1166,7 +1166,7 @@ static ast_mutex_t iaxsl[ARRAY_LEN(iaxs)];
 /*!
  *  * \brief Another container of iax2_pvt structures
  *
- *  Active IAX2 pvt stucts used during transfering a call are stored here.
+ *  Active IAX2 pvt struts used during transfering a call are stored here.
  */
 static struct ao2_container *iax_transfercallno_pvts;
 
@@ -2004,7 +2004,7 @@ static int user_cmp_cb(void *obj, void *arg, int flags)
 }
 
 /*!
- * \note This funtion calls realtime_peer -> reg_source_db -> iax2_poke_peer -> find_callno,
+ * \note This function calls realtime_peer -> reg_source_db -> iax2_poke_peer -> find_callno,
  *       so do not call it with a pvt lock held.
  */
 static struct iax2_peer *find_peer(const char *name, int realtime)
@@ -2690,7 +2690,7 @@ static void peercnt_remove(struct peercnt *peercnt)
 	 * Container locked here since peercnt may be unlinked from
 	 * list.  If left unlocked, peercnt_add could try and grab this
 	 * entry from the table and modify it at the "same time" this
-	 * thread attemps to unlink it.
+	 * thread attempts to unlink it.
 	 */
 	ao2_lock(peercnts);
 	peercnt->cur--;
@@ -4581,7 +4581,7 @@ static void realtime_update_peer(const char *peername, struct ast_sockaddr *sock
 	ast_update_realtime("iaxpeers", "name", peername,
 		"ipaddr", ast_sockaddr_isnull(sockaddr) ? "" : ast_sockaddr_stringify_addr(sockaddr),
 		"port", ast_sockaddr_isnull(sockaddr) ? "" : port,
-		"regseconds", regseconds, syslabel, sysname, SENTINEL); /* note syslable can be NULL */
+		"regseconds", regseconds, syslabel, sysname, SENTINEL); /* note syslabel can be NULL */
 }
 
 struct create_addr_info {
@@ -5830,7 +5830,7 @@ static int iax2_getpeertrunk(struct ast_sockaddr addr)
 /*! \brief  Create new call, interface with the PBX core */
 static struct ast_channel *ast_iax2_new(int callno, int state, iax2_format capability,
 	struct iax2_codec_pref *prefs, const struct ast_assigned_ids *assignedids,
-	const struct ast_channel *requestor, unsigned int cachable)
+	const struct ast_channel *requestor, unsigned int cacheable)
 {
 	struct ast_channel *tmp = NULL;
 	struct chan_iax2_pvt *i;
@@ -5963,7 +5963,7 @@ static struct ast_channel *ast_iax2_new(int callno, int state, iax2_format capab
 	i->owner = tmp;
 	i->capability = capability;
 
-	if (!cachable) {
+	if (!cacheable) {
 		ast_set_flag(ast_channel_flags(tmp), AST_FLAG_DISABLE_DEVSTATE_CACHE);
 	}
 
@@ -8404,18 +8404,18 @@ static int authenticate(const char *challenge, const char *secret, const char *k
 		if ((authmethods & IAX_AUTH_MD5) && !ast_strlen_zero(challenge)) {
 			struct MD5Context md5;
 			unsigned char digest[16];
-			char digres[128];
+			char digress[128];
 			MD5Init(&md5);
 			MD5Update(&md5, (unsigned char *)challenge, strlen(challenge));
 			MD5Update(&md5, (unsigned char *)secret, strlen(secret));
 			MD5Final(digest, &md5);
 			/* If they support md5, authenticate with it.  */
 			for (x=0;x<16;x++)
-				sprintf(digres + (x << 1),  "%02hhx", digest[x]); /* safe */
+				sprintf(digress + (x << 1),  "%02hhx", digest[x]); /* safe */
 			if (pvt) {
 				build_encryption_keys(digest, pvt);
 			}
-			iax_ie_append_str(ied, IAX_IE_MD5_RESULT, digres);
+			iax_ie_append_str(ied, IAX_IE_MD5_RESULT, digress);
 			res = 0;
 		} else if (authmethods & IAX_AUTH_PLAINTEXT) {
 			iax_ie_append_str(ied, IAX_IE_PASSWORD, secret);
@@ -8701,7 +8701,7 @@ static int complete_transfer(int callno, struct iax_ies *ies)
 		remove_by_peercallno(pvt);
 	}
 	pvt->peercallno = peercallno;
-	/*this is where the transfering call swiches hash tables */
+	/*this is where the transfering call switches hash tables */
 	store_by_peercallno(pvt);
 	pvt->transferring = TRANSFER_NONE;
 	pvt->svoiceformat = -1;
@@ -9290,7 +9290,7 @@ static int registry_rerequest(struct iax_ies *ies, int callno, struct ast_sockad
 			return send_command(iaxs[callno], AST_FRAME_IAX, IAX_COMMAND_REGREQ, 0, ied.buf, ied.pos, -1);
 		} else
 			return -1;
-		ast_log(LOG_WARNING, "Registry acknowledge on unknown registery '%s'\n", peer);
+		ast_log(LOG_WARNING, "Registry acknowledge on unknown registry '%s'\n", peer);
 	} else
 		ast_log(LOG_NOTICE, "Can't reregister without a reg\n");
 	return -1;
@@ -9513,7 +9513,7 @@ static int timing_read(int *id, int fd, short events, void *cbdata)
 			res = send_trunk(tpeer, &now);
 			trunk_timed++;
 			if (iaxtrunkdebug) {
-				ast_verbose(" - Trunk peer (%s) has %d call chunk%s in transit, %u bytes backloged and has hit a high water mark of %u bytes\n",
+				ast_verbose(" - Trunk peer (%s) has %d call chunk%s in transit, %u bytes backlogged and has hit a high water mark of %u bytes\n",
 							ast_sockaddr_stringify(&tpeer->addr),
 							res,
 							(res != 1) ? "s" : "",
@@ -10253,7 +10253,7 @@ static int socket_process_helper(struct iax2_thread *thread)
 			if (ies.calltoken && ies.calltokendata) {
 				/* if we've gotten this far, and the calltoken ie data exists,
 				 * then calltoken validation _MUST_ have taken place.  If calltoken
-				 * data is provided, it is always validated reguardless of any
+				 * data is provided, it is always validated regardless of any
 				 * calltokenoptional or requirecalltoken options */
 				new = NEW_ALLOW_CALLTOKEN_VALIDATED;
 			} else {

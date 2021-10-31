@@ -56,7 +56,7 @@
 	a channel. Once attached to the channel, the FrameHook will call the event_callback
 	function each time a frame is written or read on the channel.  A custom data
 	pointer can be provided to this function to store on the FrameHook as well.  This
-	pointer can be used to keep up with any statefull information associated with the FrameHook
+	pointer can be used to keep up with any stateful information associated with the FrameHook
 	and is provided during the event_callback function.  The destroy_callback function is optional.
 	This function exists so any custom data stored on the FrameHook can be destroyed before
 	the Framehook if destroyed.
@@ -177,7 +177,7 @@ enum ast_framehook_event {
  * \param channel, The ast_channel this framehook is attached to
  * \param frame, The ast_frame being intercepted for viewing and manipulation
  * \param event, The type of event which is occurring
- * \param data, The data pointer provided at framehook initilization.
+ * \param data, The data pointer provided at framehook initialization.
  *
  * \retval the resulting frame.
  */
@@ -204,7 +204,7 @@ typedef void (*ast_framehook_destroy_callback)(void *data);
  * frames of a given type
  * \since 12
  *
- * \param data, The data pointer provided at framehook initilization.
+ * \param data, The data pointer provided at framehook initialization.
  * \param type, The type of frame.
  *
  * \return 0 if frame type is being ignored

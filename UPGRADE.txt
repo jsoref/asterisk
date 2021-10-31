@@ -488,7 +488,7 @@ app_amd:
    the result would be detection as a 'MACHINE'.  As of this version, the value
    reflects the maximum words that if EXCEEDED (rather than reached), would
    result in detection as a machine.  This means that you should update this
-   value to be one higher than your previos value, if your previous value
+   value to be one higher than your previous value, if your previous value
    was working well for you.
 
 From 12 to 13:
@@ -662,7 +662,7 @@ chan_unistim:
    values used inside Unistim protocol
 
  - Added 'dtmf_duration' option with changing default operation to disable
-   receivied dtmf playback on unistim phone
+   received dtmf playback on unistim phone
 
 Core:
 
@@ -797,7 +797,7 @@ Realtime Configuration:
    SIP Path support in chan_pjsip.
 
  - The following new tables have been added for pjsip realtime: 'ps_systems',
-   'ps_globals', 'ps_tranports', 'ps_registrations'.
+   'ps_globals', 'ps_transport', 'ps_registrations'.
 
  - The following columns were added to the 'ps_aors' realtime table:
    'maximum_expiration', 'outbound_proxy', and 'support_path'.
@@ -1228,7 +1228,7 @@ CEL:
 Dialplan Functions:
 
  - Certain dialplan functions have been marked as 'dangerous', and may only be
-   executed from the dialplan. Execution from extenal sources (AMI's GetVar and
+   executed from the dialplan. Execution from external sources (AMI's GetVar and
    SetVar actions; etc.) may be inhibited by setting live_dangerously in the
    [options] section of asterisk.conf to no. SHELL(), channel locking, and
    direct file read/write functions are marked as dangerous. DB_DELETE() and
@@ -1328,7 +1328,7 @@ ConfBridge
    or by the dialplan function CONFBRIDGE(bridge,language)=en.
 chan_sip - Clarify The "sip show peers" Forcerport Column And Add Comedia
  - Under the "Forcerport" column, the "N" used to mean NAT (i.e. Yes).  With
-   the additon of auto_* NAT settings, the meaning changed and there was a
+   the addition of auto_* NAT settings, the meaning changed and there was a
    certain combination of letters added to indicate the current setting. The
    combination of using "Y", "N", "A" or "a", can be confusing.  Therefore, we
    now display clearly what the current Forcerport setting is: "Yes", "No",
@@ -1344,7 +1344,7 @@ From 11.5 to 11.6:
   returning RESULT_SUCCESS even if there was an error.
 
 From 11.4 to 11.5:
-* The default settings for chan_sip are now overriden properly by the general
+* The default settings for chan_sip are now overridden properly by the general
   settings in sip.conf.  Please look over your settings upon upgrading.
 
 From 11.3 to 11.4:
@@ -1476,7 +1476,7 @@ SIP
    performance should be vastly improved.  The HANGUPCAUSE function should now
    be used instead of SIP_CAUSE. Because of this, the storesipcause option in
    sip.conf is also deprecated.
- - The sip paramater for Originating Line Information (oli, isup-oli, and
+ - The sip parameter for Originating Line Information (oli, isup-oli, and
    ss7-oli) is now parsed out of the From header and copied into the channel's
    ANI2 information field.  This is readable from the CALLERID(ani2) dialplan
    function.
@@ -1580,7 +1580,7 @@ UDPTL:
 From 10.4 to 10.5:
 
 * The complex processor detection and optimization has been removed from
-  the makefile in favor of using native optimization suppport when available.
+  the makefile in favor of using native optimization support when available.
   BUILD_NATIVE can be disabled via menuselect under "Compiler Flags".
 
 From 10.2 to 10.3:
@@ -1653,7 +1653,7 @@ From 1.8.13 to 1.8.14:
 
 From 1.8.12 to 1.8.13:
 * The complex processor detection and optimization has been removed from
-  the makefile in favor of using native optimization suppport when available.
+  the makefile in favor of using native optimization support when available.
   BUILD_NATIVE can be disabled via menuselect under "Compiler Flags".
 
 From 1.8.10 to 1.8.11:
@@ -2432,7 +2432,7 @@ Applications:
   the 'm' option now provides the functionality of "initially muted".
   In practice, most existing dialplans using the 'm' flag should not notice
   any difference, unless the keypad menu is enabled, allowing the user
-  to unmute themsleves.
+  to unmute themselves.
 
 * ast_play_and_record would attempt to cancel the recording if a DTMF
   '0' was received.  This behavior was not documented in most of the
@@ -2600,7 +2600,7 @@ The SIP channel:
 
 * The "canreinvite" option has changed. canreinvite=yes used to disable
   re-invites if you had NAT=yes. In 1.4, you need to set canreinvite=nonat
-  to disable re-invites when NAT=yes. This is propably what you want.
+  to disable re-invites when NAT=yes. This is probably what you want.
   The settings are now: "yes", "no", "nonat", "update". Please consult
   sip.conf.sample for detailed information.
 

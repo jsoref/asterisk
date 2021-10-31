@@ -39,7 +39,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int decode_(integer *ipitv, integer *irms, integer *irc, integer *voice, integer *pitch, real *rms, real *rc, struct lpc10_decoder_state *st);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 /*:ref: ham84_ 14 3 4 4 4 */
 /*:ref: median_ 4 3 4 4 4 */
 #endif
@@ -49,9 +49,9 @@ extern int decode_(integer *ipitv, integer *irms, integer *irc, integer *voice, 
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* Table of constant values */
 
@@ -352,9 +352,9 @@ static integer c__2 = 2;
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /*       Function return value definitions */
 
 /*       Parameters/constants */
@@ -412,7 +412,7 @@ static integer c__2 = 2;
 /* 800	FORMAT(1X,' <<ERRCOR IN>>',T32,6X,I6,I5,T50,10I8) */
 /*  If no error correction, do pitch and voicing then jump to decode */
     i4 = detau[*ipitv];
-    if (! contrl_1.corrp) {
+    if (! control_1.corrp) {
 	voice[1] = 1;
 	voice[2] = 1;
 	if (*ipitv <= 1) {
@@ -443,7 +443,7 @@ static integer c__2 = 2;
 	dpit[0] = *iavgp;
     }
     drms[0] = *irms;
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	drc[i__ * 3 - 3] = irc[i__];
     }
@@ -522,7 +522,7 @@ static integer c__2 = 2;
     }
 /*  Get unsmoothed RMS, RC's, and PITCH */
     *irms = drms[1];
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	irc[i__] = drc[i__ * 3 - 2];
     }
@@ -563,7 +563,7 @@ static integer c__2 = 2;
 /*  the values will be zero. */
 L500:
     if ((icorf & bit[4]) != 0) {
-	i__1 = contrl_1.order;
+	i__1 = control_1.order;
 	for (i__ = 5; i__ <= i__1; ++i__) {
 	    irc[i__] = zrc[i__ - 1];
 	}
@@ -575,7 +575,7 @@ L500:
     dpit[1] = dpit[0];
     drms[2] = drms[1];
     drms[1] = drms[0];
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	drc[i__ * 3 - 1] = drc[i__ * 3 - 2];
 	drc[i__ * 3 - 2] = drc[i__ * 3 - 3];
@@ -605,7 +605,7 @@ L900:
 	irc[i__] = i2 * pow_ii(&c__2, &ishift);
     }
 /*  Decode RC(3)-RC(10) to sign plus 14 bits */
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 3; i__ <= i__1; ++i__) {
 	i2 = irc[i__];
 	ishift = 15 - nbit[i__ - 1];
@@ -617,7 +617,7 @@ L900:
 /* 811	FORMAT(1X,'<<DECODE OUT>>',T45,I4,1X,10I8) */
 /*  Scale RMS and RC's to reals */
     *rms = (real) (*irms);
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	rc[i__] = irc[i__] / 16384.f;
     }

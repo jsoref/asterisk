@@ -127,7 +127,7 @@ EXTERN int ooSendEmptyTermCapMsg(struct OOH323CallData *call);
 EXTERN ASN1UINT ooGenerateStatusDeterminationNumber(void);
 
 /**
- * This fuction is used to handle received MasterSlaveDetermination procedure
+ * This function is used to handle received MasterSlaveDetermination procedure
  * messages.
  * @param call       Pointer to the call for which a message is received.
  * @param pmsg       Pointer to MSD message
@@ -174,7 +174,7 @@ EXTERN int ooSendMasterSlaveDeterminationReject (struct OOH323CallData* call);
  * MasterSlaveDetermination procedure.
  * @param call        Handle to the call for which MasterSlaveReject is
  *                    received.
- * @param reject      Poinetr to the received reject message.
+ * @param reject      Pointer to the received reject message.
  *
  * @return            OO_OK, on success. OO_FAILED, on failure.
  */
@@ -271,7 +271,7 @@ EXTERN int ooOnReceivedUserInputIndication
    (OOH323CallData *call, H245UserInputIndication *indication);
 
 /**
- * This function is called on receiving a TreminalCapabilitySetAck message.
+ * This function is called on receiving a TerminalCapabilitySetAck message.
  * If the MasterSlaveDetermination process is also over, this function
  * initiates the process of opening logical channels.
  * @param call          Pointer to call for which TCSAck is received.
@@ -393,7 +393,7 @@ EXTERN int ooOpenChannel
 
 /**
  * This function is used to send dtmf digits as user input indication message
- * contating alphanumeric string.
+ * containing alphanumeric string.
  * @param call            Handle to the call for which dtmf has to be sent.
  * @param data            DTMF data
  *
@@ -404,7 +404,7 @@ EXTERN int ooSendH245UserInputIndication_alphanumeric
 
 /**
  * This function is used to send dtmf digits as user input indication message
- * contating dtmf signal type.
+ * containing dtmf signal type.
  * @param call            Handle to the call for which dtmf has to be sent.
  * @param data            DTMF data
  *

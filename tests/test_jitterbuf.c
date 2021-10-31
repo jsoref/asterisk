@@ -1067,7 +1067,7 @@ cleanup:
 
 /*!
  * \internal
- * \brief Insert frames into the jitter buffer for the resynch tests
+ * \brief Insert frames into the jitter buffer for the resync tests
  */
 static void test_jb_resynch_frame_insertion(struct jitterbuf *jb, enum jb_frame_type frame_type)
 {
@@ -1096,7 +1096,7 @@ AST_TEST_DEFINE(jitterbuffer_resynch_control)
 	case TEST_INIT:
 		info->name = "jitterbuffer_resynch_control";
 		info->category = "/main/jitterbuf/";
-		info->summary = "Tests sending control frames that force a resynch";
+		info->summary = "Tests sending control frames that force a resync";
 		info->description = "Control frames are sent to a jitter buffer.  After some "
 			"number of frames, the source timestamps jump, forcing a resync of "
 			"the jitter buffer.  Since the frames are control, the resync happens "
@@ -1171,7 +1171,7 @@ AST_TEST_DEFINE(jitterbuffer_resynch_voice)
 	case TEST_INIT:
 		info->name = "jitterbuffer_resynch_voice";
 		info->category = "/main/jitterbuf/";
-		info->summary = "Tests sending voice frames that force a resynch";
+		info->summary = "Tests sending voice frames that force a resync";
 		info->description = "Voice frames are sent to a jitter buffer.  After some "
 			"number of frames, the source timestamps jump, forcing a resync of "
 			"the jitter buffer.  Since the frames are voice, the resync happens "
@@ -1272,7 +1272,7 @@ static int load_module(void)
 	AST_TEST_REGISTER(jitterbuffer_overflow_voice);
 	AST_TEST_REGISTER(jitterbuffer_overflow_control);
 
-	/* Buffer resynch */
+	/* Buffer resync */
 	AST_TEST_REGISTER(jitterbuffer_resynch_voice);
 	AST_TEST_REGISTER(jitterbuffer_resynch_control);
 

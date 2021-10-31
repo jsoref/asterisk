@@ -318,7 +318,7 @@ EXTERN int ooGkClientHandleRASMessage
 
 
 /**
- * This function is used to send a message on Gatekeeper clien't RAS channel.
+ * This function is used to send a message on Gatekeeper client RAS channel.
  * @param pGkClient   Handle to the gatekeeper client.
  * @param pRasMsg     Handle to Ras message to be sent.
  *
@@ -424,7 +424,7 @@ EXTERN int ooGkClientSendUnregistrationConfirm(ooGkClient *pGkClient,
                                                                unsigned reqNo);
 
 /**
- * This function is invoked to request bandwith admission for a call.
+ * This function is invoked to request bandwidth admission for a call.
  * @param pGkClient     Gatekeeper client to be used
  * @param call          Handle to the call.
  * @param retransmit    Indicates whether new call or retransmitting for
@@ -545,7 +545,7 @@ EXTERN int ooGkClientUpdateRegisteredAliases
  * This function is used internally to set Gatekeeper Clients callbacks.
  * Note: This functionality is not yet fully supported
  * @param pGkClient  Handle to the GK client.
- * @param callbacks  Callback structure contatining various gatekeeper client
+ * @param callbacks  Callback structure containing various gatekeeper client
  *                   callbacks.
  * @return           OO_OK, on success. OO_FAILED, on failure.
  */

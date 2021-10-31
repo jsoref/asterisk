@@ -1147,7 +1147,7 @@ static struct ast_channel *findmeexec(struct fm_args *tpargs, struct ast_channel
 				/*
 				 * Caller hungup.
 				 *
-				 * Destoy all new outgoing calls.
+				 * Destroy all new outgoing calls.
 				 */
 				while ((tmpuser = AST_LIST_REMOVE_HEAD(&new_user_list, entry))) {
 					destroy_calling_node(tmpuser);

@@ -182,7 +182,7 @@ static int load_config(int reload)
 		strcpy(table, "cdr");
 	}
 
-	/* sqlite3_busy_timeout in miliseconds */
+	/* sqlite3_busy_timeout in milliseconds */
 	if ((tmp = ast_variable_retrieve(cfg, "master", "busy_timeout")) != NULL) {
 		if (ast_parse_arg(tmp, PARSE_INT32|PARSE_DEFAULT, &busy_timeout, 1000) != 0) {
 			ast_log(LOG_WARNING, "Invalid busy_timeout value '%s' specified. Using 1000 instead.\n", tmp);
@@ -253,7 +253,7 @@ static int write_cdr(struct ast_cdr *cdr)
 
 		dummy = ast_dummy_channel_alloc();
 		if (!dummy) {
-			ast_log(LOG_ERROR, "Unable to allocate channel for variable subsitution.\n");
+			ast_log(LOG_ERROR, "Unable to allocate channel for variable substitution.\n");
 			ast_free(value_string);
 			ast_mutex_unlock(&lock);
 			return 0;

@@ -90,9 +90,9 @@
 			<para>Plays hold music specified by class. If omitted, the default music
 			source for the channel will be used. Change the default class with
 			Set(CHANNEL(musicclass)=...). If duration is given, hold music will be played
-			specified number of seconds. If duration is ommited, music plays indefinitely.
+			specified number of seconds. If duration is omitted, music plays indefinitely.
 			Returns <literal>0</literal> when done, <literal>-1</literal> on hangup.</para>
-			<para>This application does not automatically answer and should be preceeded by
+			<para>This application does not automatically answer and should be preceded by
 			an application such as Answer() or Progress().</para>
 		</description>
 	</application>
@@ -1504,7 +1504,7 @@ static void local_ast_moh_cleanup(struct ast_channel *chan)
 
 /*! \brief Support routing for 'moh unregister class' CLI
  * This is in charge of generating all strings that match a prefix in the
- * given position. As many functions of this kind, each invokation has
+ * given position. As many functions of this kind, each invocation has
  * O(state) time complexity so be careful in using it.
  */
 static char *complete_mohclass_realtime(const char *line, const char *word, int pos, int state)
@@ -1741,7 +1741,7 @@ static int local_ast_moh_start(struct ast_channel *chan, const char *mclass, con
 					return -1;
 				}
 			} else {
-				/* We don't register RT moh class, so let's init it manualy */
+				/* We don't register RT moh class, so let's init it manually */
 
 				time(&mohclass->start);
 				mohclass->start -= respawn_time;

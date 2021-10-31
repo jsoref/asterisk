@@ -199,7 +199,7 @@ static AST_RWLIST_HEAD_STATIC(devstate_provs, devstate_prov);
 
 struct state_change {
 	AST_LIST_ENTRY(state_change) list;
-	enum ast_devstate_cache cachable;
+	enum ast_devstate_cache cacheable;
 	char device[1];
 };
 
@@ -457,7 +457,7 @@ static int getproviderstate(const char *provider, const char *address)
 
 /*! Called by the state change thread to find out what the state is, and then
  *  to queue up the state change event */
-static void do_state_change(const char *device, enum ast_devstate_cache cachable)
+static void do_state_change(const char *device, enum ast_devstate_cache cacheable)
 {
 	enum ast_device_state state;
 
@@ -465,10 +465,10 @@ static void do_state_change(const char *device, enum ast_devstate_cache cachable
 
 	ast_debug(3, "Changing state for %s - state %u (%s)\n", device, state, ast_devstate2str(state));
 
-	ast_publish_device_state(device, state, cachable);
+	ast_publish_device_state(device, state, cacheable);
 }
 
-int ast_devstate_changed_literal(enum ast_device_state state, enum ast_devstate_cache cachable, const char *device)
+int ast_devstate_changed_literal(enum ast_device_state state, enum ast_devstate_cache cacheable, const char *device)
 {
 	struct state_change *change;
 
@@ -489,15 +489,15 @@ int ast_devstate_changed_literal(enum ast_device_state state, enum ast_devstate_
 	 */
 
 	if (state != AST_DEVICE_UNKNOWN) {
-		ast_publish_device_state(device, state, cachable);
+		ast_publish_device_state(device, state, cacheable);
 	} else if (change_thread == AST_PTHREADT_NULL || !(change = ast_calloc(1, sizeof(*change) + strlen(device)))) {
 		/* we could not allocate a change struct, or */
 		/* there is no background thread, so process the change now */
-		do_state_change(device, cachable);
+		do_state_change(device, cacheable);
 	} else {
 		/* queue the change */
 		strcpy(change->device, device);
-		change->cachable = cachable;
+		change->cacheable = cacheable;
 		AST_LIST_LOCK(&state_changes);
 		AST_LIST_INSERT_TAIL(&state_changes, change, list);
 		ast_cond_signal(&change_pending);
@@ -507,7 +507,7 @@ int ast_devstate_changed_literal(enum ast_device_state state, enum ast_devstate_
 	return 0;
 }
 
-int ast_devstate_changed(enum ast_device_state state, enum ast_devstate_cache cachable, const char *fmt, ...)
+int ast_devstate_changed(enum ast_device_state state, enum ast_devstate_cache cacheable, const char *fmt, ...)
 {
 	char buf[AST_MAX_EXTENSION];
 	va_list ap;
@@ -516,7 +516,7 @@ int ast_devstate_changed(enum ast_device_state state, enum ast_devstate_cache ca
 	vsnprintf(buf, sizeof(buf), fmt, ap);
 	va_end(ap);
 
-	return ast_devstate_changed_literal(state, cachable, buf);
+	return ast_devstate_changed_literal(state, cacheable, buf);
 }
 
 /*! \brief Go through the dev state change queue and update changes in the dev state thread */
@@ -536,7 +536,7 @@ static void *do_devstate_changes(void *data)
 		/* Process each state change */
 		while ((current = next)) {
 			next = AST_LIST_NEXT(current, list);
-			do_state_change(current->device, current->cachable);
+			do_state_change(current->device, current->cacheable);
 			ast_free(current);
 		}
 	}
@@ -544,7 +544,7 @@ static void *do_devstate_changes(void *data)
 	return NULL;
 }
 
-static struct ast_device_state_message *device_state_alloc(const char *device, enum ast_device_state state, enum ast_devstate_cache cachable, const struct ast_eid *eid)
+static struct ast_device_state_message *device_state_alloc(const char *device, enum ast_device_state state, enum ast_devstate_cache cacheable, const struct ast_eid *eid)
 {
 	struct ast_device_state_message *new_device_state;
 	char *pos;
@@ -575,7 +575,7 @@ static struct ast_device_state_message *device_state_alloc(const char *device, e
 	new_device_state->device = pos;
 
 	new_device_state->state = state;
-	new_device_state->cachable = cachable;
+	new_device_state->cacheable = cacheable;
 
 	return new_device_state;
 }
@@ -589,7 +589,7 @@ static void devstate_change_cb(void *data, struct stasis_subscription *sub, stru
 	}
 
 	device_state = stasis_message_data(msg);
-	if (device_state->cachable == AST_DEVSTATE_CACHABLE || !device_state->eid) {
+	if (device_state->cacheable == AST_DEVSTATE_CACHABLE || !device_state->eid) {
 		/* Ignore cacheable and aggregate messages. */
 		return;
 	}
@@ -599,7 +599,7 @@ static void devstate_change_cb(void *data, struct stasis_subscription *sub, stru
 	 * device state republished as the aggregate.
 	 */
 	ast_publish_device_state_full(device_state->device, device_state->state,
-		device_state->cachable, NULL);
+		device_state->cacheable, NULL);
 }
 
 static void device_state_engine_cleanup(void)
@@ -709,7 +709,7 @@ int ast_device_state_clear_cache(const char *device)
 int ast_publish_device_state_full(
 	const char *device,
 	enum ast_device_state state,
-	enum ast_devstate_cache cachable,
+	enum ast_devstate_cache cacheable,
 	struct ast_eid *eid)
 {
 	RAII_VAR(struct ast_device_state_message *, device_state, NULL, ao2_cleanup);
@@ -722,7 +722,7 @@ int ast_publish_device_state_full(
 		return -1;
 	}
 
-	device_state = device_state_alloc(device, state, cachable, eid);
+	device_state = device_state_alloc(device, state, cacheable, eid);
 	if (!device_state) {
 		return -1;
 	}
@@ -741,10 +741,10 @@ int ast_publish_device_state_full(
 	 * When a device state is not to be cached we only publish to its
 	 * specific topic if something has already created the topic. Publishing
 	 * to its topic otherwise would create the topic, which may not be
-	 * necessary as it could be an ephemeral device. Uncachable updates
+	 * necessary as it could be an ephemeral device. Uncacheable updates
 	 * traditionally come from such things as Local channels.
 	 */
-	if (cachable || stasis_topic_pool_topic_exists(device_state_topic_pool, device)) {
+	if (cacheable || stasis_topic_pool_topic_exists(device_state_topic_pool, device)) {
 		topic = ast_device_state_topic(device);
 	} else {
 		topic = ast_device_state_topic_all();
@@ -767,7 +767,7 @@ static const char *device_state_get_id(struct stasis_message *message)
 	}
 
 	device_state = stasis_message_data(message);
-	if (device_state->cachable == AST_DEVSTATE_NOT_CACHABLE) {
+	if (device_state->cacheable == AST_DEVSTATE_NOT_CACHABLE) {
 		return NULL;
 	}
 
@@ -780,7 +780,7 @@ static const char *device_state_get_id(struct stasis_message *message)
  * \since 12.2.0
  *
  * \param cache_topic Caching topic the aggregate message may be published over.
- * \param aggregate The aggregate shapshot message to publish.
+ * \param aggregate The aggregate snapshot message to publish.
  *
  * \return Nothing
  */
@@ -807,7 +807,7 @@ static void device_state_aggregate_publish(struct stasis_topic *cache_topic, str
  * \since 12.2.0
  *
  * \param entry Cache entry to calculate a new aggregate snapshot.
- * \param new_snapshot The shapshot that is being updated.
+ * \param new_snapshot The snapshot that is being updated.
  *
  * \note Return a ref bumped pointer from stasis_cache_entry_get_aggregate()
  * if a new aggregate could not be calculated because of error.
@@ -968,14 +968,14 @@ static struct ast_event *devstate_to_event(struct stasis_message *message)
 		event = ast_event_new(AST_EVENT_DEVICE_STATE_CHANGE,
 					    AST_EVENT_IE_DEVICE, AST_EVENT_IE_PLTYPE_STR, device_state->device,
 					    AST_EVENT_IE_STATE, AST_EVENT_IE_PLTYPE_UINT, device_state->state,
-					    AST_EVENT_IE_CACHABLE, AST_EVENT_IE_PLTYPE_UINT, device_state->cachable,
+					    AST_EVENT_IE_CACHABLE, AST_EVENT_IE_PLTYPE_UINT, device_state->cacheable,
 					    AST_EVENT_IE_EID, AST_EVENT_IE_PLTYPE_RAW, device_state->eid, sizeof(*device_state->eid),
 					    AST_EVENT_IE_END);
 	} else {
 		event = ast_event_new(AST_EVENT_DEVICE_STATE,
 					    AST_EVENT_IE_DEVICE, AST_EVENT_IE_PLTYPE_STR, device_state->device,
 					    AST_EVENT_IE_STATE, AST_EVENT_IE_PLTYPE_UINT, device_state->state,
-					    AST_EVENT_IE_CACHABLE, AST_EVENT_IE_PLTYPE_UINT, device_state->cachable,
+					    AST_EVENT_IE_CACHABLE, AST_EVENT_IE_PLTYPE_UINT, device_state->cacheable,
 					    AST_EVENT_IE_END);
 	}
 

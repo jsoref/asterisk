@@ -119,7 +119,7 @@ struct ast_region {
 	 *
 	 * \note Must be right before data[].
 	 *
-	 * \note Padding between fence and data[] is irrelevent because
+	 * \note Padding between fence and data[] is irrelevant because
 	 * data[] is used to fill in the lower fence check value and not
 	 * the fence member.  The fence member is to ensure that there
 	 * is space reserved for the fence check value.
@@ -129,7 +129,7 @@ struct ast_region {
 	 * \brief Location of the requested malloc block to return.
 	 *
 	 * \note Must have the same alignment that malloc returns.
-	 * i.e., It is suitably aligned for any kind of varible.
+	 * i.e., It is suitably aligned for any kind of variable.
 	 */
 	unsigned char data[0] __attribute__((aligned));
 };
@@ -869,7 +869,7 @@ static char *handle_memory_show_allocations(struct ast_cli_entry *e, int cmd, st
 	}
 
 	/* Look for historical misspelled option as well. */
-	if (fn && (!strcasecmp(fn, "anomalies") || !strcasecmp(fn, "anomolies"))) {
+	if (fn && (!strcasecmp(fn, "anomalies") || !strcasecmp(fn, "anomalies"))) {
 		regions_check_all_fences();
 		ast_cli(a->fd, "Anomaly check complete.\n");
 		return CLI_SUCCESS;
@@ -1150,7 +1150,7 @@ static void mm_atexit_hash_restore(struct region_list *list)
 
 /*!
  * \internal
- * \brief Sort regions comparision.
+ * \brief Sort regions comparison.
  *
  * \param left Region to compare.
  * \param right Region to compare.
@@ -1502,7 +1502,7 @@ static void mm_atexit_final(void)
 	freed_regions_flush(&whales);
 	freed_regions_flush(&minnows);
 
-	/* Peform atexit allocation dumps. */
+	/* Perform atexit allocation dumps. */
 	if (atexit_list || atexit_summary) {
 		ast_mutex_lock(&reglock);
 		mm_atexit_dump();

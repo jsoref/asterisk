@@ -419,7 +419,7 @@ static void softmix_bridge_unsuspend(struct ast_bridge *bridge, struct ast_bridg
 #ifdef BINAURAL_RENDERING
 	struct softmix_channel *sc = bridge_channel->tech_pvt;
 	if (sc->binaural) {
-		/* Restore some usefull data if it was a binaural channel */
+		/* Restore some useful data if it was a binaural channel */
 		struct ast_format *slin_format;
 
 		slin_format = ast_format_cache_get_slin_by_rate(sc->rate);
@@ -1864,7 +1864,7 @@ static int softmix_mixing_loop(struct ast_bridge *bridge)
 						softmix_data->internal_mixing_interval, bridge_channel, 1, -1, -1, -1);
 			}
 
-			/* If stat_iteration_counter is 0, then collect statistics during this mixing interation */
+			/* If stat_iteration_counter is 0, then collect statistics during this mixing interaction */
 			if (!stat_iteration_counter) {
 				gather_softmix_stats(&stats, softmix_data, bridge_channel);
 			}

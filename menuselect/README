@@ -118,7 +118,7 @@ Category Attributes:
    be in the output from menuselect.
 
    displayname="Applications"
-   If this is specfied, this is what will be shown in the menu to the user.
+   If this is specified, this is what will be shown in the menu to the user.
 
    positive_output="yes"
    The default for menuselect is to output all of the members of a category
@@ -148,7 +148,7 @@ Member Attributes:
    when the cursor is on it in the menu.
 
    remove_on_change="apps/app_meetme.o apps/app_meetme.so"
-   This attribute can contain a space delimeted list of files to be deleted
+   This attribute can contain a space delimited list of files to be deleted
    when it is time to build an output file if the value of this member has
    changed from its value in any existing input when the application was
    started.

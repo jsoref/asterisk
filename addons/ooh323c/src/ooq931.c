@@ -718,7 +718,7 @@ int ooEncodeH225Message(OOH323CallData *call, Q931Message *pq931Msg,
    }
 
    msgbuf[i++] = 3; /* TPKT version */
-   msgbuf[i++] = 0; /* TPKT resevred */
+   msgbuf[i++] = 0; /* TPKT reserved */
    /* 1st octet of length, will be populated once len is determined */
    msgbuf[i++] = 0;
    /* 2nd octet of length, will be populated once len is determined */
@@ -1197,7 +1197,7 @@ int ooSetFastStartResponse(OOH323CallData *pCall, Q931Message *pQ931msg,
          {
             /* According to the spec if we are accepting olc for transmission
                from called endpoint to calling endpoint, called endpoint should
-               insert a unqiue forwardLogicalChannelNumber into olc
+               insert a unique forwardLogicalChannelNumber into olc
             */
             olc->forwardLogicalChannelNumber =  pCall->logicalChanNoCur++;
             if(pCall->logicalChanNoCur > pCall->logicalChanNoMax)
@@ -1210,7 +1210,7 @@ int ooSetFastStartResponse(OOH323CallData *pCall, Q931Message *pQ931msg,
          pChannel = ooFindLogicalChannelByLogicalChannelNo
                       (pCall, olc->forwardLogicalChannelNumber);
 
-         /* start receive and tramsmit channel listening */
+         /* start receive and transmit channel listening */
          if(dir & OORX)
          {
             strcpy(pChannel->remoteIP, remoteMediaControlIP);
@@ -2025,7 +2025,7 @@ int ooSendStatusInquiry(OOH323CallData *call)
    /* OOCTXT *pctxt = &gH323ep.msgctxt; */
    OOCTXT *pctxt = call->msgctxt;
 
-   OOTRACEDBGC3("Building StatusInquryMsg (%s, %s)\n", call->callType,
+   OOTRACEDBGC3("Building StatusInquiryMsg (%s, %s)\n", call->callType,
                  call->callToken);
    ret = ooCreateQ931Message(pctxt, &q931msg, Q931StatusEnquiryMsg);
    if(ret != OO_OK)
@@ -2964,7 +2964,7 @@ int ooH323MakeCall_helper(OOH323CallData *call)
       i=0;
       for(k=0; k< call->capPrefs.index; k++)
       {
-         OOTRACEDBGC5("Preffered capability at index %d is %s. (%s, %s)\n",
+         OOTRACEDBGC5("Preferred capability at index %d is %s. (%s, %s)\n",
                       k, ooGetCapTypeText(call->capPrefs.order[k]),
                       call->callType, call->callToken);
 
@@ -2987,7 +2987,7 @@ int ooH323MakeCall_helper(OOH323CallData *call)
          }
          if(!epCap)
          {
-            OOTRACEWARN4("Warn:Preferred capability %s is abscent in "
+            OOTRACEWARN4("Warn:Preferred capability %s is absent in "
                          "capability list. (%s, %s)\n",
                          ooGetCapTypeText(call->capPrefs.order[k]),
                          call->callType, call->callToken);
@@ -4109,7 +4109,7 @@ int ooParseDestination
       psNewAlias->value = (char*) memAlloc(pctxt, strlen(alias)+1);
       if(!psNewAlias->value)
       {
-         OOTRACEERR1("Error:Memroy - ooParseDestination - "
+         OOTRACEERR1("Error:Memory - ooParseDestination - "
                      "psNewAlias->value\n");
          memFreePtr(pctxt, psNewAlias);
          return OO_FAILED;
@@ -4130,7 +4130,7 @@ int ooParseDestination
       }
       return OO_OK;
    }
-   /* Evrything else is an h323-id for now */
+   /* Everything else is an h323-id for now */
    psNewAlias = (ooAliases*) memAlloc(pctxt, sizeof(ooAliases));
    if(!psNewAlias)
    {
@@ -4251,7 +4251,7 @@ const char* ooGetQ931CauseValueText(int val)
       case Q931RecoveryOnTimerExpiry:
          return "Q931RecoveryOnTimerExpiry";
       case Q931InvalidCallReference:
-         return "Q931InvaliedCallReference";
+         return "Q931InvalidCallReference";
       default:
          return "Unsupported Cause Type";
    }

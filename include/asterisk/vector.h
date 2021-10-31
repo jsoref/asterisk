@@ -68,7 +68,7 @@ enum ast_vector_string_split_flags {
  *
  * \param dest Pointer to an initialized vector.
  * \param input String buffer to split.
- * \param delim String delimeter passed to strsep.
+ * \param delim String delimiter passed to strsep.
  * \param flags Processing options defined by \ref enum ast_vector_string_split_flags.
  * \param excludes_cmp NULL or a function like strcmp to exclude duplicate strings.
  *
@@ -800,7 +800,7 @@ int ast_vector_string_split(struct ast_vector_string *dest,
  *
  * \note The type of the returned vector must be traceable to the original vector.
  *
- * The following will resut in "error: assignment from incompatible pointer type"
+ * The following will result in "error: assignment from incompatible pointer type"
  * because these declare 2 different structures.
  *
  * \code

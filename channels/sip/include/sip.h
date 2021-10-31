@@ -444,7 +444,7 @@ enum invitestates {
 };
 
 /*! \brief When sending a SIP message, we can send with a few options, depending on
- * type of SIP request. UNRELIABLE is moslty used for responses to repeated requests,
+ * type of SIP request. UNRELIABLE is mostly used for responses to repeated requests,
  * where the original response would be sent RELIABLE in an INVITE transaction
  */
 enum xmittype {
@@ -1100,7 +1100,7 @@ struct sip_pvt {
 	int t38_maxdatagram;              /*!< T.38 FaxMaxDatagram override */
 	int request_queue_sched_id;       /*!< Scheduler ID of any scheduled action to process queued requests */
 	int provisional_keepalive_sched_id;   /*!< Scheduler ID for provisional responses that need to be sent out to avoid cancellation */
-	const char *last_provisional;         /*!< The last successfully transmitted provisonal response message */
+	const char *last_provisional;         /*!< The last successfully transmitted provisional response message */
 	int authtries;                        /*!< Times we've tried to authenticate */
 	struct sip_proxy *outboundproxy;      /*!< Outbound proxy for this dialog. Use ref_proxy to set this instead of setting it directly*/
 	struct t38properties t38;             /*!< T38 settings */
@@ -1395,7 +1395,7 @@ struct sip_registry {
 		AST_STRING_FIELD(opaque);     /*!< Opaque nonsense */
 		AST_STRING_FIELD(qop);        /*!< Quality of Protection, since SIP wasn't complicated enough yet. */
 		AST_STRING_FIELD(authdomain); /*!< Authorization domain */
-		AST_STRING_FIELD(regdomain);  /*!< Registration doamin */
+		AST_STRING_FIELD(regdomain);  /*!< Registration domain */
 		AST_STRING_FIELD(username);   /*!< Who we are registering as */
 		AST_STRING_FIELD(authuser);   /*!< Who we *authenticate* as */
 		AST_STRING_FIELD(hostname);   /*!< Domain or host we register to */
@@ -1471,7 +1471,7 @@ struct sip_subscription_mwi {
  *
  * There are two main components to the effort, the event publication agent (EPA) and
  * the event state compositor (ESC). Both of these terms appear in RFC 3903, and the
- * implementation in Asterisk conforms to the defintions there. An EPA is a UAC that
+ * implementation in Asterisk conforms to the definitions there. An EPA is a UAC that
  * transmits PUBLISH requests. An ESC is a UAS that receives PUBLISH requests and
  * acts appropriately based on the content of those requests.
  *

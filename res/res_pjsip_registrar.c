@@ -52,7 +52,7 @@
 			are completed an <literal>InboundRegistrationDetailComplete</literal> is issued.
 			</para>
 			<warning><para>
-				This command just dumps all coonfigured AORs with contacts, even if the contact
+				This command just dumps all configured AORs with contacts, even if the contact
 				is a permanent one.  To really get just inbound registrations, use
 				<literal>PJSIPShowRegistrationInboundContactStatuses</literal>.
 			</para>
@@ -647,7 +647,7 @@ static int registrar_add_unreachable(void *obj, void *arg, int flags)
 }
 
 struct aor_core_response {
-	/*! Tx data to use for statefull response.  NULL for stateless response. */
+	/*! Tx data to use for stateful response.  NULL for stateless response. */
 	pjsip_tx_data *tdata;
 	/*! SIP response code to send in stateless response */
 	int code;

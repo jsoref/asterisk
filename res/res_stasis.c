@@ -1203,7 +1203,7 @@ static void channel_replaced_cb(void *data, struct ast_channel *old_chan, struct
 }
 
 static const struct ast_datastore_info masquerade_store_info = {
-	.type = "stasis-masqerade",
+	.type = "stasis-masquerade",
 	.chan_fixup = channel_stolen_cb,
 	.chan_breakdown = channel_replaced_cb,
 };
@@ -1484,7 +1484,7 @@ int stasis_app_exec(struct ast_channel *chan, const char *app_name, int argc,
 
 				snapshot = ast_channel_snapshot_get_latest(ast_channel_uniqueid(chan));
 				if (!snapshot) {
-					ast_log(LOG_ERROR, "Could not get channel shapshot for '%s'\n",
+					ast_log(LOG_ERROR, "Could not get channel snapshot for '%s'\n",
 						ast_channel_name(chan));
 				} else {
 					struct ast_json *json_args;

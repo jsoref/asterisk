@@ -265,14 +265,14 @@ void* memHeapAlloc (void** ppvMemHeap, int nbytes)
                   if (nunits <= (ASN1UINT)pElem_nunits (pElem)) {
                      RTMEMDIAG3
                         ("memHeapAlloc: "
-                         "found an exisiting free element 0x%x, size %d\n",
+                         "found an existing free element 0x%x, size %d\n",
                         pElem, (pElem_nunits (pElem) * 8u));
 
                      if (pMemBlk->freeElemOff ==
                          QOFFSETOF (pElem, pMemBlk->data) + 1)
                      {
 
-                        /* modify the pMemBlk->freeElemOff value if necsry */
+                        /* modify the pMemBlk->freeElemOff value if necessary */
 
                         OSMemElemDescr* nextFree = GET_NEXT_FREE (pElem);
                         FORCE_SET_FREE_ELEM (pMemBlk, nextFree);
@@ -1214,7 +1214,7 @@ static OSMemLink* memHeapAddBlock (OSMemLink** ppMemLink,
 
    /* if pMemBlk has RTMEMLINK flags it means that it is allocated
     * cooperatively with OSMemLink, and we don't need to do additional
-    * allocations for it. Just use pointer's arithemtic. */
+    * allocations for it. Just use pointer's arithmetic. */
 
    if (blockType & RTMEMLINK)
       pMemLink = (OSMemLink*) (((ASN1OCTET*)pMemBlk) - sizeof (OSMemLink));

@@ -279,7 +279,7 @@
 						codec_prefs_incoming_answer = keep: first
 						</example>
 						<para>
-						Use the defaults but keep oinly the first codec.
+						Use the defaults but keep only the first codec.
 						</para>
 					</description>
 				</configOption>
@@ -337,7 +337,7 @@
 						codec_prefs_incoming_answer = keep: first
 						</example>
 						<para>
-						Use the defaults but keep oinly the first codec.
+						Use the defaults but keep only the first codec.
 						</para>
 					</description>
 				</configOption>
@@ -941,7 +941,7 @@
 					</para></description>
 				</configOption>
 				<configOption name="t38_bind_udptl_to_media_address" default="no">
-					<synopsis>Bind the UDPTL instance to the media_adress</synopsis>
+					<synopsis>Bind the UDPTL instance to the media_address</synopsis>
 					<description><para>
 						If media_address is specified, this option causes the UDPTL instance to be bound to
 						the specified ip address which causes the packets to be sent from that address.
@@ -1052,7 +1052,7 @@
 						It can be one of the following values:
 						</para><enumlist>
 							<enum name="no"><para>
-								meaning no verificaton is done.
+								meaning no verification is done.
 							</para></enum>
 							<enum name="fingerprint"><para>
 								meaning to verify the remote fingerprint.
@@ -1565,7 +1565,7 @@
 						in their WWW-Authenticate header.  It can't be blank
 						unless you expect the server to be sending a blank
 						realm in the header.  You can't use pre-hashed
-						paswords with a wildcard auth object.
+						passwords with a wildcard auth object.
 						You can generate the hash with the following shell
 						command:
 						</para>
@@ -2058,7 +2058,7 @@
 						<literal>no</literal> (default), setting remove_unavailable to
 						<literal>yes</literal> will remove only unavailable contacts that exceed
 						<replaceable>max_contacts</replaceable>	to allow an incoming
-						REGISTER to complete sucessfully.</para>
+						REGISTER to complete successfully.</para>
 						<para>If <replaceable>remove_existing</replaceable> is set to
 						<literal>yes</literal>, setting remove_unavailable to
 						<literal>yes</literal> will prioritize unavailable contacts for removal
@@ -2378,7 +2378,7 @@
 					<description><para>
 						This option specifies the trigger the distributor will use for
 						detecting taskprocessor overloads.  When it detects an overload condition,
-						the distrubutor will stop accepting new requests until the overload is
+						the distributor will stop accepting new requests until the overload is
 						cleared.
 						</para>
 						<enumlist>

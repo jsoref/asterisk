@@ -57,7 +57,7 @@
 					the recipient of the message that was received by Asterisk.</para>
 					<para>
 					</para>
-					<para>For an ourgoing message, this will set the To header in the
+					<para>For an outgoing message, this will set the To header in the
 					outgoing SIP message.  This may be overridden by the "to" parameter
 					of MessageSend.
 					</para>
@@ -67,7 +67,7 @@
 					incoming message, this will be set to the source of the message.</para>
 					<para>
 					</para>
-					<para>For an ourgoing message, this will set the From header in the
+					<para>For an outgoing message, this will set the From header in the
 					outgoing SIP message. This may be overridden by the "from" parameter
 					of MessageSend.
 					</para>

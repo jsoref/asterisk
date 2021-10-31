@@ -577,7 +577,7 @@ AST_TEST_DEFINE(sip_parse_uri_test)
 			!ast_strlen_zero(pass)      ||
 			strcmp(hostport, "host")    ||
 			strcmp(transport, "tcp")) {
-		ast_test_status_update(test, "Test 2: uri with addtion of tcp transport failed. \n");
+		ast_test_status_update(test, "Test 2: uri with addition of tcp transport failed. \n");
 		res = AST_TEST_FAIL;
 	}
 
@@ -728,7 +728,7 @@ const char *get_calleridname(const char *input, char *output, size_t outputsize)
 	/* clear any empty characters in the beginning */
 	input = ast_skip_blanks(input);
 
-	/* make sure the output buffer is initilized */
+	/* make sure the output buffer is initialized */
 	*orig_output = '\0';
 
 	/* make room for '\0' at the end of the output buffer */
@@ -1849,7 +1849,7 @@ AST_TEST_DEFINE(sip_parse_options_test)
 							"Tests parsing of SIP options from supported and required "
 							"header fields.  Verifies when unsupported options are encountered "
 							"that they are appended to the unsupported out buffer and that the "
-							"correct bit field representnig the option profile is returned.";
+							"correct bit field representing the option profile is returned.";
 		return AST_TEST_NOT_RUN;
 	case TEST_EXECUTE:
 		break;
@@ -2406,7 +2406,7 @@ struct sip_via *parse_via(const char *header)
 		return NULL;
 	}
 
-	/* seperate the first via-parm */
+	/* separate the first via-parm */
 	via = strsep(&via, ",");
 
 	/* chop off sent-protocol */

@@ -50,7 +50,7 @@ AC_DEFUN([AST_CHECK_RAII], [
 		]
 	)
 	if test -z "${AST_C_COMPILER_FAMILY}"; then
-		AC_MSG_ERROR([Compiler ${CC} not supported. Mminimum required gcc-4.3 / llvm-gcc-4.3 / clang-3.3 + libblocksruntime-dev])
+		AC_MSG_ERROR([Compiler ${CC} not supported. Minimum required gcc-4.3 / llvm-gcc-4.3 / clang-3.3 + libblocksruntime-dev])
 	fi
 	AC_SUBST(AST_C_COMPILER_FAMILY)
 ])

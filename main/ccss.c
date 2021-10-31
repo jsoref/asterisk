@@ -229,7 +229,7 @@ struct cc_control_payload {
 	 * and "SIP"
 	 *
 	 * \note This really should be an array of characters in case this payload
-	 * is sent accross an IAX2 link.  However, this would not make too much sense
+	 * is sent across an IAX2 link.  However, this would not make too much sense
 	 * given this type may not be recognized by the other end.
 	 * Protection may be necessary to prevent it from being transmitted.
 	 *
@@ -578,7 +578,7 @@ static enum ast_device_state cc_state_to_devstate_map[] = {
  *
  * \param state
  *
- * \return the correponding DEVICE STATE from the cc_state_to_devstate_map
+ * \return the corresponding DEVICE STATE from the cc_state_to_devstate_map
  * when passed an internal state.
  */
 static enum ast_device_state cc_state_to_devstate(enum cc_state state)
@@ -606,7 +606,7 @@ static enum ast_device_state ccss_device_state(const char *device_name)
 	match_flags = MATCH_NO_REQUEST;
 	core_instance = ao2_t_callback_data(cc_core_instances, 0, match_agent,
 		(char *) device_name, &match_flags,
-		"Find Core Instance for ccss_device_state reqeust.");
+		"Find Core Instance for ccss_device_state request.");
 	if (!core_instance) {
 		ast_log_dynamic_level(cc_logger_level,
 			"Couldn't find a core instance for caller %s\n", device_name);
@@ -1354,7 +1354,7 @@ struct generic_monitor_instance_list {
 	 * for recall. If a CCNR request comes in, then we will
 	 * have to mark the list as unfit for recall since this
 	 * is a clear indicator that the person at the monitored
-	 * device has gone away and is actuall not fit to be
+	 * device has gone away and is actually not fit to be
 	 * recalled
 	 */
 	int fit_for_recall;
@@ -2226,7 +2226,7 @@ static void call_destructor_with_no_monitor(const char * const monitor_type, voi
 
 /*!
  * \internal
- * \brief Allocate and intitialize a device cc_monitor
+ * \brief Allocate and initialize a device cc_monitor
  *
  * For all intents and purposes, this is the same as
  * cc_extension_monitor_init, except that there is only
@@ -2660,7 +2660,7 @@ struct cc_generic_agent_pvt {
 	 * Context dialed
 	 *
 	 * The original context dialed. This is used
-	 * so that when performaing a recall, we can
+	 * so that when performing a recall, we can
 	 * call into the proper context
 	 */
 	char context[AST_CHANNEL_NAME];

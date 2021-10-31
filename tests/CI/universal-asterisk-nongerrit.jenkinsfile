@@ -118,7 +118,7 @@ def jobConfig = [
 	buildAsterisk: [
 		/* Build Asterisk */
 		build: true,
-		/* Additional envuronment variables to pass to buildAsterisk.sh */
+		/* Additional environment variables to pass to buildAsterisk.sh */
 		env: [
 		]
 	],

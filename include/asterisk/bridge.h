@@ -382,7 +382,7 @@ struct ast_bridge {
 	/*! Number of active channels in the bridge. */
 	unsigned int num_active;
 	/*! Number of channels with AST_BRIDGE_CHANNEL_FLAG_LONELY in the bridge. */
-	unsigned int num_lonely;
+	unsigned int num_lonly;
 	/*!
 	 * \brief Count of the active temporary requests to inhibit bridge merges.
 	 * Zero if merges are allowed.
@@ -902,7 +902,7 @@ enum ast_bridge_optimization {
 };
 
 /*!
- * \brief Determine if bridges allow for optimization to occur betweem them
+ * \brief Determine if bridges allow for optimization to occur between them
  * \since 12.0.0
  *
  * \param chan_bridge First bridge being tested
@@ -1041,7 +1041,7 @@ void ast_bridge_set_remb_send_interval(struct ast_bridge *bridge, unsigned int r
  *
  * \note This can only be called when the bridge has been set to the SFU video mode.
  */
-void ast_brige_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior);
+void ast_bridge_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior);
 
 /*!
  * \brief Force the REMB report estimated bitrate to a specific max value
@@ -1056,7 +1056,7 @@ void ast_bridge_set_remb_estimated_bitrate(struct ast_bridge *bridge, float esti
 /*!
  * \brief Update information about talker energy for talker src video mode.
  */
-void ast_bridge_update_talker_src_video_mode(struct ast_bridge *bridge, struct ast_channel *chan, int talker_energy, int is_keyfame);
+void ast_bridge_update_talker_src_video_mode(struct ast_bridge *bridge, struct ast_channel *chan, int talker_energy, int is_keyframe);
 
 /*!
  * \brief Returns the number of video sources currently active in the bridge

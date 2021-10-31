@@ -107,7 +107,7 @@ typedef int (*jb_get_impl)(void *jb, struct ast_frame **fout, long now, long int
 typedef long (*jb_next_impl)(void *jb);
 /*! \brief Remove first frame */
 typedef int (*jb_remove_impl)(void *jb, struct ast_frame **fout);
-/*! \brief Force resynch */
+/*! \brief Force resync */
 typedef void (*jb_force_resynch_impl)(void *jb);
 /*! \brief Empty and reset jb */
 typedef void (*jb_empty_and_reset_impl)(void *jb);
@@ -182,7 +182,7 @@ int ast_jb_do_usecheck(struct ast_channel *c0, struct ast_channel *c1);
  * \param time_left bridge time limit, or -1 if not set.
  *
  * Called from ast_generic_bridge() to determine the maximum time to wait for
- * activity in ast_waitfor_n() call. If neihter of the channels is using jb,
+ * activity in ast_waitfor_n() call. If neither of the channels is using jb,
  * this function returns the time limit passed.
  *
  * \return maximum time to wait.
@@ -196,15 +196,15 @@ int ast_jb_get_when_to_wakeup(struct ast_channel *c0, struct ast_channel *c1, in
  * \param f frame.
  *
  * Called from ast_generic_bridge() to put a frame into a channel's jitterbuffer.
- * The function will successfuly enqueue a frame if and only if:
+ * The function will successfully enqueue a frame if and only if:
  * 1. the channel is using a jitterbuffer (as determined by ast_jb_do_usecheck()),
  * 2. the frame's type is AST_FRAME_VOICE,
  * 3. the frame has timing info set and has length >= 2 ms,
  * 4. there is no some internal error happened (like failed memory allocation).
- * Frames, successfuly queued, should be delivered by the channel's jitterbuffer,
+ * Frames, successfully queued, should be delivered by the channel's jitterbuffer,
  * when their delivery time has came.
- * Frames, not successfuly queued, should be delivered immediately.
- * Dropped by the jb implementation frames are considered successfuly enqueued as
+ * Frames, not successfully queued, should be delivered immediately.
+ * Dropped by the jb implementation frames are considered successfully enqueued as
  * far as they should not be delivered at all.
  *
  * \retval 0 if the frame was queued
@@ -219,8 +219,8 @@ int ast_jb_put(struct ast_channel *chan, struct ast_frame *f);
  * \param c1 second bridged channel.
  *
  * Called from ast_generic_bridge() to deliver any frames, that should be delivered
- * for the moment of invocation. Does nothing if neihter of the channels is using jb
- * or has any frames currently queued in. The function delivers frames usig ast_write()
+ * for the moment of invocation. Does nothing if neither of the channels is using jb
+ * or has any frames currently queued in. The function delivers frames using ast_write()
  * each of the channels.
  */
 void ast_jb_get_and_deliver(struct ast_channel *c0, struct ast_channel *c1);

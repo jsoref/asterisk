@@ -930,7 +930,7 @@ static const char *get_cid_name(char *name, int namelen, struct ast_channel *cha
  * XXX this code is highly suspicious, as it essentially overwrites
  * the outgoing channel without properly deleting it.
  *
- * \todo eventually this function should be intergrated into and replaced by ast_call_forward()
+ * \todo eventually this function should be integrated into and replaced by ast_call_forward()
  */
 static void do_forward(struct chanlist *o, struct cause_args *num,
 	struct ast_flags64 *peerflags, int single, int caller_entertained, int *to,
@@ -1289,7 +1289,7 @@ static struct ast_channel *wait_for_answer(struct ast_channel *in,
 			if (is_cc_recall) {
 				ast_cc_failed(cc_recall_core_id, "Everyone is busy/congested for the recall. How sad");
 			}
-			SCOPE_EXIT_RTN_VALUE(NULL, "%s: No outging channels available\n", ast_channel_name(in));
+			SCOPE_EXIT_RTN_VALUE(NULL, "%s: No outgoing channels available\n", ast_channel_name(in));
 		}
 		winner = ast_waitfor_n(watchers, pos, to);
 		AST_LIST_TRAVERSE(out_chans, o, node) {

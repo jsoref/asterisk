@@ -832,7 +832,7 @@ static int is_unsolicited_allowed(struct ast_sip_endpoint *endpoint, const char 
 /*!
  * \brief Determine if an endpoint is a candidate to be able to subscribe for MWI
  *
- * Currently, this just makes sure that the endpoint is not already receiving unsolicted
+ * Currently, this just makes sure that the endpoint is not already receiving unsolicited
  * MWI for any of an AOR's configured mailboxes.
  *
  * \param obj The AOR to which the endpoint is subscribing.

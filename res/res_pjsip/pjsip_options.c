@@ -46,7 +46,7 @@
  * The lowest level object in here is a contact and its associated
  * contact status. The result of an OPTIONS request to a contact is
  * reflected in the contact status. The scheduling of these OPTIONS
- * request is driven by the AOR. The AOR periodicially (according to
+ * request is driven by the AOR. The AOR periodically (according to
  * configuration) sends OPTIONS requests out to any contacts
  * associated with it. Contacts themselves are not individually
  * scheduled. Contacts can be added or deleted as appropriate with no
@@ -182,7 +182,7 @@ struct sip_options_aor {
 	unsigned int qualify_frequency;
 	/*! If true authenticate the qualify challenge response if needed */
 	int authenticate_qualify;
-	/*! \brief Qualify timeout. 0 is diabled. */
+	/*! \brief Qualify timeout. 0 is disabled. */
 	double qualify_timeout;
 	/*! \brief The name of the AOR */
 	char name[0];
@@ -1071,7 +1071,7 @@ static void sip_options_remove_contact_status(struct sip_options_aor *aor_option
 struct sip_options_synchronize_aor_task_data {
 	/*! \brief The AOR options for this AOR */
 	struct sip_options_aor *aor_options;
-	/*! \brief The AOR which contains the new configuraton */
+	/*! \brief The AOR which contains the new configuration */
 	struct ast_sip_aor *aor;
 	/*! \brief Optional container of existing AOR s*/
 	struct ao2_container *existing;

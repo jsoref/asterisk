@@ -259,7 +259,7 @@ static int consumer_wait_for(struct consumer *consumer, size_t expected_len)
 		if (r == ETIMEDOUT) {
 			break;
 		}
-		ast_assert(r == 0); /* Not expecting any othet types of errors */
+		ast_assert(r == 0); /* Not expecting any other types of errors */
 	}
 	return consumer->messages_rxed_len;
 }
@@ -280,7 +280,7 @@ static int consumer_wait_for_completion(struct consumer *consumer)
 		if (r == ETIMEDOUT) {
 			break;
 		}
-		ast_assert(r == 0); /* Not expecting any othet types of errors */
+		ast_assert(r == 0); /* Not expecting any other types of errors */
 	}
 	return consumer->complete;
 }
@@ -306,7 +306,7 @@ static int consumer_should_stay(struct consumer *consumer, size_t expected_len)
 		if (r == ETIMEDOUT) {
 			break;
 		}
-		ast_assert(r == 0); /* Not expecting any othet types of errors */
+		ast_assert(r == 0); /* Not expecting any other types of errors */
 	}
 	return consumer->messages_rxed_len;
 }
@@ -900,12 +900,12 @@ static struct stasis_message *cache_test_message_create(struct stasis_message_ty
 
 static const char *cache_test_data_id(struct stasis_message *message)
 {
-	struct cache_test_data *cachable = stasis_message_data(message);
+	struct cache_test_data *cacheable = stasis_message_data(message);
 
 	if (0 != strcmp("Cacheable", stasis_message_type_name(stasis_message_type(message)))) {
 		return NULL;
 	}
-	return cachable->id;
+	return cacheable->id;
 }
 
 static struct stasis_message *cache_test_aggregate_calc_fn(struct stasis_cache_entry *entry, struct stasis_message *new_snapshot)

@@ -36,7 +36,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int bsynz_(real *coef, integer *ip, integer *iv, real *sout, real *rms, real *ratio, real *g2pass, struct lpc10_decoder_state *st);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 /*:ref: random_ 4 0 */
 #endif
 
@@ -45,9 +45,9 @@ extern int bsynz_(real *coef, integer *ip, integer *iv, real *sout, real *rms, r
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* ***************************************************************** */
 
@@ -296,9 +296,9 @@ extern struct {
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /*       Function return value definitions */
 /* 	Parameters/constants */
 /*       KEXC is not a Fortran PARAMETER, but it is an array initialized
@@ -343,7 +343,7 @@ extern struct {
     r__1 = *rmso / (*rms + 1e-6f);
     xy = min(r__1,8.f);
     *rmso = *rms;
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	exc2[i__ - 1] = exc2[*ipo + i__ - 1] * xy;
     }
@@ -352,7 +352,7 @@ extern struct {
 /*  Generate white noise for unvoiced */
 	i__1 = *ip;
 	for (i__ = 1; i__ <= i__1; ++i__) {
-	    exc[contrl_1.order + i__ - 1] = (real) (random_(st) / 64);
+	    exc[control_1.order + i__ - 1] = (real) (random_(st) / 64);
 	}
 /*  Impulse doublet excitation for plosives */
 /*       (RANDOM()+32768) is in the range 0 to 2**16-1.  Therefore the
@@ -362,7 +362,7 @@ at */
 /*       least 32 bits (16 isn't enough), and PX should be in the rang
 e */
 /*       ORDER+1+0 through ORDER+1+(IP-2) .EQ. ORDER+IP-1. */
-	px = (random_(st) + 32768) * (*ip - 1) / 65536 + contrl_1.order + 1;
+	px = (random_(st) + 32768) * (*ip - 1) / 65536 + control_1.order + 1;
 	r__1 = *ratio / 4 * 1.f;
 	pulse = r__1 * 342;
 	if (pulse > 2e3f) {
@@ -375,32 +375,32 @@ e */
 	sscale = (real)sqrt((real) (*ip)) / 6.928f;
 	i__1 = *ip;
 	for (i__ = 1; i__ <= i__1; ++i__) {
-	    exc[contrl_1.order + i__ - 1] = 0.f;
+	    exc[control_1.order + i__ - 1] = 0.f;
 	    if (i__ <= 25) {
-		exc[contrl_1.order + i__ - 1] = sscale * kexc[i__ - 1];
+		exc[control_1.order + i__ - 1] = sscale * kexc[i__ - 1];
 	    }
-	    lpi0 = exc[contrl_1.order + i__ - 1];
-	    r__2 = exc[contrl_1.order + i__ - 1] * .125f + *lpi1 * .75f;
+	    lpi0 = exc[control_1.order + i__ - 1];
+	    r__2 = exc[control_1.order + i__ - 1] * .125f + *lpi1 * .75f;
 	    r__1 = r__2 + *lpi2 * .125f;
-	    exc[contrl_1.order + i__ - 1] = r__1 + *lpi3 * 0.f;
+	    exc[control_1.order + i__ - 1] = r__1 + *lpi3 * 0.f;
 	    *lpi3 = *lpi2;
 	    *lpi2 = *lpi1;
 	    *lpi1 = lpi0;
 	}
 	i__1 = *ip;
 	for (i__ = 1; i__ <= i__1; ++i__) {
-	    noise[contrl_1.order + i__ - 1] = random_(st) * 1.f / 64;
-	    hpi0 = noise[contrl_1.order + i__ - 1];
-	    r__2 = noise[contrl_1.order + i__ - 1] * -.125f + *hpi1 * .25f;
+	    noise[control_1.order + i__ - 1] = random_(st) * 1.f / 64;
+	    hpi0 = noise[control_1.order + i__ - 1];
+	    r__2 = noise[control_1.order + i__ - 1] * -.125f + *hpi1 * .25f;
 	    r__1 = r__2 + *hpi2 * -.125f;
-	    noise[contrl_1.order + i__ - 1] = r__1 + *hpi3 * 0.f;
+	    noise[control_1.order + i__ - 1] = r__1 + *hpi3 * 0.f;
 	    *hpi3 = *hpi2;
 	    *hpi2 = *hpi1;
 	    *hpi1 = hpi0;
 	}
 	i__1 = *ip;
 	for (i__ = 1; i__ <= i__1; ++i__) {
-	    exc[contrl_1.order + i__ - 1] += noise[contrl_1.order + i__ - 1];
+	    exc[control_1.order + i__ - 1] += noise[control_1.order + i__ - 1];
 	}
     }
 /*   Synthesis filters: */
@@ -408,9 +408,9 @@ e */
     xssq = 0.f;
     i__1 = *ip;
     for (i__ = 1; i__ <= i__1; ++i__) {
-	k = contrl_1.order + i__;
+	k = control_1.order + i__;
 	sum = 0.f;
-	i__2 = contrl_1.order;
+	i__2 = control_1.order;
 	for (j = 1; j <= i__2; ++j) {
 	    sum += coef[j] * exc[k - j - 1];
 	}
@@ -420,9 +420,9 @@ e */
 /*   Synthesize using the all pole filter  1 / (1 - SUM) */
     i__1 = *ip;
     for (i__ = 1; i__ <= i__1; ++i__) {
-	k = contrl_1.order + i__;
+	k = control_1.order + i__;
 	sum = 0.f;
-	i__2 = contrl_1.order;
+	i__2 = control_1.order;
 	for (j = 1; j <= i__2; ++j) {
 	    sum += coef[j] * exc2[k - j - 1];
 	}
@@ -430,7 +430,7 @@ e */
 	xssq += exc2[k - 1] * exc2[k - 1];
     }
 /*  Save filter history for next epoch */
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	exc[i__ - 1] = exc[*ip + i__ - 1];
 	exc2[i__ - 1] = exc2[*ip + i__ - 1];
@@ -441,7 +441,7 @@ e */
     gain = (real)sqrt(ssq / xssq);
     i__1 = *ip;
     for (i__ = 1; i__ <= i__1; ++i__) {
-	sout[i__] = gain * exc2[contrl_1.order + i__ - 1];
+	sout[i__] = gain * exc2[control_1.order + i__ - 1];
     }
     return 0;
 } /* bsynz_ */

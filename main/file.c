@@ -271,7 +271,7 @@ int ast_writestream(struct ast_filestream *fs, struct ast_frame *f)
 static int copy(const char *infile, const char *outfile)
 {
 	int ifd, ofd, len;
-	char buf[4096];	/* XXX make it lerger. */
+	char buf[4096];	/* XXX make it larger. */
 
 	if ((ifd = open(infile, O_RDONLY)) < 0) {
 		ast_log(LOG_WARNING, "Unable to open %s in read-only mode\n", infile);
@@ -694,7 +694,7 @@ static int fileexists_test(const char *filename, const char *fmt, const char *la
  *
  * \param filename Name of the file.
  * \param fmt Format to look for the file in. OPTIONAL
- * \param preflang The perfered language
+ * \param preflang The preferred language
  * \param buf Returns the matching filename
  * \param buflen Size of the buf
  * \param result_cap OPTIONAL format capabilities result structure

@@ -43,7 +43,7 @@
 
 #define AST_AUDIOHOOK_SYNC_TOLERANCE 100 /*!< Tolerance in milliseconds for audiohooks synchronization */
 #define AST_AUDIOHOOK_SMALL_QUEUE_TOLERANCE 100 /*!< When small queue is enabled, this is the maximum amount of audio that can remain queued at a time. */
-#define AST_AUDIOHOOK_LONG_QUEUE_TOLERANCE 500 /*!< Otheriwise we still don't want the queue to grow indefinitely */
+#define AST_AUDIOHOOK_LONG_QUEUE_TOLERANCE 500 /*!< Otherwise we still don't want the queue to grow indefinitely */
 
 #define DEFAULT_INTERNAL_SAMPLE_RATE 8000
 
@@ -610,7 +610,7 @@ void ast_audiohook_detach_list(struct ast_audiohook_list *audiohook_list)
 		ast_audiohook_update_status(audiohook, AST_AUDIOHOOK_STATUS_DONE);
 	}
 
-	/* Drop any manipulaters */
+	/* Drop any manipulators */
 	while ((audiohook = AST_LIST_REMOVE_HEAD(&audiohook_list->manipulate_list, list))) {
 		ast_audiohook_update_status(audiohook, AST_AUDIOHOOK_STATUS_DONE);
 		audiohook->manipulate_callback(audiohook, NULL, NULL, 0);
@@ -1275,7 +1275,7 @@ static int audiohook_volume_callback(struct ast_audiohook *audiohook, struct ast
 		return 0;
 	}
 
-	/* Try to find the datastore containg adjustment information, if we can't just bail out */
+	/* Try to find the datastore containing adjustment information, if we can't just bail out */
 	if (!(datastore = ast_channel_datastore_find(chan, &audiohook_volume_datastore, NULL))) {
 		return 0;
 	}

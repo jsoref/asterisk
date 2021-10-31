@@ -894,7 +894,7 @@ static void pj_thread_register_check(void)
 	pj_bzero(*desc, sizeof(*desc));
 
 	if (pj_thread_register("Asterisk Thread", *desc, &thread) != PJ_SUCCESS) {
-		ast_log(LOG_ERROR, "Coudln't register thread with PJLIB.\n");
+		ast_log(LOG_ERROR, "Couldn't register thread with PJLIB.\n");
 	}
 	return;
 }
@@ -3671,7 +3671,7 @@ static void rtp_add_candidates_to_ice(struct ast_rtp_instance *instance, struct 
 
 		/*
 		 * The instance should not be locked because we can block
-		 * waiting for a STUN respone.
+		 * waiting for a STUN response.
 		 */
 		ao2_unlock(instance);
 		rsp = ast_stun_request(component == AST_RTP_ICE_COMPONENT_RTCP
@@ -5688,7 +5688,7 @@ static struct ast_frame *process_dtmf_cisco(struct ast_rtp_instance *instance, u
 						  then falls to 0 at its end)
 		+3 (+5,+7,...)  - detected DTMF digit (0..9,*,#,A-D,...)
 		Repeated DTMF information (bytes 4/5, 6/7) is history shifted right
-		by each new packet and thus provides some redudancy.
+		by each new packet and thus provides some redundancy.
 
 		Sample of Cisco RTP DTMF packet is (all data in hex):
 			19 07 00 02 12 02 20 02
@@ -5751,7 +5751,7 @@ static struct ast_frame *process_cn_rfc3389(struct ast_rtp_instance *instance, u
 	struct ast_rtp *rtp = ast_rtp_instance_get_data(instance);
 
 	/* Convert comfort noise into audio with various codecs.  Unfortunately this doesn't
-	   totally help us out becuase we don't have an engine to keep it going and we are not
+	   totally help us out because we don't have an engine to keep it going and we are not
 	   guaranteed to have it every 20ms or anything */
 	if (ast_debug_rtp_packet_is_allowed) {
 		ast_debug(0, "- RTP 3389 Comfort noise event: Format %s (len = %d)\n",
@@ -8035,7 +8035,7 @@ static struct ast_frame *ast_rtp_read(struct ast_rtp_instance *instance, int rtc
 			ast_free(payload);
 
 			if (!frame) {
-				/* If this packet can't be interpeted due to being out of memory we return what we have and assume
+				/* If this packet can't be interpreted due to being out of memory we return what we have and assume
 				 * that we will determine it is a missing packet later and NACK for it.
 				 */
 				return AST_LIST_FIRST(&frames);
@@ -8576,7 +8576,7 @@ static void ast_rtp_remote_address_set(struct ast_rtp_instance *instance, struct
 }
 
 /*!
- * \brief Write t140 redundacy frame
+ * \brief Write t140 redundancy frame
  *
  * \param data primary data to be buffered
  *
@@ -8769,7 +8769,7 @@ static void ast_rtp_stun_request(struct ast_rtp_instance *instance, struct ast_s
 
 	/*
 	 * The instance should not be locked because we can block
-	 * waiting for a STUN respone.
+	 * waiting for a STUN response.
 	 */
 	ast_sockaddr_to_sin(suggestion, &suggestion_tmp);
 	ast_stun_request(rtp->s, &suggestion_tmp, username, NULL);

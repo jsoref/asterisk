@@ -269,7 +269,7 @@ static int stun_send(int s, struct sockaddr_in *dst, struct stun_header *resp)
 
 /*!
  * \internal
- * \brief Compare the STUN tranaction IDs.
+ * \brief Compare the STUN transaction IDs.
  *
  * \param left Transaction ID.
  * \param right Transaction ID.
@@ -502,7 +502,7 @@ try_again:
 			/* Bad STUN packet, not right type, or transaction ID did not match. */
 			memset(answer, 0, sizeof(struct sockaddr_in));
 
-			/* Was not a resonse to our request. */
+			/* Was not a response to our request. */
 			goto try_again;
 		}
 		/* Success.  answer contains the external address if available. */

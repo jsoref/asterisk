@@ -761,7 +761,7 @@ static int spandsp_fax_write(struct ast_fax_session *s, const struct ast_frame *
  * \param data fax session structure
  * \param len not used
  * \param samples no of samples generated
- * \return -1 on failure or 0 on sucess*/
+ * \return -1 on failure or 0 on success*/
 static int spandsp_fax_gw_t30_gen(struct ast_channel *chan, void *data, int len, int samples)
 {
 	int res = -1;
@@ -809,7 +809,7 @@ static void spandsp_fax_gw_gen_release(struct ast_channel *chan, void *data)
 
 /*! \brief activate a spandsp gateway based on the information in the given fax session
  * \param s fax session
- * \return -1 on error 0 on sucess*/
+ * \return -1 on error 0 on success*/
 static int spandsp_fax_gateway_start(struct ast_fax_session *s)
 {
 	struct spandsp_pvt *p = s->tech_pvt;
@@ -823,7 +823,7 @@ static int spandsp_fax_gateway_start(struct ast_fax_session *s)
 	};
 
 #if SPANDSP_RELEASE_DATE >= 20081012
-	/* for spandsp shaphots 0.0.6 and higher */
+	/* for spandsp snapshot 0.0.6 and higher */
 	p->t38_core_state=&p->t38_gw_state.t38x.t38;
 #else
 	/* for spandsp release 0.0.5 */
@@ -890,7 +890,7 @@ static int spandsp_fax_gateway_start(struct ast_fax_session *s)
 /*! \brief process a frame from the bridge
  * \param s fax session
  * \param f frame to process
- * \return 1 on sucess 0 on incorect packet*/
+ * \return 1 on success 0 on incorrect packet*/
 static int spandsp_fax_gateway_process(struct ast_fax_session *s, const struct ast_frame *f)
 {
 	struct spandsp_pvt *p = s->tech_pvt;
@@ -938,7 +938,7 @@ static int spandsp_fax_start(struct ast_fax_session *s)
 
 	if (p->ist38) {
 #if SPANDSP_RELEASE_DATE >= 20080725
-		/* for spandsp shaphots 0.0.6 and higher */
+		/* for spandsp snapshot 0.0.6 and higher */
 		p->t30_state = &p->t38_state.t30;
 		p->t38_core_state = &p->t38_state.t38_fe.t38;
 #else
@@ -948,7 +948,7 @@ static int spandsp_fax_start(struct ast_fax_session *s)
 #endif
 	} else {
 #if SPANDSP_RELEASE_DATE >= 20080725
-		/* for spandsp shaphots 0.0.6 and higher */
+		/* for spandsp snapshot 0.0.6 and higher */
 		p->t30_state = &p->fax_state.t30;
 #else
 		/* for spandsp release 0.0.5 */

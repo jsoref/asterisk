@@ -513,7 +513,7 @@ static struct ast_sip_endpoint *handle_atsign(const char *to, char *destination,
 	*atsign = '\0';
 	endpoint_name = destination;
 
-	/* Apprently there may be ';<user_options>' after the endpoint name ??? */
+	/* Apparently there may be ';<user_options>' after the endpoint name ??? */
 	AST_SIP_USER_OPTIONS_TRUNCATE_CHECK(endpoint_name);
 	endpoint = ast_sorcery_retrieve_by_id(ast_sip_get_sorcery(), "endpoint", endpoint_name);
 	if (!endpoint) {
@@ -846,7 +846,7 @@ static int update_from(pjsip_tx_data *tdata, char *from)
  * \internal
  * \brief Checks if the given msg var name should be blocked.
  *
- * \details Some headers are not allowed to be overriden by the user.
+ * \details Some headers are not allowed to be overridden by the user.
  *  Determine if the given var header name from the user is blocked for
  *  an outgoing MESSAGE.
  *

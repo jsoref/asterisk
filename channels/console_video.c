@@ -112,7 +112,7 @@ iax.conf too) the following:
 /*
  * Codecs are absolutely necessary or we cannot do anything.
  * SDL is optional (used for rendering only), so that we can still
- * stream video withouth displaying it.
+ * stream video without displaying it.
  */
 #if !defined(HAVE_VIDEO_CONSOLE) || !defined(HAVE_FFMPEG)
 /* stubs if required pieces are missing */
@@ -162,7 +162,7 @@ static void my_scale(struct fbuf_t *in, AVPicture *p_in,
 
 /*
  * this structure will be an entry in the table containing
- * every device specified in the file oss.conf, it contains various infomation
+ * every device specified in the file oss.conf, it contains various information
  * about the device
  */
 struct video_device {
@@ -173,7 +173,7 @@ struct video_device {
 	struct fbuf_t		*dev_buf;	/* buffer for incoming data		*/
 	struct timeval		last_frame;	/* when we read the last frame ?	*/
 	int 			status_index;	/* what is the status of the device (source) */
-	/* status index is set using the IS_ON, IS_PRIMARY and IS_SECONDARY costants */
+	/* status index is set using the IS_ON, IS_PRIMARY and IS_SECONDARY constants */
 	/* status_index is the index of the status message in the src_msgs array in console_gui.c */
 };
 
@@ -234,7 +234,7 @@ struct video_out_desc {
  * The overall descriptor, with room for config info, video source and
  * received data descriptors, SDL info, etc.
  * This should be globally visible to all modules (grabber, vcodecs, gui)
- * and contain all configurtion info.
+ * and contain all configuration info.
  */
 struct video_desc {
 	char codec_name[64];        /* the codec we use */
@@ -364,7 +364,7 @@ static int grabber_open(struct video_out_desc *v)
  * \param fps = frame per seconds, for every device
  *
  * returns:
- * - NULL on falure
+ * - NULL on failure
  * - reference to the device buffer on success
  */
 static struct fbuf_t *grabber_read(struct video_device *dev, int fps)
@@ -779,7 +779,7 @@ int console_write_video(struct ast_channel *chan, struct ast_frame *f)
  * is returned as an argument.
  *
  * \param env = video environment descriptor
- * \param tail = tail ponter (pratically a return value)
+ * \param tail = tail ponter (practically a return value)
  */
 static struct ast_frame *get_video_frames(struct video_desc *env, struct ast_frame **tail)
 {
@@ -794,7 +794,7 @@ static struct ast_frame *get_video_frames(struct video_desc *env, struct ast_fra
 	updating the private device buffer in the device table */
 	for (i = 0; i < env->out.device_num; i++) {
 		p_read = grabber_read(&env->out.devices[i], env->out.fps);
-		/* it is used only if different from NULL, we mantain last good buffer otherwise */
+		/* it is used only if different from NULL, we maintain last good buffer otherwise */
 		if (p_read)
 			env->out.devices[i].dev_buf = p_read;
 	}
@@ -896,7 +896,7 @@ static void *video_thread(void *arg)
 	 */
 	video_out_init(env);
 
-	/* Writes intial status of the sources. */
+	/* Writes initial status of the sources. */
 	if (env->gui) {
 		for (i = 0; i < env->out.device_num; i++) {
 			print_message(env->gui->thumb_bd_array[i].board,

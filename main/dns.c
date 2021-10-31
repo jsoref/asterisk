@@ -127,7 +127,7 @@ typedef struct {
 			/* fields in third byte */
 	unsigned	qr:1;           /*!< response flag */
 	unsigned	opcode:4;       /*!< purpose of message */
-	unsigned	aa:1;           /*!< authoritive answer */
+	unsigned	aa:1;           /*!< authoritative answer */
 	unsigned	tc:1;           /*!< truncated message */
 	unsigned	rd:1;           /*!< recursion desired */
 			/* fields in fourth byte */
@@ -141,7 +141,7 @@ typedef struct {
 			/* fields in third byte */
 	unsigned	rd:1;           /*!< recursion desired */
 	unsigned	tc:1;           /*!< truncated message */
-	unsigned	aa:1;           /*!< authoritive answer */
+	unsigned	aa:1;           /*!< authoritative answer */
 	unsigned	opcode:4;       /*!< purpose of message */
 	unsigned	qr:1;           /*!< response flag */
 			/* fields in fourth byte */
@@ -487,7 +487,7 @@ static int dns_parse_answer_ex(void *context, int rr_class, int rr_type, unsigne
 /*!
  * \brief Lookup record in DNS
  *
- * \note Asterisk DNS is synchronus at this time. This means that if your DNS does not
+ * \note Asterisk DNS is synchronous at this time. This means that if your DNS does not
  *       work properly, Asterisk might not start properly or a channel may lock.
 */
 int ast_search_dns(void *context,

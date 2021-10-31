@@ -163,7 +163,7 @@ static struct ast_variable *variable_named(struct ast_variable *var, const char 
 /*! \brief Count  semicolons in string
  * \param somestr - pointer to a string
  *
- * \return number of occurances of the delimiter(semicolon)
+ * \return number of occurrences of the delimiter(semicolon)
  */
 static int semicolon_count_str(const char *somestr)
 {
@@ -405,7 +405,7 @@ static struct ast_variable **realtime_ldap_result_to_vars(struct ldap_table_conf
 	int delim_tot_count = 0;
 	int delim_count = 0;
 
-	/* \breif First find the total count
+	/* \brief First find the total count
 	 */
 	ldap_entry = ldap_first_entry(ldapConn, ldap_result_msg);
 
@@ -800,11 +800,11 @@ static struct ast_str *create_lookup_filter(struct ldap_table_config *config, co
 }
 
 /*! \brief LDAP base function
- * \return a null terminated array of ast_variable (one per entry) or NULL if no entry is found or if an error occured
+ * \return a null terminated array of ast_variable (one per entry) or NULL if no entry is found or if an error occurred
  * caller should free the returned array and ast_variables
  * \param entries_count_ptr is a pointer to found entries count (can be NULL)
  * \param basedn is the base DN
- * \param table_name is the table_name (used dor attribute convertion and additional filter)
+ * \param table_name is the table_name (used dor attribute conversion and additional filter)
  * \param fields contains list of pairs name/value
 */
 static struct ast_variable **realtime_ldap_base_ap(unsigned int *entries_count_ptr,
@@ -1086,7 +1086,7 @@ static struct ast_config *realtime_multi_ldap(const char *basedn,
 
 }
 
-/*! \brief Sorting alogrithm for qsort to find the order of the variables \a a and \a b
+/*! \brief Sorting algorithm for qsort to find the order of the variables \a a and \a b
  * \param a pointer to category_and_metric struct
  * \param b pointer to category_and_metric struct
  *
@@ -1758,7 +1758,7 @@ static int unload_module(void)
 	return 0;
 }
 
-/*! \breif Relod Module
+/*! \brief Reload Module
  */
 static int reload(void)
 {

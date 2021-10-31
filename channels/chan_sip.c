@@ -114,7 +114,7 @@
  * \todo Add TCP/TLS information to function SIPPEER and CHANNEL function
  * \todo If tcpenable=yes, we must open a TCP socket on the same address as the IP for UDP.
  * 	The tcpbindaddr config option should only be used to open ADDITIONAL ports
- * 	So we should propably go back to
+ * 	So we should probably go back to
  *		bindaddr= the default address to bind to. If tcpenable=yes, then bind this to both udp and TCP
  *				if tlsenable=yes, open TLS port (provided we also have cert)
  *		tcpbindaddr = extra address for additional TCP connections
@@ -794,7 +794,7 @@ static const struct sip_reasons {
 static char default_language[MAX_LANGUAGE];      /*!< Default language setting for new channels */
 static char default_callerid[AST_MAX_EXTENSION]; /*!< Default caller ID for sip messages */
 static char default_mwi_from[80];                /*!< Default caller ID for MWI updates */
-static char default_fromdomain[AST_MAX_EXTENSION]; /*!< Default domain on outound messages */
+static char default_fromdomain[AST_MAX_EXTENSION]; /*!< Default domain on outbound messages */
 static int default_fromdomainport;                 /*!< Default domain port on outbound messages */
 static char default_notifymime[AST_MAX_EXTENSION]; /*!< Default MIME media type for MWI notify messages */
 static char default_vmexten[AST_MAX_EXTENSION];    /*!< Default From Username on MWI updates */
@@ -3442,7 +3442,7 @@ static inline void pvt_set_needdestroy(struct sip_pvt *pvt, const char *reason)
 	}
 }
 
-/*! \brief Initialize the initital request packet in the pvt structure.
+/*! \brief Initialize the initial request packet in the pvt structure.
 	This packet is used for creating replies and future requests in
 	a dialog */
 static void initialize_initreq(struct sip_pvt *p, struct sip_request *req)
@@ -7062,7 +7062,7 @@ int hangup_sip2cause(int cause)
 			return AST_CAUSE_BEARERCAPABILITY_NOTAVAIL;
 		default:
 			if (cause < 500 && cause >= 400) {
-				/* 4xx class error that is unknown - someting wrong with our request */
+				/* 4xx class error that is unknown - something wrong with our request */
 				return AST_CAUSE_INTERWORKING;
 			} else if (cause < 600 && cause >= 500) {
 				/* 5xx class error - problem in the remote end */
@@ -9006,7 +9006,7 @@ struct sip_pvt *__sip_alloc(ast_string_field callid, struct ast_sockaddr *addr,
 			free_via(via);
 		}
 
-		/* Store initial incoming cseq. An error in sscanf here is ignored.  There is no approperiate
+		/* Store initial incoming cseq. An error in sscanf here is ignored.  There is no appropriate
 		 * except not storing the number.  CSeq validation must take place before dialog creation in find_call */
 		if (!ast_strlen_zero(cseq) && (sscanf(cseq, "%30u", &seqno) == 1)) {
 			p->init_icseq = seqno;
@@ -9379,7 +9379,7 @@ static void forked_invite_init(struct sip_request *req, const char *new_theirtag
 	transmit_request(p, SIP_ACK, p->ocseq, XMIT_UNRELIABLE, TRUE);
 	transmit_request(p, SIP_BYE, 0, XMIT_RELIABLE, TRUE);
 
-	pvt_set_needdestroy(p, "forked request"); /* this dialog will terminate once the BYE is responed to or times out. */
+	pvt_set_needdestroy(p, "forked request"); /* this dialog will terminate once the BYE is responded to or times out. */
 	sip_pvt_unlock(p);
 	dialog_unref(p, "setup forked invite termination");
 }
@@ -9437,7 +9437,7 @@ static struct ast_channel *sip_pvt_lock_full(struct sip_pvt *pvt)
 		}
 
 		/* If the owner changed while everything was unlocked, no problem,
-		 * just start over and everthing will work.  This is rare, do not be
+		 * just start over and everything will work.  This is rare, do not be
 		 * confused by this loop and think this it is an expensive operation.
 		 * The majority of the calls to this function will never involve multiple
 		 * executions of this loop. */
@@ -9656,7 +9656,7 @@ static struct sip_pvt *__find_call(struct sip_request *req, struct ast_sockaddr 
 				Without a dialog we can't retransmit and handle ACKs and all that, but at least
 				send an error message.
 
-				Sorry, we apologize for the inconvienience
+				Sorry, we apologize for the inconvenience
 			*/
 			transmit_response_using_temp(callid, addr, 1, intended_method, req, "500 Server internal error");
 			ast_debug(4, "Failed allocating SIP dialog, sending 500 Server internal error and giving up\n");
@@ -10119,7 +10119,7 @@ static int find_sdp(struct sip_request *req)
 		boundary[strlen(boundary) - 1] = '\0';
 
 	/* search for the boundary marker, the empty line delimiting headers from
-	   sdp part and the end boundry if it exists */
+	   sdp part and the end boundary if it exists */
 
 	for (x = 0; x < (req->lines); x++) {
 		const char *line = REQ_OFFSET_TO_STR(req, line[x]);
@@ -12828,7 +12828,7 @@ static int get_domain(const char *str, char *domain, int len)
 }
 
 /*!
-  \brief Choose realm based on From header and then To header or use globaly configured realm.
+  \brief Choose realm based on From header and then To header or use globally configured realm.
   Realm from From/To header should be listed among served domains in config file: domain=...
 */
 static void get_realm(struct sip_pvt *p, const struct sip_request *req)
@@ -13622,7 +13622,7 @@ static enum sip_result add_sdp(struct sip_request *resp, struct sip_pvt *p, int 
 
 		if (doing_directmedia) {
 			ast_format_cap_get_compatible(p->jointcaps, p->redircaps, tmpcap);
-			ast_debug(1, "** Our native-bridge filtered capablity: %s\n", ast_format_cap_get_names(tmpcap, &codec_buf));
+			ast_debug(1, "** Our native-bridge filtered capability: %s\n", ast_format_cap_get_names(tmpcap, &codec_buf));
 		} else {
 			ast_format_cap_append_from_cap(tmpcap, p->jointcaps, AST_MEDIA_TYPE_UNKNOWN);
 		}
@@ -16452,7 +16452,7 @@ static int transmit_refer(struct sip_pvt *p, const char *dest)
 	p->refer->status = REFER_SENT;   /* Set refer status */
 
 	return transmit_invite(p, SIP_REFER, FALSE, 0, NULL);
-	/* We should propably wait for a NOTIFY here until we ack the transfer */
+	/* We should probably wait for a NOTIFY here until we ack the transfer */
 	/* Maybe fork a new thread and wait for a STATUS of REFER_200OK on the refer status before returning to app_transfer */
 
 	/*! \todo In theory, we should hang around and wait for a reply, before
@@ -17258,7 +17258,7 @@ static void build_route(struct sip_pvt *p, struct sip_request *req, int backward
 }
 
 /*! \brief Build route list from Path header
- *  RFC 3327 requires that the Path header contains SIP URIs with lr paramter.
+ *  RFC 3327 requires that the Path header contains SIP URIs with lr parameter.
  *  Thus, we do not care about strict routing SIP routers
  */
 static int build_path(struct sip_pvt *p, struct sip_peer *peer, struct sip_request *req, const char *pathbuf)
@@ -21029,7 +21029,7 @@ static int manager_sip_peer_status(struct mansession *s, const struct message *m
 	}
 
 	if (!ast_strlen_zero(peer_name)) {
-		/* strip SIP/ from the begining of the peer name */
+		/* strip SIP/ from the beginning of the peer name */
 		if (strlen(peer_name) >= 4 && !strncasecmp("SIP/", peer_name, 4)) {
 			peer_name += 4;
 		}
@@ -22250,7 +22250,7 @@ static char *sip_show_channels(struct ast_cli_entry *e, int cmd, struct ast_cli_
 
 /*! \brief Support routine for 'sip show channel' and 'sip show history' CLI
  * This is in charge of generating all strings that match a prefix in the
- * given position. As many functions of this kind, each invokation has
+ * given position. As many functions of this kind, each invocation has
  * O(state) time complexity so be careful in using it.
  */
 static char *complete_sipch(const char *line, const char *word, int pos, int state)
@@ -24909,7 +24909,7 @@ static int handle_response_register(struct sip_pvt *p, int resp, const char *res
 		ao2_t_replace(p->registry, NULL, "unref registry entry p->registry");
 
 		/* destroy dialog now to avoid interference with next register */
-		pvt_set_needdestroy(p, "Registration successfull");
+		pvt_set_needdestroy(p, "Registration successful");
 
 		/* set us up for re-registering
 		 * figure out how long we got registered for
@@ -25819,7 +25819,7 @@ static int handle_request_notify(struct sip_pvt *p, struct sip_request *req, str
 		case 200:	/* OK: The new call is up, hangup this call */
 			/* Hangup the call that we are replacing */
 			break;
-		case 301: /* Moved permenantly */
+		case 301: /* Moved permanently */
 		case 302: /* Moved temporarily */
 			/* Do we get the header in the packet in this case? */
 			success = FALSE;
@@ -26590,7 +26590,7 @@ static int handle_request_invite(struct sip_pvt *p, struct sip_request *req, str
 		}
 
 		if (!error && ast_strlen_zero(pickup.exten) && !replaces_chan) {
-			/* Oops, someting wrong anyway, no owner, no call */
+			/* Oops, something wrong anyway, no owner, no call */
 			ast_log(LOG_NOTICE, "Supervised transfer attempted to replace non-existing call id (%s)!\n", replace_id);
 			/* Check for better return code */
 			transmit_response_reliable(p, "481 Call Leg Does Not Exist (Replace)", req);
@@ -28996,7 +28996,7 @@ static int handle_request_register(struct sip_pvt *p, struct sip_request *req, s
 {
 	enum check_auth_result res;
 
-	/* If this is not the intial request, and the initial request isn't
+	/* If this is not the initial request, and the initial request isn't
 	 * a register, something screwy happened, so bail */
 	if (p->initreq.headers && p->initreq.method != SIP_REGISTER) {
 		ast_log(LOG_WARNING, "Ignoring spurious REGISTER with Call-ID: %s\n", p->callid);
@@ -29139,7 +29139,7 @@ static int handle_incoming(struct sip_pvt *p, struct sip_request *req, struct as
 			ast_log(LOG_WARNING, "Invalid SIP response code: '%d'\n", respid);
 			return 0;
 		}
-		/* RFC 3261 - 8.1.3.3 If more than one Via header field value is present in a reponse
+		/* RFC 3261 - 8.1.3.3 If more than one Via header field value is present in a response
 		 * the UAC SHOULD discard the message. This is not perfect, as it will not catch multiple
 		 * headers joined with a comma. Fixing that would pretty much involve writing a new parser */
 		if (!ast_strlen_zero(__get_header(req, "via", &via_pos))) {
@@ -29195,7 +29195,7 @@ static int handle_incoming(struct sip_pvt *p, struct sip_request *req, struct as
 				unsigned int ran = (ast_random() % 10) + 1;
 				char seconds[4];
 				snprintf(seconds, sizeof(seconds), "%u", ran);
-				transmit_response_with_retry_after(p, "500 Server error", req, seconds);	/* respond according to RFC 3261 14.2 with Retry-After betwewn 0 and 10 */
+				transmit_response_with_retry_after(p, "500 Server error", req, seconds);	/* respond according to RFC 3261 14.2 with Retry-After between 0 and 10 */
 			} else if (req->method != SIP_ACK) {
 				transmit_response(p, "500 Server error", req);	/* We must respond according to RFC 3261 sec 12.2 */
 			}
@@ -30980,7 +30980,7 @@ static struct ast_channel *sip_request_call(const char *type, struct ast_format_
 		ast_string_field_set(p, peername, ext);
 	/* Recalculate our side, and recalculate Call ID */
 	ast_sip_ouraddrfor(&p->sa, &p->ourip, p);
-	/* When chan_sip is first loaded or reloaded, we need to check for NAT and set the appropiate flags
+	/* When chan_sip is first loaded or reloaded, we need to check for NAT and set the appropriate flags
 	   now that we have the auto_* settings. */
 	check_for_nat(&p->sa, p);
 	/* If there is a peer related to this outgoing call and it hasn't re-registered after
@@ -31408,7 +31408,7 @@ static void add_realm_authentication(struct sip_auth_container **credentials, co
 		*md5secret++ = '\0';
 	}
 
-	/* Create the continer if needed. */
+	/* Create the container if needed. */
 	if (!*credentials) {
 		*credentials = ao2_t_alloc(sizeof(**credentials), destroy_realm_authentication,
 			"Create realm auth container.");
@@ -35359,7 +35359,7 @@ AST_TEST_DEFINE(test_tcp_message_fragmentation)
 			info->summary = "SIP TCP message fragmentation test";
 			info->description =
 				"Tests reception of different TCP messages that have been fragmented or"
-				"run together. This test mimicks the code that TCP reception uses.";
+				"run together. This test mimics the code that TCP reception uses.";
 			return AST_TEST_NOT_RUN;
 		case TEST_EXECUTE:
 			break;

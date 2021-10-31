@@ -45,7 +45,7 @@ typedef int (*encoder_encode_f)(struct video_out_desc *v);
 typedef struct ast_frame *(*encoder_encap_f)(struct fbuf_t *, int mtu,
 		struct ast_frame **tail);
 
-/*! \brief inizialize the decoder */
+/*! \brief initialize the decoder */
 typedef int (*decoder_init_f)(AVCodecContext *enc_ctx);
 
 /*! \brief extract the bitstream from RTP frames and store in the fbuf.
@@ -416,7 +416,7 @@ static struct ast_frame *h263p_encap(struct fbuf_t *b, int mtu,
 	return first;
 }
 
-/*! \brief extract the bitstreem from the RTP payload.
+/*! \brief extract the bitstream from the RTP payload.
  * This is format dependent.
  * For h263+, the format is defined in RFC 2429
  * and basically has a fixed 2-byte header as follows:

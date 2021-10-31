@@ -328,7 +328,7 @@
 		<description>
 			<para>Provides details about a specific FAX session. The response will include a common subset of
 			the output from the CLI command 'fax show session &lt;session_number&gt;' for each technology. If the
-			FAX technolgy used by this session does not include a handler for FAXSession, then this action
+			FAX technology used by this session does not include a handler for FAXSession, then this action
 			will fail.</para>
 		</description>
 	</manager>
@@ -1158,7 +1158,7 @@ static struct ast_fax_session *fax_session_reserve(struct ast_fax_session_detail
 
 	/* locate a FAX technology module that can handle said requirements
 	 * Note: the requirements have not yet been finalized as T.38
-	 * negotiation has not yet occured. */
+	 * negotiation has not yet occurred. */
 	AST_RWLIST_RDLOCK(&faxmodules);
 	AST_RWLIST_TRAVERSE(&faxmodules, faxmod, list) {
 		if ((faxmod->tech->caps & details->caps) != details->caps) {
@@ -3114,7 +3114,7 @@ static struct ast_frame *fax_gateway_detect_t38(struct fax_gateway *gateway, str
 	enum ast_t38_state state_other;
 
 	if (f->datalen != sizeof(struct ast_control_t38_parameters)) {
-		/* invalaid AST_CONTROL_T38_PARAMETERS frame, we can't
+		/* invalid AST_CONTROL_T38_PARAMETERS frame, we can't
 		 * do anything with it, pass it on */
 		return f;
 	}

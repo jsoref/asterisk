@@ -121,13 +121,13 @@ if (! -e "$FESTIVALCACHE/jukebox_percent.ul") {
 	`echo "Percent" | text2wave -o $FESTIVALCACHE/jukebox_percent.ul -otype ulaw -`;
 }
 if (! -e "$FESTIVALCACHE/jukebox_generate.ul") {
-	`echo "Please wait while Astrisk Jukebox cashes the files of your music collection" | text2wave -o $FESTIVALCACHE/jukebox_generate.ul -otype ulaw -`;
+	`echo "Please wait while Asterisk Jukebox cashes the files of your music collection" | text2wave -o $FESTIVALCACHE/jukebox_generate.ul -otype ulaw -`;
 }
 if (! -e "$FESTIVALCACHE/jukebox_invalid.ul") {
 	`echo "You have entered an invalid selection" | text2wave -o $FESTIVALCACHE/jukebox_invalid.ul -otype ulaw -`;
 }
 if (! -e "$FESTIVALCACHE/jukebox_thankyou.ul") {
-	`echo "Thank you for using Astrisk Jukebox, Goodbye" | text2wave -o $FESTIVALCACHE/jukebox_thankyou.ul -otype ulaw -`;
+	`echo "Thank you for using Asterisk Jukebox, Goodbye" | text2wave -o $FESTIVALCACHE/jukebox_thankyou.ul -otype ulaw -`;
 }
 
 # greet the user
@@ -348,7 +348,7 @@ sub music_dir_cache {
 }
 
 # this function will fill the @masterCacheList of all the files that
-# need to have text2speeced ulaw files of their names generated
+# need to have text2speech ulaw files of their names generated
 sub music_dir_cache_genlist {
 	my $dir = shift;
 	if (!opendir(THEDIR, rmts($MUSIC.$dir))) {

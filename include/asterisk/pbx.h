@@ -144,7 +144,7 @@ struct ast_custom_function {
 					 * 'dangerous', and should not be run directly
 					 * from external interfaces (AMI, ARI, etc.)
 					 * \since 12 */
-	unsigned int write_escalates:1; /*!< The write function is to be considerd
+	unsigned int write_escalates:1; /*!< The write function is to be considered
 					 * 'dangerous', and should not be run directly
 					 * from external interfaces (AMI, ARI, etc.)
 					 * \since 12 */
@@ -789,7 +789,7 @@ int ast_findlabel_extension2(struct ast_channel *c, struct ast_context *con,
  * \brief Looks for a valid matching extension
  *
  * \param c not really important
- * \param context context to serach within
+ * \param context context to search within
  * \param exten extension to check
  * \param priority priority of extension path
  * \param callerid callerid of extension being searched for
@@ -809,7 +809,7 @@ int ast_canmatch_extension(struct ast_channel *c, const char *context,
  * \brief Looks to see if adding anything to this extension might match something. (exists ^ canmatch)
  *
  * \param c not really important XXX
- * \param context context to serach within
+ * \param context context to search within
  * \param exten extension to check
  * \param priority priority of extension path
  * \param callerid callerid of extension being searched for
@@ -1013,7 +1013,7 @@ int ast_context_remove_extension_callerid2(struct ast_context *con, const char *
 /*!
  * \brief Add an ignorepat
  *
- * \param context which context to add the ignorpattern to
+ * \param context which context to add the ignorepattern to
  * \param ignorepat ignorepattern to set up for the extension
  * \param registrar registrar of the ignore pattern
  *
@@ -1669,7 +1669,7 @@ void pbx_live_dangerously(int new_live_dangerously);
  * which cause privilege escalations. If pbx_live_dangerously() has been
  * called, this function has no effect.
  *
- * \return 0 if successfuly marked current thread.
+ * \return 0 if successfully marked current thread.
  * \return Non-zero if marking current thread failed.
  */
 int ast_thread_inhibit_escalations(void);

@@ -36,7 +36,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int dyptrk_(real *amdf, integer *ltau, integer *minptr, integer *voice, integer *pitch, integer *midx, struct lpc10_encoder_state *st);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 #endif
 
 /* Common Block Declarations */
@@ -44,9 +44,9 @@ extern int dyptrk_(real *amdf, integer *ltau, integer *minptr, integer *voice, i
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* ********************************************************************* */
 
@@ -251,9 +251,9 @@ extern struct {
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /* 	Parameters/constants */
 /*       Local variables that need not be saved */
 /*       Note that PATH is only used for debugging purposes, and can be */
@@ -315,7 +315,7 @@ extern struct {
     if (*voice == 0 && *alphax < 128.f) {
 	alpha = 8.f;
     }
-/* SEESAW: Construct a pitch pointer array and intermediate winner functio
+/* SEESAW: Construct a pitch pointer array and intermediate winner function
 n*/
 /*   Left to right pass: */
     iptr = *ipoint + 1;

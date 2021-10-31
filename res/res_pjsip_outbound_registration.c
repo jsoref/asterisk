@@ -64,7 +64,7 @@
 					registration will not be attempted again until the configuration is reloaded.</para></description>
 				</configOption>
 				<configOption name="client_uri">
-					<synopsis>Client SIP URI used when attemping outbound registration</synopsis>
+					<synopsis>Client SIP URI used when attempting outbound registration</synopsis>
 					<description><para>
 						This is the address-of-record for the outbound registration (i.e. the URI in
 						the To header of the REGISTER).</para>
@@ -308,7 +308,7 @@ struct sip_outbound_registration {
 		AST_STRING_FIELD(client_uri);
 		/*! \brief Optional user for contact header */
 		AST_STRING_FIELD(contact_user);
-		/*! \bried Optional header parameters for contact */
+		/*! \brief Optional header parameters for contact */
 		AST_STRING_FIELD(contact_header_params);
 		/*! \brief Explicit transport to use for registration */
 		AST_STRING_FIELD(transport);

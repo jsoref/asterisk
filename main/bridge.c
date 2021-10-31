@@ -1127,7 +1127,7 @@ static int smart_bridge_operation(struct ast_bridge *bridge)
 		AST_LIST_INSERT_TAIL(&dummy_bridge.channels, bridge_channel, entry);
 		dummy_bridge.num_channels++;
 		if (ast_test_flag(&bridge_channel->features->feature_flags, AST_BRIDGE_CHANNEL_FLAG_LONELY)) {
-			dummy_bridge.num_lonely++;
+			dummy_bridge.num_lonly++;
 		}
 		if (!bridge_channel->suspended) {
 			dummy_bridge.num_active++;
@@ -1147,7 +1147,7 @@ static int smart_bridge_operation(struct ast_bridge *bridge)
 		AST_LIST_INSERT_TAIL(&bridge->channels, bridge_channel, entry);
 		dummy_bridge.num_channels--;
 		if (ast_test_flag(&bridge_channel->features->feature_flags, AST_BRIDGE_CHANNEL_FLAG_LONELY)) {
-			dummy_bridge.num_lonely--;
+			dummy_bridge.num_lonly--;
 		}
 		if (!bridge_channel->suspended) {
 			dummy_bridge.num_active--;
@@ -2573,7 +2573,7 @@ int ast_bridge_add_channel(struct ast_bridge *bridge, struct ast_channel *chan,
 		if (ast_bridge_impart(bridge, yanked_chan, NULL, features,
 			AST_BRIDGE_IMPART_CHAN_INDEPENDENT)) {
 			/* It is possible for us to yank a channel and have some other
-			 * thread start a PBX on the channl after we yanked it. In particular,
+			 * thread start a PBX on the channel after we yanked it. In particular,
 			 * this can theoretically happen on the ;2 of a Local channel if we
 			 * yank it prior to the ;1 being answered. Make sure that it isn't
 			 * executing a PBX before hanging it up.
@@ -3068,7 +3068,7 @@ void ast_bridge_merge_inhibit(struct ast_bridge *bridge, int request)
 int ast_bridge_suspend(struct ast_bridge *bridge, struct ast_channel *chan)
 {
 	struct ast_bridge_channel *bridge_channel;
-/* XXX ASTERISK-21271 the case of a disolved bridge while channel is suspended is not handled. */
+/* XXX ASTERISK-21271 the case of a dissolved bridge while channel is suspended is not handled. */
 /* XXX ASTERISK-21271 suspend/unsuspend needs to be rethought. The caller must block until it has successfully suspended the channel for temporary control. */
 /* XXX ASTERISK-21271 external suspend/unsuspend needs to be eliminated. The channel may be playing a file at the time and stealing it then is not good. */
 
@@ -3089,7 +3089,7 @@ int ast_bridge_suspend(struct ast_bridge *bridge, struct ast_channel *chan)
 int ast_bridge_unsuspend(struct ast_bridge *bridge, struct ast_channel *chan)
 {
 	struct ast_bridge_channel *bridge_channel;
-/* XXX ASTERISK-21271 the case of a disolved bridge while channel is suspended is not handled. */
+/* XXX ASTERISK-21271 the case of a dissolved bridge while channel is suspended is not handled. */
 
 	ast_bridge_lock(bridge);
 
@@ -3862,7 +3862,7 @@ void ast_bridge_set_remb_send_interval(struct ast_bridge *bridge, unsigned int r
 	ast_bridge_unlock(bridge);
 }
 
-void ast_brige_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior)
+void ast_bridge_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior)
 {
 	ast_assert(bridge->softmix.video_mode.mode == AST_BRIDGE_VIDEO_MODE_SFU);
 

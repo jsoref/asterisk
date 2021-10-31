@@ -39,7 +39,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int voicin_(integer *vwin, real *inbuf, real *lpbuf, integer *buflim, integer *half, real *minamd, real *maxamd, integer *mintau, real *ivrc, integer *obound, integer *voibuf, integer *af, struct lpc10_encoder_state *st);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 /*:ref: vparms_ 14 14 4 6 6 4 4 6 4 4 4 4 6 6 6 6 */
 #endif
 
@@ -48,9 +48,9 @@ extern int voicin_(integer *vwin, real *inbuf, real *lpbuf, integer *buflim, int
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /****************************************************************************/
 
@@ -414,9 +414,9 @@ s*/
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /* 	Parameters/constants */
 /*       Voicing coefficient and Linear Discriminant Analysis variables:
 */
@@ -542,7 +542,7 @@ fic*/
 /*   SNR.  The last element of the vector is the constant. */
 /* 	         E    ZC    RC1    Qs   IVRC2  aRb   aRf        c */
 
-/*  The VOICE array contains the result of the linear discriminant functio
+/*  The VOICE array contains the result of the linear discriminant function
 n*/
 /*   (analog values).  The VOIBUF array contains the hard-limited binary
 */

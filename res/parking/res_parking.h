@@ -367,7 +367,7 @@ int parking_lot_cfg_create_extensions(struct parking_lot_cfg *lot_cfg);
  * \since 12.0.0
  * \brief Remove extensions belonging to a parking lot configuration
  *
- * \param lot_cfg parking lot configuratin to remove extensions from
+ * \param lot_cfg parking lot configuration to remove extensions from
  *
  * \note This will not remove extensions registered non-exclusively even
  *       if those extensions were registered by lot_cfg. Those are only
@@ -431,7 +431,7 @@ struct ast_bridge *park_common_setup(struct ast_channel *parkee, struct ast_chan
  *        to necessary parking information when joining, and applying various bridge roles to the
  *        channel.
  *
- * \param parkee The channel being preparred for parking
+ * \param parkee The channel being prepared for parking
  * \param parker The channel initiating the park; may be the parkee as well. May be NULL.
  * \param app_data arguments supplied to the Park application. May be NULL.
  * \param silence_announcements optional pointer to an integer where we want to store the silence option flag

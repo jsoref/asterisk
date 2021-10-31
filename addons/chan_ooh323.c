@@ -2055,7 +2055,7 @@ int onOutgoingCall(ooCallData *call)
 			}
 			ooCallAddAliasDialedDigits(call, p->caller_dialedDigits);
 		} else if (!ast_strlen_zero(p->callerid_num)) {
-			if (ooIsDailedDigit(p->callerid_num)) {
+			if (ooIsDialedDigit(p->callerid_num)) {
 				if (gH323Debug) {
 					ast_verb(0, "setting callid number %s\n", p->callerid_num);
 				}
@@ -2136,7 +2136,7 @@ int onNewCallCreated(ooCallData *call)
 			}
 			ooCallAddAliasDialedDigits(call, p->caller_dialedDigits);
 		} else if (!ast_strlen_zero(p->callerid_num)) {
-			if (ooIsDailedDigit(p->callerid_num)) {
+			if (ooIsDialedDigit(p->callerid_num)) {
 				if (gH323Debug) {
 					ast_verb(0, "setting callid number %s\n", p->callerid_num);
 				}
@@ -2148,7 +2148,7 @@ int onNewCallCreated(ooCallData *call)
 
 
 		if (!ast_strlen_zero(p->exten))  {
-			if (ooIsDailedDigit(p->exten)) {
+			if (ooIsDialedDigit(p->exten)) {
 				ooCallSetCalledPartyNumber(call, p->exten);
 				ooCallAddRemoteAliasDialedDigits(call, p->exten);
 			} else {
@@ -2851,7 +2851,7 @@ int reload_config(int reload)
 		ooH323EpClearAllAliases();
 	}
 
-	/* Inintialize everything to default */
+	/* Initialize everything to default */
 	snprintf(gLogFile, sizeof(gLogFile), "%s/%s", ast_config_AST_LOG_DIR, DEFAULT_LOGFILE);
 	gPort = 1720;
 	gIP[0] = '\0';
@@ -3167,7 +3167,7 @@ int reload_config(int reload)
 	ast_config_destroy(cfg);
 
 
-	/* Determine ip address if neccessary */
+	/* Determine ip address if necessary */
 	if (ast_strlen_zero(gIP)) {
 		ooGetLocalIPAddress(gIP);
 		if (!strcmp(gIP, "127.0.0.1") || !strcmp(gIP, "::1")) {

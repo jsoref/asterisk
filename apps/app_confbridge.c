@@ -979,7 +979,7 @@ static int sound_file_exists(const char *filename)
  * \param user Optional Caller
  * \param bridge_channel The bridged channel involved
  *
- * \note if caller is NULL, the announcment will be sent to all participants in the conference.
+ * \note if caller is NULL, the announcement will be sent to all participants in the conference.
  * \return Returns 0 on success, -1 if the user hung up
  */
 static int announce_user_count(struct confbridge_conference *conference, struct confbridge_user *user,
@@ -1682,7 +1682,7 @@ static struct confbridge_conference *join_conference_bridge(const char *conferen
 	struct post_join_action *action;
 	int max_members_reached = 0;
 
-	/* We explictly lock the conference bridges container ourselves so that other callers can not create duplicate conferences at the same */
+	/* We explicitly lock the conference bridges container ourselves so that other callers can not create duplicate conferences at the same */
 	ao2_lock(conference_bridges);
 
 	ast_debug(1, "Trying to find conference bridge '%s'\n", conference_name);
@@ -1751,19 +1751,19 @@ static struct confbridge_conference *join_conference_bridge(const char *conferen
 			ast_bridge_set_video_update_discard(conference->bridge, conference->b_profile.video_update_discard);
 			ast_bridge_set_remb_send_interval(conference->bridge, conference->b_profile.remb_send_interval);
 			if (ast_test_flag(&conference->b_profile, BRIDGE_OPT_REMB_BEHAVIOR_AVERAGE)) {
-				ast_brige_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_AVERAGE);
+				ast_bridge_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_AVERAGE);
 			} else if (ast_test_flag(&conference->b_profile, BRIDGE_OPT_REMB_BEHAVIOR_LOWEST)) {
-				ast_brige_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_LOWEST);
+				ast_bridge_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_LOWEST);
 			} else if (ast_test_flag(&conference->b_profile, BRIDGE_OPT_REMB_BEHAVIOR_HIGHEST)) {
-				ast_brige_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_HIGHEST);
+				ast_bridge_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_HIGHEST);
 			} else if (ast_test_flag(&conference->b_profile, BRIDGE_OPT_REMB_BEHAVIOR_AVERAGE_ALL)) {
-				ast_brige_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_AVERAGE_ALL);
+				ast_bridge_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_AVERAGE_ALL);
 			} else if (ast_test_flag(&conference->b_profile, BRIDGE_OPT_REMB_BEHAVIOR_LOWEST_ALL)) {
-				ast_brige_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_LOWEST_ALL);
+				ast_bridge_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_LOWEST_ALL);
 			} else if (ast_test_flag(&conference->b_profile, BRIDGE_OPT_REMB_BEHAVIOR_HIGHEST_ALL)) {
-				ast_brige_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_HIGHEST_ALL);
+				ast_bridge_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_HIGHEST_ALL);
 			} else if (ast_test_flag(&conference->b_profile, BRIDGE_OPT_REMB_BEHAVIOR_FORCE)) {
-				ast_brige_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_FORCE);
+				ast_bridge_set_remb_behavior(conference->bridge, AST_BRIDGE_VIDEO_SFU_REMB_FORCE);
 				ast_bridge_set_remb_estimated_bitrate(conference->bridge, conference->b_profile.remb_estimated_bitrate);
 			}
 		}
@@ -2374,7 +2374,7 @@ static int conf_get_pin(struct ast_channel *chan, struct confbridge_user *user)
 			ast_channel_language(chan));
 		res = ast_waitstream(chan, AST_DIGIT_ANY);
 		if (res > 0) {
-			/* Account for digit already read during ivalid pin playback
+			/* Account for digit already read during invalid pin playback
 			 * resetting pin buf. */
 			pin_guess[0] = res;
 			pin_guess[1] = '\0';
@@ -2624,7 +2624,7 @@ static int confbridge_exec(struct ast_channel *chan, const char *data)
 	quiet = ast_test_flag(&user.u_profile, USER_OPT_QUIET);
 
 	/* ask for a PIN immediately after finding user profile.  This has to be
-	 * prompted for requardless of quiet setting. */
+	 * prompted for regardless of quiet setting. */
 	if (!ast_strlen_zero(user.u_profile.pin)) {
 		if (conf_get_pin(chan, &user)) {
 			pbx_builtin_setvar_helper(chan, "CONFBRIDGE_RESULT", "FAILED");
@@ -2919,7 +2919,7 @@ static int action_toggle_mute_participants(struct confbridge_conference *confere
 		conference->b_profile.sounds);
 
 	if (strcmp(conference->b_profile.language, ast_channel_language(user->chan))) {
-		/* The host needs to hear it seperately, as they don't get the audio from play_sound_helper */
+		/* The host needs to hear it separately, as they don't get the audio from play_sound_helper */
 		ast_stream_and_wait(user->chan, sound_to_play, "");
 
 		/* Announce to the group that all participants are muted */

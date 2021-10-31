@@ -2290,7 +2290,7 @@ static enum agi_result launch_script(struct ast_channel *chan, char *script, int
 		ast_close_fds_above_n(STDERR_FILENO + 1);
 
 		/* Execute script */
-		/* XXX argv should be deprecated in favor of passing agi_argX paramaters */
+		/* XXX argv should be deprecated in favor of passing agi_argX parameters */
 		execv(script, argv);
 		/* Can't use ast_log since FD's are closed */
 		ast_child_verbose(1, "Failed to execute '%s': %s", script, strerror(errno));
@@ -2353,7 +2353,7 @@ static void setup_env(struct ast_channel *chan, char *request, int fd, int enhan
 	ast_agi_send(fd, chan, "agi_threadid: %ld\n", (long)pthread_self());
 
 	/* Send any parameters to the fastagi server that have been passed via the agi application */
-	/* Agi application paramaters take the form of: AGI(/path/to/example/script|${EXTEN}) */
+	/* Agi application parameters take the form of: AGI(/path/to/example/script|${EXTEN}) */
 	for(count = 1; count < argc; count++)
 		ast_agi_send(fd, chan, "agi_arg_%d: %s\n", count, argv[count]);
 
@@ -3010,7 +3010,7 @@ static int handle_recordfile(struct ast_channel *chan, AGI *agi, int argc, const
 			switch(f->frametype) {
 			case AST_FRAME_DTMF:
 				if (strchr(argv[4], f->subclass.integer)) {
-					/* This is an interrupting chracter, so rewind to chop off any small
+					/* This is an interrupting character, so rewind to chop off any small
 					   amount of DTMF that may have been recorded
 					*/
 					ast_stream_rewind(fs, 200);

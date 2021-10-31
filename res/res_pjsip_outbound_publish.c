@@ -247,7 +247,7 @@ struct ast_sip_outbound_publish_state {
 /*!
  * \brief Used for locking while loading/reloading
  *
- * Mutli-user configurations make it so publishers can be dynamically added and
+ * Multi-user configurations make it so publishers can be dynamically added and
  * removed. Publishers should not be added or removed during a [re]load since
  * it could cause the current_clients container to be out of sync. Thus the
  * reason for this lock.

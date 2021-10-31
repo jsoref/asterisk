@@ -272,7 +272,7 @@ static int prometheus_metric_cmp(struct prometheus_metric *left,
 		}
 	}
 
-	ast_debug(5, "Copmarison: %s (%p) is equal to %s (%p)\n",
+	ast_debug(5, "Comparison: %s (%p) is equal to %s (%p)\n",
 		left->name, left, right->name, right);
 	return 1;
 }

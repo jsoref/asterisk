@@ -65,7 +65,7 @@ struct translator_path {
 /*!
  * \brief a matrix that, for any pair of supported formats,
  * indicates the total cost of translation and the first step.
- * The full path can be reconstricted iterating on the matrix
+ * The full path can be reconstructed iterating on the matrix
  * until step->dstfmt == desired_format.
  *
  * Array indexes are 'src' and 'dest', in that order.
@@ -755,7 +755,7 @@ static void generate_computational_cost(struct ast_translator *t, int seconds)
  * dst formats.
  *
  * \note This function allows older translators built before the translation cost
- * changed away from using onely computational time to continue to be registered
+ * changed away from using only computational time to continue to be registered
  * correctly.  It is expected that translators built after the introduction of this
  * function will manually assign their own table cost value.
  *

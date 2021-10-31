@@ -91,7 +91,7 @@ enum sig_ss7_law {
 	SIG_SS7_ALAW
 };
 
-enum sig_ss7_redirect_idication {
+enum sig_ss7_redirect_indication {
 	SS7_INDICATION_NO_REDIRECTION = 0,
 	SS7_INDICATION_REROUTED_PRES_ALLOWED,
 	SS7_INDICATION_REROUTED_INFO_RESTRICTED,
@@ -309,8 +309,8 @@ struct sig_ss7_chan {
 	/*!
 	 * \brief Indication of the call being a CUG call and its permissions.
 	 * \note 0 or 1 - non-CUG call
-	 * \note 2 - CUG call, outgoing access alowed
-	 * \note 3 - CUG call, outgoing access not alowed
+	 * \note 2 - CUG call, outgoing access allowed
+	 * \note 3 - CUG call, outgoing access not allowed
 	 */
 	unsigned char cug_indicator;
 };

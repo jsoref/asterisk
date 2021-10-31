@@ -125,7 +125,7 @@
      <para>
       Enable extra debugging statements. This parameter may be used several
       times, and each increases the debug level.  Equivalent to <option>debug = <replaceable>num</replaceable></option>
-      in <filename>asterisk.conf</filename> to explicitly set the initian debug
+      in <filename>asterisk.conf</filename> to explicitly set the initial debug
       level to <replaceable>num</replaceable>. When given at startup, this
       option also implies <option>-f</option> (no forking). However when
       connecting to an existing Asterisk instance (<option>-r</option> or
@@ -201,7 +201,7 @@
     <term>-i</term>
     <listitem>
      <para>
-      Prompt user to intialize any encrypted private keys for IAX2
+      Prompt user to initialize any encrypted private keys for IAX2
       secure authentication during startup.
      </para>
     </listitem>

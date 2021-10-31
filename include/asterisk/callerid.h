@@ -27,7 +27,7 @@
 /*!
  * \page CID Caller ID names and numbers
  *
- * Caller ID names are currently 8 bit characters, propably
+ * Caller ID names are currently 8 bit characters, probably
  * ISO8859-1, depending on what your channel drivers handle.
  *
  * IAX2 and SIP caller ID names are UTF8
@@ -202,7 +202,7 @@ int ast_callerid_callwaiting_generate(unsigned char *buf, const char *name, cons
 
 /*! \brief Destructively parse inbuf into name and location (or number)
  * \details
- * Parses callerid stream from inbuf and changes into useable form, outputed in name and location.
+ * Parses callerid stream from inbuf and changes into useable form, outputted in name and location.
  * \param instr buffer of callerid stream (in audio form) to be parsed. Warning, data in buffer is changed.
  * \param name address of a pointer-to-char for the name value of the stream.
  * \param location address of a pointer-to-char for the phone number value of the stream.
@@ -218,7 +218,7 @@ int ast_callerid_parse(char *instr, char **name, char **location);
 /*!
  * \brief Generate a CAS (CPE Alert Signal) tone for 'n' samples
  * \param outbuf Allocated buffer for data.  Must be at least 2400 bytes unless no SAS is desired
- * \param sas Non-zero if CAS should be preceeded by SAS
+ * \param sas Non-zero if CAS should be preceded by SAS
  * \param len How many samples to generate.
  * \param codec Which codec (AST_FORMAT_ALAW or AST_FORMAT_ULAW)
  * \return Returns -1 on error (if len is less than 2400), 0 on success.

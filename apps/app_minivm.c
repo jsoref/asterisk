@@ -256,7 +256,7 @@
 	<description>
 		<para>This application is part of the Mini-Voicemail system, configured in minivm.conf.</para>
 		<para>MinivmGreet() plays default prompts or user specific prompts for an account.</para>
-		<para>Busy and unavailable messages can be choosen, but will be overridden if a temporary
+		<para>Busy and unavailable messages can be chosen, but will be overridden if a temporary
 		message exists for the account.</para>
 		<variablelist>
 			<variable name="MVM_GREET_STATUS">
@@ -536,7 +536,7 @@
 
 #define SOUND_INTRO		"vm-intro"
 #define B64_BASEMAXINLINE 	256	/*!< Buffer size for Base 64 attachment encoding */
-#define B64_BASELINELEN 	72	/*!< Line length for Base 64 endoded messages */
+#define B64_BASELINELEN 	72	/*!< Line length for Base 64 encoded messages */
 #define EOL			"\r\n"
 
 #define MAX_DATETIME_FORMAT	512
@@ -1013,7 +1013,7 @@ static void prep_email_sub_vars(struct ast_channel *channel, const struct minivm
 		pbx_builtin_setvar_helper(channel, var->name, var->value);
 	}
 
-	/* Prepare variables for substition in email body and subject */
+	/* Prepare variables for substitution in email body and subject */
 	pbx_builtin_setvar_helper(channel, "MVM_NAME", vmu->fullname);
 	pbx_builtin_setvar_helper(channel, "MVM_DUR", dur);
 	pbx_builtin_setvar_helper(channel, "MVM_DOMAIN", vmu->domain);
@@ -1204,7 +1204,7 @@ static const char *ast_str_encode_mime(struct ast_str **end, ssize_t maxlen, con
 }
 
 /*!\internal
- * \brief Wraps a character sequence in double quotes, escaping occurences of quotes within the string.
+ * \brief Wraps a character sequence in double quotes, escaping occurrences of quotes within the string.
  * \param from The string to work with.
  * \param buf The destination buffer to write the modified quoted string.
  * \param maxlen Always zero.  \see ast_str
@@ -1737,7 +1737,7 @@ static int play_record_review(struct ast_channel *chan, char *playfile, char *re
 			}
 			return cmd;
  		default:
-			/* If the caller is an ouside caller, and the review option is enabled,
+			/* If the caller is an outside caller, and the review option is enabled,
 			   allow them to review the message, but let the owner of the box review
 			   their OGM's */
 			if (outsidecaller && !ast_test_flag(vmu, MVM_REVIEW))
@@ -2011,7 +2011,7 @@ static int leave_voicemail(struct ast_channel *chan, char *username, struct leav
 			S_COR(ast_channel_caller(chan)->id.number.valid, ast_channel_caller(chan)->id.number.str, NULL),
 			"Unknown");
 		snprintf(logbuf, sizeof(logbuf),
-			/* "Mailbox:domain:macrocontext:exten:priority:callerchan:callerid:origdate:origtime:duration:durationstatus:accountcode" */
+			/* "Mailbox:domain:macrocontext:exten:priority:callerchan:callerid:origdate:orightime:duration:durationstatus:accountcode" */
 			"%s:%s:%s:%s:%d:%s:%s:%s:%s:%d:%s:%s\n",
 			username,
 			ast_channel_context(chan),
@@ -2095,7 +2095,7 @@ static void queue_mwi_event(const char *channel_id, const char *mbx, const char 
 }
 
 /*!\internal
- * \brief Send MWI using interal Asterisk event subsystem */
+ * \brief Send MWI using internal Asterisk event subsystem */
 static int minivm_mwi_exec(struct ast_channel *chan, const char *data)
 {
 	int argc;
@@ -2250,7 +2250,7 @@ static int minivm_record_exec(struct ast_channel *chan, const char *data)
 		}
 	}
 
-	/* Now run the appliation and good luck to you! */
+	/* Now run the application and good luck to you! */
 	res = leave_voicemail(chan, argv[0], &leave_options);
 
 	if (res == ERROR_LOCK_PATH) {
@@ -2781,7 +2781,7 @@ static char *message_template_parse_emailbody(const char *configuration)
 	char *tmpread, *tmpwrite;
 	char *emailbody = ast_strdup(configuration);
 
-	/* substitute strings \t and \n into the apropriate characters */
+	/* substitute strings \t and \n into the appropriate characters */
 	tmpread = tmpwrite = emailbody;
 	while ((tmpwrite = strchr(tmpread,'\\'))) {
 	       int len = strlen("\n");
@@ -2827,8 +2827,8 @@ static int apply_general_options(struct ast_variable *var)
 		} else if (!strcmp(var->name, "externnotify")) {
 			/* External voicemail notify application */
 			ast_copy_string(global_externnotify, var->value, sizeof(global_externnotify));
-		} else if (!strcmp(var->name, "silencetreshold")) {
-			/* Silence treshold */
+		} else if (!strcmp(var->name, "silencethreshold")) {
+			/* Silence threshold */
 			global_silencethreshold = atoi(var->value);
 		} else if (!strcmp(var->name, "maxmessage")) {
 			int x;
@@ -2954,7 +2954,7 @@ static int load_config(int reload)
 		ast_copy_string(template->dateformat, chanvar, sizeof(template->dateformat));
 	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailfromstring")))
 		ast_copy_string(template->fromaddress, chanvar, sizeof(template->fromaddress));
-	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailaaddress")))
+	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailaddress")))
 		ast_copy_string(template->serveremail, chanvar, sizeof(template->serveremail));
 	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailcharset")))
 		ast_copy_string(template->charset, chanvar, sizeof(template->charset));
@@ -3547,7 +3547,7 @@ static int reload(void)
 	return(load_config(1));
 }
 
-/*! \brief Reload cofiguration */
+/*! \brief Reload configuration */
 static char *handle_minivm_reload(struct ast_cli_entry *e, int cmd, struct ast_cli_args *a)
 {
 

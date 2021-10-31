@@ -12,7 +12,7 @@
 ;
 [macro-minivmfunctest]
 exten => s,1,set(account=${ARGV1})
-exten => minivm,n,verbose(1,-------------------- Minivm Function test - Accoutn ${account}  -------------)
+exten => minivm,n,verbose(1,-------------------- Minivm Function test - Account ${account}  -------------)
 exten => s,n,verbose(1,---- Has account:       ${MINIVMACCOUNT(${account}:hasaccount)})
 exten => s,n,verbose(1,---- Fullname:          ${MINIVMACCOUNT(${account}:fullname)})
 exten => s,n,verbose(1,---- Email:             ${MINIVMACCOUNT(${account}:email)})
@@ -120,7 +120,7 @@ exten => record,n,noop(Recording status: ${MINIVM_APPMESS_STATUS})
 exten => record,n,macroreturn
 
 ;.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-; To set a counter and use a template for voicemail to users without acounts
+; To set a counter and use a template for voicemail to users without accounts
 ; use something like this
 ;
 ; email address is in the "account" channel variable. Set from ast_db or a script

@@ -271,7 +271,7 @@ static void *internal_ao2_traverse(struct ao2_container *self, enum search_flags
 			return NULL;
 		}
 		if (!(multi_iterator = ast_calloc(1, sizeof(*multi_iterator)))) {
-			ao2_t_ref(multi_container, -1, "OBJ_MULTIPLE interator creation failed.");
+			ao2_t_ref(multi_container, -1, "OBJ_MULTIPLE iterator creation failed.");
 			return NULL;
 		}
 	}
@@ -864,7 +864,7 @@ int ao2_container_check(struct ao2_container *self, enum search_flags flags)
 	}
 #if defined(AO2_DEBUG)
 	if (!self->v_table->integrity) {
-		/* No ingetrigy check available.  Assume container is ok. */
+		/* No integrity check available.  Assume container is ok. */
 		return 0;
 	}
 

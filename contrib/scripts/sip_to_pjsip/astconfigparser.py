@@ -222,7 +222,7 @@ def remove_comment(line, is_comment):
         # otherwise it was an embedded comment so combine
         return ''.join([part[0].strip(), ' ', line]).rstrip(), False
 
-    # find the first occurence of a comment that is not escaped
+    # find the first occurrence of a comment that is not escaped
     match = re.match(r'.*?([^\\];)', line)
 
     if match:

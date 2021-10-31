@@ -52,7 +52,7 @@
 #define CONFIG_INCLUDE_FILE "test_config_include.conf"
 
 /*
- * This builds the folowing config:
+ * This builds the following config:
  * [Capitals]
  * Germany = Berlin
  * China = Beijing
@@ -967,7 +967,7 @@ AST_TEST_DEFINE(config_hook)
 		info->category = "/main/config/";
 		info->summary = "Test config hooks";
 		info->description =
-			"Ensure that config hooks are called at approriate times,"
+			"Ensure that config hooks are called at appropriate times,"
 			"not called at inappropriate times, and that all information"
 			"that should be present is present.";
 		return AST_TEST_NOT_RUN;
@@ -1493,7 +1493,7 @@ AST_TEST_DEFINE(config_options_test)
 	case TEST_INIT:
 		info->name = "config_options_test";
 		info->category = "/config/";
-		info->summary = "Config opptions unit test";
+		info->summary = "Config options unit test";
 		info->description =
 			"Tests the Config Options API";
 		return AST_TEST_NOT_RUN;

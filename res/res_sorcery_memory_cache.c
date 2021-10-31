@@ -3002,7 +3002,7 @@ static void *test_data_alloc(const char *id) {
  * \brief Callback for retrieving sorcery object by ID
  *
  * The mock wizard uses the \ref real_backend_data in order to construct
- * objects. If the backend data is "nonexisent" then no object is returned.
+ * objects. If the backend data is "nonexistent" then no object is returned.
  * Otherwise, an object is created that has the backend data's salt and
  * pepper values copied.
  *
@@ -3037,7 +3037,7 @@ static void *mock_retrieve_id(const struct ast_sorcery *sorcery, void *data,
  * \brief Callback for retrieving multiple sorcery objects
  *
  * The mock wizard uses the \ref real_backend_data in order to construct
- * objects. If the backend data is "nonexisent" then no object is returned.
+ * objects. If the backend data is "nonexistent" then no object is returned.
  * Otherwise, the number of objects matching the exists value will be returned.
  *
  * \param sorcery The sorcery instance
@@ -3186,7 +3186,7 @@ AST_TEST_DEFINE(stale)
 
 		real_backend_data = &iterations[i];
 
-		ast_test_status_update(test, "Begininning iteration %d\n", i);
+		ast_test_status_update(test, "Beginning iteration %d\n", i);
 
 		cache_fresh = ast_sorcery_retrieve_by_id(sorcery, "test", "test");
 		if (!cache_fresh) {

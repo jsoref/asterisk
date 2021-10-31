@@ -106,8 +106,8 @@ static pval *get_goto_target(pval *item);
 static int label_inside_case(pval *label);
 static void attach_exten(struct ael_extension **list, struct ael_extension *newmem);
 static void fix_gotos_in_extensions(struct ael_extension *exten);
-static pval *get_extension_or_contxt(pval *p);
-static pval *get_contxt(pval *p);
+static pval *get_extension_or_context(pval *p);
+static pval *get_context(pval *p);
 static void remove_spaces_before_equals(char *str);
 
 /* PRETTY PRINTER FOR AEL:  ============================================================================= */
@@ -528,7 +528,7 @@ void traverse_pval_item_template(pval *item, int depth)/* depth comes in handy f
 		break;
 
 	case PV_FOR:
-		/* fields: item->u1.for_init     == a string containing the initalizer
+		/* fields: item->u1.for_init     == a string containing the initializer
 		           item->u2.for_test     == a string containing the loop test
 		           item->u3.for_inc      == a string containing the loop increment
 
@@ -1153,7 +1153,7 @@ static void check_label(pval *item)
 static pval *get_goto_target(pval *item)
 {
 	/* just one item-- the label should be in the current extension */
-	pval *curr_ext = get_extension_or_contxt(item); /* containing exten, or macro */
+	pval *curr_ext = get_extension_or_context(item); /* containing exten, or macro */
 	pval *curr_cont;
 
 	if (!item->u1.list) {
@@ -1165,7 +1165,7 @@ static pval *get_goto_target(pval *item)
 			return x;
 	}
 
-	curr_cont = get_contxt(item);
+	curr_cont = get_context(item);
 
 	/* TWO items */
 	if (item->u1.list->next && !item->u1.list->next->next) {
@@ -1237,7 +1237,7 @@ static void check_goto(pval *item)
 
 	/* just one item-- the label should be in the current extension */
 	if (!item->u1.list->next && !strstr(item->u1.list->u1.str,"${")) {
-		struct pval *z = get_extension_or_contxt(item);
+		struct pval *z = get_extension_or_context(item);
 		struct pval *x = 0;
 		if (z)
 			x = find_label_in_current_extension((char*)((item->u1.list)->u1.str), z); /* if in macro, use current context instead */
@@ -1259,7 +1259,7 @@ static void check_goto(pval *item)
 		   (char*)((item->u1.list)->u1.str), (char *)item->u1.list->next->u1.str); */
 		if (!strstr((item->u1.list)->u1.str,"${")
 			&& !strstr(item->u1.list->next->u1.str,"${") ) /* Don't try to match variables */ {
-			struct pval *z = get_contxt(item);
+			struct pval *z = get_context(item);
 			struct pval *x = 0;
 
 			if (z)
@@ -1470,7 +1470,7 @@ static void find_pval_goto_item(pval *item, int lev)
 		break;
 
 	case PV_FOR:
-		/* fields: item->u1.for_init     == a string containing the initalizer
+		/* fields: item->u1.for_init     == a string containing the initializer
 		           item->u2.for_test     == a string containing the loop test
 		           item->u3.for_inc      == a string containing the loop increment
 
@@ -1697,7 +1697,7 @@ static struct pval *match_pval_item(pval *item)
 		break;
 
 	case PV_FOR:
-		/* fields: item->u1.for_init     == a string containing the initalizer
+		/* fields: item->u1.for_init     == a string containing the initializer
 		           item->u2.for_test     == a string containing the loop test
 		           item->u3.for_inc      == a string containing the loop increment
 
@@ -2686,7 +2686,7 @@ void check_pval_item(pval *item, struct argapp *apps, int in_globals)
 		break;
 
 	case PV_FOR:
-		/* fields: item->u1.for_init     == a string containing the initalizer
+		/* fields: item->u1.for_init     == a string containing the initializer
 		           item->u2.for_test     == a string containing the loop test
 		           item->u3.for_inc      == a string containing the loop increment
 
@@ -3214,7 +3214,7 @@ int find_switch_item(pval *item)
 		break;
 
 	case PV_FOR:
-		/* fields: item->u1.for_init     == a string containing the initalizer
+		/* fields: item->u1.for_init     == a string containing the initializer
 		           item->u2.for_test     == a string containing the loop test
 		           item->u3.for_inc      == a string containing the loop increment
 
@@ -4332,7 +4332,7 @@ static void attach_exten(struct ael_extension **list, struct ael_extension *newm
 	lptr->next_exten = newmem;
 }
 
-static pval *get_extension_or_contxt(pval *p)
+static pval *get_extension_or_context(pval *p)
 {
 	while( p && p->type != PV_EXTENSION && p->type != PV_CONTEXT && p->type != PV_MACRO ) {
 
@@ -4342,7 +4342,7 @@ static pval *get_extension_or_contxt(pval *p)
 	return p;
 }
 
-static pval *get_contxt(pval *p)
+static pval *get_context(pval *p)
 {
 	while( p && p->type != PV_CONTEXT && p->type != PV_MACRO ) {
 
@@ -4820,7 +4820,7 @@ void destroy_pval_item(pval *item)
 		break;
 
 	case PV_FOR:
-		/* fields: item->u1.for_init     == a string containing the initalizer
+		/* fields: item->u1.for_init     == a string containing the initializer
 		           item->u2.for_test     == a string containing the loop test
 		           item->u3.for_inc      == a string containing the loop increment
 

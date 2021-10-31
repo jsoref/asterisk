@@ -294,7 +294,7 @@ context=public
 ;
 ;datetime_send=
 
-; Send ISDN conected line information.
+; Send ISDN connected line information.
 ;
 ; block:   Do not send any connected line information.
 ; connect: Send connected line information on initial connect.
@@ -588,7 +588,7 @@ usecallerid=yes
 ;                   for dtmf dialtone detection; using DTMF.
 ;     (see https://wiki.asterisk.org/wiki/display/AST/Caller+ID+in+India)
 ;     dtmf        = causes monitor loop to look for dtmf energy on the
-;                   incoming channel to initate cid acquisition
+;                   incoming channel to initiate cid acquisition
 ;
 ;cidstart=polarity
 ;
@@ -1077,7 +1077,7 @@ pickupgroup=1
 ; Few zones are supported at the time of this writing, but may be selected
 ; with "progzone".
 ;
-; progzone also affects the pattern used for buzydetect (unless
+; progzone also affects the pattern used for busydetect (unless
 ; busypattern is set explicitly). The possible values are:
 ;   us (default)
 ;   ca (alias for 'us')

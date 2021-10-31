@@ -21,7 +21,7 @@
 /*! \file
  * \brief Asterisk module definitions.
  *
- * This file contains the definitons for functions Asterisk modules should
+ * This file contains the definitions for functions Asterisk modules should
  * provide and some other module related functions.
  */
 
@@ -107,7 +107,7 @@ enum ast_module_load_result {
  * \brief Possible return types for \ref ast_module_reload
  */
 enum ast_module_reload_result {
-	AST_MODULE_RELOAD_SUCCESS = 0,      /*!< The module was reloaded succesfully */
+	AST_MODULE_RELOAD_SUCCESS = 0,      /*!< The module was reloaded successfully */
 	AST_MODULE_RELOAD_QUEUED,           /*!< The module reload request was queued */
 	AST_MODULE_RELOAD_NOT_FOUND,        /*!< The requested module was not found */
 	AST_MODULE_RELOAD_ERROR,            /*!< An error occurred while reloading the module */
@@ -181,7 +181,7 @@ enum ast_module_reload_result ast_module_reload(const char *name);
 /*!
  * \brief Notify when usecount has been changed.
  *
- * This function calulates use counts and notifies anyone trying to keep track
+ * This function calculates use counts and notifies anyone trying to keep track
  * of them.  It should be called whenever your module's usecount changes.
  *
  * \note The ast_module_user_* functions take care of calling this function for you.
@@ -352,7 +352,7 @@ struct ast_module_info {
 	const char *description;
 
 	/*!
-	 * This holds the ASTERISK_GPL_KEY, signifiying that you agree to the terms of
+	 * This holds the ASTERISK_GPL_KEY, signifying that you agree to the terms of
 	 * the Asterisk license as stated in the ASTERISK_GPL_KEY.  Your module will not
 	 * load if it does not return the EXACT key string.
 	 */

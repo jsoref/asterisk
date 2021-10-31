@@ -143,7 +143,7 @@ NOTES
 
 	The script relies on not only bash, but also recent GNU date and
 	gdb with python support.  *BSD operating systems may require
-	installation of the 'coreutils' and 'devel/gdb' packagess and minor
+	installation of the 'coreutils' and 'devel/gdb' packages and minor
 	tweaking of the ast_debug_tools.conf file.
 
 	Any files output will have ':' characters changed to '-'.  This is
@@ -553,7 +553,7 @@ done
 
 exit
 
-# Be careful editng the inline scripts.
+# Be careful editing the inline scripts.
 # They're space-indented.
 
 # We need the python bit because lock_infos isn't

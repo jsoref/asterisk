@@ -27,7 +27,7 @@
  * 		-you can change the port numbers in the sourcecode below
  *
  * 	Once you make the call, both programs will accept the incoming
- * 	connection. The program on port 8417 will print out the enviornemnt
+ * 	connection. The program on port 8417 will print out the environment
  * 	(unless the appropriate define below is commented) and you can write
  * 	any AGI command there (http://www.voip-info.org/wiki-Asterisk+AGI),
  * 	e.g.:
@@ -58,7 +58,7 @@
 /* DEFINES */
 #define SIGNAL_PORT 8418
 #define COMMAND_PORT 8417
-#define SEND_ENVIORNMENT /*send the enviornment thru the socket*/
+#define SEND_ENVIORNMENT /*send the environment thru the socket*/
 /************************/
 
 
@@ -78,16 +78,16 @@ char *end, *bs, *be;
  */
 
 int command_desc; /* command transfer descriptor */
-int speech_desc; /* speech signal descrriptor */
+int speech_desc; /* speech signal descriptor */
 char connected=1; /* connection state */
 
 int connect_to_host(char* host, int port); /* connect to a given host (name or IP) and given port number in nonblocking mode returning socket descriptor*/
 
-void read_full(int file, char* buffer, int num); /* read EXACTLY "num" ammount of bytes from "file" descriptor to "buffer"*/
-int read_some(int file, char* buffer, int size); /* read AT MOST "size" ammount of bytes */
+void read_full(int file, char* buffer, int num); /* read EXACTLY "num" amount of bytes from "file" descriptor to "buffer"*/
+int read_some(int file, char* buffer, int size); /* read AT MOST "size" amount of bytes */
 
-void write_buf(int file, char* buffer, int num); /* write "num" ammount of bytes to "file" descriptor and buffer the surplus if the write would block */
-int write_amap(int file, char* buffer, int num); /*write AT MOST "num" ammount of bytes and return ammount that was written*/
+void write_buf(int file, char* buffer, int num); /* write "num" amount of bytes to "file" descriptor and buffer the surplus if the write would block */
+int write_amap(int file, char* buffer, int num); /*write AT MOST "num" amount of bytes and return amount that was written*/
 
 void setnonblocking(int desc); /*sets the socket non-blocking; for polling */
 
@@ -160,7 +160,7 @@ void finalize()
 
 void* readStdin(void* ptr)
 {
-	while(1)/*read enviornment*/
+	while(1)/*read environment*/
 	{
 		fgets(buf,BUFSIZE,stdin);
 		#ifdef SEND_ENVIORNMENT
@@ -349,7 +349,7 @@ void write_buf(int desc, char* buf, int size)
 			{
 				size-=end-be;/* reduce new data size by the higher end size */
 				memcpy(be,buf,end-be);/* copy to higher end */
-				be=winbuf;/* shift end to begining of buffer */
+				be=winbuf;/* shift end to beginning of buffer */
 				buf+=end-be;/* shift start of new data */
 			}
 			else/* if new data fits the higher end */

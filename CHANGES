@@ -293,7 +293,7 @@ Core
  * The Streams API becomes the home for the core ACN capabilities.
    These include...
 
-    * Parsing and formatting of codec negotation preferences.
+    * Parsing and formatting of codec negotiation preferences.
     * Resolving pending streams and topologies with those configured
       using configured preferences.
     * Utility functions for creating string representations of
@@ -306,7 +306,7 @@ Core
       a ast_stream_codec_negotiation_prefs structure.
     * Added ast_stream_codec_prefs_to_str() which does the reverse.
     * Added many functions to parse individual parameter name
-      and value strings to their respectrive enum values, and the
+      and value strings to their respective enum values, and the
       reverse.
 
    For streams:
@@ -486,7 +486,7 @@ app_voicemail
 
 chan_pjsip
 ------------------
- * A new dialplan function, PJSIP_MOH_PASSTRHOUGH, has been added to chan_pjsip. This
+ * A new dialplan function, PJSIP_MOH_PASSTHROUGH, has been added to chan_pjsip. This
    allows the behaviour of the moh_passthrough endpoint option to be read or changed
    in the dialplan. This allows control on a per-call basis.
 
@@ -926,7 +926,7 @@ res_pjsip
 
 res_rtp_asterisk
 ------------------
- * The existing strictrtp option in rtp.conf has a new choice availabe, called
+ * The existing strictrtp option in rtp.conf has a new choice available, called
    'seqno', which behaves the same way as setting strictrtp to 'yes', but will
    ignore the time interval during learning so that bursts of packets can still
    trigger learning our source.
@@ -1201,7 +1201,7 @@ res_pjsip
    methods.
 
  * The pjsip_transport_event feature introduced in 15.1.0 has been refactored.
-   Any external modules that may have used that feature (highly unlikey) will
+   Any external modules that may have used that feature (highly unlikely) will
    need to be changed as the API has been altered slightly.
 
 res_pjsip_endpoint_identifier_ip
@@ -1256,7 +1256,7 @@ chan_sip
 
 res_rtp_asterisk
 ------------------
- * The X.509 certificate used for DTLS negotation can now be automatically
+ * The X.509 certificate used for DTLS negotiation can now be automatically
    generated. This is supported by res_pjsip by specifying
    "dtls_auto_generate_cert = yes" on a PJSIP endpoint. For chan_sip, you
    would set "dtlsautogeneratecert = yes" either in the [general] section of
@@ -1296,7 +1296,7 @@ app_queue
 
  * A new option, "announce-position-only-up," has been added that, when set to
    yes, causes position announcements to only be played when the caller's
-   queue position has improved since the last time that we annouced their
+   queue position has improved since the last time that we announced their
    position. This default is no.
 
 Build System
@@ -1329,9 +1329,9 @@ res_musiconhold
    to custom applications (and all descendants), waits 100ms, then sends a
    TERM signal, waits 100ms, then finally sends a KILL signal.  An application
    which is interacting with an external device and/or spawns children of its
-   own may not be able to exit cleanly in the default times, expecially if sent
+   own may not be able to exit cleanly in the default times, especially if sent
    a KILL signal, or if it's children are getting signals directly from
-   res_musiconhoild.  To allow extra time, the 'kill_escalation_delay'
+   res_musiconhold.  To allow extra time, the 'kill_escalation_delay'
    class option can be used to set the number of milliseconds res_musiconhold
    waits before escalating kill signals, with the default being the current
    100ms.  To control to whom the signals are sent, the "kill_method"
@@ -1530,7 +1530,7 @@ pbx_spool
 
 AMI
 ------------------
- * The 'PJSIPShowEndpoint' command's respone event of 'IdentifyDetail' now
+ * The 'PJSIPShowEndpoint' command's response event of 'IdentifyDetail' now
    contains a new optional parameter, 'MatchHeader', mapping to the new
    configuration option 'match_header' for the corresponding 'identify' object.
    It should be noted that since 'match_header' takes in a key: value pair, the
@@ -1551,7 +1551,7 @@ res_pjsip_outbound_registration
 
 app_voicemail
 ------------------
- * The 'Comedian Mail' prompts can now be overriden using the 'vm-login' and
+ * The 'Comedian Mail' prompts can now be overridden using the 'vm-login' and
    'vm-newuser' configuration options in voicemail.conf.
 
  * Added 'fromstring' field to the voicemail boxes. If set, it will override
@@ -1576,7 +1576,7 @@ res_pjsip
    is not a hostname, the saved transport will be used and the 'x-ast-txp'
    parameter stripped from the outgoing packet.  To facilitate recreation of
    subscriptions on asterisk restart, a new column 'contact_uri' needed to be
-   added to the ps_subcsription_persistence table.  Since new columns were
+   added to the ps_subscription_persistence table.  Since new columns were
    added to both transport and subscription_persistence, an alembic upgrade
    should be run to bring the database tables up to date.
 
@@ -2336,8 +2336,8 @@ res_parking:
 res_pjsip
 ------------------
  * Added new global option (disable_multi_domain) to pjsip.
-   Disabling Multi Domain can improve realtime performace by reducing
-   number of database requsts.
+   Disabling Multi Domain can improve realtime performance by reducing
+   number of database requests.
 
 chan_pjsip
 ------------------
@@ -2462,7 +2462,7 @@ res_pjsip
  * In conjunction with the "auth_username" change, 3 new options have been
    added to the global configuration object that control how many unidentified
    requests over a certain period from the same IP address can be received
-   before a security altert is generated.  A new CLI command
+   before a security alert is generated.  A new CLI command
    "pjsip show unidentified_requests" will list the current candidates.
 
 res_pjsip_history
@@ -2506,7 +2506,7 @@ res_rtp_asterisk
 ------------------
  * A new configuration section - ice_host_candidates - has been added to
    rtp.conf, allowing automatically discovered ICE host candidates to be
-   overriden. This allows an Asterisk server behind a 1:1 NAT to send its
+   overridden. This allows an Asterisk server behind a 1:1 NAT to send its
    external IP as a host candidate rather than relying on STUN to discover it.
 
 ------------------------------------------------------------------------------
@@ -2616,7 +2616,7 @@ ARI
    of whether the application 'controls' the resource. This is useful for
    scenarios where an ARI application merely wants to observe the system,
    as opposed to control it. There are two ways to accomplish this:
-   (1) Via the WebSocket connection URI. A new query paramter, 'subscribeAll',
+   (1) Via the WebSocket connection URI. A new query parameter, 'subscribeAll',
        has been added that, when present and True, will subscribe all
        specified applications to all ARI event sources in Asterisk.
    (2) Via the applications resource. An ARI client can, at any time, subscribe
@@ -2873,7 +2873,7 @@ on AMI, CDRs, and CEL on the Asterisk wiki:
  * CEL - https://wiki.asterisk.org/wiki/x/4ICLAQ
  * CDRs - https://wiki.asterisk.org/wiki/x/pwpRAQ
 
-Many new featuers in Asterisk 13 were introduced in point releases of
+Many new features in Asterisk 13 were introduced in point releases of
 Asterisk 12. Following this section - which documents the changes from all
 versions of Asterisk 12 to Asterisk 13 - users should examine the new features
 that were introduced in the point releases of Asterisk 12, as they are also
@@ -3238,7 +3238,7 @@ res_hep_rtcp
 Functions
 ------------------
  * Function AUDIOHOOK_INHERIT has been deprecated. Audiohooks are now
-   unconditionally inhereted through masquerades. As a side benefit, more
+   unconditionally inherited through masquerades. As a side benefit, more
    than one audiohook of a given type may persist through a masquerade now.
 
 ------------------------------------------------------------------------------
@@ -3269,7 +3269,7 @@ ARI
 Functions
 ------------------
  * A new function, TALK_DETECT, has been added. When set on a channel, this
-   fucntion causes events indicating the starting/stoping of talking on said
+   function causes events indicating the starting/stoping of talking on said
    channel to be emitted to both AMI and ARI clients.
 
 ------------------------------------------------------------------------------
@@ -3346,7 +3346,7 @@ ConfBridge
    CONFBRIDGE dialplan function.
 
  * The ConfBridge dialplan application now sets a channel variable,
-   CONFBRIGE_RESULT, upon exiting. This variable can be used to determine
+   CONFBRIDGE_RESULT, upon exiting. This variable can be used to determine
    how a channel exited the conference.
 
  * Added conference user option 'announce_join_leave_review'. This option
@@ -3631,7 +3631,7 @@ res_mwi_external
    acts as a base framework that other modules can build on top of to allow
    an external system to control MWI within Asterisk. For implementations
    that make use of res_mwi_external, see res_mwi_external_ami and
-   res_ari_mailboxes. Note that res_mwi_external canflicts with other modules
+   res_ari_mailboxes. Note that res_mwi_external conflicts with other modules
    that may produce MWI themselves, such as app_voicemail. res_mwi_external
    and other modules that depend on it cannot be built or loaded with
    app_voicemail present.
@@ -3640,7 +3640,7 @@ res_pjsip
 ------------------
  * DNS functionality will now automatically be enabled if the system configured
    nameservers can be retrieved. If the system configured nameservers can not be
-   retrieved the functionality will resort to using system resolution. Functionalty
+   retrieved the functionality will resort to using system resolution. Functionality
    such as SRV records and failover will not be available if system resolution
    is in use.
 
@@ -3721,7 +3721,7 @@ AgentLogin
    running AgentLogin.
 
  * If this application is called and the agent is already logged in, the
-   dialplan will continue exection with the AGENT_STATUS channel variable set
+   dialplan will continue execution with the AGENT_STATUS channel variable set
    to ALREADY_LOGGED_IN.
 
  * The agents.conf schema has changed. Rather than specifying agents on a
@@ -4192,7 +4192,7 @@ AMI (Asterisk Manager Interface)
    the Local channel. This affects the 'LocalBridge', 'LocalOptimizationBegin',
    and 'LocalOptimizationEnd' events.
 
- * The option 'allowmultiplelogin' can now be set or overriden in a particular
+ * The option 'allowmultiplelogin' can now be set or overridden in a particular
    account. When set in the general context, it will act as the default
    setting for defined accounts.
 
@@ -4201,7 +4201,7 @@ AMI (Asterisk Manager Interface)
    successful completion Event.
 
  * The 'BridgeExec' events were removed. These events duplicated the events that
-   occur in the Briding API, and are conveyed now through BridgeCreate,
+   occur in the Bridging API, and are conveyed now through BridgeCreate,
    BridgeEnter, and BridgeLeave events.
 
  * The 'RTCPSent'/'RTCPReceived' events have been significantly modified from
@@ -4212,7 +4212,7 @@ AMI (Asterisk Manager Interface)
  * Added 'BlindTransfer' and 'AttendedTransfer' events. These events are
    raised when a blind transfer/attended transfer completes successfully.
    They contain information about the transfer that just completed, including
-   the location of the transfered channel.
+   the location of the transferred channel.
 
  * Added a 'security' class to AMI which outputs the required fields for
    security messages similar to the log messages from res_security_log
@@ -4524,7 +4524,7 @@ chan_sip
 
  * The option "register_retry_403" has been added to chan_sip to work around
    servers that are known to erroneously send 403 in response to valid
-   REGISTER requests and allows Asterisk to continue attepmting to connect.
+   REGISTER requests and allows Asterisk to continue attempting to connect.
 
 chan_skinny
 ------------------
@@ -4609,7 +4609,7 @@ PJSIP_DIAL_CONTACTS
 
 PJSIP_MEDIA_OFFER
 ------------------
- * Provided by chan_pjsip, this function sets the codecs to be offerred on the
+ * Provided by chan_pjsip, this function sets the codecs to be offered on the
    outbound channel prior to dialing.
 
 REDIRECTING
@@ -4702,7 +4702,7 @@ res_parking
    PARKING_SPACE to match the naming scheme of the new system.
 
  * PARKING_SPACE and PARKEDLOT channel variables will now be set for a parked
-   channel even when the configuration option 'comebactoorigin' is enabled.
+   channel even when the configuration option 'comebacktoorigin' is enabled.
 
  * A new CLI command 'parking show' has been added. This allows a user to
    inspect the parking lots that are currently in use.
@@ -4852,7 +4852,7 @@ ConfBridge
  * Added menu action admin_toggle_mute_participants.  This will mute / unmute
    all non-admin participants on a conference.  The confbridge configuration
    file also allows for the default sounds played to all conference users when
-   this occurs to be overriden using sound_participants_unmuted and
+   this occurs to be overridden using sound_participants_unmuted and
    sound_participants_muted.
 
  * Added menu action participant_count.  This will playback the number of
@@ -4902,7 +4902,7 @@ MixMonitor
 ------------------
  * MixMonitor hooks now have IDs associated with them which can be used to
    assign a target to StopMixMonitor. Use of MixMonitor's i(variable) option
-   will allow storage of the MixMontior ID in a channel variable. StopMixmonitor
+   will allow storage of the MixMonitor ID in a channel variable. StopMixmonitor
    now accepts that ID as an argument.
 
  * Added 'm' option, which stores a copy of the recording as a voicemail in the
@@ -4969,7 +4969,7 @@ Voicemail
  * Addition of the VM_INFO function - see Function changes.
 
  * The imapserver, imapport, and imapflags configuration options can now be
-   overriden on a user by user basis.
+   overridden on a user by user basis.
 
  * When voicemail plays a message's envelope with saycid set to yes, when
    reaching the caller id field it will play a recording of a file with the same
@@ -5073,7 +5073,7 @@ chan_motif
 chan_ooh323
 ------------------
  * Added NAT support for RTP.  Setting in config is 'nat', which can be set
-   globally and overriden on a peer by peer basis.
+   globally and overridden on a peer by peer basis.
 
  * Direct media functionality has been added. Options in config are:
    directmedia (directrtp) and directrtpsetup (earlydirect)
@@ -5236,7 +5236,7 @@ Core
  * Rules in ACLs (specified using 'permit' and 'deny') can now contain multiple
    items (separated by commas), and items in the rule can be negated by prefixing
    them with '!'. This simplifies Asterisk Realtime configurations, since it is no
-   longer necessray to control the order that the 'permit' and 'deny' columns are
+   longer necessary to control the order that the 'permit' and 'deny' columns are
    returned from queries.
 
  * DUNDi now allows the built in variables ${NUMBER}, ${IPADDR} and ${SECRET} to
@@ -5330,7 +5330,7 @@ AMI (Asterisk Manager Interface)
    AMI Parkinglot events.
 
  * Added MessageSend command.  This behaves in the same manner as the
-   MessageSend application, and is a technolgoy agnostic mechanism to send out
+   MessageSend application, and is a technology agnostic mechanism to send out
    of call text messages.
 
  * Added "message" class authorization.  This grants an account permission to
@@ -5481,7 +5481,7 @@ res_rtp_asterisk
 res_corosync
 -------------------
  * A new module, res_corosync, has been introduced.  This module uses the
-   Corosync cluster enginer (http://www.corosync.org) to allow a local cluster
+   Corosync cluster engineer (http://www.corosync.org) to allow a local cluster
    of Asterisk servers to both Message Waiting Indication (MWI) and/or
    Device State (presence) information.  This module is very similar to, and
    is a replacement for the res_ais module that was in previous releases of
@@ -5735,7 +5735,7 @@ Asterisk Modules
 
 IAX2 Changes
 ------------
- * authdebug is now disabled by default. To enable this functionaility again
+ * authdebug is now disabled by default. To enable this functionality again
    set authdebug = yes in iax.conf.
 
 RTP Changes
@@ -6022,7 +6022,7 @@ Dialplan Variables
  * Added DYNAMIC_PEERNAME which holds the unique channel name on the other side
    and is set when a dynamic feature is triggered.
  * Added PARKINGLOT which can be used with parkeddynamic feature.conf option
-   to dynamically create a new parking lot matching the value this varible is
+   to dynamically create a new parking lot matching the value this variable is
    set to.
  * Added PARKINGDYNAMIC which represents the template parkinglot defined in
    features.conf that should be the base for dynamic parkinglots.
@@ -6087,7 +6087,7 @@ mISDN channel driver (chan_misdn) changes
  * Added new dialplan function mISDN_CC which permits retrieval of various
    values from an active call completion record.
  * For PTP, you should manually send the COLR of the redirected-to party
-   for an incomming redirected call if the incoming call could experience
+   for an incoming redirected call if the incoming call could experience
    further redirects.  Just set the REDIRECTING(to-num,i) = ${EXTEN} and
    set the REDIRECTING(to-pres) to the COLR.  A call has been redirected
    if the REDIRECTING(from-num) is not empty.
@@ -6120,7 +6120,7 @@ libpri channel driver (chan_dahdi) DAHDI changes
    and it is also deprecated.  Use the REDIRECTING(reason) dialplan function
    to read and alter the reason.
  * For Q.SIG and ETSI PRI/BRI-PTP, you should manually send the COLR of the
-   redirected-to party for an incomming redirected call if the incoming call
+   redirected-to party for an incoming redirected call if the incoming call
    could experience further redirects.  Just set the
    REDIRECTING(to-num,i) = CALLERID(dnid) and set the REDIRECTING(to-pres)
    to the COLR.  A call has been redirected if the REDIRECTING(count) is not
@@ -6213,7 +6213,7 @@ Channel Event Logging
    the AMI, but it differs from the AMI in that it logs to db backends much
    like CDR does; is based on the event subsystem introduced by Russell, and
    can share in all its benefits; allows multiple backends to operate like CDR;
-   is specialized to event data that would be of concern to billing sytems,
+   is specialized to event data that would be of concern to billing systems,
    like CDR. Backends for logging and accounting calls have been produced,
    but a new CDR backend is still in development.
 
@@ -6221,7 +6221,7 @@ CDR
 ---
  * 'linkedid' and 'peeraccount' are new CDR fields available to CDR aficionados.
    linkedid is based on uniqueID, but spreads to other channels as transfers, dials,
-   etc are performed. Thus the pieces of CDR can be grouped into multilegged sets.
+   etc are performed. Thus the pieces of CDR can be grouped into multiplegged sets.
  * Multiple files and formats can now be specified in cdr_custom.conf.
  * cdr_syslog has been added which allows CDRs to be written directly to syslog.
    See configs/cdr_syslog.conf.sample for more information.
@@ -6233,7 +6233,7 @@ CDR
 
 Calendaring for Asterisk
 ------------------------
- * A new set of modules were added supporing calendar integration with Asterisk.
+ * A new set of modules were added supporting calendar integration with Asterisk.
    Dialplan functions for reading from and writing to calendars are included,
    as well as the ability to execute dialplan logic upon calendar event notifications.
    iCalendar, CalDAV, and Exchange Server calendars (via res_calendar_exchange for
@@ -6704,7 +6704,7 @@ CLI Changes
      a versions of libpri and libss7 that have them or it will not know that
      these libraries exist.
   * The commands "core show globals", "core set global" and "core set chanvar" has
-     been deprecated in favor of the more semanticly correct "dialplan show globals",
+     been deprecated in favor of the more semantically correct "dialplan show globals",
      "dialplan set chanvar" and "dialplan set global".
   * New CLI command "dialplan show chanvar" to list all variables associated
     with a given channel.
@@ -7046,7 +7046,7 @@ DUNDi changes
   * Added two new dialplan functions, DUNDIQUERY and DUNDIRESULT.  These
      functions will allow you to initiate a DUNDi query from the dialplan,
      find out how many results there are, and access each one.
-  * Added the ability to specifiy a port for a dundi peer.
+  * Added the ability to specify a port for a dundi peer.
 
 ENUM changes
 ------------
@@ -7133,7 +7133,7 @@ Queue changes
     "manager show command QueueReset."
   * New configuration option: randomperiodicannounce. If a list of periodic announcements is
     specified by the periodic-announce option, then one will be chosen randomly when it is time
-    to play a periodic announcment
+    to play a periodic announcement
   * New configuration options: announce-position now takes two more values in addition to "yes" and
     "no." Two new options, "limit" and "more," are allowed. These are tied to another option,
     announce-position-limit. By setting announce-position to "limit" callers will only have their
@@ -7210,7 +7210,7 @@ Other Dialplan Application Changes
      READSTATUS to ERROR, which you can catch and handle separately.
   * Added 'm' option to Directory, which lists out names, 8 at a time, instead
      of asking for verification of each name, one at a time.
-  * Privacy() no longer uses privacy.conf, as all options are specifyable as
+  * Privacy() no longer uses privacy.conf, as all options are specifiable as
      direct options to the app.
   * AMD() has a new "maximum word length" option. "show application AMD" from the CLI
      for more details
@@ -7256,7 +7256,7 @@ AEL Changes
      will be improved as time goes by. Should be useful for a
      first pass at conversion.
   * aelparse will now read extensions.conf to see if a referenced
-     macro or context is there before issueing a warning.
+     macro or context is there before issuing a warning.
   * AEL parser sets a local channel variable ~~EXTEN~~, to
     preserve the value of ${EXTEN} thru switch statements.
   * New operator in $[...] expressions: the ~~ operator serves

@@ -85,7 +85,7 @@ struct ast_format_def {
 	 * required size (in bytes) and the support routine will allocate them
 	 * for you, pointed by s->buf and s->private, respectively.
 	 * When allocating a buffer, remember to leave AST_FRIENDLY_OFFSET
-	 * spare bytes at the bginning.
+	 * spare bytes at the beginning.
 	 */
 	int buf_size;			/*!< size of frame buffer, if any, aligned to 8 bytes. */
 	int desc_size;			/*!< size of private descriptor, if any */
@@ -110,7 +110,7 @@ struct ast_filestream {
 	struct ast_filestream *vfs;
 	/*! Transparently translate from another format -- just once */
 	struct ast_trans_pvt *trans;
-	struct ast_tranlator_pvt *tr;
+	struct ast_translator_pvt *tr;
 	struct ast_format *lastwriteformat;
 	int lasttimeout;
 	struct ast_channel *owner;

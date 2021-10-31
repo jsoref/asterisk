@@ -132,7 +132,7 @@ void ast_manager_unregister_hook(struct manager_custom_hook *hook);
 
 /*! \brief Registered hooks can call this function to invoke actions and they will receive responses through registered callback
  * \param hook the file identifier specified in manager_custom_hook struct when registering a hook
- * \param msg ami action mesage string e.g. "Action: SipPeers\r\n"
+ * \param msg ami action message string e.g. "Action: SipPeers\r\n"
 
  * \retval 0 on Success
  * \retval non-zero on Failure
@@ -173,7 +173,7 @@ struct manager_action {
 	 * \brief TRUE if the AMI action is registered and the callback can be called.
 	 *
 	 * \note Needed to prevent a race between calling the callback
-	 * function and unregestring the AMI action object.
+	 * function and unregistering the AMI action object.
 	 */
 	unsigned int registered:1;
 };
@@ -269,7 +269,7 @@ int __ast_manager_event_multichan(int category, const char *event, int chancount
 		struct ast_channel **chans, const char *file, int line, const char *func,
 		const char *contents, ...) __attribute__((format(printf, 8, 9)));
 
-/*! \brief Get header from mananger transaction */
+/*! \brief Get header from manager transaction */
 const char *astman_get_header(const struct message *m, char *var);
 
 /*! \brief Get a linked list of the Variable: headers
@@ -327,7 +327,7 @@ void astman_send_listack(struct mansession *s, const struct message *m, char *ms
  * the AMI list completion event.
  *
  * \note Between calling astman_send_list_complete_start() and
- * astman_send_list_complete_end() you can add additonal headers
+ * astman_send_list_complete_end() you can add additional headers
  * using astman_append().
  *
  * \return Nothing
@@ -344,7 +344,7 @@ void astman_send_list_complete_start(struct mansession *s, const struct message 
  * the AMI list completion event.
  *
  * \note Between calling astman_send_list_complete_start() and
- * astman_send_list_complete_end() you can add additonal headers
+ * astman_send_list_complete_end() you can add additional headers
  * using astman_append().
  *
  * \return Nothing
@@ -353,7 +353,7 @@ void astman_send_list_complete_end(struct mansession *s);
 
 void __attribute__((format(printf, 2, 3))) astman_append(struct mansession *s, const char *fmt, ...);
 
-/*! \brief Determinie if a manager session ident is authenticated */
+/*! \brief Determine if a manager session ident is authenticated */
 int astman_is_authed(uint32_t ident);
 
 /*!

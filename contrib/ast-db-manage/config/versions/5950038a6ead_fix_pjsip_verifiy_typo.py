@@ -21,10 +21,10 @@ def upgrade():
     yesno_values = ENUM(*YESNO_VALUES, name=YESNO_NAME, create_type=False)
 
     if op.get_context().bind.dialect.name != 'mssql':
-        op.alter_column('ps_transports', 'verifiy_server', type_=yesno_values,
+        op.alter_column('ps_transports', 'verify_server', type_=yesno_values,
                         new_column_name='verify_server')
     else:
-        op.alter_column('ps_transports', 'verifiy_server', existing_type=yesno_values, type_=sa.String(3),
+        op.alter_column('ps_transports', 'verify_server', existing_type=yesno_values, type_=sa.String(3),
                         new_column_name='verify_server')
         yesno_values = ENUM(*YESNO_VALUES, name=YESNO_NAME, create_type=True)
         op.alter_column('ps_transports', 'verify_server', existing_type=sa.String(3), type_=yesno_values)
@@ -34,9 +34,9 @@ def downgrade():
     yesno_values = ENUM(*YESNO_VALUES, name=YESNO_NAME, create_type=False)
     if op.get_context().bind.dialect.name != 'mssql':
         op.alter_column('ps_transports', 'verify_server', type_=yesno_values,
-                        new_column_name='verifiy_server')
+                        new_column_name='verify_server')
     else:
         op.alter_column('ps_transports', 'verify_server', existing_type=yesno_values, type_=sa.String(3),
-                        new_column_name='verifiy_server')
+                        new_column_name='verify_server')
         yesno_values = ENUM(*YESNO_VALUES, name=YESNO_NAME, create_type=True)
-        op.alter_column('ps_transports', 'verifiy_server', existing_type=sa.String(3), type_=yesno_values)
+        op.alter_column('ps_transports', 'verify_server', existing_type=sa.String(3), type_=yesno_values)

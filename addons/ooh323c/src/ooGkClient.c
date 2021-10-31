@@ -1231,7 +1231,7 @@ int ooGkClientHandleRegistrationConfirm
                                 (&pGkClient->ctxt, sizeof(ooGkClientTimerCb));
       if(!cbData)
       {
-         OOTRACEERR1("Error:Failed to allocate memory for Regisration timer."
+         OOTRACEERR1("Error:Failed to allocate memory for Registration timer."
                      "\n");
          pGkClient->state = GkClientFailed;
          return OO_FAILED;
@@ -1927,7 +1927,7 @@ int ooGkClientSendAdmissionRequest
                                (&pGkClient->ctxt, sizeof(ooGkClientTimerCb));
    if(!cbData)
    {
-      OOTRACEERR1("Error:Failed to allocate memory for Regisration timer."
+      OOTRACEERR1("Error:Failed to allocate memory for Registration timer."
                   "\n");
       pGkClient->state = GkClientFailed;
       ast_mutex_unlock(&pGkClient->Lock);
@@ -2854,7 +2854,7 @@ int ooGkClientHandleClientOrGkFailure(ooGkClient *pGkClient)
       if(pGkClient->gkMode == RasUseSpecificGatekeeper)
       {
          OOTRACEERR1("Error: Gatekeeper error detected. Closing GkClient as "
-                     "Gk mode is UseSpecifcGatekeeper\n");
+                     "Gk mode is UseSpecificGatekeeper\n");
 	 pGkClient->state = GkClientStopped;
          return OO_FAILED;
       }
@@ -2870,13 +2870,13 @@ int ooGkClientHandleClientOrGkFailure(ooGkClient *pGkClient)
 }
 
 /**
- * TODO: This fuction might not work properly in case of additive registrations
- * For example we registrered 10 aliases and gatekeeper accepted 8 of them.
+ * TODO: This function might not work properly in case of additive registrations
+ * For example we registered 10 aliases and gatekeeper accepted 8 of them.
  * Now we want to register another two new aliases(not out of those first 10).
  * Gk responds with RCF with empty terminalAlias field thus indicating both
  * the aliases were accepted. If this function is called, it will even mark
  * the earlier two unregistered aliases as registered. We will have to
- * maintain a separete list of aliases being sent in RRQ for this.
+ * maintain a separate list of aliases being sent in RRQ for this.
  */
 int ooGkClientUpdateRegisteredAliases
    (ooGkClient *pGkClient, H225_SeqOfH225AliasAddress *pAddresses,
@@ -2892,7 +2892,7 @@ int ooGkClientUpdateRegisteredAliases
 
    if(!pAddresses)
    {
-     /* All aliases registered/unregistsred */
+     /* All aliases registered/unregistered */
       pAlias = gH323ep.aliases;
 
       while(pAlias)

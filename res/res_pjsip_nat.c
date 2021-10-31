@@ -106,7 +106,7 @@ static void rewrite_uri(pjsip_rx_data *rdata, pjsip_sip_uri *uri, pj_pool_t *poo
  * but pjsip_pubsub does not), thus this strategy can't update the dialog in
  * all cases needed.
  *
- * The ideal solution would be to implement an "incomming_request" event
+ * The ideal solution would be to implement an "incoming_request" event
  * in pubsub module that can then pass the dialog object to this module
  * on SUBSCRIBE, this module then should add itself as a listener to the dialog
  * for the subsequent requests and responses & then be able to properly update
@@ -207,7 +207,7 @@ static pj_bool_t handle_rx_message(struct ast_sip_endpoint *endpoint, pjsip_rx_d
 
 	if (endpoint->nat.rewrite_contact) {
 		/* rewrite_contact is intended to ensure we send requests/responses to
-		 * a routeable address when NAT is involved. The URI that dictates where
+		 * a routable address when NAT is involved. The URI that dictates where
 		 * we send requests/responses can be determined either by Record-Route
 		 * headers or by the Contact header if no Record-Route headers are present.
 		 * We therefore will attempt to rewrite a Record-Route header first, and if

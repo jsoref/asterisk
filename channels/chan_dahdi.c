@@ -226,7 +226,7 @@
 				canceller on the channel (if any), for the current call
 				only.</para>
 				<para>Possible values are:</para>
-				<para>	<literal>on</literal>	Normal mode (the echo canceller is actually reinitalized)</para>
+				<para>	<literal>on</literal>	Normal mode (the echo canceller is actually reinitialized)</para>
 				<para>	<literal>off</literal>	Disabled</para>
 				<para>	<literal>fax</literal>	FAX/data mode (NLP disabled if possible, otherwise
 					completely disabled)</para>
@@ -1154,7 +1154,7 @@ static int analogsub_to_dahdisub(enum analog_sub analogsub)
  * \brief release all members on the doomed pris list
  * \since 13.0
  *
- * Called priodically by the monitor threads to release spans marked for
+ * Called periodically by the monitor threads to release spans marked for
  * removal.
  */
 static void release_doomed_pris(void)
@@ -2897,13 +2897,13 @@ static void my_set_rdnis(void *pvt, const char *rdnis)
  *
  * \details
  * original dialstring:
- * DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadance#>|d][/extension[/options]]
+ * DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadence#>|d][/extension[/options]]
  *
  * The modified dialstring will have prefixed the channel-group section
  * with the ISDN channel restriction.
  *
  * buf:
- * DAHDI/i<span>-(g|G|r|R)<group#(0-63)>[c|r<cadance#>|d][/extension[/options]]
+ * DAHDI/i<span>-(g|G|r|R)<group#(0-63)>[c|r<cadence#>|d][/extension[/options]]
  *
  * The routine will check to see if the ISDN channel restriction is already
  * in the original dialstring.
@@ -2919,7 +2919,7 @@ static void my_pri_make_cc_dialstring(void *priv, char *buf, size_t buf_size)
 		AST_APP_ARG(group);	/* channel/group token */
 		//AST_APP_ARG(ext);	/* extension token */
 		//AST_APP_ARG(opts);	/* options token */
-		//AST_APP_ARG(other);	/* Any remining unused arguments */
+		//AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	pvt = priv;
@@ -3170,7 +3170,7 @@ static struct sig_ss7_linkset *my_ss7_find_linkset(struct ss7 *ss7)
  *
  * \param pvt Private channel structure.
  * \param state Initial state of new channel.
- * \param law Combanding law to use.
+ * \param law Commanding law to use.
  * \param exten Dialplan extension for incoming call.
  * \param requestor Channel requesting this new channel.
  *
@@ -4407,7 +4407,7 @@ static char *dahdi_sig2str(int sig)
 	case SIG_FEATDMF:
 		return "Feature Group D (MF)";
 	case SIG_FEATDMF_TA:
-		return "Feature Groud D (MF) Tandem Access";
+		return "Feature Group D (MF) Tandem Access";
 	case SIG_FEATB:
 		return "Feature Group B (MF)";
 	case SIG_E911:
@@ -5131,7 +5131,7 @@ static int dahdi_call(struct ast_channel *ast, const char *rdest, int timeout)
 		AST_APP_ARG(group);	/* channel/group token */
 		AST_APP_ARG(ext);	/* extension token */
 		//AST_APP_ARG(opts);	/* options token */
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	ast_mutex_lock(&p->lock);
@@ -6188,7 +6188,7 @@ static int dahdi_hangup(struct ast_channel *ast)
 				ast_debug(1, "Normal call hung up with both three way call and a call waiting call in place?\n");
 				if (p->subs[SUB_CALLWAIT].inthreeway) {
 					/* We had flipped over to answer a callwait and now it's gone */
-					ast_debug(1, "We were flipped over to the callwait, moving back and unowning.\n");
+					ast_debug(1, "We were flipped over to the callwait, moving back and not owning.\n");
 					/* Move to the call-wait, but un-own us until they flip back. */
 					swap_subs(p, SUB_CALLWAIT, SUB_REAL);
 					unalloc_sub(p, SUB_CALLWAIT);
@@ -6234,7 +6234,7 @@ static int dahdi_hangup(struct ast_channel *ast)
 				p->subs[SUB_REAL].inthreeway = 0;
 			}
 		} else if (idx == SUB_CALLWAIT) {
-			/* Ditch the holding callwait call, and immediately make it availabe */
+			/* Ditch the holding callwait call, and immediately make it available */
 			if (p->subs[SUB_CALLWAIT].inthreeway) {
 				/* This is actually part of a three way, placed on hold.  Place the third part
 				   on music on hold now */
@@ -8260,7 +8260,7 @@ winkflashdone:
 			(p->polarity == POLARITY_REV) &&
 			((ast_channel_state(ast) == AST_STATE_UP) || (ast_channel_state(ast) == AST_STATE_RING)) ) {
 			/* Added log_debug information below to provide a better indication of what is going on */
-			ast_debug(1, "Polarity Reversal event occured - DEBUG 1: channel %d, state %u, pol= %d, aonp= %d, honp= %d, pdelay= %d, tv= %" PRIi64 "\n", p->channel, ast_channel_state(ast), p->polarity, p->answeronpolarityswitch, p->hanguponpolarityswitch, p->polarityonanswerdelay, ast_tvdiff_ms(ast_tvnow(), p->polaritydelaytv) );
+			ast_debug(1, "Polarity Reversal event occurred - DEBUG 1: channel %d, state %u, pol= %d, aonp= %d, honp= %d, pdelay= %d, tv= %" PRIi64 "\n", p->channel, ast_channel_state(ast), p->polarity, p->answeronpolarityswitch, p->hanguponpolarityswitch, p->polarityonanswerdelay, ast_tvdiff_ms(ast_tvnow(), p->polaritydelaytv) );
 
 			if (ast_tvdiff_ms(ast_tvnow(), p->polaritydelaytv) > p->polarityonanswerdelay) {
 				ast_debug(1, "Polarity Reversal detected and now Hanging up on channel %d\n", p->channel);
@@ -8274,7 +8274,7 @@ winkflashdone:
 			ast_debug(1, "Ignoring Polarity switch to IDLE on channel %d, state %u\n", p->channel, ast_channel_state(ast));
 		}
 		/* Added more log_debug information below to provide a better indication of what is going on */
-		ast_debug(1, "Polarity Reversal event occured - DEBUG 2: channel %d, state %u, pol= %d, aonp= %d, honp= %d, pdelay= %d, tv= %" PRIi64 "\n", p->channel, ast_channel_state(ast), p->polarity, p->answeronpolarityswitch, p->hanguponpolarityswitch, p->polarityonanswerdelay, ast_tvdiff_ms(ast_tvnow(), p->polaritydelaytv) );
+		ast_debug(1, "Polarity Reversal event occurred - DEBUG 2: channel %d, state %u, pol= %d, aonp= %d, honp= %d, pdelay= %d, tv= %" PRIi64 "\n", p->channel, ast_channel_state(ast), p->polarity, p->answeronpolarityswitch, p->hanguponpolarityswitch, p->polarityonanswerdelay, ast_tvdiff_ms(ast_tvnow(), p->polaritydelaytv) );
 		break;
 	default:
 		ast_debug(1, "Dunno what to do with event %d on channel %d\n", res, p->channel);
@@ -8439,7 +8439,7 @@ static struct ast_frame *dahdi_read(struct ast_channel *ast)
 		/*
 		 * Check to see if the channel is still associated with the same
 		 * private structure.  While the Asterisk channel was unlocked
-		 * the following events may have occured:
+		 * the following events may have occurred:
 		 *
 		 * 1) A masquerade may have associated the channel with another
 		 * technology or private structure.
@@ -12712,7 +12712,7 @@ static struct dahdi_pvt *mkintf(int channel, const struct dahdi_chan_conf *conf,
 		if (tmp->use_smdi) {
 			tmp->smdi_iface = ast_smdi_interface_find(conf->smdi_port);
 			if (!(tmp->smdi_iface)) {
-				ast_log(LOG_ERROR, "Invalid SMDI port specfied, disabling SMDI support\n");
+				ast_log(LOG_ERROR, "Invalid SMDI port specified, disabling SMDI support\n");
 				tmp->use_smdi = 0;
 			}
 		}
@@ -13328,8 +13328,8 @@ struct dahdi_starting_point {
 	int rr_starting_point;
 	/*! ISDN span where channels can be picked (Zero if not specified) */
 	int span;
-	/*! Analog channel distinctive ring cadance index. */
-	int cadance;
+	/*! Analog channel distinctive ring cadence index. */
+	int cadence;
 	/*! Dialing option. c/r/d if present and valid. */
 	char opt;
 	/*! TRUE if to search the channel list backwards. */
@@ -13349,16 +13349,16 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 		AST_APP_ARG(group);	/* channel/group token */
 		//AST_APP_ARG(ext);	/* extension token */
 		//AST_APP_ARG(opts);	/* options token */
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	/*
 	 * data is ---v
 	 * Dial(DAHDI/pseudo[/extension[/options]])
-	 * Dial(DAHDI/<channel#>[c|r<cadance#>|d][/extension[/options]])
-	 * Dial(DAHDI/<subdir>!<channel#>[c|r<cadance#>|d][/extension[/options]])
+	 * Dial(DAHDI/<channel#>[c|r<cadence#>|d][/extension[/options]])
+	 * Dial(DAHDI/<subdir>!<channel#>[c|r<cadence#>|d][/extension[/options]])
 	 * Dial(DAHDI/i<span>[/extension[/options]])
-	 * Dial(DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadance#>|d][/extension[/options]])
+	 * Dial(DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadence#>|d][/extension[/options]])
 	 *
 	 * i - ISDN span channel restriction.
 	 *     Used by CC to ensure that the CC recall goes out the same span.
@@ -13371,7 +13371,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 	 * R - channel group allocation round robin search backward
 	 *
 	 * c - Wait for DTMF digit to confirm answer
-	 * r<cadance#> - Set distintive ring cadance number
+	 * r<cadence#> - Set distinctive ring cadence number
 	 * d - Force bearer capability for ISDN/SS7 call to digital.
 	 */
 
@@ -13421,7 +13421,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 	if (toupper(args.group[0]) == 'G' || toupper(args.group[0])=='R') {
 		/* Retrieve the group number */
 		s = args.group + 1;
-		res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadance);
+		res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadence);
 		if (res < 1) {
 			ast_log(LOG_WARNING, "Unable to determine group for data %s\n", data);
 			return NULL;
@@ -13460,7 +13460,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 			x = CHAN_PSEUDO;
 			param->channelmatch = x;
 		} else {
-			res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadance);
+			res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadence);
 			if (res < 1) {
 				ast_log(LOG_WARNING, "Unable to determine channel for data %s\n", data);
 				return NULL;
@@ -13566,7 +13566,7 @@ static struct ast_channel *dahdi_request(const char *type, struct ast_format_cap
 				break;
 			case 'r':
 				/* Distinctive ring */
-				p->distinctivering = start.cadance;
+				p->distinctivering = start.cadence;
 				break;
 			case 'd':
 #if defined(HAVE_PRI) || defined(HAVE_SS7)
@@ -17700,7 +17700,7 @@ static int build_channels(struct dahdi_chan_conf *conf, const char *value, int r
 			return -1;
 		}
 		if (finish < start) {
-			ast_log(LOG_WARNING, "Sillyness: %d < %d\n", start, finish);
+			ast_log(LOG_WARNING, "Silliness: %d < %d\n", start, finish);
 			x = finish;
 			finish = start;
 			start = x;
@@ -17869,7 +17869,7 @@ static int dahdi_datetime_send_option(const char *value)
 
 /*! process_dahdi() - ignore keyword 'channel' and similar */
 #define PROC_DAHDI_OPT_NOCHAN  (1 << 0)
-/*! process_dahdi() - No warnings on non-existing cofiguration keywords */
+/*! process_dahdi() - No warnings on non-existing configuration keywords */
 #define PROC_DAHDI_OPT_NOWARN  (1 << 1)
 
 static void parse_busy_pattern(struct ast_variable *v, struct ast_dsp_busy_pattern *busy_cadence)
@@ -19463,7 +19463,7 @@ static int setup_dahdi_int(int reload, struct dahdi_chan_conf *default_conf, str
 						while (c && (i < SIG_PRI_NUM_DCHANS)) {
 							dchannels[i] = atoi(c + 1);
 							if (dchannels[i] < 0) {
-								ast_log(LOG_WARNING, "D-channel for trunk group %d must be a postiive number at line %d of chan_dahdi.conf\n", trunkgroup, v->lineno);
+								ast_log(LOG_WARNING, "D-channel for trunk group %d must be a positive number at line %d of chan_dahdi.conf\n", trunkgroup, v->lineno);
 							} else
 								i++;
 							c = strchr(c + 1, ',');
@@ -19495,13 +19495,13 @@ static int setup_dahdi_int(int reload, struct dahdi_chan_conf *default_conf, str
 							} else
 									ast_verb(2, "Mapped span %d to trunk group %d (logical span %d)\n", spanno, trunkgroup, logicalspan);
 							} else
-								ast_log(LOG_WARNING, "Logical span must be a postive number, or '0' (for unspecified) at line %d of chan_dahdi.conf\n", v->lineno);
+								ast_log(LOG_WARNING, "Logical span must be a positive number, or '0' (for unspecified) at line %d of chan_dahdi.conf\n", v->lineno);
 						} else
-							ast_log(LOG_WARNING, "Trunk group must be a postive number at line %d of chan_dahdi.conf\n", v->lineno);
+							ast_log(LOG_WARNING, "Trunk group must be a positive number at line %d of chan_dahdi.conf\n", v->lineno);
 					} else
 						ast_log(LOG_WARNING, "Missing trunk group for span map at line %d of chan_dahdi.conf\n", v->lineno);
 				} else
-					ast_log(LOG_WARNING, "Span number must be a postive integer at line %d of chan_dahdi.conf\n", v->lineno);
+					ast_log(LOG_WARNING, "Span number must be a positive integer at line %d of chan_dahdi.conf\n", v->lineno);
 			} else {
 				ast_log(LOG_NOTICE, "Ignoring unknown keyword '%s' in trunkgroups\n", v->name);
 			}

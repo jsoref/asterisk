@@ -158,7 +158,7 @@
 			VM_API_STRING_FIELD_VERIFY((expected)->callerchan, msg->callerchan); \
 			VM_API_STRING_FIELD_VERIFY((expected)->exten, msg->exten); \
 			VM_API_STRING_FIELD_VERIFY((expected)->origdate, msg->origdate); \
-			VM_API_STRING_FIELD_VERIFY((expected)->origtime, msg->origtime); \
+			VM_API_STRING_FIELD_VERIFY((expected)->orightime, msg->orightime); \
 			VM_API_STRING_FIELD_VERIFY((expected)->duration, msg->duration); \
 			VM_API_STRING_FIELD_VERIFY((expected)->folder_name, msg->folder_name); \
 			VM_API_STRING_FIELD_VERIFY((expected)->flag, msg->flag); \
@@ -497,7 +497,7 @@ static int test_vm_api_create_voicemail_files(const char *context, const char *m
 		"callerchan=%s\n"
 		"callerid=%s\n"
 		"origdate=%s\n"
-		"origtime=%s\n"
+		"orightime=%s\n"
 		"category=%s\n"
 		"msg_id=%s\n"
 		"flag=%s\n"
@@ -511,7 +511,7 @@ static int test_vm_api_create_voicemail_files(const char *context, const char *m
 		snapshot->callerchan,
 		snapshot->callerid,
 		snapshot->origdate,
-		snapshot->origtime,
+		snapshot->orightime,
 		"",
 		snapshot->msg_id,
 		snapshot->flag,
@@ -666,7 +666,7 @@ static int test_vm_api_test_setup(void)
 	/* Set the basic properties on each */
 	ast_string_field_set(msg_one, callerchan, "SIP/2000-00000000");
 	ast_string_field_set(msg_one, origdate, "Mon Mar 19 04:14:21 PM UTC 2012");
-	ast_string_field_set(msg_one, origtime, "1332173661");
+	ast_string_field_set(msg_one, orightime, "1332173661");
 	ast_string_field_set(msg_one, duration, "8");
 	ast_string_field_set(msg_one, folder_name, "Old");
 	msg_one->msg_number = 0;
@@ -674,7 +674,7 @@ static int test_vm_api_test_setup(void)
 
 	ast_string_field_set(msg_two, callerchan, "SIP/8000-00000001");
 	ast_string_field_set(msg_two, origdate, "Mon Mar 19 06:16:13 PM UTC 2012");
-	ast_string_field_set(msg_two, origtime, "1332180973");
+	ast_string_field_set(msg_two, orightime, "1332180973");
 	ast_string_field_set(msg_two, duration, "24");
 	ast_string_field_set(msg_two, folder_name, "INBOX");
 	msg_two->msg_number = 0;
@@ -682,7 +682,7 @@ static int test_vm_api_test_setup(void)
 
 	ast_string_field_set(msg_three, callerchan, "IAX/2000-000000a3");
 	ast_string_field_set(msg_three, origdate, "Thu Mar 22 23:13:03 PM UTC 2012");
-	ast_string_field_set(msg_three, origtime, "1332181251");
+	ast_string_field_set(msg_three, orightime, "1332181251");
 	ast_string_field_set(msg_three, duration, "25");
 	ast_string_field_set(msg_three, folder_name, "INBOX");
 	msg_three->msg_number = 0;
@@ -690,7 +690,7 @@ static int test_vm_api_test_setup(void)
 
 	ast_string_field_set(msg_four, callerchan, "DAHDI/3000-00000010");
 	ast_string_field_set(msg_four, origdate, "Fri Mar 23 03:01:03 AM UTC 2012");
-	ast_string_field_set(msg_four, origtime, "1332181362");
+	ast_string_field_set(msg_four, orightime, "1332181362");
 	ast_string_field_set(msg_four, duration, "13");
 	ast_string_field_set(msg_four, folder_name, "INBOX");
 	msg_three->msg_number = 1;
@@ -735,7 +735,7 @@ static void test_vm_api_test_teardown(void)
  * \internal
  * \brief Update the test snapshots with a new mailbox snapshot
  *
- * \param mailbox_snapshot The new mailbox shapshot to update the test snapshots with
+ * \param mailbox_snapshot The new mailbox snapshot to update the test snapshots with
  */
 static void test_vm_api_update_test_snapshots(struct ast_vm_mailbox_snapshot *mailbox_snapshot)
 {
@@ -750,7 +750,7 @@ static void test_vm_api_update_test_snapshots(struct ast_vm_mailbox_snapshot *ma
 					ast_string_field_set(test_snapshots[i], callerchan, msg->callerchan);
 					ast_string_field_set(test_snapshots[i], exten, msg->exten);
 					ast_string_field_set(test_snapshots[i], origdate, msg->origdate);
-					ast_string_field_set(test_snapshots[i], origtime, msg->origtime);
+					ast_string_field_set(test_snapshots[i], orightime, msg->orightime);
 					ast_string_field_set(test_snapshots[i], duration, msg->duration);
 					ast_string_field_set(test_snapshots[i], folder_name, msg->folder_name);
 					ast_string_field_set(test_snapshots[i], flag, msg->flag);
@@ -933,7 +933,7 @@ AST_TEST_DEFINE(voicemail_api_off_nominal_snapshot)
 		info->description =
 			"Test off nominal requests for mailbox snapshots.  This includes"
 			" testing the following:\n"
-			" * Access to non-exisstent mailbox\n"
+			" * Access to nonexistent mailbox\n"
 			" * Access to NULL mailbox\n"
 			" * Access to non-existent context\n"
 			" * Access to non-existent folder\n"

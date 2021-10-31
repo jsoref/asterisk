@@ -133,7 +133,7 @@ static void bridge_sync_init(struct bridge_sync *sync_struct, unsigned int id)
 }
 
 /*!
- * \brief Clean up a syncrhonization bridge object.
+ * \brief Clean up a synchronization bridge object.
  *
  * This frees fields within the synchronization object and removes
  * it from the list of active synchronization objects.
@@ -170,7 +170,7 @@ static void bridge_sync_cleanup(struct bridge_sync *sync_struct)
  * completed.
  *
  * If a significant amount of time passes, then we will abandon
- * waiting for the synchrnous bridge action to complete.
+ * waiting for the synchronous bridge action to complete.
  *
  * This constant represents the number of milliseconds we will
  * wait for the bridge action to complete.
@@ -1334,7 +1334,7 @@ void ast_bridge_channel_playfile(struct ast_bridge_channel *bridge_channel, ast_
 
 	/*
 	 * It may be necessary to resume music on hold after we finish
-	 * playing the announcment.
+	 * playing the announcement.
 	 */
 	if (ast_test_flag(ast_channel_flags(bridge_channel->chan), AST_FLAG_MOH)) {
 		const char *latest_musicclass;
@@ -1506,7 +1506,7 @@ struct bridge_park {
 
 /*!
  * \internal
- * \brief Park a bridge_cahnnel
+ * \brief Park a bridge_channel
  */
 static void bridge_channel_park(struct ast_bridge_channel *bridge_channel, struct bridge_park *payload)
 {
@@ -2163,11 +2163,11 @@ static void bridge_channel_dissolve_check(struct ast_bridge_channel *bridge_chan
 		break;
 	}
 
-	if (bridge->num_lonely && bridge->num_lonely == bridge->num_channels) {
+	if (bridge->num_lonly && bridge->num_lonly == bridge->num_channels) {
 		/*
 		 * This will start a chain reaction where each channel leaving
 		 * enters this function and causes the next to leave as long as
-		 * there aren't non-lonely channels in the bridge.
+		 * there aren't non-lonly channels in the bridge.
 		 */
 		ast_bridge_channel_leave_bridge(AST_LIST_FIRST(&bridge->channels),
 			BRIDGE_CHANNEL_STATE_END_NO_DISSOLVE,
@@ -2208,7 +2208,7 @@ void bridge_channel_internal_pull(struct ast_bridge_channel *bridge_channel)
 		--bridge->num_active;
 	}
 	if (ast_test_flag(&bridge_channel->features->feature_flags, AST_BRIDGE_CHANNEL_FLAG_LONELY)) {
-		--bridge->num_lonely;
+		--bridge->num_lonly;
 	}
 	--bridge->num_channels;
 	AST_LIST_REMOVE(&bridge->channels, bridge_channel, entry);
@@ -2283,7 +2283,7 @@ int bridge_channel_internal_push_full(struct ast_bridge_channel *bridge_channel,
 	AST_LIST_INSERT_TAIL(&bridge->channels, bridge_channel, entry);
 	++bridge->num_channels;
 	if (ast_test_flag(&bridge_channel->features->feature_flags, AST_BRIDGE_CHANNEL_FLAG_LONELY)) {
-		++bridge->num_lonely;
+		++bridge->num_lonly;
 	}
 	if (!bridge_channel->suspended) {
 		++bridge->num_active;

@@ -712,7 +712,7 @@ int ast_bridge_features_enable(struct ast_bridge_features *features,
 /*!
  * \brief Constructor function for ast_bridge_features_limits
  *
- * \param limits pointer to a ast_bridge_features_limits struct that has been allocted, but not initialized
+ * \param limits pointer to a ast_bridge_features_limits struct that has been allocated, but not initialized
  *
  * \retval 0 on success
  * \retval -1 on failure
@@ -789,7 +789,7 @@ void ast_bridge_features_merge(struct ast_bridge_features *into, const struct as
 /*!
  * \brief Initialize bridge features structure
  *
- * \param features Bridge featues structure
+ * \param features Bridge features structure
  *
  * \retval 0 on success
  * \retval -1 on failure

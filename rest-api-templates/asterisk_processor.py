@@ -32,9 +32,9 @@ except ImportError:
 
 
 def simple_name(name):
-    """Removes the {markers} from a path segement.
+    """Removes the {markers} from a path segment.
 
-    @param name: Swagger path segement, with {pathVar} markers.
+    @param name: Swagger path segment, with {pathVar} markers.
     """
     if name.startswith('{') and name.endswith('}'):
         return name[1:-1]
@@ -52,7 +52,7 @@ def wikify(str):
 
 
 def snakify(name):
-    """Helper to take a camelCase or dash-seperated name and make it
+    """Helper to take a camelCase or dash-separated name and make it
     snake_case.
     """
     r = ''
@@ -80,11 +80,11 @@ class PathSegment(Stringify):
         self.name = simple_name(name)
         #: True if segment is a {pathVar}, else None.
         self.is_wildcard = None
-        #: Underscore seperated name all ancestor segments
+        #: Underscore separated name all ancestor segments
         self.full_name = None
         #: Dictionary of child PathSegements
         self.__children = OrderedDict()
-        #: List of operations on this segement
+        #: List of operations on this segment
         self.operations = []
 
         if self.name != name:
@@ -99,7 +99,7 @@ class PathSegment(Stringify):
             self.full_name = "%s_%s" % (parent.full_name, self.name)
 
     def get_child(self, path):
-        """Walks decendents to get path, creating it if necessary.
+        """Walks descendants to get path, creating it if necessary.
 
         @param path: List of path names.
         @return: PageSegment corresponding to path.

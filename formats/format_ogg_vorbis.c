@@ -336,7 +336,7 @@ static struct ast_frame *ogg_vorbis_read(struct ast_filestream *fs,
 }
 
 /*!
- * \brief Trucate an OGG/Vorbis filestream.
+ * \brief Truncate an OGG/Vorbis filestream.
  * \param fs The filestream to truncate.
  * \return 0 on success, -1 on failure.
  */
@@ -385,7 +385,7 @@ static int ogg_vorbis_seek(struct ast_filestream *fs, off_t sample_offset, int w
 		return -1;
 	}
 
-	/* ov_pcm_seek support seeking only from begining (SEEK_SET), the rest must be emulated */
+	/* ov_pcm_seek support seeking only from beginning (SEEK_SET), the rest must be emulated */
 	switch (whence) {
 	case SEEK_SET:
 		seek_result = ov_pcm_seek(&desc->ov_f, sample_offset);

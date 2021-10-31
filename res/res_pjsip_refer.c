@@ -345,7 +345,7 @@ static int dlg_releaser_task(void *data) {
 	return 0;
 }
 
-/*! \brief Destructor for REFER progress sutrcture */
+/*! \brief Destructor for REFER progress structure */
 static void refer_progress_destroy(void *obj)
 {
 	struct refer_progress *progress = obj;

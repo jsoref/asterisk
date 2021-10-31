@@ -190,7 +190,7 @@ static void clean_statements(void)
 static int init_statements(void)
 {
 	/* Don't initialize create_astdb_statement here as the astdb table needs to exist
-	 * brefore these statements can be initialized */
+	 * before these statements can be initialized */
 	return init_stmt(&get_stmt, get_stmt_sql, sizeof(get_stmt_sql))
 	|| init_stmt(&del_stmt, del_stmt_sql, sizeof(del_stmt_sql))
 	|| init_stmt(&deltree_stmt, deltree_stmt_sql, sizeof(deltree_stmt_sql))

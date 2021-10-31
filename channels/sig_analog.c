@@ -1288,7 +1288,7 @@ int analog_hangup(struct analog_pvt *p, struct ast_channel *ast)
 				ast_debug(1, "Normal call hung up with both three way call and a call waiting call in place?\n");
 				if (p->subs[ANALOG_SUB_CALLWAIT].inthreeway) {
 					/* We had flipped over to answer a callwait and now it's gone */
-					ast_debug(1, "We were flipped over to the callwait, moving back and unowning.\n");
+					ast_debug(1, "We were flipped over to the callwait, moving back and not owning.\n");
 					/* Move to the call-wait, but un-own us until they flip back. */
 					analog_swap_subs(p, ANALOG_SUB_CALLWAIT, ANALOG_SUB_REAL);
 					analog_unalloc_sub(p, ANALOG_SUB_CALLWAIT);
@@ -1314,7 +1314,7 @@ int analog_hangup(struct analog_pvt *p, struct ast_channel *ast)
 				/* Need to hold the lock for real-call, private, and call-waiting call */
 				analog_lock_sub_owner(p, ANALOG_SUB_CALLWAIT);
 				if (!p->subs[ANALOG_SUB_CALLWAIT].owner) {
-					/* The call waiting call dissappeared. */
+					/* The call waiting call disappeared. */
 					analog_set_new_owner(p, NULL);
 					break;
 				}
@@ -2905,7 +2905,7 @@ static struct ast_frame *__analog_handle_event(struct analog_pvt *p, struct ast_
 					analog_lock_sub_owner(p, ANALOG_SUB_CALLWAIT);
 					if (!p->subs[ANALOG_SUB_CALLWAIT].owner) {
 						/*
-						 * The call waiting call dissappeared.
+						 * The call waiting call disappeared.
 						 * This is now a normal hangup.
 						 */
 						analog_set_echocanceller(p, 0);
@@ -3223,7 +3223,7 @@ static struct ast_frame *__analog_handle_event(struct analog_pvt *p, struct ast_
 				analog_lock_sub_owner(p, ANALOG_SUB_CALLWAIT);
 				if (!p->subs[ANALOG_SUB_CALLWAIT].owner) {
 					/*
-					 * The call waiting call dissappeared.
+					 * The call waiting call disappeared.
 					 * Let's just ignore this flash-hook.
 					 */
 					ast_log(LOG_NOTICE, "Whoa, the call-waiting call disappeared.\n");
@@ -3350,7 +3350,7 @@ static struct ast_frame *__analog_handle_event(struct analog_pvt *p, struct ast_
 				analog_lock_sub_owner(p, ANALOG_SUB_THREEWAY);
 				if (!p->subs[ANALOG_SUB_THREEWAY].owner) {
 					/*
-					 * The 3-way call dissappeared.
+					 * The 3-way call disappeared.
 					 * Let's just ignore this flash-hook.
 					 */
 					ast_log(LOG_NOTICE, "Whoa, the 3-way call disappeared.\n");
@@ -3586,7 +3586,7 @@ winkflashdone:
 		}
 
 		/* Added more log_debug information below to provide a better indication of what is going on */
-		ast_debug(1, "Polarity Reversal event occured - DEBUG 2: channel %d, state %u, pol= %d, aonp= %d, honp= %d, pdelay= %d, tv= %" PRIi64 "\n", p->channel, ast_channel_state(ast), p->polarity, p->answeronpolarityswitch, p->hanguponpolarityswitch, p->polarityonanswerdelay, ast_tvdiff_ms(ast_tvnow(), p->polaritydelaytv) );
+		ast_debug(1, "Polarity Reversal event occurred - DEBUG 2: channel %d, state %u, pol= %d, aonp= %d, honp= %d, pdelay= %d, tv= %" PRIi64 "\n", p->channel, ast_channel_state(ast), p->polarity, p->answeronpolarityswitch, p->hanguponpolarityswitch, p->polarityonanswerdelay, ast_tvdiff_ms(ast_tvnow(), p->polaritydelaytv) );
 		break;
 	default:
 		ast_debug(1, "Dunno what to do with event %d on channel %d\n", res, p->channel);
