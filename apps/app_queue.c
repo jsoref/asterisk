@@ -2641,7 +2641,7 @@ static int extensionstate2devicestate(int state)
  * \param parent Parent context to search for child
  * \param child Context to check for inclusion in parent
  *
- * This function recrusively checks if the context child is included in the context parent.
+ * This function recursively checks if the context child is included in the context parent.
  *
  * \return 1 if child is included in parent, 0 if not
  */
