@@ -9513,7 +9513,7 @@ static int timing_read(int *id, int fd, short events, void *cbdata)
 			res = send_trunk(tpeer, &now);
 			trunk_timed++;
 			if (iaxtrunkdebug) {
-				ast_verbose(" - Trunk peer (%s) has %d call chunk%s in transit, %u bytes backloged and has hit a high water mark of %u bytes\n",
+				ast_verbose(" - Trunk peer (%s) has %d call chunk%s in transit, %u bytes backlogged and has hit a high water mark of %u bytes\n",
 							ast_sockaddr_stringify(&tpeer->addr),
 							res,
 							(res != 1) ? "s" : "",
