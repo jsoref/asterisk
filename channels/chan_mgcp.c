@@ -335,7 +335,7 @@ struct mgcp_endpoint {
 	char name[80];
 	struct mgcp_subchannel *sub;		/*!< Pointer to our current connection, channel and stuff */
 	char accountcode[AST_MAX_ACCOUNT_CODE];
-	char exten[AST_MAX_EXTENSION];		/*!< Extention where to start */
+	char exten[AST_MAX_EXTENSION];		/*!< Extension where to start */
 	char context[AST_MAX_EXTENSION];
 	char language[MAX_LANGUAGE];
 	char cid_num[AST_MAX_EXTENSION];	/*!< Caller*ID number */
