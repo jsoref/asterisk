@@ -4407,7 +4407,7 @@ static char *dahdi_sig2str(int sig)
 	case SIG_FEATDMF:
 		return "Feature Group D (MF)";
 	case SIG_FEATDMF_TA:
-		return "Feature Groud D (MF) Tandem Access";
+		return "Feature Group D (MF) Tandem Access";
 	case SIG_FEATB:
 		return "Feature Group B (MF)";
 	case SIG_E911:
