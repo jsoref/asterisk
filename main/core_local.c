@@ -285,7 +285,7 @@ struct ast_channel *ast_local_get_peer(struct ast_channel *ast)
 
 	found = p ? ao2_find(locals, p, 0) : NULL;
 	if (!found) {
-		/* ast is either not a local channel or it has alredy been hungup */
+		/* ast is either not a local channel or it has already been hungup */
 		return NULL;
 	}
 	ao2_lock(found);

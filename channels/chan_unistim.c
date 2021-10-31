@@ -6513,7 +6513,7 @@ static struct unistim_device *build_device(const char *cat, const struct ast_var
 	d = devices;
 	while (d) {
 		if (!strcmp(d->name, cat)) {
-			/* Yep, we alreay have this one */
+			/* Yep, we already have this one */
 			if (unistimsock < 0) {
 				/* It's a dupe */
 				ast_log(LOG_WARNING, "Duplicate entry found (%s), ignoring.\n", cat);
