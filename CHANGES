@@ -4609,7 +4609,7 @@ PJSIP_DIAL_CONTACTS
 
 PJSIP_MEDIA_OFFER
 ------------------
- * Provided by chan_pjsip, this function sets the codecs to be offerred on the
+ * Provided by chan_pjsip, this function sets the codecs to be offered on the
    outbound channel prior to dialing.
 
 REDIRECTING
