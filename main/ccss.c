@@ -2660,7 +2660,7 @@ struct cc_generic_agent_pvt {
 	 * Context dialed
 	 *
 	 * The original context dialed. This is used
-	 * so that when performaing a recall, we can
+	 * so that when performing a recall, we can
 	 * call into the proper context
 	 */
 	char context[AST_CHANNEL_NAME];
