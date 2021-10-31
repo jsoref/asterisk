@@ -929,7 +929,7 @@ static int exp10_int(int power)
  * - 3,4,...,20
  * - 30,40,...,90
  *
- * - hundereds - 100 - sto, 200 - 2ste, 300,400 3,4sta, 500,600,...,900 5,6,...9set
+ * - hundreds - 100 - sto, 200 - 2ste, 300,400 3,4sta, 500,600,...,900 5,6,...9set
  *
  * for each number 10^(3n + 3) exist 3 files represented as:
  *		1 tousand = jeden tisic = 1_E3
@@ -949,7 +949,7 @@ static int ast_say_number_full_cs(struct ast_channel *chan, int num, const char 
 	int playh = 0;
 	char fn[256] = "";
 
-	int hundered = 0;
+	int hundred = 0;
 	int left = 0;
 	int length = 0;
 
@@ -980,22 +980,22 @@ static int ast_say_number_full_cs(struct ast_channel *chan, int num, const char 
 			snprintf(fn, sizeof(fn), "digits/%d", (num /10) * 10);
 			num %= 10;
 		} else if (num < 1000) {
-			hundered = num / 100;
-			if ( hundered == 1 ) {
+			hundred = num / 100;
+			if ( hundred == 1 ) {
 				ast_copy_string(fn, "digits/1sto", sizeof(fn));
-			} else if ( hundered == 2 ) {
+			} else if ( hundred == 2 ) {
 				ast_copy_string(fn, "digits/2ste", sizeof(fn));
 			} else {
-				res = ast_say_number_full_cs(chan, hundered, ints, language, options, audiofd, ctrlfd);
+				res = ast_say_number_full_cs(chan, hundred, ints, language, options, audiofd, ctrlfd);
 				if (res)
 					return res;
-				if (hundered == 3 || hundered == 4) {
+				if (hundred == 3 || hundred == 4) {
 					ast_copy_string(fn, "digits/sta", sizeof(fn));
-				} else if ( hundered > 4 ) {
+				} else if ( hundred > 4 ) {
 					ast_copy_string(fn, "digits/set", sizeof(fn));
 				}
 			}
-			num -= (hundered * 100);
+			num -= (hundred * 100);
 		} else { /* num > 1000 */
 			length = (int)log10(num)+1;
 			while ( (length % 3 ) != 1 ) {
