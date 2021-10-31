@@ -175,7 +175,7 @@ fi
 # Timestamp to use for output files
 df=${tarball_uniqueid:-$(${DATEFORMAT})}
 
-# Extract the Python timestamp conver script from the end of this
+# Extract the Python timestamp convert script from the end of this
 # script and save it to /tmp/.ast_tsconvert.py
 
 ss=`egrep -n "^#@@@SCRIPTSTART@@@" $0 |cut -f1 -d:`
