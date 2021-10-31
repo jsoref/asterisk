@@ -89,7 +89,7 @@ static const struct ast_datastore_info dtmf_features_info = {
  * \since 12.0.0
  * \brief read a feature code character and set it on for the give feature_flags struct
  *
- * \param feature_flags flags being modifed
+ * \param feature_flags flags being modified
  * \param feature feature code provided - should be an uppercase letter
  *
  * \retval 0 if the feature was set successfully

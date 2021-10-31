@@ -294,7 +294,7 @@ void ast_translator_deactivate(struct ast_translator *t);
  * \param src_fmt_out source format chosen out of source capabilities
  * \return Returns 0 on success, -1 if no path could be found.
  *
- * \note dst_cap and src_cap are not mondified.
+ * \note dst_cap and src_cap are not modified.
  */
 int ast_translator_best_choice(struct ast_format_cap *dst_cap,
 	struct ast_format_cap *src_cap,
