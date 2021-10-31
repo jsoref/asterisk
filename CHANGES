@@ -4212,7 +4212,7 @@ AMI (Asterisk Manager Interface)
  * Added 'BlindTransfer' and 'AttendedTransfer' events. These events are
    raised when a blind transfer/attended transfer completes successfully.
    They contain information about the transfer that just completed, including
-   the location of the transfered channel.
+   the location of the transferred channel.
 
  * Added a 'security' class to AMI which outputs the required fields for
    security messages similar to the log messages from res_security_log

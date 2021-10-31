@@ -5892,7 +5892,7 @@ static int action_originate(struct mansession *s, const struct message *m)
 			ast_string_field_set(fast, otherchannelid, assignedids.uniqueid2);
 			fast->vars = vars;
 			fast->cap = cap;
-			cap = NULL; /* transfered originate helper the capabilities structure.  It is now responsible for freeing it. */
+			cap = NULL; /* transferred originate helper the capabilities structure.  It is now responsible for freeing it. */
 			fast->timeout = to;
 			fast->early_media = bridge_early;
 			fast->priority = pi;
