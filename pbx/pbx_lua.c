@@ -456,7 +456,7 @@ static void lua_create_app_table(lua_State *L)
 }
 
 /*!
- * \brief Create the global 'channel' table for accesing channel variables
+ * \brief Create the global 'channel' table for accessing channel variables
  *
  * \param L the lua_State to use
  */
