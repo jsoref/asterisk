@@ -2250,7 +2250,7 @@ static int minivm_record_exec(struct ast_channel *chan, const char *data)
 		}
 	}
 
-	/* Now run the appliation and good luck to you! */
+	/* Now run the application and good luck to you! */
 	res = leave_voicemail(chan, argv[0], &leave_options);
 
 	if (res == ERROR_LOCK_PATH) {
