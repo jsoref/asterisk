@@ -2690,7 +2690,7 @@ static void peercnt_remove(struct peercnt *peercnt)
 	 * Container locked here since peercnt may be unlinked from
 	 * list.  If left unlocked, peercnt_add could try and grab this
 	 * entry from the table and modify it at the "same time" this
-	 * thread attemps to unlink it.
+	 * thread attempts to unlink it.
 	 */
 	ao2_lock(peercnts);
 	peercnt->cur--;
