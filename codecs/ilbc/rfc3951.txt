@@ -5522,7 +5522,7 @@ RFC 3951              Internet Low Bit Rate Codec          December 2004
        float *buffer,      /* (i) Pointer to the end of the
                                   buffer for augmented codebook
                                   construction */
-       float *cbVec    /* (o) The construced codebook vector */
+       float *cbVec    /* (o) The constructed codebook vector */
    );
 
    #endif
@@ -5734,7 +5734,7 @@ RFC 3951              Internet Low Bit Rate Codec          December 2004
                               to be created */
        float *buffer,  /* (i) Pointer to the end of the buffer for
                               augmented codebook construction */
-       float *cbVec/* (o) The construced codebook vector */
+       float *cbVec/* (o) The constructed codebook vector */
    ) {
        int ilow, j;
        float *pp, *ppo, *ppi, alfa, alfa1, weighted;
