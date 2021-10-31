@@ -169,7 +169,7 @@ struct ast_fax_session_details {
 	} option;
 	/*! override the minimum transmission rate with a channel variable */
 	unsigned int minrate;
-	/*! override the maximum transmission rate with a channel varialbe */
+	/*! override the maximum transmission rate with a channel variable */
 	unsigned int maxrate;
 	/*! our T.38 session parameters, if any */
 	struct ast_fax_t38_parameters our_t38_parameters;

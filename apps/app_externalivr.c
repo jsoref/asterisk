@@ -101,7 +101,7 @@ static const char app[] = "ExternalIVR";
 #define EIVR_CMD_APND 'A' /* append to prompt queue */
 #define EIVR_CMD_DTMF 'D' /* send DTMF */
 #define EIVR_CMD_EXIT 'E' /* exit */
-#define EIVR_CMD_GET  'G' /* get channel varable(s) */
+#define EIVR_CMD_GET  'G' /* get channel variable(s) */
 #define EIVR_CMD_HGUP 'H' /* hangup */
 #define EIVR_CMD_IRPT 'I' /* interrupt */
 #define EIVR_CMD_LOG  'L' /* log message */
@@ -109,7 +109,7 @@ static const char app[] = "ExternalIVR";
 #define EIVR_CMD_PARM 'P' /* return supplied params */
 #define EIVR_CMD_SQUE 'S' /* (re)set prompt queue */
 #define EIVR_CMD_ANS  'T' /* answer channel */
-#define EIVR_CMD_SVAR 'V' /* set channel varable(s) */
+#define EIVR_CMD_SVAR 'V' /* set channel variable(s) */
 #define EIVR_CMD_XIT  'X' /* exit **deprecated** */
 
 #define EXTERNALIVR_PORT 2949

@@ -6022,7 +6022,7 @@ Dialplan Variables
  * Added DYNAMIC_PEERNAME which holds the unique channel name on the other side
    and is set when a dynamic feature is triggered.
  * Added PARKINGLOT which can be used with parkeddynamic feature.conf option
-   to dynamically create a new parking lot matching the value this varible is
+   to dynamically create a new parking lot matching the value this variable is
    set to.
  * Added PARKINGDYNAMIC which represents the template parkinglot defined in
    features.conf that should be the base for dynamic parkinglots.
