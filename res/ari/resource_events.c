@@ -86,7 +86,7 @@ static void stasis_app_message_handler(
 	ast_assert(session != NULL);
 
 	/*
-	 * We need to get the debug flag before lockinf session
+	 * We need to get the debug flag before locking session
 	 * to help prevent a deadlock with the apps_registry container.
 	 */
 	app_debug_enabled = stasis_app_get_debug_by_name(app_name);
