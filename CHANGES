@@ -3346,7 +3346,7 @@ ConfBridge
    CONFBRIDGE dialplan function.
 
  * The ConfBridge dialplan application now sets a channel variable,
-   CONFBRIGE_RESULT, upon exiting. This variable can be used to determine
+   CONFBRIDGE_RESULT, upon exiting. This variable can be used to determine
    how a channel exited the conference.
 
  * Added conference user option 'announce_join_leave_review'. This option
