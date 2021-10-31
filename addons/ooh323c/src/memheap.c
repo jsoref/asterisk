@@ -1214,7 +1214,7 @@ static OSMemLink* memHeapAddBlock (OSMemLink** ppMemLink,
 
    /* if pMemBlk has RTMEMLINK flags it means that it is allocated
     * cooperatively with OSMemLink, and we don't need to do additional
-    * allocations for it. Just use pointer's arithemtic. */
+    * allocations for it. Just use pointer's arithmetic. */
 
    if (blockType & RTMEMLINK)
       pMemLink = (OSMemLink*) (((ASN1OCTET*)pMemBlk) - sizeof (OSMemLink));
