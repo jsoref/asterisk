@@ -388,7 +388,7 @@ void softmix_process_write_binaural_audio(struct softmix_channel *sc,
 		unsigned int default_sample_size);
 
 /*!
- * \brief Checks if a position change in the virual enviroment is requested by one of
+ * \brief Checks if a position change in the virtual enviroment is requested by one of
  * the participants.
  *
  * \param bridge The conference bridge.
