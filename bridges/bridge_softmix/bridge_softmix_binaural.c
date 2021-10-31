@@ -103,7 +103,7 @@ int do_convolve(struct convolve_channel *chan, int16_t *in_samples,
 	}
 	fftw_execute(chan->fftw_plan);
 
-	/* Imaginary mulitplication (frequency space). */
+	/* Imaginary multiplication (frequency space). */
 	/* First FFTW result has never an imaginary part. */
 	chan->fftw_in[0] = chan->fftw_out[0] * chan->hrtf[0];
 	for (i = 1; i < (hrtf_length / 2); i++) {
