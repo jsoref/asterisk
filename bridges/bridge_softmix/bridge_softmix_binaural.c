@@ -128,7 +128,7 @@ int do_convolve(struct convolve_channel *chan, int16_t *in_samples,
 		chan->fftw_out[i] = chan->fftw_out[i] / (hrtf_length / 2);
 	}
 
-	/* Save the block for overlapp add in the next itteration. */
+	/* Save the block for overlapp add in the next iteration. */
 	for (i = 0; i < in_sample_size; i++) {
 		chan->overlap_add[i] += chan->fftw_out[i];
 	}
