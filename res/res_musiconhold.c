@@ -1504,7 +1504,7 @@ static void local_ast_moh_cleanup(struct ast_channel *chan)
 
 /*! \brief Support routing for 'moh unregister class' CLI
  * This is in charge of generating all strings that match a prefix in the
- * given position. As many functions of this kind, each invokation has
+ * given position. As many functions of this kind, each invocation has
  * O(state) time complexity so be careful in using it.
  */
 static char *complete_mohclass_realtime(const char *line, const char *word, int pos, int state)

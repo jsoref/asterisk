@@ -22250,7 +22250,7 @@ static char *sip_show_channels(struct ast_cli_entry *e, int cmd, struct ast_cli_
 
 /*! \brief Support routine for 'sip show channel' and 'sip show history' CLI
  * This is in charge of generating all strings that match a prefix in the
- * given position. As many functions of this kind, each invokation has
+ * given position. As many functions of this kind, each invocation has
  * O(state) time complexity so be careful in using it.
  */
 static char *complete_sipch(const char *line, const char *word, int pos, int state)
