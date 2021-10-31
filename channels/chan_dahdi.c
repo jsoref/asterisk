@@ -13371,7 +13371,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 	 * R - channel group allocation round robin search backward
 	 *
 	 * c - Wait for DTMF digit to confirm answer
-	 * r<cadence#> - Set distintive ring cadence number
+	 * r<cadence#> - Set distinctive ring cadence number
 	 * d - Force bearer capability for ISDN/SS7 call to digital.
 	 */
 
