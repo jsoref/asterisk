@@ -54,7 +54,7 @@ handled differently according to their location:
   enable/disable Picture-in-Picture, freeze the incoming video,
   dial numbers, pick up or hang up a call, ...)
 
-Configuration options control the appeareance of the gui:
+Configuration options control the appearance of the gui:
 
     keypad = /tmp/kpad2.jpg	; the skin
     keypad_font = /tmp/font.png	; the font to use for output
