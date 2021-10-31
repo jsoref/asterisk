@@ -8404,18 +8404,18 @@ static int authenticate(const char *challenge, const char *secret, const char *k
 		if ((authmethods & IAX_AUTH_MD5) && !ast_strlen_zero(challenge)) {
 			struct MD5Context md5;
 			unsigned char digest[16];
-			char digres[128];
+			char digress[128];
 			MD5Init(&md5);
 			MD5Update(&md5, (unsigned char *)challenge, strlen(challenge));
 			MD5Update(&md5, (unsigned char *)secret, strlen(secret));
 			MD5Final(digest, &md5);
 			/* If they support md5, authenticate with it.  */
 			for (x=0;x<16;x++)
-				sprintf(digres + (x << 1),  "%02hhx", digest[x]); /* safe */
+				sprintf(digress + (x << 1),  "%02hhx", digest[x]); /* safe */
 			if (pvt) {
 				build_encryption_keys(digest, pvt);
 			}
-			iax_ie_append_str(ied, IAX_IE_MD5_RESULT, digres);
+			iax_ie_append_str(ied, IAX_IE_MD5_RESULT, digress);
 			res = 0;
 		} else if (authmethods & IAX_AUTH_PLAINTEXT) {
 			iax_ie_append_str(ied, IAX_IE_PASSWORD, secret);
