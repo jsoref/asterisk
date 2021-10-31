@@ -6188,7 +6188,7 @@ static int dahdi_hangup(struct ast_channel *ast)
 				ast_debug(1, "Normal call hung up with both three way call and a call waiting call in place?\n");
 				if (p->subs[SUB_CALLWAIT].inthreeway) {
 					/* We had flipped over to answer a callwait and now it's gone */
-					ast_debug(1, "We were flipped over to the callwait, moving back and unowning.\n");
+					ast_debug(1, "We were flipped over to the callwait, moving back and not owning.\n");
 					/* Move to the call-wait, but un-own us until they flip back. */
 					swap_subs(p, SUB_CALLWAIT, SUB_REAL);
 					unalloc_sub(p, SUB_CALLWAIT);
