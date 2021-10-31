@@ -424,7 +424,7 @@ EXTERN int ooGkClientSendUnregistrationConfirm(ooGkClient *pGkClient,
                                                                unsigned reqNo);
 
 /**
- * This function is invoked to request bandwith admission for a call.
+ * This function is invoked to request bandwidth admission for a call.
  * @param pGkClient     Gatekeeper client to be used
  * @param call          Handle to the call.
  * @param retransmit    Indicates whether new call or retransmitting for

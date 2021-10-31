@@ -25,7 +25,7 @@
  * \note
  * This module is an add-on to chan_mgcp. It adds support for the
  * PacketCable MGCP variation called NCS. Res_pktccops implements COPS
- * (RFC 2748), a protocol used to manage dynamic bandwith allocation in
+ * (RFC 2748), a protocol used to manage dynamic bandwidth allocation in
  * CMTS's (HFC gateways). When you use NCS, you need to talk COPS with
  * the CMTS to complete the calls.
  */
