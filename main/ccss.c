@@ -229,7 +229,7 @@ struct cc_control_payload {
 	 * and "SIP"
 	 *
 	 * \note This really should be an array of characters in case this payload
-	 * is sent accross an IAX2 link.  However, this would not make too much sense
+	 * is sent across an IAX2 link.  However, this would not make too much sense
 	 * given this type may not be recognized by the other end.
 	 * Protection may be necessary to prevent it from being transmitted.
 	 *
