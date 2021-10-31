@@ -1230,7 +1230,7 @@ static int skinny_header_size = 12;
 
 static int skinnyreload = 0;
 
-/* a hostname, portnumber, socket and such is usefull for VoIP protocols */
+/* a hostname, portnumber, socket and such is useful for VoIP protocols */
 static struct sockaddr_in bindaddr;
 static char ourhost[256];
 static int ourport;
