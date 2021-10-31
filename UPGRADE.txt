@@ -1228,7 +1228,7 @@ CEL:
 Dialplan Functions:
 
  - Certain dialplan functions have been marked as 'dangerous', and may only be
-   executed from the dialplan. Execution from extenal sources (AMI's GetVar and
+   executed from the dialplan. Execution from external sources (AMI's GetVar and
    SetVar actions; etc.) may be inhibited by setting live_dangerously in the
    [options] section of asterisk.conf to no. SHELL(), channel locking, and
    direct file read/write functions are marked as dangerous. DB_DELETE() and
