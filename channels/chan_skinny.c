@@ -1366,7 +1366,7 @@ static int gendigittimeout = 8000;
 static int matchdigittimeout = 3000;
 
 /*!
- * To apease the stupid compiler option on ast_sched_del()
+ * To appease the stupid compiler option on ast_sched_del()
  * since we don't care about the return value.
  */
 static int not_used;
