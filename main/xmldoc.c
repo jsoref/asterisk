@@ -888,7 +888,7 @@ static char *xmldoc_parse_cmd_enumlist(struct ast_xml_node *fixnode)
 
 	paramname = ast_str_create(128);
 	if (!paramname) {
-		return ast_strdup("{<unkown>}");
+		return ast_strdup("{<unknown>}");
 	}
 
 	ast_str_append(&paramname, 0, "{");

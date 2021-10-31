@@ -2202,7 +2202,7 @@ static const char *trunkstate2str(enum sla_trunk_state state)
 	S(SLA_TRUNK_STATE_ONHOLD)
 	S(SLA_TRUNK_STATE_ONHOLD_BYME)
 	}
-	return "Uknown State";
+	return "Unknown State";
 #undef S
 }
 
