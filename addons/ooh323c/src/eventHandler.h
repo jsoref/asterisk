@@ -194,7 +194,7 @@ typedef void (*EnumValue) (ASN1UINT value) ;
  * within a decode function when an ASN.1 open type is parsed.
  *
  * @param numocts      Number of octets in the parsed value.
- * @param data         Pointer to byet array contain in tencoded ASN.1
+ * @param data         Pointer to byte array contain in tencoded ASN.1
  *                       value.
  * @return             - none
  */
