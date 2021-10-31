@@ -756,7 +756,7 @@ extern "C" {
 
 /*! \brief Destroy a container.
  *
- * \param container A pointer to the container to destory.
+ * \param container A pointer to the container to destroy.
  *
  * This macro frees up resources used by a container.  It does not operate on
  * the objects in the container.  To unlink the objects from the container use
