@@ -1613,7 +1613,7 @@ static int pri_fixup_principle(struct sig_pri_span *pri, int principle, q931_cal
 	int x;
 
 	if (principle < 0 || pri->numchans <= principle) {
-		/* Out of rannge */
+		/* Out of range */
 		return -1;
 	}
 	if (!call) {
