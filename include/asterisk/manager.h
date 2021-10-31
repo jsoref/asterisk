@@ -269,7 +269,7 @@ int __ast_manager_event_multichan(int category, const char *event, int chancount
 		struct ast_channel **chans, const char *file, int line, const char *func,
 		const char *contents, ...) __attribute__((format(printf, 8, 9)));
 
-/*! \brief Get header from mananger transaction */
+/*! \brief Get header from manager transaction */
 const char *astman_get_header(const struct message *m, char *var);
 
 /*! \brief Get a linked list of the Variable: headers
