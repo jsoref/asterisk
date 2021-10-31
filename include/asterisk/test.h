@@ -74,7 +74,7 @@
       .
       .
       if (fail) {                 \\ the following is just some example logic
-          ast_test_status_update(test, "an error occured because...");
+          ast_test_status_update(test, "an error occurred because...");
           res = AST_RESULT_FAIL;
       } else {
           res = AST_RESULT_PASS

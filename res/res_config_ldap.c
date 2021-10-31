@@ -800,7 +800,7 @@ static struct ast_str *create_lookup_filter(struct ldap_table_config *config, co
 }
 
 /*! \brief LDAP base function
- * \return a null terminated array of ast_variable (one per entry) or NULL if no entry is found or if an error occured
+ * \return a null terminated array of ast_variable (one per entry) or NULL if no entry is found or if an error occurred
  * caller should free the returned array and ast_variables
  * \param entries_count_ptr is a pointer to found entries count (can be NULL)
  * \param basedn is the base DN

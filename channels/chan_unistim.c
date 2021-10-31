@@ -459,7 +459,7 @@ static struct unistimsession {
 	ast_mutex_t lock;
 	struct sockaddr_in sin;	 /*!< IP address of the phone */
 	struct sockaddr_in sout;	/*!< IP address of server */
-	int timeout;			    /*!< time-out in ticks : resend packet if no ack was received before the timeout occured */
+	int timeout;			    /*!< time-out in ticks : resend packet if no ack was received before the timeout occurred */
 	unsigned short seq_phone;       /*!< sequence number for the next packet (when we receive a request) */
 	unsigned short seq_server;      /*!< sequence number for the next packet (when we send a request) */
 	unsigned short last_seq_ack;    /*!< sequence number of the last ACK received */

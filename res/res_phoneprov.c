@@ -996,7 +996,7 @@ out404:
 
 out500:
 	route = unref_route(route);
-	ast_http_error(ser, 500, "Internal Error", "An internal error has occured.");
+	ast_http_error(ser, 500, "Internal Error", "An internal error has occurred.");
 	return 0;
 }
 

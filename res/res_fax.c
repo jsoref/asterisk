@@ -1158,7 +1158,7 @@ static struct ast_fax_session *fax_session_reserve(struct ast_fax_session_detail
 
 	/* locate a FAX technology module that can handle said requirements
 	 * Note: the requirements have not yet been finalized as T.38
-	 * negotiation has not yet occured. */
+	 * negotiation has not yet occurred. */
 	AST_RWLIST_RDLOCK(&faxmodules);
 	AST_RWLIST_TRAVERSE(&faxmodules, faxmod, list) {
 		if ((faxmod->tech->caps & details->caps) != details->caps) {

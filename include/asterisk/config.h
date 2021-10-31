@@ -959,7 +959,7 @@ struct ast_variable *ast_variable_list_append_hint(struct ast_variable **head, s
  * same name.
  *
  * \retval 0 if a variable was replaced in the list
- * \retval -1 if no replacement occured
+ * \retval -1 if no replacement occurred
  *
  * \note The variable name comparison is performed case-sensitively
  * \note If a variable is replaced, its memory is freed.
