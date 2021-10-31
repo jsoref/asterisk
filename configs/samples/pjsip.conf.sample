@@ -1204,7 +1204,7 @@
                         ; The interval (in seconds) to check for expired contacts.
 ;disable_multi_domain=no
             ; Disable Multi Domain support.
-            ; If disabled it can improve realtime performace by reducing
+            ; If disabled it can improve realtime performance by reducing
             ; number of database requsts
             ; (default: "no")
 ;endpoint_identifier_order=ip,username,anonymous

@@ -894,7 +894,7 @@ memHeapFreeAll(&(pctxt)->pTypeMemHeap)
  * <p>The difference between this and the ASN1MEMFREE macro is that the
  * memory blocks held within the context are not actually freed.  Internal
  * pointers are reset so the existing blocks can be reused.  This can
- * provide a performace improvement for repetitive tasks such as decoding
+ * provide a performance improvement for repetitive tasks such as decoding
  * messages in a loop.
  *
  * @param pctxt - Pointer to a context block
