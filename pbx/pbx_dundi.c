@@ -2630,7 +2630,7 @@ static char *dundi_show_peer(struct ast_cli_entry *e, int cmd, struct ast_cli_ar
 		e->command = "dundi show peer";
 		e->usage =
 			"Usage: dundi show peer [peer]\n"
-			"       Provide a detailed description of a specifid DUNDi peer.\n";
+			"       Provide a detailed description of a specified DUNDi peer.\n";
 		return NULL;
 	case CLI_GENERATE:
 		return complete_peer_helper(a->line, a->word, a->pos, a->n, 3);

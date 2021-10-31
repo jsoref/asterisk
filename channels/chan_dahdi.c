@@ -12712,7 +12712,7 @@ static struct dahdi_pvt *mkintf(int channel, const struct dahdi_chan_conf *conf,
 		if (tmp->use_smdi) {
 			tmp->smdi_iface = ast_smdi_interface_find(conf->smdi_port);
 			if (!(tmp->smdi_iface)) {
-				ast_log(LOG_ERROR, "Invalid SMDI port specfied, disabling SMDI support\n");
+				ast_log(LOG_ERROR, "Invalid SMDI port specified, disabling SMDI support\n");
 				tmp->use_smdi = 0;
 			}
 		}
