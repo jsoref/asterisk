@@ -898,7 +898,7 @@ struct ast_str *__ast_str_thread_get(struct ast_threadstorage *ts,
 
 /*!
  * \brief Error codes from __ast_str_helper()
- * The undelying processing to manipulate dynamic string is done
+ * The underlying processing to manipulate dynamic string is done
  * by __ast_str_helper(), which can return a success or a
  * permanent failure (e.g. no memory).
  */
