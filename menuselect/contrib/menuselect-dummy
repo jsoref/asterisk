@@ -531,7 +531,7 @@ sub resolve_deps() {
 
 # generate menuselect.makeopts.
 # The values in this file obey to different semantics:
-# 1. For modules, a module will be built unles listed here
+# 1. For modules, a module will be built unless listed here
 # 2. For XML values (sounds, CFLAGS) it will be enabled if listed here
 sub gen_makeopts() {
 	open MAKEDEPS, ">$MakeoptsFile" or
