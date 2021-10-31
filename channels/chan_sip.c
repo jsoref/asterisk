@@ -25819,7 +25819,7 @@ static int handle_request_notify(struct sip_pvt *p, struct sip_request *req, str
 		case 200:	/* OK: The new call is up, hangup this call */
 			/* Hangup the call that we are replacing */
 			break;
-		case 301: /* Moved permenantly */
+		case 301: /* Moved permanently */
 		case 302: /* Moved temporarily */
 			/* Do we get the header in the packet in this case? */
 			success = FALSE;
