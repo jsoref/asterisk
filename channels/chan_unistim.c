@@ -684,7 +684,7 @@ static const unsigned char packet_send_charset_iso_8859_2[] =
 /* ISO-8859-4 - Baltic) */
 static const unsigned char packet_send_charset_iso_8859_4[] =
 	{ 0x17, 0x08, 0x21, 0x1b, 0x2d, 0x44, 0x1b, 0x00 };
-/* ISO 8859-5 - cyrilic */
+/* ISO 8859-5 - cyrillic */
 static const unsigned char packet_send_charset_iso_8859_5[] =
 	{ 0x17, 0x08, 0x21, 0x1b, 0x2d, 0x4c, 0x1b, 0x00 };
 /* Japaneese (ISO-2022-JP ?) */
