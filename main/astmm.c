@@ -869,7 +869,7 @@ static char *handle_memory_show_allocations(struct ast_cli_entry *e, int cmd, st
 	}
 
 	/* Look for historical misspelled option as well. */
-	if (fn && (!strcasecmp(fn, "anomalies") || !strcasecmp(fn, "anomolies"))) {
+	if (fn && (!strcasecmp(fn, "anomalies") || !strcasecmp(fn, "anomalies"))) {
 		regions_check_all_fences();
 		ast_cli(a->fd, "Anomaly check complete.\n");
 		return CLI_SUCCESS;
