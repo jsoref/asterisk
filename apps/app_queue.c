@@ -4989,7 +4989,7 @@ static void update_connected_line_from_peer(struct ast_channel *chan, struct ast
  * \param[in] caller_disconnect if the 'H' option is used when calling Queue(), this is used to detect if the caller pressed * to disconnect the call
  * \param[in] forwardsallowed used to detect if we should allow call forwarding, based on the 'i' option to Queue()
  *
- * \todo eventually all call forward logic should be intergerated into and replaced by ast_call_forward()
+ * \todo eventually all call forward logic should be integrated into and replaced by ast_call_forward()
  */
 static struct callattempt *wait_for_answer(struct queue_ent *qe, struct callattempt *outgoing, int *to, char *digit, int prebusies, int caller_disconnect, int forwardsallowed)
 {
