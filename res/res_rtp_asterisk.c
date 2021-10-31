@@ -5751,7 +5751,7 @@ static struct ast_frame *process_cn_rfc3389(struct ast_rtp_instance *instance, u
 	struct ast_rtp *rtp = ast_rtp_instance_get_data(instance);
 
 	/* Convert comfort noise into audio with various codecs.  Unfortunately this doesn't
-	   totally help us out becuase we don't have an engine to keep it going and we are not
+	   totally help us out because we don't have an engine to keep it going and we are not
 	   guaranteed to have it every 20ms or anything */
 	if (ast_debug_rtp_packet_is_allowed) {
 		ast_debug(0, "- RTP 3389 Comfort noise event: Format %s (len = %d)\n",
