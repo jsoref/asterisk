@@ -3618,7 +3618,7 @@ static struct ast_frame *__ast_read(struct ast_channel *chan, int dropaudio, int
 					break;
 				}
 			} else if (trigger_dtmf_emulating) {
-				/* generate null frame to trigger dtmf emualating */
+				/* generate null frame to trigger dtmf emulating */
 				f = &ast_null_frame;
 				break;
 			} else {
