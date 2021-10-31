@@ -3569,7 +3569,7 @@ enum ast_transport_monitor_reg ast_sip_transport_monitor_register_replace(pjsip_
  *                registered data object.  If NULL, a simple pointer comparison is done.
  *
  * \note The data object passed into the original register will have its reference count
- * automatically decremeneted.
+ * automatically decremented.
  *
  * \return Nothing
  */
@@ -3587,7 +3587,7 @@ void ast_sip_transport_monitor_unregister(pjsip_transport *transport,
  *                registered data object.  If NULL, a simple pointer comparison is done.
  *
  * \note The data object passed into the original register will have its reference count
- * automatically decremeneted.
+ * automatically decremented.
  *
  * \return Nothing
  */
