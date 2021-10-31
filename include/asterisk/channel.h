@@ -2652,7 +2652,7 @@ int ast_settimeout_full(struct ast_channel *c, unsigned int rate, int (*func)(co
 int ast_transfer(struct ast_channel *chan, char *dest);
 
 /*!
- * \brief Transfer a channel (if supported) receieve protocol result.
+ * \brief Transfer a channel (if supported) receive protocol result.
  * \retval -1 on error
  * \retval 0 if not supported
  * \retval 1 if supported and requested

@@ -517,7 +517,7 @@ int ooSendTermCapMsg(OOH323CallData *call)
             }
          }
          else{
-            OOTRACEDBGC3("Sending transmit&recevie capability t38 in TCS.(%s, %s)\n",
+            OOTRACEDBGC3("Sending transmit&receive capability t38 in TCS.(%s, %s)\n",
                 call->callType, call->callToken);
             t38Cap = ooCapabilityCreateT38Capability(epCap, pctxt, OOTX&OORX);
             if(!t38Cap)

@@ -434,7 +434,7 @@ static struct unistim_device {
 	int callhistory;			/*!< Allowed to record call history */
         int sharp_dial;				/*!< Execute Dial on '#' or not */
 	char lst_cid[TEXT_LENGTH_MAX];  /*!< Last callerID received */
-	char lst_cnm[TEXT_LENGTH_MAX];  /*!< Last callername recevied */
+	char lst_cnm[TEXT_LENGTH_MAX];  /*!< Last callername received */
 	char call_forward[AST_MAX_EXTENSION];   /*!< Forward number */
 	int output;				     /*!< Handset, headphone or speaker */
 	int previous_output;	    /*!< Previous output */
