@@ -1502,7 +1502,7 @@ static void mm_atexit_final(void)
 	freed_regions_flush(&whales);
 	freed_regions_flush(&minnows);
 
-	/* Peform atexit allocation dumps. */
+	/* Perform atexit allocation dumps. */
 	if (atexit_list || atexit_summary) {
 		ast_mutex_lock(&reglock);
 		mm_atexit_dump();
