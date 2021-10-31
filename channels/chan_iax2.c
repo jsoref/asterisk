@@ -8701,7 +8701,7 @@ static int complete_transfer(int callno, struct iax_ies *ies)
 		remove_by_peercallno(pvt);
 	}
 	pvt->peercallno = peercallno;
-	/*this is where the transfering call swiches hash tables */
+	/*this is where the transfering call switches hash tables */
 	store_by_peercallno(pvt);
 	pvt->transferring = TRANSFER_NONE;
 	pvt->svoiceformat = -1;
