@@ -3024,7 +3024,7 @@ static int init_mailstream(struct vm_state *vms, int box)
 	ast_mutex_lock(&vms->lock);
 	ast_mutex_lock(&mail_open_lock);
 	vms->mailstream = mail_open (stream, tmp, debug ? OP_DEBUG : NIL);
-	/* Create the folder if it dosn't exist */
+	/* Create the folder if it doesn't exist */
 	if (vms->mailstream && !mail_status(vms->mailstream, tmp, SA_UIDNEXT)) {
 		mail_create(vms->mailstream, tmp);
 	}
@@ -7253,7 +7253,7 @@ static int save_to_folder(struct ast_vm_user *vmu, struct vm_state *vms, int msg
 	/* get the current mailbox so that we can point the mailstream back to it later */
 	curr_mbox = get_folder_by_name(vms->curbox);
 
-	/* Create the folder if it dosn't exist */
+	/* Create the folder if it doesn't exist */
 	imap_mailbox_name(mailbox, sizeof(mailbox), vms, box, 1); /* Get the full mailbox name */
 	if (vms->mailstream && !mail_status(vms->mailstream, mailbox, SA_UIDNEXT)) {
     		if (mail_create(vms->mailstream, mailbox) != NIL) {
