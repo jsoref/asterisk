@@ -146,7 +146,7 @@ const char *ast_bridge_channel_get_role_option(struct ast_bridge_channel *bridge
  * \details
  * This function should always be called when the bridge_channel binds to an ast_channel at some point before the bridge_channel
  * joins or is imparted onto a bridge. Failure to do so will result in an empty role list. While the list remains established,
- * changes to roles on the ast_channel will not propogate to the bridge channel and roles can not be re-established on the bridge
+ * changes to roles on the ast_channel will not propagate to the bridge channel and roles can not be re-established on the bridge
  * channel without first clearing the roles with ast_bridge_roles_bridge_channel_clear_roles.
  */
 int ast_bridge_channel_establish_roles(struct ast_bridge_channel *bridge_channel);
