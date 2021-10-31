@@ -209,7 +209,7 @@
 					<synopsis>Maximum number of ICE candidates to offer</synopsis>
 				</configOption>
 				<configOption name="maxpayloads">
-					<synopsis>Maximum number of pyaloads to offer</synopsis>
+					<synopsis>Maximum number of payloads to offer</synopsis>
 				</configOption>
 			</configObject>
 		</configFile>
