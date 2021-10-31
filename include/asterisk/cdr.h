@@ -522,7 +522,7 @@ int ast_cdr_unregister(const char *name);
 /*!
  * \brief Suspend a CDR backend temporarily
  *
-  * \retval 0 The backend is suspdended
+  * \retval 0 The backend is suspended
   * \retval -1 The backend could not be suspended
   */
 int ast_cdr_backend_suspend(const char *name);
