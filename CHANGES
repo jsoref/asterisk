@@ -3238,7 +3238,7 @@ res_hep_rtcp
 Functions
 ------------------
  * Function AUDIOHOOK_INHERIT has been deprecated. Audiohooks are now
-   unconditionally inhereted through masquerades. As a side benefit, more
+   unconditionally inherited through masquerades. As a side benefit, more
    than one audiohook of a given type may persist through a masquerade now.
 
 ------------------------------------------------------------------------------
