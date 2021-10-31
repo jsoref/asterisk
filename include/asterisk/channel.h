@@ -1559,7 +1559,7 @@ struct ast_channel *__ast_request_and_dial(const char *type, struct ast_format_c
  * \param timeout maximum amount of time to wait for setup of new forward channel
  * \param cap format capabilities for requested channel
  * \param oh outgoing helper used with original channel
- * \param outstate reason why unsuccessful (if uncuccessful)
+ * \param outstate reason why unsuccessful (if unsuccessful)
  * \return Returns the forwarded call's ast_channel on success or NULL on failure
  */
 struct ast_channel *ast_call_forward(struct ast_channel *caller, struct ast_channel *orig, int *timeout, struct ast_format_cap *cap, struct outgoing_helper *oh, int *outstate);
