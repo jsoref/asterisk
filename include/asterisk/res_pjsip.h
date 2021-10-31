@@ -1907,7 +1907,7 @@ struct ast_sip_sched_task;
  * \ref AST_SIP_SCHED_TASK_PERIODIC specifies that the invocations of the task occur at the
  * specific interval.  That is, every \ref "interval" milliseconds, regardless of how long the task
  * takes. If the task takes longer than \ref interval, it will be scheduled at the next available
- * multiple of \ref interval.  For exmaple: If the task has an interval of 60 seconds and the task
+ * multiple of \ref interval.  For example: If the task has an interval of 60 seconds and the task
  * takes 70 seconds, the next invocation will happen at 120 seconds.
  *
  * \ref AST_SIP_SCHED_TASK_DELAY specifies that the next invocation of the task should start
