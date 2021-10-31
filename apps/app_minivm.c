@@ -256,7 +256,7 @@
 	<description>
 		<para>This application is part of the Mini-Voicemail system, configured in minivm.conf.</para>
 		<para>MinivmGreet() plays default prompts or user specific prompts for an account.</para>
-		<para>Busy and unavailable messages can be choosen, but will be overridden if a temporary
+		<para>Busy and unavailable messages can be chosen, but will be overridden if a temporary
 		message exists for the account.</para>
 		<variablelist>
 			<variable name="MVM_GREET_STATUS">
