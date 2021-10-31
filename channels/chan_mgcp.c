@@ -3711,7 +3711,7 @@ static int mgcpsock_read(int *id, int fd, short events, void *ignore)
 		if (ast_strlen_zero(req.endpoint) ||
 			ast_strlen_zero(req.version) ||
 			ast_strlen_zero(req.verb)) {
-			ast_log(LOG_NOTICE, "Message must have a verb, an idenitifier, version, and endpoint\n");
+			ast_log(LOG_NOTICE, "Message must have a verb, an identifier, version, and endpoint\n");
 			return 1;
 		}
 		/* Process request, with iflock held */

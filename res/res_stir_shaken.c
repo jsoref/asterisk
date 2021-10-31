@@ -233,7 +233,7 @@ static const char *stir_shaken_verification_result_to_string(enum ast_stir_shake
 
 /* The datastore struct holding verification information for the channel */
 struct stir_shaken_datastore {
-	/* The identitifier for the STIR/SHAKEN verification */
+	/* The identifier for the STIR/SHAKEN verification */
 	char *identity;
 	/* The attestation value */
 	char *attestation;
