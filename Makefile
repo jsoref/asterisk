@@ -135,7 +135,7 @@ empty:=
 space:=$(empty) $(empty)
 ASTTOPDIR:=$(subst $(space),\$(space),$(CURDIR))
 
-# Overwite config files on "make samples" or other config installation targets
+# Overwrite config files on "make samples" or other config installation targets
 OVERWRITE=y
 
 # Include debug and macro symbols in the executables (-g) and profiling info (-pg)
