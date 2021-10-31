@@ -726,7 +726,7 @@ static struct ao2_container *applicationmap_alloc(int replace_duplicates)
  * need to allocate these structures because they are not used.
  *
  * \param allocate_applicationmap See previous explanation
- * \retval NULL Failed to alloate configuration
+ * \retval NULL Failed to allocate configuration
  * \retval non-NULL Allocated configuration
  */
 static struct features_config *__features_config_alloc(int allocate_applicationmap)
