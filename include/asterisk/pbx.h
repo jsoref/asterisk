@@ -144,7 +144,7 @@ struct ast_custom_function {
 					 * 'dangerous', and should not be run directly
 					 * from external interfaces (AMI, ARI, etc.)
 					 * \since 12 */
-	unsigned int write_escalates:1; /*!< The write function is to be considerd
+	unsigned int write_escalates:1; /*!< The write function is to be considered
 					 * 'dangerous', and should not be run directly
 					 * from external interfaces (AMI, ARI, etc.)
 					 * \since 12 */
