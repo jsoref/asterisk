@@ -21,7 +21,7 @@
 #      on a single object just for that object
 # SOLINK - linker flags used only for creating dynamically loadable modules
 #          as .so files
-# DYLINK - linker flags used only for creating shared libaries
+# DYLINK - linker flags used only for creating shared libraries
 #          (.so files on Unix-type platforms, .dylib on Darwin)
 #
 # Values for ASTCFLAGS and ASTLDFLAGS can be specified in the
