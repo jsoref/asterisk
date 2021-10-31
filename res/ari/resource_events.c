@@ -574,7 +574,7 @@ void ast_ari_events_user_event(struct ast_variable *headers,
 
 	case STASIS_APP_USER_USEREVENT_INVALID:
 		ast_ari_response_error(response, 400, "Bad Request",
-			"Invalid userevnet data");
+			"Invalid userevent data");
 		break;
 
 	case STASIS_APP_USER_INTERNAL_ERROR:
