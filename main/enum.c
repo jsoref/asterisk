@@ -507,7 +507,7 @@ static int parse_naptr(unsigned char *dst, int dstsize, char *tech, int techsize
 	}
 
 	/* Make the regex case-insensitive if the 'i' flag is present. This assumes you
-	 * aren't using 'i' as a delimiter which, altough dubious, does not appear to be
+	 * aren't using 'i' as a delimiter which, although dubious, does not appear to be
 	 * explicitly non-compliant */
 	if (regexp[regexp_len - 1] == 'i') {
 		re_flags |= REG_ICASE;
