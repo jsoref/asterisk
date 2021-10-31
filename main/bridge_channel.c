@@ -1506,7 +1506,7 @@ struct bridge_park {
 
 /*!
  * \internal
- * \brief Park a bridge_cahnnel
+ * \brief Park a bridge_channel
  */
 static void bridge_channel_park(struct ast_bridge_channel *bridge_channel, struct bridge_park *payload)
 {

@@ -131,7 +131,7 @@ function demo_congrats()
 	demo_instruct()
 end
 
--- Answer the chanel and play the demo sound files
+-- Answer the channel and play the demo sound files
 function demo_start(context, exten)
 	app.wait(1)
 	app.answer()
