@@ -90,7 +90,7 @@
 			<para>Plays hold music specified by class. If omitted, the default music
 			source for the channel will be used. Change the default class with
 			Set(CHANNEL(musicclass)=...). If duration is given, hold music will be played
-			specified number of seconds. If duration is ommited, music plays indefinitely.
+			specified number of seconds. If duration is omitted, music plays indefinitely.
 			Returns <literal>0</literal> when done, <literal>-1</literal> on hangup.</para>
 			<para>This application does not automatically answer and should be preceeded by
 			an application such as Answer() or Progress().</para>
