@@ -21029,7 +21029,7 @@ static int manager_sip_peer_status(struct mansession *s, const struct message *m
 	}
 
 	if (!ast_strlen_zero(peer_name)) {
-		/* strip SIP/ from the begining of the peer name */
+		/* strip SIP/ from the beginning of the peer name */
 		if (strlen(peer_name) >= 4 && !strncasecmp("SIP/", peer_name, 4)) {
 			peer_name += 4;
 		}

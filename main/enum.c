@@ -513,7 +513,7 @@ static int parse_naptr(unsigned char *dst, int dstsize, char *tech, int techsize
 		re_flags |= REG_ICASE;
 	}
 
-	pattern = regexp + 1;   /* pattern is the regex without the begining and ending delimiter */
+	pattern = regexp + 1;   /* pattern is the regex without the beginning and ending delimiter */
 	*delim2 = 0;    /* zero out the middle delimiter */
 	subst   = delim2 + 1; /* dst substring is everything after the second delimiter. */
 	regexp[regexp_len - 1] = 0; /* zero out the last delimiter */

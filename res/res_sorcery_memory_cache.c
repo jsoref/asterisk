@@ -3186,7 +3186,7 @@ AST_TEST_DEFINE(stale)
 
 		real_backend_data = &iterations[i];
 
-		ast_test_status_update(test, "Begininning iteration %d\n", i);
+		ast_test_status_update(test, "Beginning iteration %d\n", i);
 
 		cache_fresh = ast_sorcery_retrieve_by_id(sorcery, "test", "test");
 		if (!cache_fresh) {
