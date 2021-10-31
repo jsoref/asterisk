@@ -827,7 +827,7 @@ unsigned long _ast_trace_dec_indent(void);
  *     if (something) {
  *         SCOPE_EXIT_EXPR(break, "Somethiung broke me\n");
  *     } else {
- *         SCOPE_EXIT_EXPR(contniue, "Somethiung continued me\n");
+ *         SCOPE_EXIT_EXPR(continue, "Somethiung continued me\n");
  *     }
  * }
  */
