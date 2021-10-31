@@ -41,7 +41,7 @@ enum ast_fax_capabilities {
 	AST_FAX_TECH_AUDIO     = (1 << 2),
 	/*! T.38 FAX session supported */
 	AST_FAX_TECH_T38       = (1 << 3),
-	/*! sending mulitple documents supported */
+	/*! sending multiple documents supported */
 	AST_FAX_TECH_MULTI_DOC = (1 << 4),
 	/*! T.38 - T.30 Gateway */
 	AST_FAX_TECH_GATEWAY = (1 << 5),

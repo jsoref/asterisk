@@ -40,7 +40,7 @@
  *   http://tools.ietf.org/wg/enum/draft-ietf-enum-branch-location-record/
  *
  * \par Possible improvement
- * \todo Implement a caching mechanism for multile enum lookups
+ * \todo Implement a caching mechanism for multiple enum lookups
  * - See https://issues.asterisk.org/view.php?id=6739
  * \todo The service type selection needs to be redone.
  */
