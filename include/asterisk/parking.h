@@ -285,7 +285,7 @@ int ast_parking_register_bridge_features(struct ast_parking_bridge_feature_fn_ta
  *
  * \param The module name of the provider to unregister
  *
- * \retval 0 if the parking provider \c module_name was unregsistered
+ * \retval 0 if the parking provider \c module_name was unregistered
  * \retval -1 on error
  */
 int ast_parking_unregister_bridge_features(const char *module_name);
@@ -293,8 +293,8 @@ int ast_parking_unregister_bridge_features(const char *module_name);
 /*!
  * \brief Check whether a parking provider is registered
  *
- * \retval 0 if there is no parking provider regsistered
- * \retval 1 if there is a parking provider regsistered
+ * \retval 0 if there is no parking provider registered
+ * \retval 1 if there is a parking provider registered
  */
 int ast_parking_provider_registered(void);
 

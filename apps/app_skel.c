@@ -349,7 +349,7 @@ static int skel_level_cmp(void *obj, void *arg, int flags)
  * bitfields in the config struct will have to use a custom handler
  * \param opt The opaque config option
  * \param var The ast_variable containing the option name and value
- * \param obj The object registerd for this option type
+ * \param obj The object registered for this option type
  * \retval 0 Success
  * \retval non-zero Failure
  */
