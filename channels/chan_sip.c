@@ -13622,7 +13622,7 @@ static enum sip_result add_sdp(struct sip_request *resp, struct sip_pvt *p, int 
 
 		if (doing_directmedia) {
 			ast_format_cap_get_compatible(p->jointcaps, p->redircaps, tmpcap);
-			ast_debug(1, "** Our native-bridge filtered capablity: %s\n", ast_format_cap_get_names(tmpcap, &codec_buf));
+			ast_debug(1, "** Our native-bridge filtered capability: %s\n", ast_format_cap_get_names(tmpcap, &codec_buf));
 		} else {
 			ast_format_cap_append_from_cap(tmpcap, p->jointcaps, AST_MEDIA_TYPE_UNKNOWN);
 		}
