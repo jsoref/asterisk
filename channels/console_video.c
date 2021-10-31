@@ -779,7 +779,7 @@ int console_write_video(struct ast_channel *chan, struct ast_frame *f)
  * is returned as an argument.
  *
  * \param env = video environment descriptor
- * \param tail = tail ponter (pratically a return value)
+ * \param tail = tail ponter (practically a return value)
  */
 static struct ast_frame *get_video_frames(struct video_desc *env, struct ast_frame **tail)
 {
