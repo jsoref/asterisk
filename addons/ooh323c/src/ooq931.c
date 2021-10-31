@@ -2964,7 +2964,7 @@ int ooH323MakeCall_helper(OOH323CallData *call)
       i=0;
       for(k=0; k< call->capPrefs.index; k++)
       {
-         OOTRACEDBGC5("Preffered capability at index %d is %s. (%s, %s)\n",
+         OOTRACEDBGC5("Preferred capability at index %d is %s. (%s, %s)\n",
                       k, ooGetCapTypeText(call->capPrefs.order[k]),
                       call->callType, call->callToken);
 

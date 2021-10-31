@@ -3733,7 +3733,7 @@ int ooOpenLogicalChannel(OOH323CallData *call, enum OOCapType capType )
          }
          if(!epCap)
          {
-            OOTRACEDBGA4("Prefereed capability %d is not a local transmit "
+            OOTRACEDBGA4("Preferred capability %d is not a local transmit "
                          "capability(%s, %s)\n", call->capPrefs.order[k],
                          call->callType, call->callToken);
             continue;
