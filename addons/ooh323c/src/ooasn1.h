@@ -606,7 +606,7 @@ EXTERN int initContextBuffer
 
 /**
  * This function initializes a context block. It makes sure that if the block
- * was not previosly initialized, that all key working parameters are set to
+ * was not previously initialized, that all key working parameters are set to
  * thier correct initial state values (i.e. declared within a function as a
  * normal working variable), it is required that they invoke this function
  * before using it.
