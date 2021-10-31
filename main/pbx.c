@@ -4691,7 +4691,7 @@ static void destroy_exten(struct ast_exten *e)
 
 static void *pbx_thread(void *data)
 {
-	/* Oh joyeous kernel, we're a new thread, with nothing to do but
+	/* Oh joyous kernel, we're a new thread, with nothing to do but
 	   answer this channel and get it going.
 	*/
 	/* NOTE:
