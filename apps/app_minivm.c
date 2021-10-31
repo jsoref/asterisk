@@ -1013,7 +1013,7 @@ static void prep_email_sub_vars(struct ast_channel *channel, const struct minivm
 		pbx_builtin_setvar_helper(channel, var->name, var->value);
 	}
 
-	/* Prepare variables for substition in email body and subject */
+	/* Prepare variables for substitution in email body and subject */
 	pbx_builtin_setvar_helper(channel, "MVM_NAME", vmu->fullname);
 	pbx_builtin_setvar_helper(channel, "MVM_DUR", dur);
 	pbx_builtin_setvar_helper(channel, "MVM_DOMAIN", vmu->domain);
