@@ -59,7 +59,7 @@ Configuration options control the appearance of the gui:
     keypad = /tmp/kpad2.jpg	; the skin
     keypad_font = /tmp/font.png	; the font to use for output
 
-For future implementation, intresting features can be the following:
+For future implementation, interesting features can be the following:
 - save of the whole SDL window as a picture
 - audio output device switching
 
