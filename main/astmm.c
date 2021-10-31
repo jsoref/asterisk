@@ -1150,7 +1150,7 @@ static void mm_atexit_hash_restore(struct region_list *list)
 
 /*!
  * \internal
- * \brief Sort regions comparision.
+ * \brief Sort regions comparison.
  *
  * \param left Region to compare.
  * \param right Region to compare.
