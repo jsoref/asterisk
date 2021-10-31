@@ -7504,7 +7504,7 @@ static int change_priority_caller_on_queue(const char *queuename, const char *ca
 	res = RES_NOT_CALLER;
 	for (qe = q->head; qe; qe = qe->next) {
 		if (strcmp(ast_channel_name(qe->chan), caller) == 0) {
-			ast_debug(1, "%s Caller new prioriry %d in queue %s\n",
+			ast_debug(1, "%s Caller new priority %d in queue %s\n",
 			             caller, priority, queuename);
 			qe->prio = priority;
 			res = RES_OKAY;
