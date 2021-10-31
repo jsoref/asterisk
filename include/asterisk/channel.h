@@ -1025,7 +1025,7 @@ enum {
 	 * Disable device state event caching.  This allows channel
 	 * drivers to selectively prevent device state events from being
 	 * cached by certain channels such as anonymous calls which have
-	 * no persistent represenatation that can be tracked.
+	 * no persistent representation that can be tracked.
 	 */
 	AST_FLAG_DISABLE_DEVSTATE_CACHE = (1 << 21),
 	/*!
