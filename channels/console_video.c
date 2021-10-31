@@ -794,7 +794,7 @@ static struct ast_frame *get_video_frames(struct video_desc *env, struct ast_fra
 	updating the private device buffer in the device table */
 	for (i = 0; i < env->out.device_num; i++) {
 		p_read = grabber_read(&env->out.devices[i], env->out.fps);
-		/* it is used only if different from NULL, we mantain last good buffer otherwise */
+		/* it is used only if different from NULL, we maintain last good buffer otherwise */
 		if (p_read)
 			env->out.devices[i].dev_buf = p_read;
 	}
