@@ -40,7 +40,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int lpcini_(void);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 /*:ref: initlpcenc_ 14 0 */
 /*:ref: initlpcdec_ 14 0 */
 #endif
@@ -50,9 +50,9 @@ extern int lpcini_(void);
 struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* ***************************************************************** */
 
@@ -238,12 +238,12 @@ struct {
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
-    contrl_1.order = 10;
-    contrl_1.lframe = 180;
-    contrl_1.corrp = TRUE_;
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+    control_1.order = 10;
+    control_1.lframe = 180;
+    control_1.corrp = TRUE_;
     return 0;
 } /* lpcini_ */
 

@@ -34,7 +34,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int analys_(real *speech, integer *voice, integer *pitch, real *rms, real *rc, struct lpc10_encoder_state *st);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 /*:ref: preemp_ 14 5 6 6 4 6 6 */
 /*:ref: onset_ 14 7 6 4 4 4 4 4 4 */
 /*:ref: placev_ 14 11 4 4 4 4 4 4 4 4 4 4 4 */
@@ -65,9 +65,9 @@ extern int analys_(real *speech, integer *voice, integer *pitch, real *rms, real
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* Table of constant values */
 
@@ -131,7 +131,7 @@ static integer c__1 = 1;
 
 /* Revision 1.7  1996/03/27  18:06:20  jaf */
 /* Commented out access to MAXOSP, which is just a debugging variable */
-/* that was defined in the COMMON block CONTRL in contrl.fh. */
+/* that was defined in the COMMON block CONTRL in control.fh. */
 
 /* Revision 1.6  1996/03/26  19:31:33  jaf */
 /* Commented out trace statements. */
@@ -185,7 +185,7 @@ static integer c__1 = 1;
 /*  RMS */
 /*       Written. */
 /*  RC */
-/*       Indices 1 through ORDER written (ORDER defined in contrl.fh). */
+/*       Indices 1 through ORDER written (ORDER defined in control.fh). */
 
 /* This subroutine maintains local state from one call to the next.  If */
 /* you want to switch to using a new audio stream for this filter, or */
@@ -406,9 +406,9 @@ static integer c__1 = 1;
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /*       Arguments to entry PITDEC (below) */
 /* 	Parameters/constants */
 /*  Constants */
@@ -483,24 +483,24 @@ static integer c__1 = 1;
     rcbuf = &(st->rcbuf[0]);
     zpre = &(st->zpre);
 
-    i__1 = 720 - contrl_1.lframe;
+    i__1 = 720 - control_1.lframe;
     for (i__ = 181; i__ <= i__1; ++i__) {
-	inbuf[i__ - 181] = inbuf[contrl_1.lframe + i__ - 181];
-	pebuf[i__ - 181] = pebuf[contrl_1.lframe + i__ - 181];
+	inbuf[i__ - 181] = inbuf[control_1.lframe + i__ - 181];
+	pebuf[i__ - 181] = pebuf[control_1.lframe + i__ - 181];
     }
-    i__1 = 540 - contrl_1.lframe;
+    i__1 = 540 - control_1.lframe;
     for (i__ = 229; i__ <= i__1; ++i__) {
-	ivbuf[i__ - 229] = ivbuf[contrl_1.lframe + i__ - 229];
+	ivbuf[i__ - 229] = ivbuf[control_1.lframe + i__ - 229];
     }
-    i__1 = 720 - contrl_1.lframe;
+    i__1 = 720 - control_1.lframe;
     for (i__ = 25; i__ <= i__1; ++i__) {
-	lpbuf[i__ - 25] = lpbuf[contrl_1.lframe + i__ - 25];
+	lpbuf[i__ - 25] = lpbuf[control_1.lframe + i__ - 25];
     }
     j = 1;
     i__1 = (*osptr) - 1;
     for (i__ = 1; i__ <= i__1; ++i__) {
-	if (osbuf[i__ - 1] > contrl_1.lframe) {
-	    osbuf[j - 1] = osbuf[i__ - 1] - contrl_1.lframe;
+	if (osbuf[i__ - 1] > control_1.lframe) {
+	    osbuf[j - 1] = osbuf[i__ - 1] - control_1.lframe;
 	    ++j;
 	}
     }
@@ -508,10 +508,10 @@ static integer c__1 = 1;
     voibuf[0] = voibuf[2];
     voibuf[1] = voibuf[3];
     for (i__ = 1; i__ <= 2; ++i__) {
-	vwin[(i__ << 1) - 2] = vwin[((i__ + 1) << 1) - 2] - contrl_1.lframe;
-	vwin[(i__ << 1) - 1] = vwin[((i__ + 1) << 1) - 1] - contrl_1.lframe;
-	awin[(i__ << 1) - 2] = awin[((i__ + 1) << 1) - 2] - contrl_1.lframe;
-	awin[(i__ << 1) - 1] = awin[((i__ + 1) << 1) - 1] - contrl_1.lframe;
+	vwin[(i__ << 1) - 2] = vwin[((i__ + 1) << 1) - 2] - control_1.lframe;
+	vwin[(i__ << 1) - 1] = vwin[((i__ + 1) << 1) - 1] - control_1.lframe;
+	awin[(i__ << 1) - 2] = awin[((i__ + 1) << 1) - 2] - control_1.lframe;
+	awin[(i__ << 1) - 1] = awin[((i__ + 1) << 1) - 1] - control_1.lframe;
 /*       EWIN(*,J) is unused for J .NE. AF, so the following shift is
 */
 /*       unnecessary.  It also causes error messages when the C versio
@@ -526,7 +526,7 @@ n */
 	voibuf[i__ * 2] = voibuf[(i__ + 1) * 2];
 	voibuf[(i__ << 1) + 1] = voibuf[((i__ + 1) << 1) + 1];
 	rmsbuf[i__ - 1] = rmsbuf[i__];
-	i__1 = contrl_1.order;
+	i__1 = control_1.order;
 	for (j = 1; j <= i__1; ++j) {
 	    rcbuf[j + i__ * 10 - 11] = rcbuf[j + (i__ + 1) * 10 - 11];
 	}
@@ -541,29 +541,29 @@ n */
 */
 /*       cases, keep BIAS the same. */
     temp = 0.f;
-    i__1 = contrl_1.lframe;
+    i__1 = control_1.lframe;
     for (i__ = 1; i__ <= i__1; ++i__) {
-	inbuf[720 - contrl_1.lframe + i__ - 181] = speech[i__] * 4096.f -
+	inbuf[720 - control_1.lframe + i__ - 181] = speech[i__] * 4096.f -
 		(*bias);
-	temp += inbuf[720 - contrl_1.lframe + i__ - 181];
+	temp += inbuf[720 - control_1.lframe + i__ - 181];
     }
-    if (temp > (real) contrl_1.lframe) {
+    if (temp > (real) control_1.lframe) {
 	*bias += 1;
     }
-    if (temp < (real) (-contrl_1.lframe)) {
+    if (temp < (real) (-control_1.lframe)) {
 	*bias += -1;
     }
 /*   Place Voicing Window */
-    i__ = 721 - contrl_1.lframe;
-    preemp_(&inbuf[i__ - 181], &pebuf[i__ - 181], &contrl_1.lframe, &precoef,
+    i__ = 721 - control_1.lframe;
+    preemp_(&inbuf[i__ - 181], &pebuf[i__ - 181], &control_1.lframe, &precoef,
 	    zpre);
-    onset_(pebuf, osbuf, osptr, &c__10, &c__181, &c__720, &contrl_1.lframe, st);
+    onset_(pebuf, osbuf, osptr, &c__10, &c__181, &c__720, &control_1.lframe, st);
 
 /*       MAXOSP is just a debugging variable. */
 
 /* 	MAXOSP = MAX( MAXOSP, OSPTR ) */
 
-    placev_(osbuf, osptr, &c__10, &obound[2], vwin, &c__3, &contrl_1.lframe,
+    placev_(osbuf, osptr, &c__10, &obound[2], vwin, &c__3, &control_1.lframe,
 	    &c__90, &c__156, &c__307, &c__462);
 /*        The Pitch Extraction algorithm estimates the pitch for a frame
 */
@@ -584,12 +584,12 @@ n */
 /*       of INBUF, and writes indices LBUFH+1-LFRAME = 541 through LBUFH
 */
 /*       = 720 of LPBUF. */
-    lpfilt_(&inbuf[228], &lpbuf[384], &c__312, &contrl_1.lframe);
+    lpfilt_(&inbuf[228], &lpbuf[384], &c__312, &control_1.lframe);
 /*       IVFILT reads indices (PWINH-LFRAME-7) = 353 through PWINH = 540
 */
 /*       of LPBUF, and writes indices (PWINH-LFRAME+1) = 361 through */
 /*       PWINH = 540 of IVBUF. */
-    ivfilt_(&lpbuf[204], ivbuf, &c__312, &contrl_1.lframe, ivrc);
+    ivfilt_(&lpbuf[204], ivbuf, &c__312, &control_1.lframe, ivrc);
 /*       TBDM reads indices PWINL = 229 through */
 /*       (PWINL-1)+MAXWIN+(TAU(LTAU)-TAU(1))/2 = 452 of IVBUF, and writes
 */
@@ -620,7 +620,7 @@ n */
     ipitch = tau[midx - 1];
 /*   Place spectrum analysis and energy windows */
     placea_(&ipitch, voibuf, &obound[2], &c__3, vwin, awin, ewin, &
-	    contrl_1.lframe, &c__156);
+	    control_1.lframe, &c__156);
 /*  Remove short term DC bias over the analysis window, Put result in ABUF
 */
     lanal = awin[5] + 1 - awin[4];
@@ -634,14 +634,14 @@ n */
     i__1 = ewin[5] - ewin[4] + 1;
     energy_(&i__1, &abuf[ewin[4] - awin[4]], &rmsbuf[2]);
 /*   Matrix load and invert, check RC's for stability */
-    mload_(&contrl_1.order, &c__1, &lanal, abuf, phi, psi);
-    invert_(&contrl_1.order, phi, psi, &rcbuf[20]);
-    rcchk_(&contrl_1.order, &rcbuf[10], &rcbuf[20]);
+    mload_(&control_1.order, &c__1, &lanal, abuf, phi, psi);
+    invert_(&control_1.order, phi, psi, &rcbuf[20]);
+    rcchk_(&control_1.order, &rcbuf[10], &rcbuf[20]);
 /*   Set return parameters */
     voice[1] = voibuf[2];
     voice[2] = voibuf[3];
     *rms = rmsbuf[0];
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	rc[i__] = rcbuf[i__ - 1];
     }

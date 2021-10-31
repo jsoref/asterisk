@@ -28,7 +28,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int encode_(integer *voice, integer *pitch, real *rms, real *rc, integer *ipitch, integer *irms, integer *irc);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 #endif
 
 /* Common Block Declarations */
@@ -36,9 +36,9 @@ extern int encode_(integer *voice, integer *pitch, real *rms, real *rc, integer 
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* Table of constant values */
 
@@ -264,9 +264,9 @@ static integer c__2 = 2;
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /*       Parameters/constants */
 /*       These arrays are not Fortran PARAMETER's, but they are defined */
 /*       by DATA statements below, and their contents are never altered.
@@ -280,7 +280,7 @@ static integer c__2 = 2;
     /* Function Body */
 /*  Scale RMS and RC's to integers */
     *irms = (integer)*rms;
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 1; i__ <= i__1; ++i__) {
 	irc[i__] = (integer)(rc[i__] * 32768.f);
     }
@@ -290,7 +290,7 @@ static integer c__2 = 2;
     if (voice[1] != 0 && voice[2] != 0) {
 	*ipitch = entau[*pitch - 1];
     } else {
-	if (contrl_1.corrp) {
+	if (control_1.corrp) {
 	    *ipitch = 0;
 	    if (voice[1] != voice[2]) {
 		*ipitch = 127;
@@ -333,15 +333,15 @@ static integer c__2 = 2;
 	irc[i__] = i2;
     }
 /*  Encode RC(3) - (10) linearly, remove bias then scale */
-    i__1 = contrl_1.order;
+    i__1 = control_1.order;
     for (i__ = 3; i__ <= i__1; ++i__) {
 	i2 = irc[i__] / 2;
-	i2 = (integer)((i2 + enadd[contrl_1.order + 1 - i__ - 1]) * enscl[
-		contrl_1.order + 1 - i__ - 1]);
+	i2 = (integer)((i2 + enadd[control_1.order + 1 - i__ - 1]) * enscl[
+		control_1.order + 1 - i__ - 1]);
 /* Computing MIN */
 	i__2 = max(i2,-127);
 	i2 = min(i__2,127);
-	nbit = enbits[contrl_1.order + 1 - i__ - 1];
+	nbit = enbits[control_1.order + 1 - i__ - 1];
 	i3 = 0;
 	if (i2 < 0) {
 	    i3 = -1;
@@ -356,7 +356,7 @@ static integer c__2 = 2;
 /*     important parameters during non-voiced frames. */
 /*     RC(1) - RC(4) are protected using 20 parity bits */
 /*     replacing RC(5) - RC(10). */
-    if (contrl_1.corrp) {
+    if (control_1.corrp) {
 	if (*ipitch == 0 || *ipitch == 127) {
 	    irc[5] = enctab[(irc[1] & 30) / 2];
 	    irc[6] = enctab[(irc[2] & 30) / 2];

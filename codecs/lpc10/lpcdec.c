@@ -40,7 +40,7 @@ Some OSS fixes and a few lpc changes to make it actually work
 #ifdef P_R_O_T_O_T_Y_P_E_S
 extern int lpcdec_(integer *bits, real *speech);
 extern int initlpcdec_(void);
-/* comlen contrl_ 12 */
+/* comlen control_ 12 */
 /*:ref: chanrd_ 14 5 4 4 4 4 4 */
 /*:ref: decode_ 14 7 4 4 4 4 4 6 6 */
 /*:ref: synths_ 14 6 4 4 6 6 6 4 */
@@ -53,9 +53,9 @@ extern int initlpcdec_(void);
 extern struct {
     integer order, lframe;
     logical corrp;
-} contrl_;
+} control_;
 
-#define contrl_1 contrl_
+#define control_1 control_
 
 /* Table of constant values */
 
@@ -271,9 +271,9 @@ static integer c__10 = 10;
 /* embedded. */
 /* listl and lincnt are not needed for an embedded LPC10 at all. */
 /* 	integer nframe, nunsfm, iclip, maxosp, listl, lincnt */
-/* 	common /contrl/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
-/* 	common /contrl/ quant, nbits */
-/* 	common /contrl/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
+/* 	common /control/ fsi, fso, fpi, fpo, fbi, fbo, pbin, fmsg, fdebug */
+/* 	common /control/ quant, nbits */
+/* 	common /control/ nframe, nunsfm, iclip, maxosp, listl, lincnt */
 /*       Local variables that need not be saved */
 /*       Uncoded speech parameters */
 /*       Coded speech parameters */

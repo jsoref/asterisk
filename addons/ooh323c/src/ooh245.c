@@ -1722,7 +1722,7 @@ int ooHandleOpenLogicalChannel_helper(OOH323CallData *call,
    	iPAddress->tsapIdentifier = pLogicalChannel->localRtpPort;
    }
 
-   /* media contrcol channel */
+   /* media control channel */
    h2250lcap->mediaControlChannel.t =
                                  T_H245TransportAddress_unicastAddress;
    h2250lcap->mediaControlChannel.u.unicastAddress =  (H245UnicastAddress*)

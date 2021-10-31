@@ -68,10 +68,10 @@ library.
 
 3.
 
-The f2c output originally had a file called contrl_com.c, that defined
+The f2c output originally had a file called control_com.c, that defined
 a small structure containing a few variables that were used in many
 different functions of the LPC10 code.  Every file containing
-functions that used it defined it as "extern", while contrl_com.c
+functions that used it defined it as "extern", while control_com.c
 actually allocated storage for the structure.  Bill Dorsey, one of the
 lead developers of Nautilus, said that the Microsoft C compiler had
 problems either compiling this file, or linking it with all of the
