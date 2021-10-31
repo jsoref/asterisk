@@ -102,7 +102,7 @@ struct adapter_pvt {
 	char id[31];					/* the 'name' from mobile.conf */
 	bdaddr_t addr;					/* adddress of adapter */
 	unsigned int inuse:1;				/* are we in use ? */
-	unsigned int alignment_detection:1;		/* do alignment detection on this adpater? */
+	unsigned int alignment_detection:1;		/* do alignment detection on this adapter? */
 	struct io_context *io;				/*!< io context for audio connections */
 	struct io_context *accept_io;			/*!< io context for sco listener */
 	int *sco_id;					/*!< the io context id of the sco listener socket */
