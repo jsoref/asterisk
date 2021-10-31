@@ -198,7 +198,7 @@ static void icalendar_add_event(icalcomponent *comp, struct icaltime_span *span,
 	struct icaltriggertype trigger;
 
 	if (!(pvt && pvt->owner)) {
-		ast_log(LOG_ERROR, "Require a private structure with an ownenr\n");
+		ast_log(LOG_ERROR, "Require a private structure with an owner\n");
 		return;
 	}
 
