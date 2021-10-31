@@ -896,7 +896,7 @@ static void *video_thread(void *arg)
 	 */
 	video_out_init(env);
 
-	/* Writes intial status of the sources. */
+	/* Writes initial status of the sources. */
 	if (env->gui) {
 		for (i = 0; i < env->out.device_num; i++) {
 			print_message(env->gui->thumb_bd_array[i].board,

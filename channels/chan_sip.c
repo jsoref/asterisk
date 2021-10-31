@@ -3442,7 +3442,7 @@ static inline void pvt_set_needdestroy(struct sip_pvt *pvt, const char *reason)
 	}
 }
 
-/*! \brief Initialize the initital request packet in the pvt structure.
+/*! \brief Initialize the initial request packet in the pvt structure.
 	This packet is used for creating replies and future requests in
 	a dialog */
 static void initialize_initreq(struct sip_pvt *p, struct sip_request *req)
@@ -28996,7 +28996,7 @@ static int handle_request_register(struct sip_pvt *p, struct sip_request *req, s
 {
 	enum check_auth_result res;
 
-	/* If this is not the intial request, and the initial request isn't
+	/* If this is not the initial request, and the initial request isn't
 	 * a register, something screwy happened, so bail */
 	if (p->initreq.headers && p->initreq.method != SIP_REGISTER) {
 		ast_log(LOG_WARNING, "Ignoring spurious REGISTER with Call-ID: %s\n", p->callid);

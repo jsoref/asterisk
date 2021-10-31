@@ -173,7 +173,7 @@ static int audiosocket_run(struct ast_channel *chan, const char *id, int svc)
 	}
 
 	if (ast_audiosocket_init(svc, id)) {
-		ast_log(LOG_ERROR, "Failed to intialize AudioSocket\n");
+		ast_log(LOG_ERROR, "Failed to initialize AudioSocket\n");
 		return -1;
 	}
 

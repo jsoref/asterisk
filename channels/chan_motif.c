@@ -2731,7 +2731,7 @@ static int load_module(void)
 	}
 
 	if (aco_info_init(&cfg_info)) {
-		ast_log(LOG_ERROR, "Unable to intialize configuration for chan_motif.\n");
+		ast_log(LOG_ERROR, "Unable to initialize configuration for chan_motif.\n");
 		goto end;
 	}
 

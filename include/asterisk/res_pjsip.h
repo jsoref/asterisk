@@ -3193,7 +3193,7 @@ const char *ast_sip_get_contact_short_status_label(const enum ast_sip_contact_st
  *
  * \param tdata the tx data from the original request
  * \retval 0 No more addresses to try
- * \retval 1 The request was successfully re-intialized
+ * \retval 1 The request was successfully re-initialized
  */
 int ast_sip_failover_request(pjsip_tx_data *tdata);
 
