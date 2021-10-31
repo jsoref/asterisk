@@ -12828,7 +12828,7 @@ static int get_domain(const char *str, char *domain, int len)
 }
 
 /*!
-  \brief Choose realm based on From header and then To header or use globaly configured realm.
+  \brief Choose realm based on From header and then To header or use globally configured realm.
   Realm from From/To header should be listed among served domains in config file: domain=...
 */
 static void get_realm(struct sip_pvt *p, const struct sip_request *req)
