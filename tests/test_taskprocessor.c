@@ -546,7 +546,7 @@ static int check_stats(struct ast_test *test, const struct test_listener_pvt *pv
 /*!
  * \brief Test for a taskprocessor with custom listener.
  *
- * This test pushes tasks to a taskprocessor with a custom listener, executes the taskss,
+ * This test pushes tasks to a taskprocessor with a custom listener, executes the tasks,
  * and destroys the taskprocessor.
  *
  * The test ensures that the listener's callbacks are called when expected and that the data
