@@ -134,7 +134,7 @@ EXTERN OOStkCmdStat ooForwardCall(const char* callToken, char *dest);
 
 /**
  * This function is used by an user application to terminate a call.
- * @param callToken   The uinque token for the call.
+ * @param callToken   The unique token for the call.
  * @param reason      Reason for hanging call.
  *
  * @return            Returns OOStkCmdStat value indication success or failure.

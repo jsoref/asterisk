@@ -103,7 +103,7 @@ static struct prometheus_metric_wrapper *create_wrapper(const char *key)
  * \internal
  * \brief Get a wrapper by its key
  *
- * \param key The unqiue key for the wrapper
+ * \param key The unique key for the wrapper
  *
  * \retval NULL on no wrapper found :-\
  * \retval wrapper on success

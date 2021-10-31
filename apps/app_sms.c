@@ -117,7 +117,7 @@
 /* user ref field */
 
 static volatile unsigned char message_ref;  /* arbitrary message ref */
-static volatile unsigned int seq;           /* arbitrary message sequence number for unqiue files */
+static volatile unsigned int seq;           /* arbitrary message sequence number for unique files */
 
 static char log_file[255];
 
