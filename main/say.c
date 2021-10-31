@@ -5502,7 +5502,7 @@ int ast_say_date_with_format_he(struct ast_channel *chan, time_t t, const char *
 				res = ast_say_number_full_he(chan, tm.tm_year + 1900, ints, lang, "f", -1, -1);
 				break;
 			case 'I':
-			case 'l': /* 12-Hour -> we do not support 12 hour based langauges in Hebrew */
+			case 'l': /* 12-Hour -> we do not support 12 hour based languages in Hebrew */
 			case 'H':
 			case 'k': /* 24-Hour */
 				res = ast_say_number_full_he(chan, tm.tm_hour, ints, lang, "f", -1, -1);
