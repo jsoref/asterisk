@@ -58,8 +58,8 @@ msgid "Dialing..."
 msgstr "Dialing..."
 
 #: chan_unistim_lang.c:13
-msgid "TransfrCancel"
-msgstr "TransfrCancel"
+msgid "TransferCancel"
+msgstr "TransferCancel"
 
 #: chan_unistim_lang.c:14
 #: chan_unistim_lang.c:20

@@ -104,7 +104,7 @@ enum Q931InformationTransferCapability {
    Q931TransferUnrestrictedDigital = 8,
    Q931TransferRestrictedDigital = 9,
    Q931Transfer3_1kHzAudio = 16,
-   Q931TrasnferUnrestrictedDigitalWithTones = 17,
+   Q931TransferUnrestrictedDigitalWithTones = 17,
    Q931TransferVideo = 24
 };
 

@@ -3156,7 +3156,7 @@ static void handle_call_outgoing(struct unistimsession *s)
 			send_text(TEXT_LINE1, TEXT_NORMAL, s, s->device->phone_number);
 			send_text(TEXT_LINE2, TEXT_NORMAL, s, ustmtext("Dialing...", s));
 		}
-		send_text_status(s, ustmtext("TransfrCancel", s));
+		send_text_status(s, ustmtext("TransferCancel", s));
 
 		if (ast_pthread_create(&sub->ss_thread, NULL, unistim_ss, c)) {
 			ast_log(LOG_WARNING, "Unable to start simple switch on channel %p\n", c);
