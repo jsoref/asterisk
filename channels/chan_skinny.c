@@ -5992,7 +5992,7 @@ static void setsubstate(struct skinny_subchannel *sub, int state)
 		sub->substate = SUBSTATE_HOLD;
 		break;
 	default:
-		ast_log(LOG_WARNING, "Was asked to change to nonexistant substate %d on Sub-%u\n", state, sub->callid);
+		ast_log(LOG_WARNING, "Was asked to change to nonexistent substate %d on Sub-%u\n", state, sub->callid);
 	}
 	skinny_unlocksub(sub);
 }

@@ -208,7 +208,7 @@ AST_TEST_DEFINE(format_cache_get_nonexistent)
 
 	switch (cmd) {
 	case TEST_INIT:
-		info->name = "format_cache_get_nonxistent";
+		info->name = "format_cache_get_nonexistent";
 		info->category = "/main/format_cache/";
 		info->summary = "format cache get unit test";
 		info->description =

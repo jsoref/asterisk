@@ -933,7 +933,7 @@ AST_TEST_DEFINE(voicemail_api_off_nominal_snapshot)
 		info->description =
 			"Test off nominal requests for mailbox snapshots.  This includes"
 			" testing the following:\n"
-			" * Access to non-exisstent mailbox\n"
+			" * Access to nonexistent mailbox\n"
 			" * Access to NULL mailbox\n"
 			" * Access to non-existent context\n"
 			" * Access to non-existent folder\n"
