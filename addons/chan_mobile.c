@@ -2176,7 +2176,7 @@ static int hfp_parse_ecav(struct hfp_pvt *hfp, char *buf)
 }
 
 /*!
- * \brief Enable Sony Erricson extensions / indications.
+ * \brief Enable Sony Ericsson extensions / indications.
  * \param hfp an hfp_pvt struct
  */
 static int hfp_send_ecam(struct hfp_pvt *hfp)
