@@ -1376,7 +1376,7 @@ static char *handle_cli_dialplan_add_ignorepat(struct ast_cli_entry *e, int cmd,
 			break;
 
 		default:
-			ast_cli(a->fd, "Failed to add ingore pattern '%s' into '%s' context\n",
+			ast_cli(a->fd, "Failed to add ignore pattern '%s' into '%s' context\n",
 				a->argv[3], a->argv[5]);
 			break;
 		}
