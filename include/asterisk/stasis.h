@@ -1185,7 +1185,7 @@ struct stasis_caching_topic *stasis_caching_unsubscribe(
  * \brief Unsubscribes a caching topic from its upstream topic, blocking until
  * all messages have been forwarded.
  *
- * See stasis_unsubscriben_and_join() for more info on when to use this as
+ * See stasis_unsubscribe_and_join() for more info on when to use this as
  * opposed to stasis_caching_unsubscribe().
  *
  * \param caching_topic Caching topic to unsubscribe
