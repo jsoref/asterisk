@@ -553,7 +553,7 @@ void iax_frame_subclass2str(enum iax_frame_subclass subclass, char *str, size_t 
 		cmd = "QUELCH ";
 		break;
 	case IAX_COMMAND_UNQUELCH:
-		cmd = "UNQULCH";
+		cmd = "UNQUELCH";
 		break;
 	case IAX_COMMAND_POKE:
 		cmd = "POKE   ";
