@@ -10715,7 +10715,7 @@ Authors' Addresses
 
    Alan Duric
    Telio AS
-   Stoperigt. 2
+   Stoperight. 2
    Oslo, N-0250
    Norway
 

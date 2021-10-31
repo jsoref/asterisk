@@ -4891,7 +4891,7 @@ int ast_context_remove_include2(struct ast_context *con, const char *include, co
 }
 
 /*!
- * \note This function locks contexts list by &conlist, search for the rigt context
+ * \note This function locks contexts list by &conlist, search for the right context
  * structure, leave context list locked and call ast_context_remove_switch2
  * which removes switch, unlock contexts list and return ...
  */

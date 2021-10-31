@@ -2011,7 +2011,7 @@ static int leave_voicemail(struct ast_channel *chan, char *username, struct leav
 			S_COR(ast_channel_caller(chan)->id.number.valid, ast_channel_caller(chan)->id.number.str, NULL),
 			"Unknown");
 		snprintf(logbuf, sizeof(logbuf),
-			/* "Mailbox:domain:macrocontext:exten:priority:callerchan:callerid:origdate:origtime:duration:durationstatus:accountcode" */
+			/* "Mailbox:domain:macrocontext:exten:priority:callerchan:callerid:origdate:orightime:duration:durationstatus:accountcode" */
 			"%s:%s:%s:%s:%d:%s:%s:%s:%s:%d:%s:%s\n",
 			username,
 			ast_channel_context(chan),

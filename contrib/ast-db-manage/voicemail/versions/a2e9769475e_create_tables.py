@@ -40,7 +40,7 @@ def upgrade():
         sa.Column('context', sa.String(80)),
         sa.Column('macrocontext', sa.String(80)),
         sa.Column('callerid', sa.String(80)),
-        sa.Column('origtime', sa.Integer),
+        sa.Column('orightime', sa.Integer),
         sa.Column('duration', sa.Integer),
         sa.Column('recording', sa.LargeBinary),
         sa.Column('flag', sa.String(30)),

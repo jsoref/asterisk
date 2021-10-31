@@ -1411,8 +1411,8 @@ struct skinny_subchannel {
 	int cfwd_sched;
 	int dialType;
 	int getforward;
-	char *origtonum;
-	char *origtoname;
+	char *orightonum;
+	char *orightoname;
 
 	AST_LIST_ENTRY(skinny_subchannel) list;
 	struct skinny_subchannel *related;
@@ -2466,7 +2466,7 @@ static void transmit_microphone_mode(struct skinny_device *d, int mode)
 
 //static void transmit_callinfo(struct skinny_subchannel *sub)
 static void transmit_callinfo(struct skinny_device *d, int instance, int callid,
-	char *fromname, char *fromnum, char *toname, char *tonum, int calldirection, char *origtonum, char *origtoname)
+	char *fromname, char *fromnum, char *toname, char *tonum, int calldirection, char *orightonum, char *orightoname)
 {
 	struct skinny_req *req;
 
@@ -2477,24 +2477,24 @@ static void transmit_callinfo(struct skinny_device *d, int instance, int callid,
 	ast_copy_string(req->data.callinfo.callingParty, fromnum, sizeof(req->data.callinfo.callingParty));
 	ast_copy_string(req->data.callinfo.calledPartyName, toname, sizeof(req->data.callinfo.calledPartyName));
 	ast_copy_string(req->data.callinfo.calledParty, tonum, sizeof(req->data.callinfo.calledParty));
-	if (origtoname) {
-		ast_copy_string(req->data.callinfo.originalCalledPartyName, origtoname, sizeof(req->data.callinfo.originalCalledPartyName));
+	if (orightoname) {
+		ast_copy_string(req->data.callinfo.originalCalledPartyName, orightoname, sizeof(req->data.callinfo.originalCalledPartyName));
 	}
-	if (origtonum) {
-		ast_copy_string(req->data.callinfo.originalCalledParty, origtonum, sizeof(req->data.callinfo.originalCalledParty));
+	if (orightonum) {
+		ast_copy_string(req->data.callinfo.originalCalledParty, orightonum, sizeof(req->data.callinfo.originalCalledParty));
 	}
 
 	req->data.callinfo.instance = htolel(instance);
 	req->data.callinfo.reference = htolel(callid);
 	req->data.callinfo.type = htolel(calldirection);
 
-	SKINNY_DEBUG(DEBUG_PACKET, 3, "Transmitting CALL_INFO_MESSAGE to %s, to %s(%s) from %s(%s), origto %s(%s) (dir=%d) on %s(%d)\n",
-		d->name, toname, tonum, fromname, fromnum, origtoname, origtonum, calldirection, d->name, instance);
+	SKINNY_DEBUG(DEBUG_PACKET, 3, "Transmitting CALL_INFO_MESSAGE to %s, to %s(%s) from %s(%s), orighto %s(%s) (dir=%d) on %s(%d)\n",
+		d->name, toname, tonum, fromname, fromnum, orightoname, orightonum, calldirection, d->name, instance);
 	transmit_response(d, req);
 }
 
 static void transmit_callinfo_variable(struct skinny_device *d, int instance, int callreference,
-	char *fromname, char *fromnum, char *toname, char *tonum, int calldirection, char *origtonum, char *origtoname)
+	char *fromname, char *fromnum, char *toname, char *tonum, int calldirection, char *orightonum, char *orightoname)
 {
 	struct skinny_req *req;
 	char *strptr;
@@ -2519,7 +2519,7 @@ static void transmit_callinfo_variable(struct skinny_device *d, int instance, in
 	thestrings[1] = "";                     /* Appears to be origfrom */
 	if (calldirection == SKINNY_OUTGOING) {
 		thestrings[2] = tonum;
-		thestrings[3] = origtonum;
+		thestrings[3] = orightonum;
 	} else {
 		thestrings[2] = "";
 		thestrings[3] = "";
@@ -2532,7 +2532,7 @@ static void transmit_callinfo_variable(struct skinny_device *d, int instance, in
 	thestrings[8] = "";
 	thestrings[9] = fromname;
 	thestrings[10] = toname;
-	thestrings[11] = origtoname;
+	thestrings[11] = orightoname;
 	thestrings[12] = "";
 
 	strptr = req->data.callinfomessagevariable.calldetails;
@@ -2551,8 +2551,8 @@ static void transmit_callinfo_variable(struct skinny_device *d, int instance, in
 
 	req->len = req->len - (callinfostrleft & ~0x3);
 
-	SKINNY_DEBUG(DEBUG_PACKET, 3, "Transmitting CALL_INFO_MESSAGE_VARIABLE to %s, to %s(%s) from %s(%s), origto %s(%s) (dir=%d) on %s(%d)\n",
-		d->name, toname, tonum, fromname, fromnum, origtoname, origtonum, calldirection, d->name, instance);
+	SKINNY_DEBUG(DEBUG_PACKET, 3, "Transmitting CALL_INFO_MESSAGE_VARIABLE to %s, to %s(%s) from %s(%s), orighto %s(%s) (dir=%d) on %s(%d)\n",
+		d->name, toname, tonum, fromname, fromnum, orightoname, orightonum, calldirection, d->name, instance);
 	transmit_response(d, req);
 }
 
@@ -2597,9 +2597,9 @@ static void send_callinfo(struct skinny_subchannel *sub)
 	}
 
 	if (d->protocolversion < 17) {
-		transmit_callinfo(d, l->instance, sub->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->origtonum, sub->origtoname);
+		transmit_callinfo(d, l->instance, sub->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->orightonum, sub->orightoname);
 	} else {
-		transmit_callinfo_variable(d, l->instance, sub->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->origtonum, sub->origtoname);
+		transmit_callinfo_variable(d, l->instance, sub->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->orightonum, sub->orightoname);
 	}
 }
 
@@ -2644,9 +2644,9 @@ static void push_callinfo(struct skinny_subline *subline, struct skinny_subchann
 	}
 
 	if (d->protocolversion < 17) {
-		transmit_callinfo(subline->line->device, subline->line->instance, subline->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->origtonum, sub->origtoname);
+		transmit_callinfo(subline->line->device, subline->line->instance, subline->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->orightonum, sub->orightoname);
 	} else {
-		transmit_callinfo_variable(subline->line->device, subline->line->instance, subline->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->origtonum, sub->origtoname);
+		transmit_callinfo_variable(subline->line->device, subline->line->instance, subline->callid, fromname, fromnum, toname, tonum, sub->calldirection, sub->orightonum, sub->orightoname);
 	}
 }
 
@@ -3535,11 +3535,11 @@ static void update_connectedline(struct skinny_subchannel *sub, const void *data
 		return;
 	}
 
-	if (sub->calldirection == SKINNY_OUTGOING && !sub->origtonum) {
-		/* Do not set origtonum before here or origtoname won't be set */
-		sub->origtonum = ast_strdup(sub->exten);
+	if (sub->calldirection == SKINNY_OUTGOING && !sub->orightonum) {
+		/* Do not set orightonum before here or orightoname won't be set */
+		sub->orightonum = ast_strdup(sub->exten);
 		if (ast_channel_connected(c)->id.name.valid) {
-			sub->origtoname = ast_strdup(ast_channel_connected(c)->id.name.str);
+			sub->orightoname = ast_strdup(ast_channel_connected(c)->id.name.str);
 		}
 	}
 
@@ -5003,8 +5003,8 @@ static int skinny_hangup(struct ast_channel *ast)
 	skinny_set_owner(sub, NULL);
 	ast_channel_tech_pvt_set(ast, NULL);
 	destroy_rtp(sub);
-	ast_free(sub->origtonum);
-	ast_free(sub->origtoname);
+	ast_free(sub->orightonum);
+	ast_free(sub->orightoname);
 	ast_free(sub);
 	ast_module_unref(ast_module_info->self);
 	return 0;
