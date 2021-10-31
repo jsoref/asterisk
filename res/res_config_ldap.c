@@ -1758,7 +1758,7 @@ static int unload_module(void)
 	return 0;
 }
 
-/*! \brief Relod Module
+/*! \brief Reload Module
  */
 static int reload(void)
 {
