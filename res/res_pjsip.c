@@ -941,7 +941,7 @@
 					</para></description>
 				</configOption>
 				<configOption name="t38_bind_udptl_to_media_address" default="no">
-					<synopsis>Bind the UDPTL instance to the media_adress</synopsis>
+					<synopsis>Bind the UDPTL instance to the media_address</synopsis>
 					<description><para>
 						If media_address is specified, this option causes the UDPTL instance to be bound to
 						the specified ip address which causes the packets to be sent from that address.

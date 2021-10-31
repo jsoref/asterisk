@@ -94,7 +94,7 @@
 ;	1. Asterisk checks the SIP From: address username and matches against
 ;	   names of devices with type=user
 ;	   The name is the text between square brackets [name]
-;	2. Asterisk checks the From: addres and matches the list of devices
+;	2. Asterisk checks the From: address and matches the list of devices
 ;	   with a type=peer
 ;	3. Asterisk checks the IP address (and port number) that the INVITE
 ;	   was sent from and matches against any devices with type=peer
