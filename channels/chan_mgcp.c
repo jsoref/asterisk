@@ -3534,7 +3534,7 @@ static int handle_request(struct mgcp_subchannel *sub, struct mgcp_request *req,
 			}
 			*/
 			if (p->transfer && (sub->owner && sub->next->owner) && ((!sub->outgoing) || (!sub->next->outgoing))) {
-				/* We're allowed to transfer, we have two avtive calls and */
+				/* We're allowed to transfer, we have two active calls and */
 				/* we made at least one of the calls.  Let's try and transfer */
 				ast_mutex_lock(&p->sub->next->lock);
 				res = attempt_transfer(p, sub);

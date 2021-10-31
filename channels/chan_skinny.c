@@ -3144,7 +3144,7 @@ static void transmit_cfwdstate(struct skinny_device *d, struct skinny_line *l)
 	else
 		req->data.forwardstat.activeforward = htolel(0);
 
-	SKINNY_DEBUG(DEBUG_PACKET, 3, "Transmitting FORWARD_STAT_MESSAGE to %s, inst %d, all %s, busy %s, noans %s, acitve %d\n",
+	SKINNY_DEBUG(DEBUG_PACKET, 3, "Transmitting FORWARD_STAT_MESSAGE to %s, inst %d, all %s, busy %s, noans %s, active %d\n",
 		d->name, l->instance, l->call_forward_all, l->call_forward_busy, l->call_forward_noanswer, anyon ? 7 : 0);
 	transmit_response(d, req);
 }
