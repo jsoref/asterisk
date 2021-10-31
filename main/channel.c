@@ -2869,7 +2869,7 @@ static inline int should_trigger_dtmf_emulating(struct ast_channel *chan)
 			ast_tvdiff_ms(ast_tvnow(), *ast_channel_dtmf_tv(chan)) < 2*AST_MIN_DTMF_GAP) {
 		/*
 		 * We're not in the middle of a digit, but it hasn't been long enough
-		 * since the last digit, so we'll have to trigger DTMF furtheron.
+		 * since the last digit, so we'll have to trigger DTMF further on.
 		 * Using 2 times AST_MIN_DTMF_GAP to trigger readq reading for possible
 		 * buffered next dtmf event
 		 */
