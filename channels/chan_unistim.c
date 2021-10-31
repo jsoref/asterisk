@@ -2176,7 +2176,7 @@ static void rcv_mac_addr(struct unistimsession *pte, const unsigned char *buf)
 		struct unistim_line *line;
 		struct unistim_subchannel *sub;
 
-		ast_verb(3, "Device '%s' successfuly registered\n", pte->device->name);
+		ast_verb(3, "Device '%s' successfully registered\n", pte->device->name);
 
 		AST_LIST_LOCK(&pte->device->subs);
 		AST_LIST_TRAVERSE_SAFE_BEGIN(&pte->device->subs, sub, list) {

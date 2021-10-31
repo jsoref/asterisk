@@ -4827,7 +4827,7 @@ struct ast_channel *ast_channel_yank(struct ast_channel *yankee);
  * use ast_bridge_join() or ast_bridge_impart(). If you wish to move a bridged
  * channel into the place of another bridged channel, then use ast_bridge_move().
  *
- * \note When this function returns succesfully, the source channel is in a
+ * \note When this function returns successfully, the source channel is in a
  * state where its continued use is unreliable.
  *
  * \note absolutely _NO_ channel locks should be held before calling this function.

@@ -196,15 +196,15 @@ int ast_jb_get_when_to_wakeup(struct ast_channel *c0, struct ast_channel *c1, in
  * \param f frame.
  *
  * Called from ast_generic_bridge() to put a frame into a channel's jitterbuffer.
- * The function will successfuly enqueue a frame if and only if:
+ * The function will successfully enqueue a frame if and only if:
  * 1. the channel is using a jitterbuffer (as determined by ast_jb_do_usecheck()),
  * 2. the frame's type is AST_FRAME_VOICE,
  * 3. the frame has timing info set and has length >= 2 ms,
  * 4. there is no some internal error happened (like failed memory allocation).
- * Frames, successfuly queued, should be delivered by the channel's jitterbuffer,
+ * Frames, successfully queued, should be delivered by the channel's jitterbuffer,
  * when their delivery time has came.
- * Frames, not successfuly queued, should be delivered immediately.
- * Dropped by the jb implementation frames are considered successfuly enqueued as
+ * Frames, not successfully queued, should be delivered immediately.
+ * Dropped by the jb implementation frames are considered successfully enqueued as
  * far as they should not be delivered at all.
  *
  * \retval 0 if the frame was queued
