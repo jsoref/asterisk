@@ -173,7 +173,7 @@ struct video_device {
 	struct fbuf_t		*dev_buf;	/* buffer for incoming data		*/
 	struct timeval		last_frame;	/* when we read the last frame ?	*/
 	int 			status_index;	/* what is the status of the device (source) */
-	/* status index is set using the IS_ON, IS_PRIMARY and IS_SECONDARY costants */
+	/* status index is set using the IS_ON, IS_PRIMARY and IS_SECONDARY constants */
 	/* status_index is the index of the status message in the src_msgs array in console_gui.c */
 };
 

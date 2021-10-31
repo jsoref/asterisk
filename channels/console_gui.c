@@ -231,7 +231,7 @@ static struct gui_info *cleanup_sdl(struct gui_info *gui, int device_num)
  * below the source windows
  */
 
-/* costants defined to describe status of devices */
+/* constants defined to describe status of devices */
 #define IS_PRIMARY 1
 #define IS_SECONDARY 2
 #define IS_ON 4
