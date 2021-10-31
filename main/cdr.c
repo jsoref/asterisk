@@ -1532,7 +1532,7 @@ static void cdr_object_swap_snapshot(struct cdr_object_snapshot *old_snapshot,
 		struct ast_channel_snapshot *new_snapshot)
 {
 	cdr_object_update_cid(old_snapshot, new_snapshot);
-	ao2_t_replace(old_snapshot->snapshot, new_snapshot, "Swap CDR shapshot");
+	ao2_t_replace(old_snapshot->snapshot, new_snapshot, "Swap CDR snapshot");
 }
 
 /* BASE METHOD IMPLEMENTATIONS */

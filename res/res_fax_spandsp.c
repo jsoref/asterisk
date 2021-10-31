@@ -823,7 +823,7 @@ static int spandsp_fax_gateway_start(struct ast_fax_session *s)
 	};
 
 #if SPANDSP_RELEASE_DATE >= 20081012
-	/* for spandsp shaphots 0.0.6 and higher */
+	/* for spandsp snapshot 0.0.6 and higher */
 	p->t38_core_state=&p->t38_gw_state.t38x.t38;
 #else
 	/* for spandsp release 0.0.5 */
@@ -938,7 +938,7 @@ static int spandsp_fax_start(struct ast_fax_session *s)
 
 	if (p->ist38) {
 #if SPANDSP_RELEASE_DATE >= 20080725
-		/* for spandsp shaphots 0.0.6 and higher */
+		/* for spandsp snapshot 0.0.6 and higher */
 		p->t30_state = &p->t38_state.t30;
 		p->t38_core_state = &p->t38_state.t38_fe.t38;
 #else
@@ -948,7 +948,7 @@ static int spandsp_fax_start(struct ast_fax_session *s)
 #endif
 	} else {
 #if SPANDSP_RELEASE_DATE >= 20080725
-		/* for spandsp shaphots 0.0.6 and higher */
+		/* for spandsp snapshot 0.0.6 and higher */
 		p->t30_state = &p->fax_state.t30;
 #else
 		/* for spandsp release 0.0.5 */
