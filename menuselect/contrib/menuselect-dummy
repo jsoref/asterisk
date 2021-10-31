@@ -79,7 +79,7 @@ my $ConfFile = "build_tools/conf";
 
 my $DumpFile = 'build_tools/dump_deps';
 
-# Modules removed randomely:
+# Modules removed randomly:
 my $RandomModsFile = "build_tools/mods_removed_random";
 
 my $MakedepsFile = "menuselect.makedeps";
@@ -99,7 +99,7 @@ my @ExcludedModules = ();
 # Do try building those. Overrides 'exclude' and 'defaultenable: no'
 my @IncludedModules = ();
 
-# A chance to rule-out a module randomely.
+# A chance to rule-out a module randomly.
 my $RandomKnockoutFactor = 0;
 
 sub warning($) {
