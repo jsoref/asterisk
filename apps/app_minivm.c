@@ -2954,7 +2954,7 @@ static int load_config(int reload)
 		ast_copy_string(template->dateformat, chanvar, sizeof(template->dateformat));
 	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailfromstring")))
 		ast_copy_string(template->fromaddress, chanvar, sizeof(template->fromaddress));
-	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailaaddress")))
+	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailaddress")))
 		ast_copy_string(template->serveremail, chanvar, sizeof(template->serveremail));
 	if ((chanvar = ast_variable_retrieve(cfg, "general", "emailcharset")))
 		ast_copy_string(template->charset, chanvar, sizeof(template->charset));
