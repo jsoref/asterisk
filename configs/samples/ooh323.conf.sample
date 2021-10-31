@@ -38,7 +38,7 @@
 
 
 [general]
-;Define the asetrisk server h323 endpoint
+;Define the asterisk server h323 endpoint
 
 ;The port asterisk should listen for incoming H323 connections.
 ;Default - 1720
