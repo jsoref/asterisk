@@ -384,7 +384,7 @@
 						specific conference bridge.
 						You should be aware that there are potential races between testing for the
 						existence of a bridge, and taking action upon that information, consider
-						for example two callers executing the check simultaniously, and then taking
+						for example two callers executing the check simultaneously, and then taking
 						special action as "first caller" into the bridge.  The same for exiting,
 						directly after the check the bridge can be destroyed before the new caller
 						enters (creating a new bridge), for example, and the "first member" actions
