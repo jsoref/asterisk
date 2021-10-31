@@ -3445,7 +3445,7 @@ static int handle_request(struct mgcp_subchannel *sub, struct mgcp_request *req,
 			sub->cxmode = MGCP_CX_SENDRECV;
 
 			if (p) {
-			  /* When the endpoint have a Off hook transition we allways
+			  /* When the endpoint have a Off hook transition we always
 			     starts without any previous dtmfs */
 			  memset(p->dtmf_buf, 0, sizeof(p->dtmf_buf));
 			}
