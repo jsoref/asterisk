@@ -1045,7 +1045,7 @@ static void pbx_destroy(struct ast_pbx *p)
  *   Hope the limit on stack depth won't be a problem... this routine should
  *   be pretty lean as far a stack usage goes. Any non-match terminates the recursion down a branch.
  *
- *   In the above example, with the number "3077549999" as the pattern, the traversor could match extensions a, b and d.  All are
+ *   In the above example, with the number "3077549999" as the pattern, the traverser could match extensions a, b and d.  All are
  *   of length 10; they have total specificities of  24580, 10246, and 25090, respectively, not that this matters
  *   at all. (b) wins purely because the first character "3" is much more specific (lower specificity) than "N". I have
  *   left the specificity totals in the code as an artifact; at some point, I will strip it out.
