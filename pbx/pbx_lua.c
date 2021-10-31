@@ -1261,7 +1261,7 @@ static void lua_free_extensions()
  * \brief Get the lua_State for this channel
  *
  * If no channel is passed then a new state is allocated.  States with no
- * channel assocatied with them should only be used for matching extensions.
+ * channel associated with them should only be used for matching extensions.
  * If the channel does not yet have a lua state associated with it, one will be
  * created.
  *
