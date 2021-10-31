@@ -168,7 +168,7 @@ enum {
 	FLAG_DEAD =        (1 << 1),  /*!< Transaction is dead */
 	FLAG_FINAL =       (1 << 2),  /*!< Transaction has final message sent */
 	FLAG_ISQUAL =      (1 << 3),  /*!< Transaction is a qualification */
-	FLAG_ENCRYPT =     (1 << 4),  /*!< Transaction is encrypted wiht ECX/DCX */
+	FLAG_ENCRYPT =     (1 << 4),  /*!< Transaction is encrypted with ECX/DCX */
 	FLAG_SENDFULLKEY = (1 << 5),  /*!< Send full key on transaction */
 	FLAG_STOREHIST =   (1 << 6),  /*!< Record historic performance */
 };
