@@ -718,7 +718,7 @@ int ooEncodeH225Message(OOH323CallData *call, Q931Message *pq931Msg,
    }
 
    msgbuf[i++] = 3; /* TPKT version */
-   msgbuf[i++] = 0; /* TPKT resevred */
+   msgbuf[i++] = 0; /* TPKT reserved */
    /* 1st octet of length, will be populated once len is determined */
    msgbuf[i++] = 0;
    /* 2nd octet of length, will be populated once len is determined */

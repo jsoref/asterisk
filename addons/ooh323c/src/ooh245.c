@@ -194,7 +194,7 @@ int ooEncodeH245Message
       /* Populate message buffer to be returned */
       len =  4;
       msgbuf[i++] = 3; /* TPKT version */
-      msgbuf[i++] = 0; /* TPKT resevred */
+      msgbuf[i++] = 0; /* TPKT reserved */
       /* 1st octet of length, will be populated once len is determined */
       msgbuf[i++] = 0;
       /* 2nd octet of length, will be populated once len is determined */

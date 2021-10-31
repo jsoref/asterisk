@@ -64,7 +64,7 @@
 				<para>The name of the provider that authenticates the call.</para>
 			</parameter>
 			<parameter name="options">
-				<para>Reserverd.</para>
+				<para>Reserved.</para>
 			</parameter>
 		</syntax>
 		<description>
