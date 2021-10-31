@@ -2636,7 +2636,7 @@ int ast_autoservice_ignore(struct ast_channel *chan, enum ast_frame_type ftype);
  *
  * \note Call this function with a rate of 0 to turn off the timer ticks
  *
- * \version 1.6.1 changed samples parameter to rate, accomodates new timing methods
+ * \version 1.6.1 changed samples parameter to rate, accommodates new timing methods
  */
 int ast_settimeout(struct ast_channel *c, unsigned int rate, int (*func)(const void *data), void *data);
 int ast_settimeout_full(struct ast_channel *c, unsigned int rate, int (*func)(const void *data), void *data, unsigned int is_ao2_obj);
