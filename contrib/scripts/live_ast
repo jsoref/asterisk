@@ -50,7 +50,7 @@
 #
 ####################### Begin Samples
 # optional environment variables. Set those in live/live.conf or in
-# your envirnment.
+# your environment.
 #
 # LIVE_AST_LIBPRI_PATH:
 # To use a libpri SVN directory (without running 'make install': make include
