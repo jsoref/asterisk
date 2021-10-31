@@ -3564,7 +3564,7 @@ enum ast_transport_monitor_reg ast_sip_transport_monitor_register_replace(pjsip_
  * \param transport Transport to monitor for shutdown.
  * \param cb The callback that was used for the original register.
  * \param data Data to pass to the matcher. May be NULL and does NOT need to be an ao2 object.
- *             If NULL, all monitors with the provided callbck are unregistered.
+ *             If NULL, all monitors with the provided callback are unregistered.
  * \param matches Matcher function that returns true if data matches the previously
  *                registered data object.  If NULL, a simple pointer comparison is done.
  *
@@ -3582,7 +3582,7 @@ void ast_sip_transport_monitor_unregister(pjsip_transport *transport,
  *
  * \param cb The callback that was used for the original register.
  * \param data Data to pass to the matcher. May be NULL and does NOT need to be an ao2 object.
- *             If NULL, all monitors with the provided callbck are unregistered.
+ *             If NULL, all monitors with the provided callback are unregistered.
  * \param matches Matcher function that returns true if ao2_data matches the previously
  *                registered data object.  If NULL, a simple pointer comparison is done.
  *
