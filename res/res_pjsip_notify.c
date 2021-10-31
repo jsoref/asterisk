@@ -1072,7 +1072,7 @@ static struct ast_cli_entry cli_options[] = {
 };
 
 /*!
- * \interanl
+ * \internal
  * \brief Completes SIPNotify AMI command in Endpoint mode.
  */
 static void manager_notify_endpoint(struct mansession *s,

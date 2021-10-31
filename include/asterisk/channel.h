@@ -4471,7 +4471,7 @@ void ast_channel_internal_alertpipe_clear(struct ast_channel *chan);
 void ast_channel_internal_alertpipe_close(struct ast_channel *chan);
 int ast_channel_internal_alert_readfd(struct ast_channel *chan);
 int ast_channel_internal_alertpipe_init(struct ast_channel *chan);
-/*! \brief Swap the interal alertpipe between two channels
+/*! \brief Swap the internal alertpipe between two channels
  * \note Handle all of the necessary locking before calling this
  */
 void ast_channel_internal_alertpipe_swap(struct ast_channel *chan1, struct ast_channel *chan2);

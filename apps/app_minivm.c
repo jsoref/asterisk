@@ -2095,7 +2095,7 @@ static void queue_mwi_event(const char *channel_id, const char *mbx, const char 
 }
 
 /*!\internal
- * \brief Send MWI using interal Asterisk event subsystem */
+ * \brief Send MWI using internal Asterisk event subsystem */
 static int minivm_mwi_exec(struct ast_channel *chan, const char *data)
 {
 	int argc;
