@@ -364,7 +364,7 @@ static int grabber_open(struct video_out_desc *v)
  * \param fps = frame per seconds, for every device
  *
  * returns:
- * - NULL on falure
+ * - NULL on failure
  * - reference to the device buffer on success
  */
 static struct fbuf_t *grabber_read(struct video_device *dev, int fps)

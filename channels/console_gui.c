@@ -563,7 +563,7 @@ static int switch_video_out(struct video_desc *env, int index, Uint8 button)
  * \param env = pointer to the video environment descriptor
  *
  * returns:
- * - 0 on falure switching from off to on
+ * - 0 on failure switching from off to on
  * - 1 on success in switching from off to on
  * - 2 on success in switching from on to off
 */

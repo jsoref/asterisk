@@ -341,7 +341,7 @@ struct bridge_basic_personality {
  * \param len Length of the given extension buffer.
  *
  * \retval 0 success
- * \retval non-zero failiure
+ * \retval non-zero failure
  */
 static int builtin_feature_get_exten(struct ast_channel *chan, const char *feature_name, char *buf, size_t len)
 {
