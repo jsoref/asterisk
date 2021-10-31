@@ -121,7 +121,7 @@ extern void makewavheader( void);
 
 /* --------------------------------------------------------------------
    Tests the character 'coal' for being a command line option character,
-   momentarrily '/' or '-'.
+   momentarily '/' or '-'.
    -------------------------------------------------------------------- */
 extern int isoptionchar (char coal);
 

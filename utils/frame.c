@@ -314,7 +314,7 @@ void startstopwatch(void)
 
 /* --------------------------------------------------------------------
    Tests the character 'coal' for being a command line option character,
-   momentarrily '-'.
+   momentarily '-'.
    -------------------------------------------------------------------- */
 int isoptionchar (char coal)
 {
