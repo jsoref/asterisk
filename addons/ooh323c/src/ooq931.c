@@ -2987,7 +2987,7 @@ int ooH323MakeCall_helper(OOH323CallData *call)
          }
          if(!epCap)
          {
-            OOTRACEWARN4("Warn:Preferred capability %s is abscent in "
+            OOTRACEWARN4("Warn:Preferred capability %s is absent in "
                          "capability list. (%s, %s)\n",
                          ooGetCapTypeText(call->capPrefs.order[k]),
                          call->callType, call->callToken);
