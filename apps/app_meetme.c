@@ -6263,7 +6263,7 @@ static void sla_handle_dial_state_event(void)
 				/* This case happens in a bit of a race condition.  If two stations answer
 				 * the outbound call at the same time, the first one will get connected to
 				 * the trunk.  When the second one gets here, it will not see any trunks
-				 * ringing so we have no idea what to conect it to.  So, we just hang up
+				 * ringing so we have no idea what to connect it to.  So, we just hang up
 				 * on it. */
 				ast_debug(1, "Found no ringing trunk for station '%s' to answer!\n", ringing_station->station->name);
 				ast_dial_join(ringing_station->station->dial);

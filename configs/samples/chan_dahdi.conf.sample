@@ -294,7 +294,7 @@ context=public
 ;
 ;datetime_send=
 
-; Send ISDN conected line information.
+; Send ISDN connected line information.
 ;
 ; block:   Do not send any connected line information.
 ; connect: Send connected line information on initial connect.

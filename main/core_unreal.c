@@ -883,7 +883,7 @@ void ast_unreal_call_setup(struct ast_channel *semi1, struct ast_channel *semi2)
 
 	ast_party_dialed_copy(ast_channel_dialed(semi2), ast_channel_dialed(semi1));
 
-	/* Crossover the CallerID and conected-line to cross the unreal bridge. */
+	/* Crossover the CallerID and connected-line to cross the unreal bridge. */
 	ast_connected_line_copy_to_caller(ast_channel_caller(semi2), ast_channel_connected(semi1));
 	ast_connected_line_copy_from_caller(ast_channel_connected(semi2), ast_channel_caller(semi1));
 
