@@ -73,7 +73,7 @@
 	</function>
 	<application name="ODBCFinish" language="en_US">
 		<synopsis>
-			Clear the resultset of a sucessful multirow query.
+			Clear the resultset of a successful multirow query.
 		</synopsis>
 		<syntax>
 			<parameter name="result-id" required="true" />

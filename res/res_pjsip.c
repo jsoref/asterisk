@@ -2058,7 +2058,7 @@
 						<literal>no</literal> (default), setting remove_unavailable to
 						<literal>yes</literal> will remove only unavailable contacts that exceed
 						<replaceable>max_contacts</replaceable>	to allow an incoming
-						REGISTER to complete sucessfully.</para>
+						REGISTER to complete successfully.</para>
 						<para>If <replaceable>remove_existing</replaceable> is set to
 						<literal>yes</literal>, setting remove_unavailable to
 						<literal>yes</literal> will prioritize unavailable contacts for removal
