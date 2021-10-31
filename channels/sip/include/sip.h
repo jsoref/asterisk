@@ -1395,7 +1395,7 @@ struct sip_registry {
 		AST_STRING_FIELD(opaque);     /*!< Opaque nonsense */
 		AST_STRING_FIELD(qop);        /*!< Quality of Protection, since SIP wasn't complicated enough yet. */
 		AST_STRING_FIELD(authdomain); /*!< Authorization domain */
-		AST_STRING_FIELD(regdomain);  /*!< Registration doamin */
+		AST_STRING_FIELD(regdomain);  /*!< Registration domain */
 		AST_STRING_FIELD(username);   /*!< Who we are registering as */
 		AST_STRING_FIELD(authuser);   /*!< Who we *authenticate* as */
 		AST_STRING_FIELD(hostname);   /*!< Domain or host we register to */
