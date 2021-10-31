@@ -6942,7 +6942,7 @@ static void channel_do_masquerade(struct ast_channel *original, struct ast_chann
 	ast_channel_unlock(original);
 	ast_indicate(original, -1);
 
-	/* Start the masquerade channel contents rearangement. */
+	/* Start the masquerade channel contents rearrangement. */
 	ast_channel_lock_both(original, clonechan);
 
 	ast_debug(1, "Actually Masquerading %s(%u) into the structure of %s(%u)\n",
