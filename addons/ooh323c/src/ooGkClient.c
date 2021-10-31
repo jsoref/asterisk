@@ -2854,7 +2854,7 @@ int ooGkClientHandleClientOrGkFailure(ooGkClient *pGkClient)
       if(pGkClient->gkMode == RasUseSpecificGatekeeper)
       {
          OOTRACEERR1("Error: Gatekeeper error detected. Closing GkClient as "
-                     "Gk mode is UseSpecifcGatekeeper\n");
+                     "Gk mode is UseSpecificGatekeeper\n");
 	 pGkClient->state = GkClientStopped;
          return OO_FAILED;
       }
