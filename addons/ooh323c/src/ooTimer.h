@@ -107,7 +107,7 @@ EXTERN struct timeval* ooTimerNextTimeout (DList* pList, struct timeval* ptimeou
 /**
  * This function resets the given timer object if its reregister flag
  * is set.  Otherwise, it is deleted.
- * @param pctxt        Pointer to OOCTXT structre used for memory allocation.
+ * @param pctxt        Pointer to OOCTXT structure used for memory allocation.
  * @param pList        Pointer to timer list.
  * @param pTimer       Pointer to timer object.
  */

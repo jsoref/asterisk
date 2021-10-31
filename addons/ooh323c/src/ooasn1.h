@@ -755,7 +755,7 @@ EXTERN void errPrint (ASN1ErrInfo* pErrInfo);
 
 /**
  * This function resets the error information in the error information
- * sturcture.
+ * structure.
  *
  * @param pErrInfo     A pointer to a structure containing information on the
  *                     error to be printed. Typically, the error info
