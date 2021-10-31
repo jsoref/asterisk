@@ -444,7 +444,7 @@ enum invitestates {
 };
 
 /*! \brief When sending a SIP message, we can send with a few options, depending on
- * type of SIP request. UNRELIABLE is moslty used for responses to repeated requests,
+ * type of SIP request. UNRELIABLE is mostly used for responses to repeated requests,
  * where the original response would be sent RELIABLE in an INVITE transaction
  */
 enum xmittype {
