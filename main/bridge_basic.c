@@ -798,7 +798,7 @@ enum attended_transfer_state {
 	 * 2) TRANSFER_BLOND: Transferer hangs up or presses DTMF swap sequence
 	 * and configured atxferdropcall setting is yes.
 	 * 3) TRANSFER_BLOND_NONFINAL: Transferer hangs up or presses DTMF swap
-	 * sequence and configured atxferdroppcall setting is no.
+	 * sequence and configured atxferdropcall setting is no.
 	 * 4) TRANSFER_CONSULTING: Transfer target answers the call.
 	 * 5) TRANSFER_REBRIDGE: Transfer target hangs up, call to transfer target
 	 * times out, or transferer presses DTMF abort sequence.
@@ -832,7 +832,7 @@ enum attended_transfer_state {
 	 * 2) TRANSFER_BLOND: Transferer hangs up or presses DTMF swap sequence
 	 * and configured atxferdropcall setting is yes.
 	 * 3) TRANSFER_BLOND_NONFINAL: Transferer hangs up or presses DTMF swap
-	 * sequence and configured atxferdroppcall setting is no.
+	 * sequence and configured atxferdropcall setting is no.
 	 * 4) TRANSFER_DOUBLECHECKING: Transfer target answers the call
 	 * 5) TRANSFER_RESUME: Transfer target hangs up, call to transfer target
 	 * times out, or transferer presses DTMF abort sequence.
