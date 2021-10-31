@@ -3835,7 +3835,7 @@ static int dundi_lookup_internal(struct dundi_result *result, int maxret, struct
 	char eid_str[20];
 	struct timeval start;
 
-	/* Don't do anthing for a hungup channel */
+	/* Don't do anything for a hungup channel */
 	if (chan && ast_check_hangup(chan))
 		return 0;
 
