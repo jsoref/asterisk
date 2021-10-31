@@ -1353,7 +1353,7 @@ static int add_menu_entry(struct conf_menu *menu, const char *dtmf, const char *
 		comma = strchr(tmp_action_names, ',');
 
 		/* If the next action has brackets with comma delimited arguments in it,
-		 * make the delimeter ')' instead of a comma to preserve the argments */
+		 * make the delimeter ')' instead of a comma to preserve the arguments */
 		if (startbrace && endbrace && comma && (comma > startbrace && comma < endbrace)) {
 			delimiter = ")";
 		} else {
