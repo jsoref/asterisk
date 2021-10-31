@@ -1057,7 +1057,7 @@ static SDL_Surface *load_image(const char *file)
 
 static void keypad_setup(struct gui_info *gui, const char *kp_file);
 
-/* TODO: consistency checks, check for bpp, widht and height */
+/* TODO: consistency checks, check for bpp, width and height */
 /* Init the mask image used to grab the action. */
 static struct gui_info *gui_init(const char *keypad_file, const char *font)
 {
