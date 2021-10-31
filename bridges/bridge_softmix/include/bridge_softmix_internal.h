@@ -304,7 +304,7 @@ int init_convolve_channel(struct convolve_channel *channel, unsigned int hrtf_le
 		unsigned int chan_pos, unsigned int chan_side, unsigned int default_sample_size);
 
 /*!
- * \brief Initializies all data needed for binaural audio processing of a channel pair
+ * \brief Initializes all data needed for binaural audio processing of a channel pair
  * (left and right).
  *
  * \param cchan_pair The channel pair used for binaural audio processing.
