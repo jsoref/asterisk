@@ -953,7 +953,7 @@ static int ast_say_number_full_cs(struct ast_channel *chan, int num, const char 
 	int left = 0;
 	int length = 0;
 
-	/* options - w = woman, m = man, n = neutral. Defaultl is woman */
+	/* options - w = woman, m = man, n = neutral. Default is woman */
 	if (!options)
 		options = "w";
 
