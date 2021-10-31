@@ -7946,7 +7946,7 @@ static int generic_http_callback(struct ast_tcptls_session_instance *ser,
 		/*!
 		 * \note There is approximately a 1 in 1.8E19 chance that the following
 		 * calculation will produce 0, which is an invalid ID, but due to the
-		 * properties of the rand() function (and the constantcy of s), that
+		 * properties of the rand() function (and the constancy of s), that
 		 * won't happen twice in a row.
 		 */
 		while ((session->managerid = ast_random() ^ (unsigned long) session) == 0) {
