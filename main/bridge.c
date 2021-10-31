@@ -3862,7 +3862,7 @@ void ast_bridge_set_remb_send_interval(struct ast_bridge *bridge, unsigned int r
 	ast_bridge_unlock(bridge);
 }
 
-void ast_brige_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior)
+void ast_bridge_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior)
 {
 	ast_assert(bridge->softmix.video_mode.mode == AST_BRIDGE_VIDEO_MODE_SFU);
 

@@ -1041,7 +1041,7 @@ void ast_bridge_set_remb_send_interval(struct ast_bridge *bridge, unsigned int r
  *
  * \note This can only be called when the bridge has been set to the SFU video mode.
  */
-void ast_brige_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior);
+void ast_bridge_set_remb_behavior(struct ast_bridge *bridge, enum ast_bridge_video_sfu_remb_behavior behavior);
 
 /*!
  * \brief Force the REMB report estimated bitrate to a specific max value
