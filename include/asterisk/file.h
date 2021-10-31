@@ -59,7 +59,7 @@ enum ast_waitstream_fr_cb_values {
 
 /*!
  * \brief callback used during dtmf controlled file playback to indicate
- * location of playback in a file after rewinding or fastfowarding
+ * location of playback in a file after rewinding or fastforwarding
  * a file.
  */
 typedef void (ast_waitstream_fr_cb)(struct ast_channel *chan, long ms, enum ast_waitstream_fr_cb_values val);
@@ -218,7 +218,7 @@ int ast_waitstream_fr(struct ast_channel *c, const char *breakon, const char *fo
  * \param forward DTMF digit to fast forward upon
  * \param rewind DTMF digit to rewind upon
  * \param ms How many milliseconds to skip forward/back
- * \param cb to call when rewind or fastfoward occurs.
+ * \param cb to call when rewind or fastforward occurs.
  * Begins playback of a stream...
  * Wait for a stream to stop or for any one of a given digit to arrive,
  * \retval 0 if the stream finishes.
