@@ -465,7 +465,7 @@ static struct unistimsession {
 	unsigned short last_seq_ack;    /*!< sequence number of the last ACK received */
 	unsigned long tick_next_ping;   /*!< time for the next ping */
 	int last_buf_available;	 /*!< number of a free slot */
-	int nb_retransmit;		      /*!< number of retransmition */
+	int nb_retransmit;		      /*!< number of retransmission */
 	int state;				      /*!< state of the phone (see phone_state) */
 	int size_buff_entry;	    /*!< size of the buffer used to enter datas */
 	char buff_entry[16];	    /*!< Buffer for temporary datas */
