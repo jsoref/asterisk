@@ -2624,7 +2624,7 @@ static int confbridge_exec(struct ast_channel *chan, const char *data)
 	quiet = ast_test_flag(&user.u_profile, USER_OPT_QUIET);
 
 	/* ask for a PIN immediately after finding user profile.  This has to be
-	 * prompted for requardless of quiet setting. */
+	 * prompted for regardless of quiet setting. */
 	if (!ast_strlen_zero(user.u_profile.pin)) {
 		if (conf_get_pin(chan, &user)) {
 			pbx_builtin_setvar_helper(chan, "CONFBRIDGE_RESULT", "FAILED");
