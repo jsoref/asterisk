@@ -275,7 +275,7 @@ context telemarket-political3 {
 		begin:
 		Playback(telemark-politx-intro);
 		Playback(telemark-polit3-choices);
-                                               //  if You represent the Independant American Party, dial 1.
+                                               //  if You represent the Independent American Party, dial 1.
                                                //  if You represent the Labor Party, dial 2.
                                                //  if You represent the Libertarian Party, dial 3.
                                                //  if You represent the Light Party, dial 4.
