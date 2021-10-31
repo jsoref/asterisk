@@ -33,7 +33,7 @@
  *
  * The Stasis Message Bus is a loosely typed mechanism for distributing messages
  * within Asterisk. It is designed to be:
- *  - Loosely coupled; new message types can be added in seperate modules.
+ *  - Loosely coupled; new message types can be added in separate modules.
  *  - Easy to use; publishing and subscribing are straightforward operations.
  *
  * There are three main concepts for using the Stasis Message Bus:

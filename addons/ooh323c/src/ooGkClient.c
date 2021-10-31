@@ -2876,7 +2876,7 @@ int ooGkClientHandleClientOrGkFailure(ooGkClient *pGkClient)
  * Gk responds with RCF with empty terminalAlias field thus indicating both
  * the aliases were accepted. If this function is called, it will even mark
  * the earlier two unregistered aliases as registered. We will have to
- * maintain a separete list of aliases being sent in RRQ for this.
+ * maintain a separate list of aliases being sent in RRQ for this.
  */
 int ooGkClientUpdateRegisteredAliases
    (ooGkClient *pGkClient, H225_SeqOfH225AliasAddress *pAddresses,

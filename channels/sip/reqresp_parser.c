@@ -2406,7 +2406,7 @@ struct sip_via *parse_via(const char *header)
 		return NULL;
 	}
 
-	/* seperate the first via-parm */
+	/* separate the first via-parm */
 	via = strsep(&via, ",");
 
 	/* chop off sent-protocol */

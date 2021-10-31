@@ -52,7 +52,7 @@ def wikify(str):
 
 
 def snakify(name):
-    """Helper to take a camelCase or dash-seperated name and make it
+    """Helper to take a camelCase or dash-separated name and make it
     snake_case.
     """
     r = ''
@@ -80,7 +80,7 @@ class PathSegment(Stringify):
         self.name = simple_name(name)
         #: True if segment is a {pathVar}, else None.
         self.is_wildcard = None
-        #: Underscore seperated name all ancestor segments
+        #: Underscore separated name all ancestor segments
         self.full_name = None
         #: Dictionary of child PathSegements
         self.__children = OrderedDict()

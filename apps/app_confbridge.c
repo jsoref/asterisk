@@ -2919,7 +2919,7 @@ static int action_toggle_mute_participants(struct confbridge_conference *confere
 		conference->b_profile.sounds);
 
 	if (strcmp(conference->b_profile.language, ast_channel_language(user->chan))) {
-		/* The host needs to hear it seperately, as they don't get the audio from play_sound_helper */
+		/* The host needs to hear it separately, as they don't get the audio from play_sound_helper */
 		ast_stream_and_wait(user->chan, sound_to_play, "");
 
 		/* Announce to the group that all participants are muted */

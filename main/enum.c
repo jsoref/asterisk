@@ -740,7 +740,7 @@ int ast_get_enum(struct ast_channel *chan, const char *number, char *dst, int ds
 	 * This code does more than simple RFC3261 ENUM. All these rewriting
 	 * schemes have in common that they build the FQDN for the NAPTR lookup
 	 * by concatenating
-	 *    - a number which needs be flipped and "."-seperated 	(left)
+	 *    - a number which needs be flipped and "."-separated 	(left)
 	 *    - some fixed string					(middle)
 	 *    - an Apex.						(apex)
 	 *

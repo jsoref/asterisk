@@ -91,7 +91,7 @@ struct stasis_rest_handlers {
 struct ast_ari_response {
 	/*! Response message */
 	struct ast_json *message;
-	/*! \r\n seperated response headers */
+	/*! \r\n separated response headers */
 	struct ast_str *headers;
 	/*! HTTP response code.
 	 * See http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html */
