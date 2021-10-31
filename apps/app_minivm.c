@@ -1737,7 +1737,7 @@ static int play_record_review(struct ast_channel *chan, char *playfile, char *re
 			}
 			return cmd;
  		default:
-			/* If the caller is an ouside caller, and the review option is enabled,
+			/* If the caller is an outside caller, and the review option is enabled,
 			   allow them to review the message, but let the owner of the box review
 			   their OGM's */
 			if (outsidecaller && !ast_test_flag(vmu, MVM_REVIEW))
