@@ -1815,7 +1815,7 @@ static struct mgcp_subchannel *find_subchannel_and_lock(char *name, int msgid, s
 					found = 1;
 					break;
 				} else if (name && !strcasecmp(p->name, tmp)) {
-					ast_debug(1, "Coundn't determine subchannel, assuming current master %s@%s-%d\n",
+					ast_debug(1, "Couldn't determine subchannel, assuming current master %s@%s-%d\n",
 						p->name, g->name, p->sub->id);
 					sub = p->sub;
 					found = 1;

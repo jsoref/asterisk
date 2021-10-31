@@ -894,7 +894,7 @@ static void pj_thread_register_check(void)
 	pj_bzero(*desc, sizeof(*desc));
 
 	if (pj_thread_register("Asterisk Thread", *desc, &thread) != PJ_SUCCESS) {
-		ast_log(LOG_ERROR, "Coudln't register thread with PJLIB.\n");
+		ast_log(LOG_ERROR, "Couldn't register thread with PJLIB.\n");
 	}
 	return;
 }

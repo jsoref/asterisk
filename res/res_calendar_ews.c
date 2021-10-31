@@ -199,7 +199,7 @@ static int startelm(void *userdata, int parent, const char *nspace, const char *
 		ast_debug(3, "EWS: XML: <RootFolder>\n");
 		if (sscanf(ne_xml_get_attr(ctx->parser, atts, NULL, "TotalItemsInView"), "%u", &items) != 1) {
 			/* Couldn't read anything */
-			ne_xml_set_error(ctx->parser, "Could't read number of events.");
+			ne_xml_set_error(ctx->parser, "Couldn't read number of events.");
 			return NE_XML_ABORT;
 		}
 
