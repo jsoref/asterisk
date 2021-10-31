@@ -118,7 +118,7 @@ char *get_in_brackets(char *tmp);
  *
  * \param src String to search
  * \param[out] start Set to first character inside left bracket.
- * \param[out] length Set to lenght of string inside brackets
+ * \param[out] length Set to length of string inside brackets
  * \retval 0 success
  * \retval -1 failure
  * \retval 1 no brackets so got all

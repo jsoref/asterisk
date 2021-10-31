@@ -1609,7 +1609,7 @@ EXTERN int encodeExpandBuffer (OOCTXT* pctxt, ASN1UINT nbytes);
  * dynamic encoding is specified because the message pointer is not known until
  * encoding is complete. If static encoding is used, the message starts at the
  * beginning of the specified buffer adn the encodeGetMsgLen function can be
- * used to obtain the lenght of the message.
+ * used to obtain the length of the message.
  *
  * @param pctxt        Pointer to a context structure. This provides a storage
  *                       area for the function to store all working variables
