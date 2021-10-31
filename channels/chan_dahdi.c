@@ -17700,7 +17700,7 @@ static int build_channels(struct dahdi_chan_conf *conf, const char *value, int r
 			return -1;
 		}
 		if (finish < start) {
-			ast_log(LOG_WARNING, "Sillyness: %d < %d\n", start, finish);
+			ast_log(LOG_WARNING, "Silliness: %d < %d\n", start, finish);
 			x = finish;
 			finish = start;
 			start = x;
