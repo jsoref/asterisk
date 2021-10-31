@@ -834,7 +834,7 @@ static int eivr_comm(struct ast_channel *chan, struct ivr_localuser *u,
 				}
 			} else if (input[0] == EIVR_CMD_GET) {
 				char response[2048];
-				ast_verb(4, "Retriving Variables from channel: %s\n", &input[2]);
+				ast_verb(4, "Retrieving Variables from channel: %s\n", &input[2]);
 				ast_eivr_getvariable(chan, &input[2], response, sizeof(response));
 				send_eivr_event(eivr_events, 'G', response, chan);
 			} else if (input[0] == EIVR_CMD_SVAR) {
