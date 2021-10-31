@@ -4109,7 +4109,7 @@ int ooParseDestination
       psNewAlias->value = (char*) memAlloc(pctxt, strlen(alias)+1);
       if(!psNewAlias->value)
       {
-         OOTRACEERR1("Error:Memroy - ooParseDestination - "
+         OOTRACEERR1("Error:Memory - ooParseDestination - "
                      "psNewAlias->value\n");
          memFreePtr(pctxt, psNewAlias);
          return OO_FAILED;

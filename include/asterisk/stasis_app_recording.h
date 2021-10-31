@@ -96,7 +96,7 @@ struct ao2_container *stasis_app_stored_recording_find_all(void);
  * \param name Name of the recording.
  * \return New recording object.
  * \return \c NULL if recording is not found. \c errno is set to indicate why
- *	- \c ENOMEM - out of memeory
+ *	- \c ENOMEM - out of memory
  *	- \c EACCES - file permissions (or recording is outside the config dir)
  *	- Any of the error codes for stat(), opendir(), readdir()
  */
