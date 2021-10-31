@@ -509,7 +509,7 @@ exten => _X.,n,Set(LOCAL(cntx)=${ARG5})
 
 exten => _X.,n,Set(LOCAL(mbx)="${ext}"$["${cntx}" ? "@${cntx}" :: ""])
 exten => _X.,n,Dial(${dev},20,p)			; Ring the interface, 20 seconds maximum, call screening
-						; option (or use P for databased call _X.creening)
+						; option (or use P for databased call _X.screening)
 exten => _X.,n,Goto(stdexten-${DIALSTATUS},1)		; Jump based on status (NOANSWER,BUSY,CHANUNAVAIL,CONGESTION,ANSWER)
 
 exten => stdexten-NOANSWER,1,VoiceMail(${mbx},u)	; If unavailable, send to voicemail w/ unavail announce
