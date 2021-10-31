@@ -7052,7 +7052,7 @@ static void channel_do_masquerade(struct ast_channel *original, struct ast_chann
 	ast_channel_state_set(original, ast_channel_state(clonechan));
 	ast_channel_state_set(clonechan, origstate);
 
-	/* And the swap the cachable state too. Otherwise we'd start caching
+	/* And the swap the cacheable state too. Otherwise we'd start caching
 	 * Local channels and ignoring real ones. */
 	orig_disablestatecache = ast_test_flag(ast_channel_flags(original), AST_FLAG_DISABLE_DEVSTATE_CACHE);
 	clone_disablestatecache = ast_test_flag(ast_channel_flags(clonechan), AST_FLAG_DISABLE_DEVSTATE_CACHE);

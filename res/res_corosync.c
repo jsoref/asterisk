@@ -433,21 +433,21 @@ static void publish_device_state_to_stasis(struct ast_event *event)
 {
 	const char *device;
 	enum ast_device_state state;
-	unsigned int cachable;
+	unsigned int cacheable;
 	struct ast_eid *event_eid;
 
 	ast_assert(ast_event_get_type(event) == AST_EVENT_DEVICE_STATE_CHANGE);
 
 	device = ast_event_get_ie_str(event, AST_EVENT_IE_DEVICE);
 	state = ast_event_get_ie_uint(event, AST_EVENT_IE_STATE);
-	cachable = ast_event_get_ie_uint(event, AST_EVENT_IE_CACHABLE);
+	cacheable = ast_event_get_ie_uint(event, AST_EVENT_IE_CACHABLE);
 	event_eid = (struct ast_eid *)ast_event_get_ie_raw(event, AST_EVENT_IE_EID);
 
 	if (ast_strlen_zero(device)) {
 		return;
 	}
 
-	if (ast_publish_device_state_full(device, state, cachable, event_eid)) {
+	if (ast_publish_device_state_full(device, state, cacheable, event_eid)) {
 		char eid[18];
 		ast_eid_to_str(eid, sizeof(eid), event_eid);
 		ast_log(LOG_WARNING, "Failed to publish device state message for %s from %s\n",

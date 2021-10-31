@@ -66,8 +66,8 @@ enum ast_device_state {
  *  \note This is used to define the cacheability of a device state when set.
  */
 enum ast_devstate_cache {
-	AST_DEVSTATE_NOT_CACHABLE,  /*!< This device state is not cachable */
-	AST_DEVSTATE_CACHABLE,      /*!< This device state is cachable */
+	AST_DEVSTATE_NOT_CACHABLE,  /*!< This device state is not cacheable */
+	AST_DEVSTATE_CACHABLE,      /*!< This device state is cacheable */
 };
 
 /*! \brief Devicestate provider call back */
@@ -136,7 +136,7 @@ enum ast_device_state ast_device_state(const char *device);
  * \brief Tells Asterisk the State for Device is changed
  *
  * \param state the new state of the device
- * \param cachable whether this device state is cachable
+ * \param cacheable whether this device state is cacheable
  * \param fmt device name like a dial string with format parameters
  *
  * The new state of the device will be sent off to any subscribers
@@ -146,14 +146,14 @@ enum ast_device_state ast_device_state(const char *device);
  * \retval 0 on success
  * \retval -1 on failure
  */
-int ast_devstate_changed(enum ast_device_state state, enum ast_devstate_cache cachable, const char *fmt, ...)
+int ast_devstate_changed(enum ast_device_state state, enum ast_devstate_cache cacheable, const char *fmt, ...)
 	__attribute__((format(printf, 3, 4)));
 
 /*!
  * \brief Tells Asterisk the State for Device is changed
  *
  * \param state the new state of the device
- * \param cachable whether this device state is cachable
+ * \param cacheable whether this device state is cacheable
  * \param device device name like a dial string with format parameters
  *
  * The new state of the device will be sent off to any subscribers
@@ -163,7 +163,7 @@ int ast_devstate_changed(enum ast_device_state state, enum ast_devstate_cache ca
  * \retval 0 on success
  * \retval -1 on failure
  */
-int ast_devstate_changed_literal(enum ast_device_state state, enum ast_devstate_cache cachable, const char *device);
+int ast_devstate_changed_literal(enum ast_device_state state, enum ast_devstate_cache cacheable, const char *device);
 
 /*!
  * \brief Add device state provider
@@ -249,7 +249,7 @@ struct ast_device_state_message {
 	/*! The state of the device */
 	enum ast_device_state state;
 	/*! Flag designating the cacheability of this device state */
-	enum ast_devstate_cache cachable;
+	enum ast_devstate_cache cacheable;
 	/*! The device and eid data is stuffed here when the struct is allocated. */
 	struct ast_eid stuff[0];
 };
@@ -315,19 +315,19 @@ int devstate_init(void);
  * \brief Publish a device state update
  * \param[in] device The device name
  * \param[in] state The state of the device
- * \param[in] cachable Whether the device state can be cached
+ * \param[in] cacheable Whether the device state can be cached
  * \retval 0 Success
  * \retval -1 Failure
  * \since 12
  */
-#define ast_publish_device_state(device, state, cachable) \
-	ast_publish_device_state_full(device, state, cachable, &ast_eid_default)
+#define ast_publish_device_state(device, state, cacheable) \
+	ast_publish_device_state_full(device, state, cacheable, &ast_eid_default)
 
 /*!
  * \brief Publish a device state update with EID
  * \param[in] device The device name
  * \param[in] state The state of the device
- * \param[in] cachable Whether the device state can be cached
+ * \param[in] cacheable Whether the device state can be cached
  * \param[in] eid The EID of the server that originally published the message
  * \retval 0 Success
  * \retval -1 Failure
@@ -336,7 +336,7 @@ int devstate_init(void);
 int ast_publish_device_state_full(
 			const char *device,
 			enum ast_device_state state,
-			enum ast_devstate_cache cachable,
+			enum ast_devstate_cache cacheable,
 			struct ast_eid *eid);
 
 #if defined(__cplusplus) || defined(c_plusplus)

@@ -5830,7 +5830,7 @@ static int iax2_getpeertrunk(struct ast_sockaddr addr)
 /*! \brief  Create new call, interface with the PBX core */
 static struct ast_channel *ast_iax2_new(int callno, int state, iax2_format capability,
 	struct iax2_codec_pref *prefs, const struct ast_assigned_ids *assignedids,
-	const struct ast_channel *requestor, unsigned int cachable)
+	const struct ast_channel *requestor, unsigned int cacheable)
 {
 	struct ast_channel *tmp = NULL;
 	struct chan_iax2_pvt *i;
@@ -5963,7 +5963,7 @@ static struct ast_channel *ast_iax2_new(int callno, int state, iax2_format capab
 	i->owner = tmp;
 	i->capability = capability;
 
-	if (!cachable) {
+	if (!cacheable) {
 		ast_set_flag(ast_channel_flags(tmp), AST_FLAG_DISABLE_DEVSTATE_CACHE);
 	}
 

@@ -1069,7 +1069,7 @@ static iks* xmpp_pubsub_iq_create(struct ast_xmpp_client *client, const char *ty
  * \return iks *
  */
 static iks* xmpp_pubsub_build_publish_skeleton(struct ast_xmpp_client *client, const char *node,
-					       const char *event_type, unsigned int cachable)
+					       const char *event_type, unsigned int cacheable)
 {
 	RAII_VAR(struct xmpp_config *, cfg, ao2_global_obj_ref(globals), ao2_cleanup);
 	iks *request, *pubsub, *publish, *item;
@@ -1085,7 +1085,7 @@ static iks* xmpp_pubsub_build_publish_skeleton(struct ast_xmpp_client *client, c
 	item = iks_insert(publish, "item");
 	iks_insert_attrib(item, "id", node);
 
-	if (cachable == AST_DEVSTATE_NOT_CACHABLE) {
+	if (cacheable == AST_DEVSTATE_NOT_CACHABLE) {
 		iks *options, *x, *field_form_type, *field_persist;
 
 		options = iks_insert(pubsub, "publish-options");
@@ -1298,13 +1298,13 @@ static void xmpp_pubsub_publish_mwi(struct ast_xmpp_client *client, const char *
  * \return void
  */
 static void xmpp_pubsub_publish_device_state(struct ast_xmpp_client *client, const char *device,
-					     const char *device_state, unsigned int cachable)
+					     const char *device_state, unsigned int cacheable)
 {
 	RAII_VAR(struct xmpp_config *, cfg, ao2_global_obj_ref(globals), ao2_cleanup);
 	iks *request, *state;
-	char eid_str[20], cachable_str[2];
+	char eid_str[20], cacheable_str[2];
 
-	if (!cfg || !cfg->global || !(request = xmpp_pubsub_build_publish_skeleton(client, device, "device_state", cachable))) {
+	if (!cfg || !cfg->global || !(request = xmpp_pubsub_build_publish_skeleton(client, device, "device_state", cacheable))) {
 		return;
 	}
 
@@ -1320,8 +1320,8 @@ static void xmpp_pubsub_publish_device_state(struct ast_xmpp_client *client, con
 	state = iks_insert(request, "state");
 	iks_insert_attrib(state, "xmlns", "http://asterisk.org");
 	iks_insert_attrib(state, "eid", eid_str);
-	snprintf(cachable_str, sizeof(cachable_str), "%u", cachable);
-	iks_insert_attrib(state, "cachable", cachable_str);
+	snprintf(cacheable_str, sizeof(cacheable_str), "%u", cacheable);
+	iks_insert_attrib(state, "cacheable", cacheable_str);
 	iks_insert_cdata(state, device_state, strlen(device_state));
 	ast_xmpp_client_send(client, iks_root(request));
 	iks_delete(request);
@@ -1376,7 +1376,7 @@ static void xmpp_pubsub_devstate_cb(void *data, struct stasis_subscription *sub,
 		return;
 	}
 
-	xmpp_pubsub_publish_device_state(client, dev_state->device, ast_devstate_str(dev_state->state), dev_state->cachable);
+	xmpp_pubsub_publish_device_state(client, dev_state->device, ast_devstate_str(dev_state->state), dev_state->cacheable);
 }
 
 /*!
@@ -1460,11 +1460,11 @@ static void xmpp_pubsub_subscribe(struct ast_xmpp_client *client, const char *no
  */
 static int xmpp_pubsub_handle_event(void *data, ikspak *pak)
 {
-	char *item_id, *device_state, *mailbox, *cachable_str;
+	char *item_id, *device_state, *mailbox, *cacheable_str;
 	int oldmsgs, newmsgs;
 	iks *item, *item_content;
 	struct ast_eid pubsub_eid;
-	unsigned int cachable = AST_DEVSTATE_CACHABLE;
+	unsigned int cacheable = AST_DEVSTATE_CACHABLE;
 	item = iks_find(iks_find(iks_find(pak->x, "event"), "items"), "item");
 	if (!item) {
 		ast_log(LOG_ERROR, "Could not parse incoming PubSub event\n");
@@ -1478,13 +1478,13 @@ static int xmpp_pubsub_handle_event(void *data, ikspak *pak)
 		return IKS_FILTER_EAT;
 	}
 	if (!strcasecmp(iks_name(item_content), "state")) {
-		if ((cachable_str = iks_find_attrib(item_content, "cachable"))) {
-			sscanf(cachable_str, "%30u", &cachable);
+		if ((cacheable_str = iks_find_attrib(item_content, "cacheable"))) {
+			sscanf(cacheable_str, "%30u", &cacheable);
 		}
 		device_state = iks_find_cdata(item, "state");
 		ast_publish_device_state_full(item_id,
 						ast_devstate_val(device_state),
-						cachable == AST_DEVSTATE_CACHABLE ? AST_DEVSTATE_CACHABLE : AST_DEVSTATE_NOT_CACHABLE,
+						cacheable == AST_DEVSTATE_CACHABLE ? AST_DEVSTATE_CACHABLE : AST_DEVSTATE_NOT_CACHABLE,
 						&pubsub_eid);
 		return IKS_FILTER_EAT;
 	} else if (!strcasecmp(iks_name(item_content), "mailbox")) {
