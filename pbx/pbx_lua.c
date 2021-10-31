@@ -919,7 +919,7 @@ static int lua_sort_extensions(lua_State *L)
 }
 
 /*!
- * \brief Register dialplan switches for our pbx_lua contexs.
+ * \brief Register dialplan switches for our pbx_lua contexts.
  *
  * In the event of an error, an error string will be pushed onto the lua stack.
  *
@@ -977,7 +977,7 @@ static int lua_register_switches(lua_State *L)
 }
 
 /*!
- * \brief Register dialplan hints for our pbx_lua contexs.
+ * \brief Register dialplan hints for our pbx_lua contexts.
  *
  * In the event of an error, an error string will be pushed onto the lua stack.
  *
