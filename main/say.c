@@ -5494,7 +5494,7 @@ int ast_say_date_with_format_he(struct ast_channel *chan, time_t t, const char *
 				* ast_say_number_full_he mean, but it seems
 				* safe to pass -1 there.
 				*
-				* At least in one of the pathes :-(
+				* At least in one of the paths :-(
 				*/
 				res = ast_say_number_full_he(chan, tm.tm_mday, ints, lang, "m", -1, -1);
 				break;
