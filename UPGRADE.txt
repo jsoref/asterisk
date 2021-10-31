@@ -2432,7 +2432,7 @@ Applications:
   the 'm' option now provides the functionality of "initially muted".
   In practice, most existing dialplans using the 'm' flag should not notice
   any difference, unless the keypad menu is enabled, allowing the user
-  to unmute themsleves.
+  to unmute themselves.
 
 * ast_play_and_record would attempt to cancel the recording if a DTMF
   '0' was received.  This behavior was not documented in most of the
