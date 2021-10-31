@@ -5688,7 +5688,7 @@ static struct ast_frame *process_dtmf_cisco(struct ast_rtp_instance *instance, u
 						  then falls to 0 at its end)
 		+3 (+5,+7,...)  - detected DTMF digit (0..9,*,#,A-D,...)
 		Repeated DTMF information (bytes 4/5, 6/7) is history shifted right
-		by each new packet and thus provides some redudancy.
+		by each new packet and thus provides some redundancy.
 
 		Sample of Cisco RTP DTMF packet is (all data in hex):
 			19 07 00 02 12 02 20 02
@@ -8576,7 +8576,7 @@ static void ast_rtp_remote_address_set(struct ast_rtp_instance *instance, struct
 }
 
 /*!
- * \brief Write t140 redundacy frame
+ * \brief Write t140 redundancy frame
  *
  * \param data primary data to be buffered
  *
