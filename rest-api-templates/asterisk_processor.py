@@ -32,9 +32,9 @@ except ImportError:
 
 
 def simple_name(name):
-    """Removes the {markers} from a path segement.
+    """Removes the {markers} from a path segment.
 
-    @param name: Swagger path segement, with {pathVar} markers.
+    @param name: Swagger path segment, with {pathVar} markers.
     """
     if name.startswith('{') and name.endswith('}'):
         return name[1:-1]
@@ -84,7 +84,7 @@ class PathSegment(Stringify):
         self.full_name = None
         #: Dictionary of child PathSegements
         self.__children = OrderedDict()
-        #: List of operations on this segement
+        #: List of operations on this segment
         self.operations = []
 
         if self.name != name:

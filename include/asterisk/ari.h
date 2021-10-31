@@ -66,12 +66,12 @@ typedef void (*stasis_rest_callback)(
  * \brief Handler for a single RESTful path segment.
  */
 struct stasis_rest_handlers {
-	/*! Path segement to handle */
+	/*! Path segment to handle */
 	const char *path_segment;
 	/*! If true (non-zero), path_segment is a wildcard, and will match all
 	 * values.
 	 *
-	 * Value of the segement will be passed into the \a path_vars parameter
+	 * Value of the segment will be passed into the \a path_vars parameter
 	 * of the callback.
 	 */
 	int is_wildcard;
