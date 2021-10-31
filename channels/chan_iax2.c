@@ -9290,7 +9290,7 @@ static int registry_rerequest(struct iax_ies *ies, int callno, struct ast_sockad
 			return send_command(iaxs[callno], AST_FRAME_IAX, IAX_COMMAND_REGREQ, 0, ied.buf, ied.pos, -1);
 		} else
 			return -1;
-		ast_log(LOG_WARNING, "Registry acknowledge on unknown registery '%s'\n", peer);
+		ast_log(LOG_WARNING, "Registry acknowledge on unknown registry '%s'\n", peer);
 	} else
 		ast_log(LOG_NOTICE, "Can't reregister without a reg\n");
 	return -1;
