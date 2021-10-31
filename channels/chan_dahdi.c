@@ -17869,7 +17869,7 @@ static int dahdi_datetime_send_option(const char *value)
 
 /*! process_dahdi() - ignore keyword 'channel' and similar */
 #define PROC_DAHDI_OPT_NOCHAN  (1 << 0)
-/*! process_dahdi() - No warnings on non-existing cofiguration keywords */
+/*! process_dahdi() - No warnings on non-existing configuration keywords */
 #define PROC_DAHDI_OPT_NOWARN  (1 << 1)
 
 static void parse_busy_pattern(struct ast_variable *v, struct ast_dsp_busy_pattern *busy_cadence)

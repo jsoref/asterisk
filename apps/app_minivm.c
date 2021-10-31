@@ -3547,7 +3547,7 @@ static int reload(void)
 	return(load_config(1));
 }
 
-/*! \brief Reload cofiguration */
+/*! \brief Reload configuration */
 static char *handle_minivm_reload(struct ast_cli_entry *e, int cmd, struct ast_cli_args *a)
 {
 

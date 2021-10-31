@@ -1071,7 +1071,7 @@ static void sip_options_remove_contact_status(struct sip_options_aor *aor_option
 struct sip_options_synchronize_aor_task_data {
 	/*! \brief The AOR options for this AOR */
 	struct sip_options_aor *aor_options;
-	/*! \brief The AOR which contains the new configuraton */
+	/*! \brief The AOR which contains the new configuration */
 	struct ast_sip_aor *aor;
 	/*! \brief Optional container of existing AOR s*/
 	struct ao2_container *existing;

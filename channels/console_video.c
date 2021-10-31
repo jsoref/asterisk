@@ -234,7 +234,7 @@ struct video_out_desc {
  * The overall descriptor, with room for config info, video source and
  * received data descriptors, SDL info, etc.
  * This should be globally visible to all modules (grabber, vcodecs, gui)
- * and contain all configurtion info.
+ * and contain all configuration info.
  */
 struct video_desc {
 	char codec_name[64];        /* the codec we use */

@@ -114,7 +114,7 @@
 ; ----------------------------------------------------------------------------
 
 ; ** Old configuration options **
-; The "call-limit" configuation option is considered old is replaced
+; The "call-limit" configuration option is considered old is replaced
 ; by new functionality. To enable callcounters, you use the new
 ; "callcounter" setting (for extension states in queue and subscriptions)
 ; You are encouraged to use the dialplan groupcount functionality
