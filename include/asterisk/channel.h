@@ -2743,7 +2743,7 @@ struct ast_channel *ast_channel_internal_oldest_linkedid(struct ast_channel *a, 
 void ast_channel_internal_copy_linkedid(struct ast_channel *dest, struct ast_channel *source);
 
 /*!
- * \brief Swap uniqueid and linkedid beteween two channels
+ * \brief Swap uniqueid and linkedid between two channels
  * \param a First channel
  * \param b Second channel
  * \return void
@@ -2754,7 +2754,7 @@ void ast_channel_internal_copy_linkedid(struct ast_channel *dest, struct ast_cha
 void ast_channel_internal_swap_uniqueid_and_linkedid(struct ast_channel *a, struct ast_channel *b);
 
 /*!
- * \brief Swap topics beteween two channels
+ * \brief Swap topics between two channels
  * \param a First channel
  * \param b Second channel
  * \return void
@@ -2777,7 +2777,7 @@ void ast_channel_internal_swap_topics(struct ast_channel *a, struct ast_channel 
 void ast_channel_internal_swap_endpoint_forward(struct ast_channel *a, struct ast_channel *b);
 
 /*!
- * \brief Swap snapshots beteween two channels
+ * \brief Swap snapshots between two channels
  * \param a First channel
  * \param b Second channel
  * \return void

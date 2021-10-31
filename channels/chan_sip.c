@@ -29195,7 +29195,7 @@ static int handle_incoming(struct sip_pvt *p, struct sip_request *req, struct as
 				unsigned int ran = (ast_random() % 10) + 1;
 				char seconds[4];
 				snprintf(seconds, sizeof(seconds), "%u", ran);
-				transmit_response_with_retry_after(p, "500 Server error", req, seconds);	/* respond according to RFC 3261 14.2 with Retry-After betwewn 0 and 10 */
+				transmit_response_with_retry_after(p, "500 Server error", req, seconds);	/* respond according to RFC 3261 14.2 with Retry-After between 0 and 10 */
 			} else if (req->method != SIP_ACK) {
 				transmit_response(p, "500 Server error", req);	/* We must respond according to RFC 3261 sec 12.2 */
 			}
