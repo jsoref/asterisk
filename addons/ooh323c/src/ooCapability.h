@@ -717,11 +717,11 @@ EXTERN int ooAppendCapToCapPrefs(struct OOH323CallData *call, int cap);
 EXTERN int ooChangeCapPrefOrder(struct OOH323CallData *call, int cap, int pos);
 
 /**
- * This function is used to preppend a particular capability to preference
+ * This function is used to prepend a particular capability to preference
  * list.
  * @param call     Handle to call, if call's preference list has to be modified
  *                 else NULL, to modify endpoint's preference list.
- * @param cap      Capability to be preppended.
+ * @param cap      Capability to be prepended.
  *
  * @return         OO_OK, on success. OO_FAILED, otherwise.
  */
