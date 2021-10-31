@@ -170,7 +170,7 @@ static void bridge_sync_cleanup(struct bridge_sync *sync_struct)
  * completed.
  *
  * If a significant amount of time passes, then we will abandon
- * waiting for the synchrnous bridge action to complete.
+ * waiting for the synchronous bridge action to complete.
  *
  * This constant represents the number of milliseconds we will
  * wait for the bridge action to complete.
