@@ -1305,7 +1305,7 @@ EXTERN int decodeObjectIdentifier (OOCTXT* pctxt, ASN1OBJID* pvalue);
 
 /**
  * This function will decode a value of the ASN.1 octet string type whose
- * maximun size is known in advance. The ASN1C compiler generates a call to
+ * maximum size is known in advance. The ASN1C compiler generates a call to
  * this function to decode octet string productions or elements that contain a
  * size constraint.
  *

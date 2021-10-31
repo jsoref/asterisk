@@ -285,7 +285,7 @@ void ast_fax_tech_unregister(struct ast_fax_tech *tech);
 /*! \brief get the minimum supported fax rate */
 unsigned int ast_fax_minrate(void);
 
-/*! \brief get the maxiumum supported fax rate */
+/*! \brief get the maximum supported fax rate */
 unsigned int ast_fax_maxrate(void);
 
 /*! \brief convert an ast_fax_state to a string */
