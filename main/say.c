@@ -9660,7 +9660,7 @@ static const char *counted_noun_ending_en(int num)
  * They are the genitive singular which we represent with the suffix "x1" and
  * the genitive plural which we represent with the suffix "x2". The base names
  * of the soundfiles remain in English. For example:
- *  - 1 degree (soudfile says "gradus")
+ *  - 1 degree (soundfile says "gradus")
  *  - 2 degreex1 (soundfile says "gradusa")
  *  - 5 degreex2 (soundfile says "gradusov")
  */
