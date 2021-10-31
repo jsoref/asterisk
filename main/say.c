@@ -9657,8 +9657,8 @@ static const char *counted_noun_ending_en(int num)
 /*! \brief
  * Counting of objects in slavic languages such as Russian and Ukrainian the
  * rules are more complicated. There are two plural forms used in counting.
- * They are the genative singular which we represent with the suffix "x1" and
- * the genative plural which we represent with the suffix "x2". The base names
+ * They are the genitive singular which we represent with the suffix "x1" and
+ * the genitive plural which we represent with the suffix "x2". The base names
  * of the soundfiles remain in English. For example:
  *  - 1 degree (soudfile says "gradus")
  *  - 2 degreex1 (soundfile says "gradusa")
@@ -9676,9 +9676,9 @@ static const char *counted_noun_ending_slavic(int num)
 	if (num == 1) {			/* singular */
 	    return "";
 	}
-	if (num > 0 && num < 5) {	/* 2--4 get genative singular */
+	if (num > 0 && num < 5) {	/* 2--4 get genitive singular */
 	    return "x1";
-	} else {			/* 5--19 get genative plural */
+	} else {			/* 5--19 get genitive plural */
 	    return "x2";
 	}
 }
@@ -9705,7 +9705,7 @@ int ast_say_counted_noun(struct ast_channel *chan, int num, const char noun[])
 /*! \brief
  * In slavic languages such as Russian and Ukrainian the rules for declining
  * adjectives are simpler than those for nouns.  When counting we use only
- * the singular (to which we give no suffix) and the genative plural (which
+ * the singular (to which we give no suffix) and the genitive plural (which
  * we represent by adding an "x").  Oh, an in the singular gender matters
  * so we append the supplied gender suffix ("m", "f", "n").
  */
@@ -9720,7 +9720,7 @@ static const char *counted_adjective_ending_ru(int num, const char gender[])
 	}
 	if (num == 1) {
 	    return gender ? gender : "";
-	} else {		/* all other numbers get the genative plural */
+	} else {		/* all other numbers get the genitive plural */
 	    return "x";
 	}
 }

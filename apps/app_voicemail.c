@@ -9464,10 +9464,10 @@ static int vm_intro_gr(struct ast_channel *chan, struct vm_state *vms)
  * If you use it for Russian and other slavic languages, you will need these additional sound files:
  *
  *  vm-newn		"novoye" (singular, neuter)
- *  vm-newx		"novikh" (counting plural form, genative plural)
+ *  vm-newx		"novikh" (counting plural form, genitive plural)
  *  vm-message		"sobsheniye" (singular form)
- *  vm-messagex1	"sobsheniya" (first counting plural form, genative singular)
- *  vm-messagex2	"sobsheniy" (second counting plural form, genative plural)
+ *  vm-messagex1	"sobsheniya" (first counting plural form, genitive singular)
+ *  vm-messagex2	"sobsheniy" (second counting plural form, genitive plural)
  *  digits/1n		"odno" (neuter singular for phrases such as "one message" or "thirty one messages")
  *  digits/2n		"dva" (neuter singular)
  */

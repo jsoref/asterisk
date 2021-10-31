@@ -53,8 +53,8 @@
 			to <replaceable>filename</replaceable>. If the channel language is
 			English, then the suffix will be either empty or "s". If the channel
 			language is Russian or some other Slavic language, then the suffix
-			will be empty for nominative, "x1" for genative singular, and "x2"
-			for genative plural.</para>
+			will be empty for nominative, "x1" for genitive singular, and "x2"
+			for genitive plural.</para>
 			<para>Note that combining <replaceable>filename</replaceable> with
 			a suffix will not necessarily produce a correctly spelled plural
 			form. For example, SayCountedNoun(2,man) will play the sound file
@@ -96,7 +96,7 @@
 			be added (since, in English, adjectives are not declined). If the
 			channel language is Russian or some other slavic language, then the
 			suffix will the specified <replaceable>gender</replaceable> for
-			nominative, and "x" for genative plural. (The genative singular is
+			nominative, and "x" for genitive plural. (The genitive singular is
 			not used when counting things.) For example, SayCountedAdj(1,new,f)
 			will play sound file "newa" (containing the word "novaya"), but
 			SayCountedAdj(5,new,f) will play sound file "newx" (containing the
