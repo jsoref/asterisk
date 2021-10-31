@@ -47,7 +47,7 @@ struct ast_key;
 /*!
  * \brief Retrieve a key
  * \param key Name of the key we are retrieving
- * \param type Intger type of key (AST_KEY_PUBLIC or AST_KEY_PRIVATE)
+ * \param type Integer type of key (AST_KEY_PUBLIC or AST_KEY_PRIVATE)
  *
  * \retval the key on success.
  * \retval NULL on failure.
