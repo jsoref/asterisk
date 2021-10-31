@@ -182,7 +182,7 @@ struct sip_options_aor {
 	unsigned int qualify_frequency;
 	/*! If true authenticate the qualify challenge response if needed */
 	int authenticate_qualify;
-	/*! \brief Qualify timeout. 0 is diabled. */
+	/*! \brief Qualify timeout. 0 is disabled. */
 	double qualify_timeout;
 	/*! \brief The name of the AOR */
 	char name[0];
