@@ -817,7 +817,7 @@ static void features_copy(struct features_config *dest, const struct features_co
 
 	/* applicationmap and featuregroups are purposely not copied. A channel's applicationmap
 	 * is produced on the fly when ast_get_chan_applicationmap() is called
-	 * NOTE: This does not apply to the global cfg->applicationmap and cfg->featuresgroups
+	 * NOTE: This does not apply to the global cfg->applicationmap and cfg->featuregroups
 	 */
 }
 
