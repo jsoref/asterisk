@@ -2025,7 +2025,7 @@ int ooSendStatusInquiry(OOH323CallData *call)
    /* OOCTXT *pctxt = &gH323ep.msgctxt; */
    OOCTXT *pctxt = call->msgctxt;
 
-   OOTRACEDBGC3("Building StatusInquryMsg (%s, %s)\n", call->callType,
+   OOTRACEDBGC3("Building StatusInquiryMsg (%s, %s)\n", call->callType,
                  call->callToken);
    ret = ooCreateQ931Message(pctxt, &q931msg, Q931StatusEnquiryMsg);
    if(ret != OO_OK)
