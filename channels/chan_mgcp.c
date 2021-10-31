@@ -3089,7 +3089,7 @@ static void *mgcp_ss(void *data)
 			timeout = firstdigittimeout;
 		} else if (!strcmp(p->dtmf_buf, pickupexten)) {
 			/* Scan all channels and see if any there
-			 * ringing channqels with that have call groups
+			 * ringing channels with that have call groups
 			 * that equal this channels pickup group
 			 */
 			if (ast_pickup_call(chan)) {
