@@ -6485,7 +6485,7 @@ static void *pri_dchannel(void *vpri)
 					pri_find_dchan(pri);
 				}
 
-				/* Note presense of D-channel */
+				/* Note presence of D-channel */
 				time(&pri->lastreset);
 
 				/* Restart in 5 seconds */
