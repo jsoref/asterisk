@@ -2971,7 +2971,7 @@ struct ast_channel_iterator;
 /*!
  * \brief Destroy a channel iterator
  *
- * \param i the itereator to destroy
+ * \param i the iterator to destroy
  *
  * \details
  * This function is used to destroy a channel iterator that was retrieved by
