@@ -2794,7 +2794,7 @@ static void transmit_clear_display_message(struct skinny_device *d, int instance
 		return;
 
 	//what do we want hear CLEAR_DISPLAY_MESSAGE or CLEAR_PROMPT_STATUS???
-	//if we are clearing the display, it appears there is no instance and refernece info (size 0)
+	//if we are clearing the display, it appears there is no instance and reference info (size 0)
 	//req->data.clearpromptstatus.lineInstance = instance;
 	//req->data.clearpromptstatus.callReference = reference;
 
