@@ -112,7 +112,7 @@ iax.conf too) the following:
 /*
  * Codecs are absolutely necessary or we cannot do anything.
  * SDL is optional (used for rendering only), so that we can still
- * stream video withouth displaying it.
+ * stream video without displaying it.
  */
 #if !defined(HAVE_VIDEO_CONSOLE) || !defined(HAVE_FFMPEG)
 /* stubs if required pieces are missing */
