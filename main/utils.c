@@ -2454,7 +2454,7 @@ int ast_parse_digest(const char *digest, struct ast_http_digest *d, int request,
 			if (i->field) {
 				ast_string_field_ptr_set(d, i->field, src);
 			} else {
-				/* Special cases that require additional procesing */
+				/* Special cases that require additional processing */
 				if (!strcasecmp(i->key, "algorithm=")) {
 					if (strcasecmp(src, "MD5")) {
 						ast_log(LOG_WARNING, "Digest algorithm: \"%s\" not supported.\n", src);
