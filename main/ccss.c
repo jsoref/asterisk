@@ -1354,7 +1354,7 @@ struct generic_monitor_instance_list {
 	 * for recall. If a CCNR request comes in, then we will
 	 * have to mark the list as unfit for recall since this
 	 * is a clear indicator that the person at the monitored
-	 * device has gone away and is actuall not fit to be
+	 * device has gone away and is actually not fit to be
 	 * recalled
 	 */
 	int fit_for_recall;
