@@ -4431,7 +4431,7 @@ static struct adapter_pvt *mbl_load_adapter(struct ast_config *cfg, const char *
 
 	/* bind the sco listener socket */
 	if (sco_bind(adapter) < 0) {
-		ast_log(LOG_ERROR, "Skipping adapter %s. Error binding audio connection listerner socket.\n", adapter->id);
+		ast_log(LOG_ERROR, "Skipping adapter %s. Error binding audio connection listener socket.\n", adapter->id);
 		goto e_destroy_io;
 	}
 
@@ -4443,7 +4443,7 @@ static struct adapter_pvt *mbl_load_adapter(struct ast_config *cfg, const char *
 
 	/* start the sco listener for this adapter */
 	if (ast_pthread_create_background(&adapter->sco_listener_thread, NULL, do_sco_listen, adapter)) {
-		ast_log(LOG_ERROR, "Skipping adapter %s. Error creating audio connection listerner thread.\n", adapter->id);
+		ast_log(LOG_ERROR, "Skipping adapter %s. Error creating audio connection listener thread.\n", adapter->id);
 		goto e_remove_sco;
 	}
 
