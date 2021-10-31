@@ -703,7 +703,7 @@ sub usage() {
 	print "\n";
 	print "Usage:\n";
 	print "$0  # menuselect processing\n";
-	print "$0 -m|--modinfo|--moduls-info PATTERN # Status of modules\n";
+	print "$0 -m|--modinfo|--modules-info PATTERN # Status of modules\n";
 	print "$0 -v|--verbose                       # verbose (modinfo)\n";
 	print "$0 -c|--check-deps                    # Check for dependencies\n";
 	print "\n";
