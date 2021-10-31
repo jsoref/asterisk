@@ -1628,7 +1628,7 @@ static int sub_persistence_recreate(void *obj)
 	expires = (ast_tvdiff_ms(persistence->expires, ast_tvnow()) / 1000);
 	if (expires <= 0) {
 		/* The subscription expired since we started recreating the subscription. */
-		ast_debug(3, "Expired subscription retrived from persistent store '%s' %s\n",
+		ast_debug(3, "Expired subscription retrieved from persistent store '%s' %s\n",
 			persistence->endpoint, persistence->tag);
 		ast_sorcery_delete(ast_sip_get_sorcery(), persistence);
 		ao2_ref(endpoint, -1);
@@ -1699,7 +1699,7 @@ static int subscription_persistence_recreate(void *obj, void *arg, int flags)
 
 	/* If this subscription has already expired remove it */
 	if (ast_tvdiff_ms(persistence->expires, ast_tvnow()) <= 0) {
-		ast_debug(3, "Expired subscription retrived from persistent store '%s' %s\n",
+		ast_debug(3, "Expired subscription retrieved from persistent store '%s' %s\n",
 			persistence->endpoint, persistence->tag);
 		ast_sorcery_delete(ast_sip_get_sorcery(), persistence);
 		return 0;

@@ -418,7 +418,7 @@ EXTERN int ooGenerateCallIdentifier(H225CallIdentifier *callid);
 EXTERN int ooFreeQ931Message(OOCTXT* pctxt, Q931Message *q931Msg);
 
 /**
- * This function is invoked to retrive the outgoing message buffer for
+ * This function is invoked to retrieve the outgoing message buffer for
  * Q931 message
  *
  * @param call     Pointer to call for which outgoing Q931 message has to be
