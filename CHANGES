@@ -2873,7 +2873,7 @@ on AMI, CDRs, and CEL on the Asterisk wiki:
  * CEL - https://wiki.asterisk.org/wiki/x/4ICLAQ
  * CDRs - https://wiki.asterisk.org/wiki/x/pwpRAQ
 
-Many new featuers in Asterisk 13 were introduced in point releases of
+Many new features in Asterisk 13 were introduced in point releases of
 Asterisk 12. Following this section - which documents the changes from all
 versions of Asterisk 12 to Asterisk 13 - users should examine the new features
 that were introduced in the point releases of Asterisk 12, as they are also
