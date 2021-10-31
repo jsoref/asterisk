@@ -1565,7 +1565,7 @@
 						in their WWW-Authenticate header.  It can't be blank
 						unless you expect the server to be sending a blank
 						realm in the header.  You can't use pre-hashed
-						paswords with a wildcard auth object.
+						passwords with a wildcard auth object.
 						You can generate the hash with the following shell
 						command:
 						</para>
