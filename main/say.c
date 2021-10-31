@@ -8182,7 +8182,7 @@ static int gr_say_number_female(int num, struct ast_channel *chan, const char *i
 				 and digits/hundred-100 to utter "ekaton"
  ->	digits/hundred-[100...1000] :: A pronunciation of  hundreds from 100 to 1000 e.g 400 =
 				 "terakosia". Here again we use hundreds/1000 for "xilia"
-				 and digits/thousnds for "xiliades"
+				 and digits/thousands for "xiliades"
 */
 static int ast_say_number_full_gr(struct ast_channel *chan, int num, const char *ints, const char *language, int audiofd, int ctrlfd)
 {
