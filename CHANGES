@@ -5236,7 +5236,7 @@ Core
  * Rules in ACLs (specified using 'permit' and 'deny') can now contain multiple
    items (separated by commas), and items in the rule can be negated by prefixing
    them with '!'. This simplifies Asterisk Realtime configurations, since it is no
-   longer necessray to control the order that the 'permit' and 'deny' columns are
+   longer necessary to control the order that the 'permit' and 'deny' columns are
    returned from queries.
 
  * DUNDi now allows the built in variables ${NUMBER}, ${IPADDR} and ${SECRET} to

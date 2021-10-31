@@ -1654,7 +1654,7 @@ static struct ast_conference *build_conf(const char *confno, const char *pin,
 	cnf->fd = open("/dev/dahdi/pseudo", O_RDWR);
 	if (cnf->fd < 0 || ioctl(cnf->fd, DAHDI_SETCONF, &dahdic)) {
 		if (test) {
-			/* if we are creating a conference for a unit test, it is not neccesary
+			/* if we are creating a conference for a unit test, it is not necessary
 			 * to open a pseudo channel, so, if we fail continue creating
 			 * the conference. */
 			ast_test_status_update(test, "Unable to open DAHDI pseudo device\n");

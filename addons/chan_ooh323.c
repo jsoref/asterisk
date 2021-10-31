@@ -3167,7 +3167,7 @@ int reload_config(int reload)
 	ast_config_destroy(cfg);
 
 
-	/* Determine ip address if neccessary */
+	/* Determine ip address if necessary */
 	if (ast_strlen_zero(gIP)) {
 		ooGetLocalIPAddress(gIP);
 		if (!strcmp(gIP, "127.0.0.1") || !strcmp(gIP, "::1")) {
