@@ -7256,7 +7256,7 @@ AEL Changes
      will be improved as time goes by. Should be useful for a
      first pass at conversion.
   * aelparse will now read extensions.conf to see if a referenced
-     macro or context is there before issueing a warning.
+     macro or context is there before issuing a warning.
   * AEL parser sets a local channel variable ~~EXTEN~~, to
     preserve the value of ${EXTEN} thru switch statements.
   * New operator in $[...] expressions: the ~~ operator serves
