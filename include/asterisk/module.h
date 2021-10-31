@@ -181,7 +181,7 @@ enum ast_module_reload_result ast_module_reload(const char *name);
 /*!
  * \brief Notify when usecount has been changed.
  *
- * This function calulates use counts and notifies anyone trying to keep track
+ * This function calculates use counts and notifies anyone trying to keep track
  * of them.  It should be called whenever your module's usecount changes.
  *
  * \note The ast_module_user_* functions take care of calling this function for you.
