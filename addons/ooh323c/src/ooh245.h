@@ -174,7 +174,7 @@ EXTERN int ooSendMasterSlaveDeterminationReject (struct OOH323CallData* call);
  * MasterSlaveDetermination procedure.
  * @param call        Handle to the call for which MasterSlaveReject is
  *                    received.
- * @param reject      Poinetr to the received reject message.
+ * @param reject      Pointer to the received reject message.
  *
  * @return            OO_OK, on success. OO_FAILED, on failure.
  */
