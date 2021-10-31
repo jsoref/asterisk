@@ -4341,7 +4341,7 @@ static void hangupcalls(struct queue_ent *qe, struct callattempt *outgoing, stru
  *
  * \note The queue passed in should be locked prior to this function call
  *
- * \param[in] q The queue for which we are couting the number of available members
+ * \param[in] q The queue for which we are counting the number of available members
  * \return Return the number of available members in queue q
  */
 static int num_available_members(struct call_queue *q)
