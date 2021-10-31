@@ -354,7 +354,7 @@ void free_convolve_channel_pair(struct convolve_channel_pair *cchan_pair);
 void free_convolve_data(struct convolve_data *data);
 
 /*!
- * \brief Joins a channel into a virtual enviroment build with the help of binaural sythesis.
+ * \brief Joins a channel into a virtual enviroment build with the help of binaural synthesis.
  *
  * \param data Contains all channels and data needed for binaural processing
  *  (e.g. head related transfer functions).
