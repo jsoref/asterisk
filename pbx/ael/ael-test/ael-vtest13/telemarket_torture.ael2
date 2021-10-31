@@ -66,7 +66,7 @@ context telemarket-charity {
 		begin:
 		Playback(telemark-charity-intro);
                                                //  We have contributed generously to many worthy causes in the past, and will
-                                               // continue to do so in the future. But we suspect that such organizatons
+                                               // continue to do so in the future. But we suspect that such organizations
                                                // have sold our name and phone number to each other until we are now hounded
                                                // day and night by literally hundreds of such organizations.
                                                // Enough is Enough!
