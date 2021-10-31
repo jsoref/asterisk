@@ -5481,7 +5481,7 @@ res_rtp_asterisk
 res_corosync
 -------------------
  * A new module, res_corosync, has been introduced.  This module uses the
-   Corosync cluster enginer (http://www.corosync.org) to allow a local cluster
+   Corosync cluster engineer (http://www.corosync.org) to allow a local cluster
    of Asterisk servers to both Message Waiting Indication (MWI) and/or
    Device State (presence) information.  This module is very similar to, and
    is a replacement for the res_ais module that was in previous releases of
