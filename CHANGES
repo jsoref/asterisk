@@ -4201,7 +4201,7 @@ AMI (Asterisk Manager Interface)
    successful completion Event.
 
  * The 'BridgeExec' events were removed. These events duplicated the events that
-   occur in the Briding API, and are conveyed now through BridgeCreate,
+   occur in the Bridging API, and are conveyed now through BridgeCreate,
    BridgeEnter, and BridgeLeave events.
 
  * The 'RTCPSent'/'RTCPReceived' events have been significantly modified from
