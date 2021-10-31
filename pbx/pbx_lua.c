@@ -878,7 +878,7 @@ static int lua_sort_extensions(lua_State *L)
 		lua_newtable(L);
 		context_order = lua_gettop(L);
 
-		/* iterate through this context an popluate the corrisponding
+		/* iterate through this context an popluate the corresponding
 		 * table in the extensions_order table */
 		for (lua_pushnil(L); lua_next(L, context); lua_pop(L, 1)) {
 			int exten = lua_gettop(L) - 1;

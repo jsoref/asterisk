@@ -578,7 +578,7 @@ static enum ast_device_state cc_state_to_devstate_map[] = {
  *
  * \param state
  *
- * \return the correponding DEVICE STATE from the cc_state_to_devstate_map
+ * \return the corresponding DEVICE STATE from the cc_state_to_devstate_map
  * when passed an internal state.
  */
 static enum ast_device_state cc_state_to_devstate(enum cc_state state)
