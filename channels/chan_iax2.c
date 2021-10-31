@@ -1166,7 +1166,7 @@ static ast_mutex_t iaxsl[ARRAY_LEN(iaxs)];
 /*!
  *  * \brief Another container of iax2_pvt structures
  *
- *  Active IAX2 pvt stucts used during transfering a call are stored here.
+ *  Active IAX2 pvt struts used during transfering a call are stored here.
  */
 static struct ao2_container *iax_transfercallno_pvts;
 
