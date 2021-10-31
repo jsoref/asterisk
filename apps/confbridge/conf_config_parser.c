@@ -459,7 +459,7 @@
 							<enum name="sound_kicked"><para>The sound played to a user who has been kicked from the conference.</para></enum>
 							<enum name="sound_muted"><para>The sound played when the mute option it toggled on.</para></enum>
 							<enum name="sound_unmuted"><para>The sound played when the mute option it toggled off.</para></enum>
-							<enum name="sound_binaural_on"><para>The sound played when binaural auudio is turned on.</para></enum>
+							<enum name="sound_binaural_on"><para>The sound played when binaural audio is turned on.</para></enum>
 							<enum name="sound_binaural_off"><para>The sound played when the binaural audio is turned off.</para></enum>
 							<enum name="sound_only_person"><para>The sound played when the user is the only person in the conference.</para></enum>
 							<enum name="sound_only_one"><para>The sound played to a user when there is only one other
