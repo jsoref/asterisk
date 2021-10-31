@@ -2892,7 +2892,7 @@ int ooGkClientUpdateRegisteredAliases
 
    if(!pAddresses)
    {
-     /* All aliases registered/unregistsred */
+     /* All aliases registered/unregistered */
       pAlias = gH323ep.aliases;
 
       while(pAlias)

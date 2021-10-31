@@ -96,7 +96,7 @@
 
    AST_TEST_REGISTER(sample_test_cb);    \\ Test callback function defined by AST_TEST_DEFINE
 
-   Tests are unregestered by using the AST_TEST_UNREGISTER macro.
+   Tests are unregistered by using the AST_TEST_UNREGISTER macro.
 
    AST_TEST_UNREGISTER(sample_test_cb);  \\ Remove a registered test by callback function
 
