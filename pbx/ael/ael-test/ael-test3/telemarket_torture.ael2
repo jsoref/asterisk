@@ -722,7 +722,7 @@ context telemark-mag-renew {
                                                // Do you need verification information? Normally I opt out of such nonsense, if possible.
                                                // If not, use whatever of the following you can:
                                                // My birth month is October.
-                                               // My birthplace is Kigali, in Rwanda, in Afica.
+                                               // My birthplace is Kigali, in Rwanda, in Africa.
                                                // My eye color is orange.
                                                // All of these are wonderfully false, but I use them regularly for such purposes. Thank you.
 		Hangup();
