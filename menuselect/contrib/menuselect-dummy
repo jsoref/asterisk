@@ -65,7 +65,7 @@
 use strict;
 use Getopt::Long;
 
-# Holds global dependncy information. Keys are module names.
+# Holds global dependency information. Keys are module names.
 my %ModInfo = ();
 
 # extract configuration from kernel modules:
