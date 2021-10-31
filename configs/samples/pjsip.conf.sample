@@ -589,7 +589,7 @@
 ;PROFILE=someprofile            ;added by defaults
 ;SERVER=myserver.example.com    ;added by defaults
 ;SERVER_PORT=5060               ;added by defaults
-;MYVAR=someUSERvalue            ;added by defaults but overdidden by user
+;MYVAR=someUSERvalue            ;added by defaults but overridden by user
 ;CALLERID=8005551212            ;automatically added by 1000 callerid
 ;DISPLAY_NAME=My Name           ;automatically added by 1000 callerid
 ;TIMEZONE=America/Denver        ;added by defaults

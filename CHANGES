@@ -1551,7 +1551,7 @@ res_pjsip_outbound_registration
 
 app_voicemail
 ------------------
- * The 'Comedian Mail' prompts can now be overriden using the 'vm-login' and
+ * The 'Comedian Mail' prompts can now be overridden using the 'vm-login' and
    'vm-newuser' configuration options in voicemail.conf.
 
  * Added 'fromstring' field to the voicemail boxes. If set, it will override
@@ -2506,7 +2506,7 @@ res_rtp_asterisk
 ------------------
  * A new configuration section - ice_host_candidates - has been added to
    rtp.conf, allowing automatically discovered ICE host candidates to be
-   overriden. This allows an Asterisk server behind a 1:1 NAT to send its
+   overridden. This allows an Asterisk server behind a 1:1 NAT to send its
    external IP as a host candidate rather than relying on STUN to discover it.
 
 ------------------------------------------------------------------------------
@@ -4192,7 +4192,7 @@ AMI (Asterisk Manager Interface)
    the Local channel. This affects the 'LocalBridge', 'LocalOptimizationBegin',
    and 'LocalOptimizationEnd' events.
 
- * The option 'allowmultiplelogin' can now be set or overriden in a particular
+ * The option 'allowmultiplelogin' can now be set or overridden in a particular
    account. When set in the general context, it will act as the default
    setting for defined accounts.
 
@@ -4852,7 +4852,7 @@ ConfBridge
  * Added menu action admin_toggle_mute_participants.  This will mute / unmute
    all non-admin participants on a conference.  The confbridge configuration
    file also allows for the default sounds played to all conference users when
-   this occurs to be overriden using sound_participants_unmuted and
+   this occurs to be overridden using sound_participants_unmuted and
    sound_participants_muted.
 
  * Added menu action participant_count.  This will playback the number of
@@ -4969,7 +4969,7 @@ Voicemail
  * Addition of the VM_INFO function - see Function changes.
 
  * The imapserver, imapport, and imapflags configuration options can now be
-   overriden on a user by user basis.
+   overridden on a user by user basis.
 
  * When voicemail plays a message's envelope with saycid set to yes, when
    reaching the caller id field it will play a recording of a file with the same
@@ -5073,7 +5073,7 @@ chan_motif
 chan_ooh323
 ------------------
  * Added NAT support for RTP.  Setting in config is 'nat', which can be set
-   globally and overriden on a peer by peer basis.
+   globally and overridden on a peer by peer basis.
 
  * Direct media functionality has been added. Options in config are:
    directmedia (directrtp) and directrtpsetup (earlydirect)
