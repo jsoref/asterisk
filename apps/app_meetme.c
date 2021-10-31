@@ -2836,7 +2836,7 @@ static void meetme_menu_normal(enum menu_modes *menu_mode, int *dtmf, struct ast
 }
 
 /*! \internal
- * \brief Processes menu options for the adminstrator menu (accessible through the 's' option for app_meetme)
+ * \brief Processes menu options for the administrator menu (accessible through the 's' option for app_meetme)
  *
  * \param menu_mode a pointer to the currently active menu_mode.
  * \param dtmf a pointer to the dtmf value currently being processed against the menu.
