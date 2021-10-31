@@ -354,9 +354,9 @@ sub read_conf() {
 }
 
 # generate menuselect.makedeps.
-# In this file menuselect writes dependecies of each module. CFLAGS will
+# In this file menuselect writes dependencies of each module. CFLAGS will
 # then automatically include for each module the _INCLUDE and LDFLAGS
-# will include the _LIBS from all the depedencies of the module.
+# will include the _LIBS from all the dependencies of the module.
 sub gen_makedeps() {
 	open MAKEDEPSS, ">$MakedepsFile" or
 		die "Failed to open deps file $MakedepsFile for writing. Aborting: $!\n";
