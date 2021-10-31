@@ -8035,7 +8035,7 @@ static struct ast_frame *ast_rtp_read(struct ast_rtp_instance *instance, int rtc
 			ast_free(payload);
 
 			if (!frame) {
-				/* If this packet can't be interpeted due to being out of memory we return what we have and assume
+				/* If this packet can't be interpreted due to being out of memory we return what we have and assume
 				 * that we will determine it is a missing packet later and NACK for it.
 				 */
 				return AST_LIST_FIRST(&frames);
