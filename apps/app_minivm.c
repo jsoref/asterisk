@@ -536,7 +536,7 @@
 
 #define SOUND_INTRO		"vm-intro"
 #define B64_BASEMAXINLINE 	256	/*!< Buffer size for Base 64 attachment encoding */
-#define B64_BASELINELEN 	72	/*!< Line length for Base 64 endoded messages */
+#define B64_BASELINELEN 	72	/*!< Line length for Base 64 encoded messages */
 #define EOL			"\r\n"
 
 #define MAX_DATETIME_FORMAT	512
