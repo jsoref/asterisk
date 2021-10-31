@@ -59,7 +59,7 @@ struct hash_test {
 	struct ao2_container *to_be_thrashed;
 	/*! Number of entries to insert in the grow thread. */
 	int max_grow;
-	/*! Number of enteries added by the grow thread. */
+	/*! Number of entries added by the grow thread. */
 	int grow_count;
 	/*! Entries preloaded into the hashtab; to be deleted by the shrink thread */
 	int preload;
