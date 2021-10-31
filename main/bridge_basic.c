@@ -2444,7 +2444,7 @@ static void common_recall_channel_setup(struct ast_channel *recall, struct ast_c
 
 	/*
 	 * Stage a snapshot to ensure that a snapshot is always done
-	 * on the recall channel so earler COLP and CLID setup will
+	 * on the recall channel so earlier COLP and CLID setup will
 	 * get published.
 	 */
 	ast_channel_stage_snapshot(recall);
