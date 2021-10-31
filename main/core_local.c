@@ -883,7 +883,7 @@ static struct local_pvt *local_alloc(const char *data, struct ast_stream_topolog
 	 *
 	 * This is a silly default because it represents state held by
 	 * the local channels.  Unless local channel optimization is
-	 * disabled, the state will dissapear when the local channels
+	 * disabled, the state will dissappear when the local channels
 	 * optimize out.
 	 */
 	ast_set_flag(&pvt->base, AST_UNREAL_MOH_INTERCEPT);

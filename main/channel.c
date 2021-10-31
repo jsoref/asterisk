@@ -6919,7 +6919,7 @@ static void channel_do_masquerade(struct ast_channel *original, struct ast_chann
 	 */
 	ao2_lock(channels);
 
-	/* Bump the refs to ensure that they won't dissapear on us. */
+	/* Bump the refs to ensure that they won't dissappear on us. */
 	ast_channel_ref(original);
 	ast_channel_ref(clonechan);
 

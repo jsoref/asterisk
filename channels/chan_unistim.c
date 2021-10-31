@@ -2181,7 +2181,7 @@ static void rcv_mac_addr(struct unistimsession *pte, const unsigned char *buf)
 		AST_LIST_LOCK(&pte->device->subs);
 		AST_LIST_TRAVERSE_SAFE_BEGIN(&pte->device->subs, sub, list) {
 			if (sub) {
-				ast_log(LOG_ERROR, "Subchannel lost sice reboot. Hanged channel may apear!\n");
+				ast_log(LOG_ERROR, "Subchannel lost sice reboot. Hanged channel may appear!\n");
 				AST_LIST_REMOVE_CURRENT(list);
 				ast_free(sub);
 			}
@@ -4889,7 +4889,7 @@ static int unistim_call(struct ast_channel *ast, const char *dest, int timeout)
 	}
 	session->state = STATE_RINGING;
 	send_callerid_screen(session, sub);
-	if (ast_strlen_zero(ast_channel_call_forward(ast))) { /* Send ring only if no call forward, otherwise short ring will apear */
+	if (ast_strlen_zero(ast_channel_call_forward(ast))) { /* Send ring only if no call forward, otherwise short ring will appear */
 		send_text(TEXT_LINE2, TEXT_NORMAL, session, ustmtext("is calling you.", session));
 		send_text_status(session, ustmtext("Accept        Ignore Hangup", session));
 
