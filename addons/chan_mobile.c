@@ -2006,7 +2006,7 @@ static int at_match_prefix(char *buf, char *prefix)
 }
 
 /*!
- * \brief Read an AT message and clasify it.
+ * \brief Read an AT message and classify it.
  * \param rsock an rfcomm socket
  * \param buf the buffer to store the result in
  * \param count the size of the buffer or the maximum number of characters to read
