@@ -662,7 +662,7 @@ chan_unistim:
    values used inside Unistim protocol
 
  - Added 'dtmf_duration' option with changing default operation to disable
-   receivied dtmf playback on unistim phone
+   received dtmf playback on unistim phone
 
 Core:
 
