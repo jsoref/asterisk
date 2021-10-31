@@ -647,7 +647,7 @@ static int registrar_add_unreachable(void *obj, void *arg, int flags)
 }
 
 struct aor_core_response {
-	/*! Tx data to use for statefull response.  NULL for stateless response. */
+	/*! Tx data to use for stateful response.  NULL for stateless response. */
 	pjsip_tx_data *tdata;
 	/*! SIP response code to send in stateless response */
 	int code;

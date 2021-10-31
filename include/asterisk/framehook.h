@@ -56,7 +56,7 @@
 	a channel. Once attached to the channel, the FrameHook will call the event_callback
 	function each time a frame is written or read on the channel.  A custom data
 	pointer can be provided to this function to store on the FrameHook as well.  This
-	pointer can be used to keep up with any statefull information associated with the FrameHook
+	pointer can be used to keep up with any stateful information associated with the FrameHook
 	and is provided during the event_callback function.  The destroy_callback function is optional.
 	This function exists so any custom data stored on the FrameHook can be destroyed before
 	the Framehook if destroyed.
