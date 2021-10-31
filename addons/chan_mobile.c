@@ -3040,7 +3040,7 @@ static void msg_queue_free_and_pop(struct mbl_pvt *pvt)
 }
 
 /*!
- * \brief Remove all itmes from the queue and free them.
+ * \brief Remove all items from the queue and free them.
  * \param pvt a mbl_pvt structure
  */
 static void msg_queue_flush(struct mbl_pvt *pvt)
