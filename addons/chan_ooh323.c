@@ -2851,7 +2851,7 @@ int reload_config(int reload)
 		ooH323EpClearAllAliases();
 	}
 
-	/* Inintialize everything to default */
+	/* Initialize everything to default */
 	snprintf(gLogFile, sizeof(gLogFile), "%s/%s", ast_config_AST_LOG_DIR, DEFAULT_LOGFILE);
 	gPort = 1720;
 	gIP[0] = '\0';

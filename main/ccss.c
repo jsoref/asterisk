@@ -2226,7 +2226,7 @@ static void call_destructor_with_no_monitor(const char * const monitor_type, voi
 
 /*!
  * \internal
- * \brief Allocate and intitialize a device cc_monitor
+ * \brief Allocate and initialize a device cc_monitor
  *
  * For all intents and purposes, this is the same as
  * cc_extension_monitor_init, except that there is only

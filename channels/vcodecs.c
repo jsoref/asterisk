@@ -45,7 +45,7 @@ typedef int (*encoder_encode_f)(struct video_out_desc *v);
 typedef struct ast_frame *(*encoder_encap_f)(struct fbuf_t *, int mtu,
 		struct ast_frame **tail);
 
-/*! \brief inizialize the decoder */
+/*! \brief initialize the decoder */
 typedef int (*decoder_init_f)(AVCodecContext *enc_ctx);
 
 /*! \brief extract the bitstream from RTP frames and store in the fbuf.
