@@ -2919,7 +2919,7 @@ static void my_pri_make_cc_dialstring(void *priv, char *buf, size_t buf_size)
 		AST_APP_ARG(group);	/* channel/group token */
 		//AST_APP_ARG(ext);	/* extension token */
 		//AST_APP_ARG(opts);	/* options token */
-		//AST_APP_ARG(other);	/* Any remining unused arguments */
+		//AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	pvt = priv;
@@ -5131,7 +5131,7 @@ static int dahdi_call(struct ast_channel *ast, const char *rdest, int timeout)
 		AST_APP_ARG(group);	/* channel/group token */
 		AST_APP_ARG(ext);	/* extension token */
 		//AST_APP_ARG(opts);	/* options token */
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	ast_mutex_lock(&p->lock);
@@ -13349,7 +13349,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 		AST_APP_ARG(group);	/* channel/group token */
 		//AST_APP_ARG(ext);	/* extension token */
 		//AST_APP_ARG(opts);	/* options token */
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	/*

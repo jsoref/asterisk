@@ -7810,7 +7810,7 @@ void sig_pri_extract_called_num_subaddr(struct sig_pri_chan *p, const char *rdes
 		AST_APP_ARG(group);	/* channel/group token */
 		AST_APP_ARG(ext);	/* extension token */
 		//AST_APP_ARG(opts);	/* options token */
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	/* Get private copy of dial string and break it up. */
@@ -7909,7 +7909,7 @@ int sig_pri_call(struct sig_pri_chan *p, struct ast_channel *ast, const char *rd
 		AST_APP_ARG(group);	/* channel/group token */
 		AST_APP_ARG(ext);	/* extension token */
 		AST_APP_ARG(opts);	/* options token */
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 	struct ast_flags opts;
 	char *opt_args[OPT_ARG_ARRAY_SIZE];

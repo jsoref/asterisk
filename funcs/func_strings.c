@@ -891,7 +891,7 @@ static int strreplace(struct ast_channel *chan, const char *cmd, char *data, str
 		AST_APP_ARG(find_string);
 		AST_APP_ARG(replace_string);
 		AST_APP_ARG(max_replacements);
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	/* Guarantee output string is empty to start with. */
@@ -974,7 +974,7 @@ static int strbetween(struct ast_channel *chan, const char *cmd, char *data, str
 	AST_DECLARE_APP_ARGS(args,
 		AST_APP_ARG(varname);
 		AST_APP_ARG(insert_string);
-		AST_APP_ARG(other);	/* Any remining unused arguments */
+		AST_APP_ARG(other);	/* Any remaining unused arguments */
 	);
 
 	ast_str_reset(*buf);
