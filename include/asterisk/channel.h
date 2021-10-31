@@ -4218,7 +4218,7 @@ struct ast_channel_monitor {
 	int (*stop)(struct ast_channel *chan, int need_lock);
 };
 
-/* ACCESSOR FUNTIONS */
+/* ACCESSOR FUNCTIONS */
 /*! \brief Set the channel name */
 void ast_channel_name_set(struct ast_channel *chan, const char *name);
 
