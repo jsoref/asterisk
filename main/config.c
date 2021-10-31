@@ -3730,7 +3730,7 @@ int32_done:
 			error = 1;
 			goto uint32_done;
 		}
-		/* strtoul will happilly and silently negate negative numbers */
+		/* strtoul will happily and silently negate negative numbers */
 		arg = ast_skip_blanks(arg);
 		if (*arg == '-') {
 			error = 1;
