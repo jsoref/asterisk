@@ -716,7 +716,7 @@ static int lua_autoservice_start(lua_State *L)
 }
 
 /*!
- * \brief [lua_CFunction] Tell pbx_lua to stop maintaning an autoservice on
+ * \brief [lua_CFunction] Tell pbx_lua to stop maintaining an autoservice on
  * this channel (for access from lua, don't call directly)
  *
  * \param L the lua_State to use
