@@ -209,7 +209,7 @@ tar -czvf /tmp/$tardir.tar.gz -C $tmpdir $tardir 2>/dev/null
 
 exit
 
-# Be careful editng the inline scripts.
+# Be careful editing the inline scripts.
 # They're space-indented.
 
 # We need the python bit because lock_infos isn't
