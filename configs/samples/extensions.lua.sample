@@ -55,7 +55,7 @@ TRUNKMSD = 1
 --
 --   include = {"a", "b", "c"};
 --
--- Channel variables can be accessed thorugh the global 'channel' table.
+-- Channel variables can be accessed through the global 'channel' table.
 --
 --   v = channel.var_name
 --   v = channel["var_name"]
