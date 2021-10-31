@@ -21,7 +21,7 @@
 /*! \file
  * \brief Asterisk module definitions.
  *
- * This file contains the definitons for functions Asterisk modules should
+ * This file contains the definitions for functions Asterisk modules should
  * provide and some other module related functions.
  */
 

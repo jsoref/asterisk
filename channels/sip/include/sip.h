@@ -1471,7 +1471,7 @@ struct sip_subscription_mwi {
  *
  * There are two main components to the effort, the event publication agent (EPA) and
  * the event state compositor (ESC). Both of these terms appear in RFC 3903, and the
- * implementation in Asterisk conforms to the defintions there. An EPA is a UAC that
+ * implementation in Asterisk conforms to the definitions there. An EPA is a UAC that
  * transmits PUBLISH requests. An ESC is a UAS that receives PUBLISH requests and
  * acts appropriately based on the content of those requests.
  *
