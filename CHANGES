@@ -1329,7 +1329,7 @@ res_musiconhold
    to custom applications (and all descendants), waits 100ms, then sends a
    TERM signal, waits 100ms, then finally sends a KILL signal.  An application
    which is interacting with an external device and/or spawns children of its
-   own may not be able to exit cleanly in the default times, expecially if sent
+   own may not be able to exit cleanly in the default times, especially if sent
    a KILL signal, or if it's children are getting signals directly from
    res_musiconhoild.  To allow extra time, the 'kill_escalation_delay'
    class option can be used to set the number of milliseconds res_musiconhold
