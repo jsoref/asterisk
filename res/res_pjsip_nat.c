@@ -106,7 +106,7 @@ static void rewrite_uri(pjsip_rx_data *rdata, pjsip_sip_uri *uri, pj_pool_t *poo
  * but pjsip_pubsub does not), thus this strategy can't update the dialog in
  * all cases needed.
  *
- * The ideal solution would be to implement an "incomming_request" event
+ * The ideal solution would be to implement an "incoming_request" event
  * in pubsub module that can then pass the dialog object to this module
  * on SUBSCRIBE, this module then should add itself as a listener to the dialog
  * for the subsequent requests and responses & then be able to properly update

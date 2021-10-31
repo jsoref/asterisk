@@ -6087,7 +6087,7 @@ mISDN channel driver (chan_misdn) changes
  * Added new dialplan function mISDN_CC which permits retrieval of various
    values from an active call completion record.
  * For PTP, you should manually send the COLR of the redirected-to party
-   for an incomming redirected call if the incoming call could experience
+   for an incoming redirected call if the incoming call could experience
    further redirects.  Just set the REDIRECTING(to-num,i) = ${EXTEN} and
    set the REDIRECTING(to-pres) to the COLR.  A call has been redirected
    if the REDIRECTING(from-num) is not empty.
@@ -6120,7 +6120,7 @@ libpri channel driver (chan_dahdi) DAHDI changes
    and it is also deprecated.  Use the REDIRECTING(reason) dialplan function
    to read and alter the reason.
  * For Q.SIG and ETSI PRI/BRI-PTP, you should manually send the COLR of the
-   redirected-to party for an incomming redirected call if the incoming call
+   redirected-to party for an incoming redirected call if the incoming call
    could experience further redirects.  Just set the
    REDIRECTING(to-num,i) = CALLERID(dnid) and set the REDIRECTING(to-pres)
    to the COLR.  A call has been redirected if the REDIRECTING(count) is not
