@@ -1275,7 +1275,7 @@ static int audiohook_volume_callback(struct ast_audiohook *audiohook, struct ast
 		return 0;
 	}
 
-	/* Try to find the datastore containg adjustment information, if we can't just bail out */
+	/* Try to find the datastore containing adjustment information, if we can't just bail out */
 	if (!(datastore = ast_channel_datastore_find(chan, &audiohook_volume_datastore, NULL))) {
 		return 0;
 	}

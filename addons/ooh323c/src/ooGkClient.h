@@ -545,7 +545,7 @@ EXTERN int ooGkClientUpdateRegisteredAliases
  * This function is used internally to set Gatekeeper Clients callbacks.
  * Note: This functionality is not yet fully supported
  * @param pGkClient  Handle to the GK client.
- * @param callbacks  Callback structure contatining various gatekeeper client
+ * @param callbacks  Callback structure containing various gatekeeper client
  *                   callbacks.
  * @return           OO_OK, on success. OO_FAILED, on failure.
  */

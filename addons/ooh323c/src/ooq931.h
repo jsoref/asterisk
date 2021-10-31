@@ -365,7 +365,7 @@ EXTERN int ooEncodeUUIE(OOCTXT* pctxt, Q931Message *q931msg);
  * @param q931msg  Pointer to the Q931 message
  * @param ieCode   IE code for the IE element to be retrieved
  *
- * @return         Pointer to a Q931InformationElement contating
+ * @return         Pointer to a Q931InformationElement containing
  *                 the IE element.
  */
 EXTERN Q931InformationElement* ooQ931GetIE (const Q931Message* q931msg,
