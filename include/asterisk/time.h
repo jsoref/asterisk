@@ -108,7 +108,7 @@ int ast_tvzero(const struct timeval t),
 )
 
 /*!
- * \brief Compres two \c struct \c timeval instances returning
+ * \brief Compress two \c struct \c timeval instances returning
  * -1, 0, 1 if the first arg is smaller, equal or greater to the second.
  */
 AST_INLINE_API(
