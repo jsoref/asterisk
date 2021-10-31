@@ -52,7 +52,7 @@
 			are completed an <literal>InboundRegistrationDetailComplete</literal> is issued.
 			</para>
 			<warning><para>
-				This command just dumps all coonfigured AORs with contacts, even if the contact
+				This command just dumps all configured AORs with contacts, even if the contact
 				is a permanent one.  To really get just inbound registrations, use
 				<literal>PJSIPShowRegistrationInboundContactStatuses</literal>.
 			</para>

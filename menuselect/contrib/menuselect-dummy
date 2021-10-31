@@ -42,7 +42,7 @@
 #   # modules that are marked as disabled by defualt:
 #   #include res_config_sqlite3 app_skel
 #
-#   # If you want to make sure some modules will be conifgured to build,
+#   # If you want to make sure some modules will be configured to build,
 #   # you can require them. If modules that match any of the 'require'
 #   # pattern are not configured to build, menuselect will panic.
 #   # Same pattern rules apply here. Why would you want that? I have no

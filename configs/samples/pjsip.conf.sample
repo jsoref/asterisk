@@ -527,7 +527,7 @@
 ;MAC=deadbeef4dad             ; required
 ;SERVER=myserver.example.com  ; A standard variable
 ;TIMEZONE=America/Denver      ; A standard variable
-;MYVAR=somevalue              ; A user confdigured variable
+;MYVAR=somevalue              ; A user configured variable
 
 ; If the phoneprov sections have common variables, it is best to create a
 ; phoneprov template.  The example below will produce the same configuration
@@ -547,7 +547,7 @@
                               ; USERNAME, SECRET, DISPLAY_NAME and CALLERID
                               ; are needed.
 ;MAC=deadbeef4dad             ; required
-;MYVAR=someOTHERvalue         ; A user confdigured variable
+;MYVAR=someOTHERvalue         ; A user configured variable
 
 ; To have USERNAME and SECRET automatically set, the endpoint
 ; specified here must in turn have an outbound_auth section defined.
@@ -578,7 +578,7 @@
                               ; USERNAME, SECRET, DISPLAY_NAME and CALLERID
                               ; are needed.
 ;MAC=deadbeef4dad             ; required
-;MYVAR=someUSERvalue          ; A user confdigured variable
+;MYVAR=someUSERvalue          ; A user configured variable
 ;LABEL=1000                   ; A standard variable
 
 ; The previous sections would produce a template substitution map as follows:
