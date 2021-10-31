@@ -2600,7 +2600,7 @@ The SIP channel:
 
 * The "canreinvite" option has changed. canreinvite=yes used to disable
   re-invites if you had NAT=yes. In 1.4, you need to set canreinvite=nonat
-  to disable re-invites when NAT=yes. This is propably what you want.
+  to disable re-invites when NAT=yes. This is probably what you want.
   The settings are now: "yes", "no", "nonat", "update". Please consult
   sip.conf.sample for detailed information.
 

@@ -27,7 +27,7 @@
 /*!
  * \page CID Caller ID names and numbers
  *
- * Caller ID names are currently 8 bit characters, propably
+ * Caller ID names are currently 8 bit characters, probably
  * ISO8859-1, depending on what your channel drivers handle.
  *
  * IAX2 and SIP caller ID names are UTF8

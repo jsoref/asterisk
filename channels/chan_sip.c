@@ -114,7 +114,7 @@
  * \todo Add TCP/TLS information to function SIPPEER and CHANNEL function
  * \todo If tcpenable=yes, we must open a TCP socket on the same address as the IP for UDP.
  * 	The tcpbindaddr config option should only be used to open ADDITIONAL ports
- * 	So we should propably go back to
+ * 	So we should probably go back to
  *		bindaddr= the default address to bind to. If tcpenable=yes, then bind this to both udp and TCP
  *				if tlsenable=yes, open TLS port (provided we also have cert)
  *		tcpbindaddr = extra address for additional TCP connections
@@ -16452,7 +16452,7 @@ static int transmit_refer(struct sip_pvt *p, const char *dest)
 	p->refer->status = REFER_SENT;   /* Set refer status */
 
 	return transmit_invite(p, SIP_REFER, FALSE, 0, NULL);
-	/* We should propably wait for a NOTIFY here until we ack the transfer */
+	/* We should probably wait for a NOTIFY here until we ack the transfer */
 	/* Maybe fork a new thread and wait for a STATUS of REFER_200OK on the refer status before returning to app_transfer */
 
 	/*! \todo In theory, we should hang around and wait for a reply, before
