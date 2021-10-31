@@ -31408,7 +31408,7 @@ static void add_realm_authentication(struct sip_auth_container **credentials, co
 		*md5secret++ = '\0';
 	}
 
-	/* Create the continer if needed. */
+	/* Create the container if needed. */
 	if (!*credentials) {
 		*credentials = ao2_t_alloc(sizeof(**credentials), destroy_realm_authentication,
 			"Create realm auth container.");

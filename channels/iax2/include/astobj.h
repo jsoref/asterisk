@@ -358,7 +358,7 @@ extern "C" {
  * \param eval A statement to evaluate in the iteration loop.
  *
  * This is macro is a little complicated, but it may help to think of it as a
- * loop.  Basically it iterates through the specfied containter as long as the
+ * loop.  Basically it iterates through the specfied container as long as the
  * condition is met.  Two variables, iterator and next, are provided for use in
  * your \p eval statement.  See the sample code for an example.
  *
