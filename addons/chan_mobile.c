@@ -4499,7 +4499,7 @@ static struct mbl_pvt *mbl_load_device(struct ast_config *cfg, const char *cat)
 	}
 	AST_RWLIST_UNLOCK(&adapters);
 	if (!adapter) {
-		ast_log(LOG_ERROR, "Skiping device %s. Unknown adapter '%s' specified.\n", cat, adapter_str);
+		ast_log(LOG_ERROR, "Skipping device %s. Unknown adapter '%s' specified.\n", cat, adapter_str);
 		goto e_return;
 	}
 
