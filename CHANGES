@@ -1331,7 +1331,7 @@ res_musiconhold
    which is interacting with an external device and/or spawns children of its
    own may not be able to exit cleanly in the default times, especially if sent
    a KILL signal, or if it's children are getting signals directly from
-   res_musiconhoild.  To allow extra time, the 'kill_escalation_delay'
+   res_musiconhold.  To allow extra time, the 'kill_escalation_delay'
    class option can be used to set the number of milliseconds res_musiconhold
    waits before escalating kill signals, with the default being the current
    100ms.  To control to whom the signals are sent, the "kill_method"
