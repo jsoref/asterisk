@@ -3692,7 +3692,7 @@ static struct ast_frame *__ast_read(struct ast_channel *chan, int dropaudio, int
 				ast_channel_alert_write(chan);
 			} else {
 				/*
-				 * Safely disable continous timer events if only buffered dtmf begin or end
+				 * Safely disable continuous timer events if only buffered dtmf begin or end
 				 * frames are left in the readq.
 				 */
 				ast_timer_disable_continuous(ast_channel_timer(chan));

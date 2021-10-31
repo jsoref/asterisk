@@ -374,7 +374,7 @@ int ast_aoc_set_termination_request(struct ast_aoc_decoded *decoded);
  * \param time_scale from ast_aoc_time_scale enum
  * \param granularity_time (optional, set to 0 if not present);
  * \param granularity_time_scale (optional, set to 0 if not present);
- * \param step_function  set to 1 if this is to use a step function, 0 if continuious
+ * \param step_function  set to 1 if this is to use a step function, 0 if continuous
  *
  * \retval 0 success
  * \retval -1 failure
