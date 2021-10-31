@@ -1314,7 +1314,7 @@ int analog_hangup(struct analog_pvt *p, struct ast_channel *ast)
 				/* Need to hold the lock for real-call, private, and call-waiting call */
 				analog_lock_sub_owner(p, ANALOG_SUB_CALLWAIT);
 				if (!p->subs[ANALOG_SUB_CALLWAIT].owner) {
-					/* The call waiting call dissappeared. */
+					/* The call waiting call disappeared. */
 					analog_set_new_owner(p, NULL);
 					break;
 				}
@@ -2905,7 +2905,7 @@ static struct ast_frame *__analog_handle_event(struct analog_pvt *p, struct ast_
 					analog_lock_sub_owner(p, ANALOG_SUB_CALLWAIT);
 					if (!p->subs[ANALOG_SUB_CALLWAIT].owner) {
 						/*
-						 * The call waiting call dissappeared.
+						 * The call waiting call disappeared.
 						 * This is now a normal hangup.
 						 */
 						analog_set_echocanceller(p, 0);
@@ -3223,7 +3223,7 @@ static struct ast_frame *__analog_handle_event(struct analog_pvt *p, struct ast_
 				analog_lock_sub_owner(p, ANALOG_SUB_CALLWAIT);
 				if (!p->subs[ANALOG_SUB_CALLWAIT].owner) {
 					/*
-					 * The call waiting call dissappeared.
+					 * The call waiting call disappeared.
 					 * Let's just ignore this flash-hook.
 					 */
 					ast_log(LOG_NOTICE, "Whoa, the call-waiting call disappeared.\n");
@@ -3350,7 +3350,7 @@ static struct ast_frame *__analog_handle_event(struct analog_pvt *p, struct ast_
 				analog_lock_sub_owner(p, ANALOG_SUB_THREEWAY);
 				if (!p->subs[ANALOG_SUB_THREEWAY].owner) {
 					/*
-					 * The 3-way call dissappeared.
+					 * The 3-way call disappeared.
 					 * Let's just ignore this flash-hook.
 					 */
 					ast_log(LOG_NOTICE, "Whoa, the 3-way call disappeared.\n");
