@@ -804,7 +804,7 @@ static struct ast_str *create_lookup_filter(struct ldap_table_config *config, co
  * caller should free the returned array and ast_variables
  * \param entries_count_ptr is a pointer to found entries count (can be NULL)
  * \param basedn is the base DN
- * \param table_name is the table_name (used dor attribute convertion and additional filter)
+ * \param table_name is the table_name (used dor attribute conversion and additional filter)
  * \param fields contains list of pairs name/value
 */
 static struct ast_variable **realtime_ldap_base_ap(unsigned int *entries_count_ptr,
