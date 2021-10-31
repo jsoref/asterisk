@@ -2108,7 +2108,7 @@ static void *do_idle_thread(void *v_pvt)
 		}
 		ast_frfree(f);
 	}
-	/* Hangup the channel since nothing happend */
+	/* Hangup the channel since nothing happened */
 	ast_hangup(chan);
 	return NULL;
 }
