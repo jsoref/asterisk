@@ -557,7 +557,7 @@ static int parse_naptr(unsigned char *dst, int dstsize, char *tech, int techsize
 				ast_log(LOG_WARNING, "Error during regex substitution. Invalid pmatch index.\n");
 				return -1;
 			}
-			/* pmatch len is 10. we are garanteed a single char 0-9 is a valid index */
+			/* pmatch len is 10. we are guaranteed a single char 0-9 is a valid index */
 			size = pmatch[matchindex].rm_eo - pmatch[matchindex].rm_so;
 			if (size > d_len) {
 				ast_log(LOG_WARNING, "Not enough space during NAPTR regex substitution.\n");
