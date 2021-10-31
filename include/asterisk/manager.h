@@ -173,7 +173,7 @@ struct manager_action {
 	 * \brief TRUE if the AMI action is registered and the callback can be called.
 	 *
 	 * \note Needed to prevent a race between calling the callback
-	 * function and unregestring the AMI action object.
+	 * function and unregistering the AMI action object.
 	 */
 	unsigned int registered:1;
 };
