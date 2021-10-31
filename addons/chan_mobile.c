@@ -3347,7 +3347,7 @@ static int handle_response_ok(struct mbl_pvt *pvt, char *buf)
 			}
 			break;
 		case AT_CLIP:
-			ast_debug(1, "[%s] caling line indication enabled\n", pvt->id);
+			ast_debug(1, "[%s] calling line indication enabled\n", pvt->id);
 			if (hfp_send_ecam(pvt->hfp) || msg_queue_push(pvt, AT_OK, AT_ECAM)) {
 				ast_debug(1, "[%s] error enabling Sony Ericsson call monitoring extensions\n", pvt->id);
 				goto e_return;
