@@ -6704,7 +6704,7 @@ CLI Changes
      a versions of libpri and libss7 that have them or it will not know that
      these libraries exist.
   * The commands "core show globals", "core set global" and "core set chanvar" has
-     been deprecated in favor of the more semanticly correct "dialplan show globals",
+     been deprecated in favor of the more semantically correct "dialplan show globals",
      "dialplan set chanvar" and "dialplan set global".
   * New CLI command "dialplan show chanvar" to list all variables associated
     with a given channel.
