@@ -96,7 +96,7 @@ extern int placev_(integer *osbuf, integer *osptr, integer *oslen, integer *obou
 /*       	Indices (1,AF) and (2,AF) are written, */
 /*       	and then possibly read. */
 /*       	All other indices are unused. */
-/*              In all cases, the final values will satsify the condition:*/
+/*              In all cases, the final values will satisfy the condition:*/
 /*               VWIN(2,AF)-VWIN(1,AF)+1 .LE. MAXWIN */
 /*               I'm not certain yet, but they may also satisfy: */
 /*               MINWIN .LE. VWIN(2,AF)-VWIN(1,AF)+1 */
