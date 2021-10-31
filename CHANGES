@@ -3640,7 +3640,7 @@ res_pjsip
 ------------------
  * DNS functionality will now automatically be enabled if the system configured
    nameservers can be retrieved. If the system configured nameservers can not be
-   retrieved the functionality will resort to using system resolution. Functionalty
+   retrieved the functionality will resort to using system resolution. Functionality
    such as SRV records and failover will not be available if system resolution
    is in use.
 
@@ -5735,7 +5735,7 @@ Asterisk Modules
 
 IAX2 Changes
 ------------
- * authdebug is now disabled by default. To enable this functionaility again
+ * authdebug is now disabled by default. To enable this functionality again
    set authdebug = yes in iax.conf.
 
 RTP Changes
