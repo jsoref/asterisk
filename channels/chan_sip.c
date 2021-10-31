@@ -794,7 +794,7 @@ static const struct sip_reasons {
 static char default_language[MAX_LANGUAGE];      /*!< Default language setting for new channels */
 static char default_callerid[AST_MAX_EXTENSION]; /*!< Default caller ID for sip messages */
 static char default_mwi_from[80];                /*!< Default caller ID for MWI updates */
-static char default_fromdomain[AST_MAX_EXTENSION]; /*!< Default domain on outound messages */
+static char default_fromdomain[AST_MAX_EXTENSION]; /*!< Default domain on outbound messages */
 static int default_fromdomainport;                 /*!< Default domain port on outbound messages */
 static char default_notifymime[AST_MAX_EXTENSION]; /*!< Default MIME media type for MWI notify messages */
 static char default_vmexten[AST_MAX_EXTENSION];    /*!< Default From Username on MWI updates */
