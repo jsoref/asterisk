@@ -319,7 +319,7 @@ int init_convolve_channel_pair(struct convolve_channel_pair *cchan_pair,
 		unsigned int hrtf_len, unsigned int chan_pos, unsigned int default_sample_size);
 
 /*!
- * \brief Preinits a specific number of channels (CONVOVLE_CHANNEL_PREALLOC)
+ * \brief Preinits a specific number of channels (CONVOLVE_CHANNEL_PREALLOC)
  * at the beginning of a conference.
  *
  * \param data Contains all channels and data needed for binaural processing
