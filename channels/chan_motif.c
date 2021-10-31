@@ -1508,7 +1508,7 @@ static void jingle_send_session_action(struct jingle_session *session, const cha
 	iks_delete(iq);
 }
 
-/*! \brief Internal function which sends a session-inititate message */
+/*! \brief Internal function which sends a session-initiate message */
 static void jingle_send_session_initiate(struct jingle_session *session)
 {
 	jingle_send_session_action(session, session->transport == JINGLE_TRANSPORT_GOOGLE_V1 ? "initiate" : "session-initiate");
