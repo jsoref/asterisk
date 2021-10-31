@@ -226,7 +226,7 @@
 				canceller on the channel (if any), for the current call
 				only.</para>
 				<para>Possible values are:</para>
-				<para>	<literal>on</literal>	Normal mode (the echo canceller is actually reinitalized)</para>
+				<para>	<literal>on</literal>	Normal mode (the echo canceller is actually reinitialized)</para>
 				<para>	<literal>off</literal>	Disabled</para>
 				<para>	<literal>fax</literal>	FAX/data mode (NLP disabled if possible, otherwise
 					completely disabled)</para>
