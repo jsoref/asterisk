@@ -22,7 +22,7 @@
  * \brief String manipulation dialplan functions
  *
  * \author Tilghman Lesher
- * \author Anothony Minessale II
+ * \author Anthony Minessale II
  * \author Naveen Albert
  * \ingroup functions
  */
