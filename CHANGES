@@ -6233,7 +6233,7 @@ CDR
 
 Calendaring for Asterisk
 ------------------------
- * A new set of modules were added supporing calendar integration with Asterisk.
+ * A new set of modules were added supporting calendar integration with Asterisk.
    Dialplan functions for reading from and writing to calendars are included,
    as well as the ability to execute dialplan logic upon calendar event notifications.
    iCalendar, CalDAV, and Exchange Server calendars (via res_calendar_exchange for
