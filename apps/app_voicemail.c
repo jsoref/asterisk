@@ -8707,7 +8707,7 @@ static int play_message_datetime(struct ast_channel *chan, struct ast_vm_user *v
 		res = ast_say_date_with_format(chan, t, AST_DIGIT_ANY, ast_channel_language(chan), "'vm-received' Q 'digits/at' HM", NULL);
 	} else if (!strncasecmp(ast_channel_language(chan), "pl", 2)) {     /* POLISH syntax */
 		res = ast_say_date_with_format(chan, t, AST_DIGIT_ANY, ast_channel_language(chan), "'vm-received' Q HM", NULL);
-	} else if (!strncasecmp(ast_channel_language(chan), "pt_BR", 5)) {  /* Brazillian PORTUGUESE syntax */
+	} else if (!strncasecmp(ast_channel_language(chan), "pt_BR", 5)) {  /* Brazilian PORTUGUESE syntax */
 		res = ast_say_date_with_format(chan, t, AST_DIGIT_ANY, ast_channel_language(chan), "'vm-received' Ad 'digits/pt-de' B 'digits/pt-de' Y 'digits/pt-as' HM ", NULL);
 	} else if (!strncasecmp(ast_channel_language(chan), "se", 2)) {     /* SWEDISH syntax */
 		res = ast_say_date_with_format(chan, t, AST_DIGIT_ANY, ast_channel_language(chan), "'vm-received' dB 'digits/at' k 'and' M", NULL);
