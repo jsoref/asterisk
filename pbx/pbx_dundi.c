@@ -2164,7 +2164,7 @@ static void load_password(void)
 		}
 	}
 	if (current) {
-		/* Current key is still valid, just setup rotatation properly */
+		/* Current key is still valid, just setup rotation properly */
 		ast_copy_string(cursecret, current, sizeof(cursecret));
 		rotatetime = expired;
 	} else {
