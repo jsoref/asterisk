@@ -6608,7 +6608,7 @@ void ast_merge_contexts_and_delete(struct ast_context **extcontexts, struct ast_
 		if (!hint) {
 			/*
 			 * Notify watchers of this removed hint later when we aren't
-			 * encumberd by so many locks.
+			 * encumbered by so many locks.
 			 */
 			AST_LIST_INSERT_HEAD(&hints_removed, saved_hint, list);
 		} else {
