@@ -107,7 +107,7 @@ typedef int (*jb_get_impl)(void *jb, struct ast_frame **fout, long now, long int
 typedef long (*jb_next_impl)(void *jb);
 /*! \brief Remove first frame */
 typedef int (*jb_remove_impl)(void *jb, struct ast_frame **fout);
-/*! \brief Force resynch */
+/*! \brief Force resync */
 typedef void (*jb_force_resynch_impl)(void *jb);
 /*! \brief Empty and reset jb */
 typedef void (*jb_empty_and_reset_impl)(void *jb);

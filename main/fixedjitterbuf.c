@@ -156,11 +156,11 @@ static int resynch_jb(struct fixed_jb *jb, void *data, long ms, long ts, long no
 	   offset */
 	offset = diff - jb->tail->ms;
 
-	/* Do we really need to resynch, or this is just a frame for dropping? */
+	/* Do we really need to resync, or this is just a frame for dropping? */
 	if (!jb->force_resynch && (offset < jb->conf.resync_threshold && offset > -jb->conf.resync_threshold))
 		return FIXED_JB_DROP;
 
-	/* Reset the force resynch flag */
+	/* Reset the force resync flag */
 	jb->force_resynch = 0;
 
 	/* apply the offset to the jb state */
@@ -211,7 +211,7 @@ int fixed_jb_put(struct fixed_jb *jb, void *data, long ms, long ts, long now)
 	/* check if the new frame is not too late */
 	if (delivery < jb->next_delivery) {
 		/* should drop the frame, but let first resynch_jb() check if this is not a jump in ts, or
-		   the force resynch flag was not set. */
+		   the force resync flag was not set. */
 		return resynch_jb(jb, data, ms, ts, now);
 	}
 
@@ -219,7 +219,7 @@ int fixed_jb_put(struct fixed_jb *jb, void *data, long ms, long ts, long now)
 	   However, allow more resync_threshold ms in advance */
 	if (delivery > jb->next_delivery + jb->delay + jb->conf.resync_threshold) {
 		/* should drop the frame, but let first resynch_jb() check if this is not a jump in ts, or
-		   the force resynch flag was not set. */
+		   the force resync flag was not set. */
 		return resynch_jb(jb, data, ms, ts, now);
 	}
 
@@ -234,15 +234,15 @@ int fixed_jb_put(struct fixed_jb *jb, void *data, long ms, long ts, long now)
 		         delivery < frame->delivery + frame->ms ||
 		         (frame->next && delivery + ms > frame->next->delivery)))
 	{
-		/* TODO: Should we check for resynch here? Be careful to do not allow threshold smaller than
+		/* TODO: Should we check for resync here? Be careful to do not allow threshold smaller than
 		   the size of the jb */
 
 		/* should drop the frame, but let first resynch_jb() check if this is not a jump in ts, or
-		   the force resynch flag was not set. */
+		   the force resync flag was not set. */
 		return resynch_jb(jb, data, ms, ts, now);
 	}
 
-	/* Reset the force resynch flag */
+	/* Reset the force resync flag */
 	jb->force_resynch = 0;
 
 	/* Get a new frame */
