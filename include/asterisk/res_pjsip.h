@@ -2871,7 +2871,7 @@ int ast_sip_format_auths_ami(const struct ast_sip_auth_vector *auths,
 /*!
  * \brief Retrieve the endpoint snapshot for an endpoint
  *
- * \param endpoint The endpoint whose snapshot is to be retreieved.
+ * \param endpoint The endpoint whose snapshot is to be retrieved.
  * \retval The endpoint snapshot
  */
 struct ast_endpoint_snapshot *ast_sip_get_endpoint_snapshot(
