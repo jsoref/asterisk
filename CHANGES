@@ -2462,7 +2462,7 @@ res_pjsip
  * In conjunction with the "auth_username" change, 3 new options have been
    added to the global configuration object that control how many unidentified
    requests over a certain period from the same IP address can be received
-   before a security altert is generated.  A new CLI command
+   before a security alert is generated.  A new CLI command
    "pjsip show unidentified_requests" will list the current candidates.
 
 res_pjsip_history
