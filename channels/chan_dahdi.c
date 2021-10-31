@@ -2897,13 +2897,13 @@ static void my_set_rdnis(void *pvt, const char *rdnis)
  *
  * \details
  * original dialstring:
- * DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadance#>|d][/extension[/options]]
+ * DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadence#>|d][/extension[/options]]
  *
  * The modified dialstring will have prefixed the channel-group section
  * with the ISDN channel restriction.
  *
  * buf:
- * DAHDI/i<span>-(g|G|r|R)<group#(0-63)>[c|r<cadance#>|d][/extension[/options]]
+ * DAHDI/i<span>-(g|G|r|R)<group#(0-63)>[c|r<cadence#>|d][/extension[/options]]
  *
  * The routine will check to see if the ISDN channel restriction is already
  * in the original dialstring.
@@ -13328,8 +13328,8 @@ struct dahdi_starting_point {
 	int rr_starting_point;
 	/*! ISDN span where channels can be picked (Zero if not specified) */
 	int span;
-	/*! Analog channel distinctive ring cadance index. */
-	int cadance;
+	/*! Analog channel distinctive ring cadence index. */
+	int cadence;
 	/*! Dialing option. c/r/d if present and valid. */
 	char opt;
 	/*! TRUE if to search the channel list backwards. */
@@ -13355,10 +13355,10 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 	/*
 	 * data is ---v
 	 * Dial(DAHDI/pseudo[/extension[/options]])
-	 * Dial(DAHDI/<channel#>[c|r<cadance#>|d][/extension[/options]])
-	 * Dial(DAHDI/<subdir>!<channel#>[c|r<cadance#>|d][/extension[/options]])
+	 * Dial(DAHDI/<channel#>[c|r<cadence#>|d][/extension[/options]])
+	 * Dial(DAHDI/<subdir>!<channel#>[c|r<cadence#>|d][/extension[/options]])
 	 * Dial(DAHDI/i<span>[/extension[/options]])
-	 * Dial(DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadance#>|d][/extension[/options]])
+	 * Dial(DAHDI/[i<span>-](g|G|r|R)<group#(0-63)>[c|r<cadence#>|d][/extension[/options]])
 	 *
 	 * i - ISDN span channel restriction.
 	 *     Used by CC to ensure that the CC recall goes out the same span.
@@ -13371,7 +13371,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 	 * R - channel group allocation round robin search backward
 	 *
 	 * c - Wait for DTMF digit to confirm answer
-	 * r<cadance#> - Set distintive ring cadance number
+	 * r<cadence#> - Set distintive ring cadence number
 	 * d - Force bearer capability for ISDN/SS7 call to digital.
 	 */
 
@@ -13421,7 +13421,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 	if (toupper(args.group[0]) == 'G' || toupper(args.group[0])=='R') {
 		/* Retrieve the group number */
 		s = args.group + 1;
-		res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadance);
+		res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadence);
 		if (res < 1) {
 			ast_log(LOG_WARNING, "Unable to determine group for data %s\n", data);
 			return NULL;
@@ -13460,7 +13460,7 @@ static struct dahdi_pvt *determine_starting_point(const char *data, struct dahdi
 			x = CHAN_PSEUDO;
 			param->channelmatch = x;
 		} else {
-			res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadance);
+			res = sscanf(s, "%30d%1c%30d", &x, &param->opt, &param->cadence);
 			if (res < 1) {
 				ast_log(LOG_WARNING, "Unable to determine channel for data %s\n", data);
 				return NULL;
@@ -13566,7 +13566,7 @@ static struct ast_channel *dahdi_request(const char *type, struct ast_format_cap
 				break;
 			case 'r':
 				/* Distinctive ring */
-				p->distinctivering = start.cadance;
+				p->distinctivering = start.cadence;
 				break;
 			case 'd':
 #if defined(HAVE_PRI) || defined(HAVE_SS7)
