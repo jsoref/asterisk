@@ -9437,7 +9437,7 @@ static struct ast_channel *sip_pvt_lock_full(struct sip_pvt *pvt)
 		}
 
 		/* If the owner changed while everything was unlocked, no problem,
-		 * just start over and everthing will work.  This is rare, do not be
+		 * just start over and everything will work.  This is rare, do not be
 		 * confused by this loop and think this it is an expensive operation.
 		 * The majority of the calls to this function will never involve multiple
 		 * executions of this loop. */

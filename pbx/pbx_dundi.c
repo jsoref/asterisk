@@ -1437,7 +1437,7 @@ static int dundi_encrypt(struct dundi_transaction *trans, struct dundi_packet *p
 	len = pack->datalen + pack->datalen / 100 + 42;
 	compress_space = ast_alloca(len);
 	memset(compress_space, 0, len);
-	/* We care about everthing save the first 6 bytes of header */
+	/* We care about everything save the first 6 bytes of header */
 	bytes = len;
 	res = compress(compress_space, &bytes, pack->data + 6, pack->datalen - 6);
 	if (res != Z_OK) {

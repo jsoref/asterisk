@@ -4130,7 +4130,7 @@ int ooParseDestination
       }
       return OO_OK;
    }
-   /* Evrything else is an h323-id for now */
+   /* Everything else is an h323-id for now */
    psNewAlias = (ooAliases*) memAlloc(pctxt, sizeof(ooAliases));
    if(!psNewAlias)
    {
