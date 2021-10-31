@@ -1201,7 +1201,7 @@ res_pjsip
    methods.
 
  * The pjsip_transport_event feature introduced in 15.1.0 has been refactored.
-   Any external modules that may have used that feature (highly unlikey) will
+   Any external modules that may have used that feature (highly unlikely) will
    need to be changed as the API has been altered slightly.
 
 res_pjsip_endpoint_identifier_ip
