@@ -7210,7 +7210,7 @@ Other Dialplan Application Changes
      READSTATUS to ERROR, which you can catch and handle separately.
   * Added 'm' option to Directory, which lists out names, 8 at a time, instead
      of asking for verification of each name, one at a time.
-  * Privacy() no longer uses privacy.conf, as all options are specifyable as
+  * Privacy() no longer uses privacy.conf, as all options are specifiable as
      direct options to the app.
   * AMD() has a new "maximum word length" option. "show application AMD" from the CLI
      for more details
