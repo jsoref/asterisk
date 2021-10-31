@@ -9656,7 +9656,7 @@ static struct sip_pvt *__find_call(struct sip_request *req, struct ast_sockaddr 
 				Without a dialog we can't retransmit and handle ACKs and all that, but at least
 				send an error message.
 
-				Sorry, we apologize for the inconvienience
+				Sorry, we apologize for the inconvenience
 			*/
 			transmit_response_using_temp(callid, addr, 1, intended_method, req, "500 Server internal error");
 			ast_debug(4, "Failed allocating SIP dialog, sending 500 Server internal error and giving up\n");
