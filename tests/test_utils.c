@@ -48,7 +48,7 @@
 AST_TEST_DEFINE(uri_encode_decode_test)
 {
 	int res = AST_TEST_PASS;
-	const char *in = "abcdefghijklmnopurstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 ~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
+	const char *in = "abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890 ~`!@#$%^&*()_-+={[}]|\\:;\"'<,>.?/";
 	char out[256] = { 0 };
 	char small[4] = { 0 };
 	const struct ast_flags none = {0};
@@ -83,11 +83,11 @@ AST_TEST_DEFINE(uri_encode_decode_test)
 	} while (0)
 
 	INIT_ENCODE_TEST(ast_uri_http, out, in,
-		"abcdefghijklmnopurstuvwxyz%20ABCDEFGHIJKLMNOPQRSTUVWXYZ%201234567890%20~%60!%40%23%24%25%5E%26*()_-%2B%3D%7B%5B%7D%5D%7C%5C%3A%3B%22'%3C%2C%3E.%3F%2F", in);
+		"abcdefghijklmnopqrstuvwxyz%20ABCDEFGHIJKLMNOPQRSTUVWXYZ%201234567890%20~%60!%40%23%24%25%5E%26*()_-%2B%3D%7B%5B%7D%5D%7C%5C%3A%3B%22'%3C%2C%3E.%3F%2F", in);
 	INIT_ENCODE_TEST(ast_uri_http_legacy, out, in,
-		"abcdefghijklmnopurstuvwxyz+ABCDEFGHIJKLMNOPQRSTUVWXYZ+1234567890+~%60!%40%23%24%25%5E%26*()_-%2B%3D%7B%5B%7D%5D%7C%5C%3A%3B%22'%3C%2C%3E.%3F%2F", in);
+		"abcdefghijklmnopqrstuvwxyz+ABCDEFGHIJKLMNOPQRSTUVWXYZ+1234567890+~%60!%40%23%24%25%5E%26*()_-%2B%3D%7B%5B%7D%5D%7C%5C%3A%3B%22'%3C%2C%3E.%3F%2F", in);
 	INIT_ENCODE_TEST(ast_uri_sip_user, out, in,
-		"abcdefghijklmnopurstuvwxyz%20ABCDEFGHIJKLMNOPQRSTUVWXYZ%201234567890%20~%60!%40%23$%25%5E&*()_-+=%7B%5B%7D%5D%7C%5C%3A;%22'%3C,%3E.?/", in);
+		"abcdefghijklmnopqrstuvwxyz%20ABCDEFGHIJKLMNOPQRSTUVWXYZ%201234567890%20~%60!%40%23$%25%5E&*()_-+=%7B%5B%7D%5D%7C%5C%3A;%22'%3C,%3E.?/", in);
 	INIT_ENCODE_TEST(none, small, in, "%61", "a");
 	INIT_ENCODE_TEST(ast_uri_http, small, in, "abc", "abc");
 
