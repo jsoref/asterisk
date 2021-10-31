@@ -3118,7 +3118,7 @@ static void handle_call_outgoing(struct unistimsession *s)
 
 	sub = get_sub(s->device, SUB_THREEWAY);
 	if (sub) {
-		/* If sub for threway call created than we use transfer behaviuor */
+		/* If sub for threway call created than we use transfer behavior */
 		struct unistim_subchannel *sub_trans = NULL;
 		struct unistim_device *d = s->device;
 
