@@ -368,7 +368,7 @@ type=bridge
 ; reset_listening_volume    ; Reset channel's listening volume to default level.
 
 ; decrease_talking_volume ; Decreases the channel's talking volume.
-; increase_talking_volume ; Icreases the channel's talking volume.
+; increase_talking_volume ; Increases the channel's talking volume.
 ; reset_talking_volume    ; Reset channel's talking volume to default level.
 ;
 ; dialplan_exec(context,exten,priority)  ; The dialplan_exec action allows a user
