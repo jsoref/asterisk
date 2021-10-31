@@ -136,7 +136,7 @@ static const struct causes_map causes[] = {
 	{ AST_CAUSE_MISDIALED_TRUNK_PREFIX, "MISDIALED_TRUNK_PREFIX", "Misdialed trunk prefix" },
 	{ AST_CAUSE_CHANNEL_UNACCEPTABLE, "CHANNEL_UNACCEPTABLE", "Channel unacceptable" },
 	{ AST_CAUSE_CALL_AWARDED_DELIVERED, "CALL_AWARDED_DELIVERED", "Call awarded and being delivered in an established channel" },
-	{ AST_CAUSE_PRE_EMPTED, "PRE_EMPTED", "Pre-empted" },
+	{ AST_CAUSE_PREEMPTED, "PREEMPTED", "Preempted" },
 	{ AST_CAUSE_NUMBER_PORTED_NOT_HERE, "NUMBER_PORTED_NOT_HERE", "Number ported elsewhere" },
 	{ AST_CAUSE_NORMAL_CLEARING, "NORMAL_CLEARING", "Normal Clearing" },
 	{ AST_CAUSE_USER_BUSY, "USER_BUSY", "User busy" },
