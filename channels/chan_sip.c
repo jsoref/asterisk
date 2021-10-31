@@ -35359,7 +35359,7 @@ AST_TEST_DEFINE(test_tcp_message_fragmentation)
 			info->summary = "SIP TCP message fragmentation test";
 			info->description =
 				"Tests reception of different TCP messages that have been fragmented or"
-				"run together. This test mimicks the code that TCP reception uses.";
+				"run together. This test mimics the code that TCP reception uses.";
 			return AST_TEST_NOT_RUN;
 		case TEST_EXECUTE:
 			break;
