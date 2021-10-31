@@ -3170,7 +3170,7 @@ static struct sig_ss7_linkset *my_ss7_find_linkset(struct ss7 *ss7)
  *
  * \param pvt Private channel structure.
  * \param state Initial state of new channel.
- * \param law Combanding law to use.
+ * \param law Commanding law to use.
  * \param exten Dialplan extension for incoming call.
  * \param requestor Channel requesting this new channel.
  *
