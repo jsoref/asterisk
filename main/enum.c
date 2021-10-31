@@ -682,7 +682,7 @@ int ast_get_enum(struct ast_channel *chan, const char *number, char *dst, int ds
  * The "number" parameter includes a leading '+' if it's a full E.164 number (and not ISN)
  * We need to preserve that as the regex inside NAPTRs expect the +.
  *
- * But for the domain generation, the '+' is a nuissance, so we get rid of it.
+ * But for the domain generation, the '+' is a nuisance, so we get rid of it.
 */
 	ast_copy_string(naptrinput, number[0] == 'n' ? number + 1 : number, sizeof(naptrinput));
 	if (number[0] == '+') {
