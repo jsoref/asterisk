@@ -149,7 +149,7 @@ AST_THREADSTORAGE(tmp_buf);
 		<description>
 			<para>Searches for all instances of the <replaceable>find-string</replaceable> in provided variable and
 			replaces them with <replaceable>replace-string</replaceable>.  If <replaceable>replace-string</replaceable>
-			is an empty string, this will effecively delete that substring.  If <replaceable>max-replacements</replaceable>
+			is an empty string, this will effectively delete that substring.  If <replaceable>max-replacements</replaceable>
 			is specified, this function will stop after performing replacements <replaceable>max-replacements</replaceable> times.</para>
 			<note><para>The replacement only occurs in the output.  The original variable is not altered.</para></note>
 		</description>
