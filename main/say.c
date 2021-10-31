@@ -932,15 +932,15 @@ static int exp10_int(int power)
  * - hundreds - 100 - sto, 200 - 2ste, 300,400 3,4sta, 500,600,...,900 5,6,...9set
  *
  * for each number 10^(3n + 3) exist 3 files represented as:
- *		1 tousand = jeden tisic = 1_E3
- *		2,3,4 tousands = dva,tri,ctyri tisice = 2-3_E3
- *		5,6,... tousands = pet,sest,... tisic = 5_E3
+ *		1 thousand = jeden tisic = 1_E3
+ *		2,3,4 thousands = dva,tri,ctyri tisice = 2-3_E3
+ *		5,6,... thousands = pet,sest,... tisic = 5_E3
  *
  *		million = _E6
  *		miliard = _E9
  *		etc...
  *
- * tousand, milion are  gender male, so 1 and 2 is 1m 2m
+ * thousand, milion are  gender male, so 1 and 2 is 1m 2m
  * miliard is gender female, so 1 and 2 is 1w 2w
  */
 static int ast_say_number_full_cs(struct ast_channel *chan, int num, const char *ints, const char *language, const char *options, int audiofd, int ctrlfd)
