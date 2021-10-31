@@ -9006,7 +9006,7 @@ struct sip_pvt *__sip_alloc(ast_string_field callid, struct ast_sockaddr *addr,
 			free_via(via);
 		}
 
-		/* Store initial incoming cseq. An error in sscanf here is ignored.  There is no approperiate
+		/* Store initial incoming cseq. An error in sscanf here is ignored.  There is no appropriate
 		 * except not storing the number.  CSeq validation must take place before dialog creation in find_call */
 		if (!ast_strlen_zero(cseq) && (sscanf(cseq, "%30u", &seqno) == 1)) {
 			p->init_icseq = seqno;
@@ -30980,7 +30980,7 @@ static struct ast_channel *sip_request_call(const char *type, struct ast_format_
 		ast_string_field_set(p, peername, ext);
 	/* Recalculate our side, and recalculate Call ID */
 	ast_sip_ouraddrfor(&p->sa, &p->ourip, p);
-	/* When chan_sip is first loaded or reloaded, we need to check for NAT and set the appropiate flags
+	/* When chan_sip is first loaded or reloaded, we need to check for NAT and set the appropriate flags
 	   now that we have the auto_* settings. */
 	check_for_nat(&p->sa, p);
 	/* If there is a peer related to this outgoing call and it hasn't re-registered after

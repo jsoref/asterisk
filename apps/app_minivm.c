@@ -2781,7 +2781,7 @@ static char *message_template_parse_emailbody(const char *configuration)
 	char *tmpread, *tmpwrite;
 	char *emailbody = ast_strdup(configuration);
 
-	/* substitute strings \t and \n into the apropriate characters */
+	/* substitute strings \t and \n into the appropriate characters */
 	tmpread = tmpwrite = emailbody;
 	while ((tmpwrite = strchr(tmpread,'\\'))) {
 	       int len = strlen("\n");
