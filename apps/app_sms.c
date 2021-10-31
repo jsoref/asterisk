@@ -116,7 +116,7 @@
 /* Time zones on time stamps */
 /* user ref field */
 
-static volatile unsigned char message_ref;  /* arbitary message ref */
+static volatile unsigned char message_ref;  /* arbitrary message ref */
 static volatile unsigned int seq;           /* arbitrary message sequence number for unqiue files */
 
 static char log_file[255];
