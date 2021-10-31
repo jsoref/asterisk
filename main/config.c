@@ -1836,7 +1836,7 @@ static int process_text_line(struct ast_config *cfg, struct ast_category **cat,
 						if (newcat) {
 							ast_category_destroy(newcat);
 						}
-						ast_log(LOG_ERROR, "Inheritence requested, but allocation failed\n");
+						ast_log(LOG_ERROR, "Inheritance requested, but allocation failed\n");
 						return -1;
 					}
 				}
