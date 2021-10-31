@@ -669,7 +669,7 @@
 ;voicemail_extension= ; The voicemail extension to send in the NOTIFY Message-Account header
                       ; (default: global/default_voicemail_extension)
 ;mwi_subscribe_replaces_unsolicited=no
-                      ; An MWI subscribe will replace unsoliticed NOTIFYs
+                      ; An MWI subscribe will replace unsolicited NOTIFYs
                       ; (default: "no")
 ;moh_suggest=default    ; Default Music On Hold class (default: "default")
 ;moh_passthrough=yes    ; Pass Music On Hold through using SIP re-invites with sendonly
