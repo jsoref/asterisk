@@ -279,7 +279,7 @@
 						codec_prefs_incoming_answer = keep: first
 						</example>
 						<para>
-						Use the defaults but keep oinly the first codec.
+						Use the defaults but keep only the first codec.
 						</para>
 					</description>
 				</configOption>
@@ -337,7 +337,7 @@
 						codec_prefs_incoming_answer = keep: first
 						</example>
 						<para>
-						Use the defaults but keep oinly the first codec.
+						Use the defaults but keep only the first codec.
 						</para>
 					</description>
 				</configOption>

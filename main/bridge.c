@@ -1127,7 +1127,7 @@ static int smart_bridge_operation(struct ast_bridge *bridge)
 		AST_LIST_INSERT_TAIL(&dummy_bridge.channels, bridge_channel, entry);
 		dummy_bridge.num_channels++;
 		if (ast_test_flag(&bridge_channel->features->feature_flags, AST_BRIDGE_CHANNEL_FLAG_LONELY)) {
-			dummy_bridge.num_lonely++;
+			dummy_bridge.num_lonly++;
 		}
 		if (!bridge_channel->suspended) {
 			dummy_bridge.num_active++;
@@ -1147,7 +1147,7 @@ static int smart_bridge_operation(struct ast_bridge *bridge)
 		AST_LIST_INSERT_TAIL(&bridge->channels, bridge_channel, entry);
 		dummy_bridge.num_channels--;
 		if (ast_test_flag(&bridge_channel->features->feature_flags, AST_BRIDGE_CHANNEL_FLAG_LONELY)) {
-			dummy_bridge.num_lonely--;
+			dummy_bridge.num_lonly--;
 		}
 		if (!bridge_channel->suspended) {
 			dummy_bridge.num_active--;

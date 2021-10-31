@@ -755,7 +755,7 @@ static void generate_computational_cost(struct ast_translator *t, int seconds)
  * dst formats.
  *
  * \note This function allows older translators built before the translation cost
- * changed away from using onely computational time to continue to be registered
+ * changed away from using only computational time to continue to be registered
  * correctly.  It is expected that translators built after the introduction of this
  * function will manually assign their own table cost value.
  *
