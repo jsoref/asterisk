@@ -427,7 +427,7 @@ EXTERN int ooFreeQ931Message(OOCTXT* pctxt, Q931Message *q931Msg);
  *                 be returned.
  * @param len      Pointer to int in which length of the buffer will
  *                 be returned.
- * @param msgType  Pointer to integer in which message type of the ougoing
+ * @param msgType  Pointer to integer in which message type of the outgoing
  *                 message is returned.
  *
  * @return         Completion status - 0 on success, -1 on failure
