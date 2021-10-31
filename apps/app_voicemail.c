@@ -4954,7 +4954,7 @@ static void prep_email_sub_vars(struct ast_channel *ast, struct ast_vm_user *vmu
 }
 
 /*!
- * \brief Wraps a character sequence in double quotes, escaping occurences of quotes within the string.
+ * \brief Wraps a character sequence in double quotes, escaping occurrences of quotes within the string.
  * \param from The string to work with.
  * \param buf The buffer into which to write the modified quoted string.
  * \param maxlen Always zero, but see \see ast_str

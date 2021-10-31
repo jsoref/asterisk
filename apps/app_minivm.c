@@ -1204,7 +1204,7 @@ static const char *ast_str_encode_mime(struct ast_str **end, ssize_t maxlen, con
 }
 
 /*!\internal
- * \brief Wraps a character sequence in double quotes, escaping occurences of quotes within the string.
+ * \brief Wraps a character sequence in double quotes, escaping occurrences of quotes within the string.
  * \param from The string to work with.
  * \param buf The destination buffer to write the modified quoted string.
  * \param maxlen Always zero.  \see ast_str

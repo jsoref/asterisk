@@ -163,7 +163,7 @@ static struct ast_variable *variable_named(struct ast_variable *var, const char 
 /*! \brief Count  semicolons in string
  * \param somestr - pointer to a string
  *
- * \return number of occurances of the delimiter(semicolon)
+ * \return number of occurrences of the delimiter(semicolon)
  */
 static int semicolon_count_str(const char *somestr)
 {
