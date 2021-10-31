@@ -781,13 +781,13 @@ static void handle_mousedown(struct video_desc *env, SDL_MouseButtonEvent button
 			  button.x < x0+gui->keypad->w/2+BORDER+pip_loc_x+env->loc_dpy.w/3 &&
 			  button.y >= BORDER+pip_loc_y &&
 			  button.y < BORDER+pip_loc_y+env->loc_dpy.h/3) {
-				/* set the y cordinate to his previous value */
+				/* set the y coordinate to his previous value */
 				button.y += (env->out.device_num ? SRC_WIN_H+2*BORDER+SRC_MSG_BD_H : 0);
 				/* starts dragging the picture inside the picture */
 				set_drag(&gui->drag, button.x, button.y, DRAG_PIP);
 			}
 			else if (index == KEY_LOC_DPY) {
-				/* set the y cordinate to his previous value */
+				/* set the y coordinate to his previous value */
 				button.y += (env->out.device_num ? SRC_WIN_H+2*BORDER+SRC_MSG_BD_H : 0);
 				/* click in the local display, but not on the PiP */
 				set_drag(&gui->drag, button.x, button.y, DRAG_LOCAL);
