@@ -979,7 +979,7 @@ static int sound_file_exists(const char *filename)
  * \param user Optional Caller
  * \param bridge_channel The bridged channel involved
  *
- * \note if caller is NULL, the announcment will be sent to all participants in the conference.
+ * \note if caller is NULL, the announcement will be sent to all participants in the conference.
  * \return Returns 0 on success, -1 if the user hung up
  */
 static int announce_user_count(struct confbridge_conference *conference, struct confbridge_user *user,
