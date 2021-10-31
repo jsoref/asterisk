@@ -8404,7 +8404,7 @@ int ast_say_date_ja(struct ast_channel *chan, time_t t, const char *ints, const 
  * A list of the files that you need to create
  * - digits/female/1..4 : "Mia, dyo , treis, tesseris "
  * - digits/kai : "KAI"
- * - didgits : "h wra"
+ * - digits : "h wra"
  * - digits/p-m : "meta meshmbrias"
  * - digits/a-m : "pro meshmbrias"
  */
